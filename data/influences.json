@@ -1,0 +1,1716 @@
+{
+  "schema": "influences-register/v1",
+  "version": "v0.2.0",
+  "seeded_from": "influences__seed.json, brief pack v0.33.62, 25 August 2026 — published verbatim at /briefs/influences__seed.json",
+  "attribution": "Dinis Cruz, with AI co-authorship (Claude, Anthropic)",
+  "licence": "CC BY 4.0 — this register. The anchor works belong to their authors and are linked, never rehosted.",
+  "note": "The register. Every page under /register/ is generated from this file, /map/ is computed from it, and every tier count on the site is recomputed from it on each build and checked independently by the release gate. Prose is authored here once, in a tiny markdown (links, bold, italic, code), and rendered as both HTML and its markdown twin.",
+  "tiers": {
+    "traced": "corpus evidence exists today",
+    "stated": "on the founder's seed list, thin or absent in the corpus, awaiting his briefing document",
+    "discovered": "surfaced by corpus mining, not on the seed list, awaiting founder confirmation"
+  },
+  "row_status": {
+    "implemented": "the pattern appears at the named place",
+    "partial": "something of it appears; the pattern is not fully realised",
+    "absent": "the pattern is named by the anchor work and is not implemented — kept in the table rather than dropped"
+  },
+  "influences": [
+    {
+      "slug": "bret-victor",
+      "title": "Bret Victor",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "blurb": "The model entry, and the reason this site has a format at all. The register for *Inventing on Principle* was written as a working document before anyone asked what a site made of such documents should be called.",
+      "anchor": {
+        "title": "Inventing on Principle",
+        "author": "Bret Victor",
+        "venue": "CUSEC",
+        "year": 2012,
+        "url": "https://vimeo.com/36579366",
+        "transcript": "https://worrydream.com/",
+        "note": "One anchor per entry: not the whole career, the single work that did the shaping. Victor's wider work is in Block 7."
+      },
+      "principle": "Immediate connection between creator and creation — a creator needs to see what they are making, as they make it.",
+      "principle_note": "The test the format sets for a principle is that it must be usable by someone who has never consumed the anchor work. This one passes: you can apply it to a build pipeline, a form, a CLI or a lesson plan without having watched the talk.",
+      "founder_words": [
+        {
+          "quote": "That is the kind of experience and feedback loops I'm trying to create here.",
+          "source": "the immediate-connection register (held by the founder)",
+          "note": "The line the register opens on, and the reason it exists. The register is a working document about the estate's viewer, not an essay about Victor."
+        },
+        {
+          "quote": "the problem with dogma is not that it exists, but that you stop asking the question.",
+          "source": "briefs/.../v0.19.7__article__education-gaps-git-opensource.md",
+          "note": "From a section titled **The Brett Victor Problem** — in an article about education policy, not developer tooling. One influence applied in two unrelated domains, which is itself trace evidence: an idea that only shows up where you first met it has not been absorbed."
+        }
+      ],
+      "resonance": [
+        "The talk's argument is not about tools. It is that ideas can only grow where their creator can see them growing, and that most of the ways we build software put a compile step, a deploy step or a refresh between a person and the thing they are making. Every one of those steps is a place an idea dies.",
+        "What makes this the founding entry is what the register found when it was written: **the estate's viewer had already implemented several of the talk's demos without knowing it.** That is a weaker claim than *Victor caused this* and a more interesting one — the instinct and the principle agree, and writing the register is what turns an agreement into something the next agent can extend deliberately rather than rediscover."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "sources/register__bret-victor__inventing-on-principle.md",
+          "note": "the founder's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is with the founder"
+        },
+        {
+          "path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md",
+          "note": "builds its central argument on Victor's immediate-feedback thesis, and quotes the talk's core line about creators needing an immediate connection to what they create"
+        },
+        {
+          "path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md",
+          "note": "a section titled *The Brett Victor Problem*, applying the talk's point about dogma to education policy"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "**The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by the founder and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered."
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "View time travel",
+          "spec": "The register names this as a specified gap: the viewer cannot step backwards through the states a view has been in. Victor's demos treat time as a dimension you can scrub, not a sequence you can only move forward through — the binary-search-for-the-bug case in the talk is the canonical demonstration. Precise scope is in the register text this site does not yet hold."
+        },
+        {
+          "id": "G2",
+          "title": "Relayout ghosts",
+          "spec": "The register's second named gap: when a layout changes, the previous positions leave no trace, so a person cannot see what moved. Victor's argument is that a change you cannot see the shape of is a change you cannot reason about. Precise scope is in the register text this site does not yet hold."
+        }
+      ],
+      "checklist": [
+        "Does the person see the effect of their change **immediately**, or is there a step between them and it?",
+        "If there is a step, is it there because it has to be, or because it was easiest to build that way?",
+        "Can they see the *state* the system is in, or only the output it produced?",
+        "When something goes wrong, can they scrub backwards to the moment it went wrong — or only re-run it and hope?",
+        "Is a value on screen something they can reach into and change, or only something they can read?",
+        "Would someone who has never used this be able to tell what it does by moving one thing?"
+      ],
+      "wider_library": [
+        {
+          "title": "The Future of Programming",
+          "note": "the 1973 costume talk — a history of ideas that were abandoned rather than disproved",
+          "url": "https://worrydream.com/dbx/"
+        },
+        {
+          "title": "Media for Thinking the Unthinkable",
+          "note": "why the representations we use bound the thoughts we can have",
+          "url": "https://worrydream.com/MediaForThinkingTheUnthinkable/"
+        },
+        {
+          "title": "Up and Down the Ladder of Abstraction",
+          "note": "the interactive essay about moving between the concrete and the general — arguably the most directly applicable to graph work",
+          "url": "https://worrydream.com/LadderOfAbstraction/"
+        },
+        {
+          "title": "Stop Drawing Dead Fish",
+          "note": "on tools that produce artefacts versus tools that produce behaviour",
+          "url": "https://worrydream.com/StopDrawingDeadFish/"
+        },
+        {
+          "title": "Drawing Dynamic Visualizations",
+          "note": "direct manipulation applied to data visualisation itself",
+          "url": "https://worrydream.com/DrawingDynamicVisualizationsTalk/"
+        },
+        {
+          "title": "The Humane Representation of Thought",
+          "note": "the widest version of the argument: thinking with the whole body, not a rectangle",
+          "url": "https://worrydream.com/TheHumaneRepresentationOfThought/"
+        },
+        {
+          "title": "Dynamicland",
+          "note": "the research programme the ideas went into",
+          "url": "https://dynamicland.org/"
+        }
+      ],
+      "lineage": [
+        {
+          "to": "flow",
+          "label": "supplies the mechanism"
+        }
+      ],
+      "briefing_status": "integrated",
+      "comms": "Q1"
+    },
+    {
+      "slug": "wardley",
+      "title": "Simon Wardley & Wardley Maps",
+      "tier": "traced",
+      "kind": "person + framework",
+      "status": "link-out",
+      "blurb": "The deepest-traced influence in the corpus by volume — around 210 files — and the one whose material is entirely a sibling site's. This entry owns only the resonance: why a security person reorganised his thinking around an evolution axis.",
+      "anchor": {
+        "title": "Wardley Maps",
+        "author": "Simon Wardley",
+        "note": "The book/blog series, published in the open. The anchor is the mapping method itself rather than any single post.",
+        "url": "https://learnwardleymapping.com/"
+      },
+      "principle": "Situational awareness before strategy — draw the map before you argue about the move, and the map is a falsifiable claim about position and movement rather than a picture of your opinions.",
+      "resonance": [
+        "The resonance is not the diagrams. It is that mapping makes a strategy **arguable**: two people looking at the same map can disagree about where a component sits and settle it with evidence, which is impossible when the strategy is a paragraph of prose.",
+        "That is also why this influence keeps appearing in places that have nothing to do with strategy. The evolution axis is a claim about a component's state; the risks register's accepted-risk format is a claim with a named acceptor; a trace row on this site is a claim about a codebase. **The shape is the same, and it came from here.** [Popper](../popper/index.html) is the other half of that story."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(corpus-wide, ~210 files)",
+          "note": "the largest single-influence footprint the mining run found, spanning strategy documents, briefs and the published mapping material"
+        },
+        {
+          "path": "wardley-maps.sgit.ai (sibling site + its own brief pack)",
+          "note": "the founder's own published Wardley material — videos, infographics and the maps-as-code work"
+        }
+      ],
+      "trace": {
+        "state": "sibling",
+        "sibling": "wardley-maps.sgit.ai",
+        "sibling_url": "https://wardley-maps.sgit.ai",
+        "note": "**The trace of this influence is an entire site.** Reproducing it here would break the deconfliction rule the network runs on: two sites making the same argument slightly differently is worse than a dead link. The influence entry owns the *resonance*; the sibling owns the *material* — the maps, the evolution axes, the maps-as-code work and its own release history."
+      },
+      "checklist": [
+        "Is the map drawn before the strategy is argued, or produced afterwards to justify it?",
+        "Does every component on it sit somewhere on the evolution axis, or are some of them just boxes?",
+        "Is the claim about **movement** — where this is going — or only about where it is now?",
+        "Could someone who disagrees point at the specific thing they think is misplaced?"
+      ],
+      "wider_library": [
+        {
+          "title": "Wardley Maps (the online book)",
+          "note": "the whole method, published free by its author",
+          "url": "https://medium.com/wardleymaps"
+        },
+        {
+          "title": "Learn Wardley Mapping",
+          "note": "the community's structured entry point",
+          "url": "https://learnwardleymapping.com/"
+        }
+      ],
+      "sibling_site": {
+        "host": "wardley-maps.sgit.ai",
+        "url": "https://wardley-maps.sgit.ai",
+        "owns": "the maps, the evolution axes, the maps-as-code work, and the founder's own published mapping material"
+      },
+      "lineage": [
+        {
+          "to": "popper",
+          "label": "a map is a claim"
+        }
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "semantic-web",
+      "title": "Tim Berners-Lee & the Semantic Web",
+      "tier": "traced",
+      "kind": "topic + person",
+      "status": "full",
+      "blurb": "The format at its strongest, because this is an influence **argued with**. The dream of machine-readable meaning shaped the estate's graph work; the diagnosis of where the community went wrong shaped it just as much.",
+      "anchor": {
+        "title": "The Semantic Web",
+        "author": "Tim Berners-Lee, James Hendler and Ora Lassila",
+        "venue": "Scientific American",
+        "year": 2001,
+        "url": "https://www.scientificamerican.com/article/the-semantic-web/",
+        "note": "The article that put the idea in front of a general audience. The wider programme — RDF, OWL, linked data, and later Solid — is in Block 7."
+      },
+      "principle": "Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.",
+      "principle_note": "Note what the principle does **not** say: that meaning lives in the things. That distinction is the whole content of this entry's disagreement.",
+      "founder_words": [
+        {
+          "quote": "The Semantic Web community identified the right problem… But the community made a subtle mistake in practice. They ended up attaching meaning to nodes rather than deriving meaning from edges.",
+          "source": "briefs/.../library/concepts/v0_4_0__thinking-in-graphs.md",
+          "note": "The section is titled *The Semantic Web's Insight (and Mistake)*, and the ordering of those two words is the entry. An influence you have a technical disagreement with is an influence you have read closely."
+        }
+      ],
+      "resonance": [
+        "Two things resonate, and they pull in opposite directions. The first is the ambition: a web where a machine can act on meaning rather than pattern-match on strings is still the right target, twenty-five years later, and most of what is now called an AI agent is a worse-engineered attempt at it.",
+        "The second is the diagnosis of the failure, and it is a technical one rather than a sociological one. Attaching meaning to a node makes every node an assertion that has to be agreed on before anyone can use it; **deriving meaning from edges** makes agreement local and lets two parties disagree about what a thing *is* while still agreeing about how it *relates*. That inversion is load-bearing in the estate's graph substrate.",
+        "The third strand is live rather than historical: Berners-Lee's Solid puts personal data in pods the person controls, and this estate puts it in encrypted vaults the person holds the key to. Those are the same instinct with different threat models, and the corpus treats them as complementary architectures rather than competitors."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "SGraph-AI__App__Send/library/concepts/v0_4_0__thinking-in-graphs.md",
+          "note": "the section *The Semantic Web's Insight (and Mistake)* — the node-first versus edge-first critique, in the document that sets out the estate's graph thinking"
+        },
+        {
+          "path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md",
+          "note": "Solid pods and sgit vaults as complementary architectures, with Bruce Schneier's involvement at Inrupt noted"
+        },
+        {
+          "path": "(corpus-wide, ~35 files)",
+          "note": "the wider footprint the mining run found across briefs and concept documents"
+        }
+      ],
+      "trace": {
+        "state": "rows",
+        "note": "Two of these rows are the influence being *inverted* rather than implemented, and they are marked as such. A trace table that could only record agreement would be useless on an entry like this one.",
+        "rows": [
+          {
+            "pattern": "Machine-readable meaning as the target — a graph a machine can act on rather than a document it can only parse",
+            "where": "The estate's graph substrate and the concept document that sets out its thinking",
+            "version": "v0.4.0",
+            "status": "implemented",
+            "source": "`v0_4_0__thinking-in-graphs.md`, cited in 02__ §T3"
+          },
+          {
+            "pattern": "Meaning attached to nodes (RDF's typed-resource model)",
+            "where": "**Deliberately inverted.** The estate derives meaning from edges instead, and the concept document states the inversion as a correction rather than a variation",
+            "version": "v0.4.0",
+            "status": "absent",
+            "source": "`v0_4_0__thinking-in-graphs.md`, the *Insight (and Mistake)* section"
+          },
+          {
+            "pattern": "Meaning derived from connection between things",
+            "where": "The edge-first graph model the estate's ontology work is built on",
+            "version": "v0.4.0",
+            "status": "implemented",
+            "source": "`v0_4_0__thinking-in-graphs.md`"
+          },
+          {
+            "pattern": "Personal data under the person's own control (Solid pods)",
+            "where": "Encrypted vaults, keyed by their holder — compared to pods explicitly, as complementary architectures with different threat models",
+            "version": "v0.6.17",
+            "status": "partial",
+            "source": "`v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md`"
+          },
+          {
+            "pattern": "Interoperation with Solid itself — a vault that can read or write a pod",
+            "where": "Nowhere. The brief is an architectural comparison, not an integration",
+            "version": "v0.6.17",
+            "status": "absent",
+            "source": "the same brief, which scopes itself as a comparison"
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "The Solid bridge the comparison implies",
+          "spec": "The integration brief establishes that pods and vaults solve the same problem with different trust assumptions, and stops there. The build spec is the smallest thing that would make the comparison real: a read path from a Solid pod into a vault, or a vault snapshot published in a pod-readable shape. Either direction would turn an argument into an artefact and would be the first interoperation this estate has with the programme it says it inherited from."
+        },
+        {
+          "id": "G2",
+          "title": "The edge-first claim has no published counter-test",
+          "spec": "The entry asserts that deriving meaning from edges avoids a failure mode that node-typing has. That is a falsifiable claim and nothing in the corpus falsifies it — there is no worked case showing a query the node-first model answers and the edge-first model cannot. Building that case, and publishing it whether or not it is comfortable, is the honest version of this disagreement."
+        }
+      ],
+      "checklist": [
+        "Is the meaning in the **node** or in the **edge**? If it is in the node, who has to agree with you before anyone can use it?",
+        "Can two parties disagree about what a thing *is* while still agreeing about how it *relates*?",
+        "Is the machine-readable version derived from the human-readable one, or maintained beside it?",
+        "If this data left our control tomorrow, would it still mean anything to whoever holds it?"
+      ],
+      "wider_library": [
+        {
+          "title": "Weaving the Web (1999)",
+          "note": "Berners-Lee's own account of the design decisions, including the ones he regrets",
+          "url": "https://www.w3.org/People/Berners-Lee/Weaving/"
+        },
+        {
+          "title": "Linked Data — Design Issues (2006)",
+          "note": "the four rules, and the most compact statement of the programme",
+          "url": "https://www.w3.org/DesignIssues/LinkedData.html"
+        },
+        {
+          "title": "The Solid Protocol",
+          "note": "the personal-data-store programme; the direct comparator to vaults",
+          "url": "https://solidproject.org/"
+        },
+        {
+          "title": "RDF 1.1 Concepts",
+          "note": "the model the edge-first critique is aimed at — worth reading before agreeing with the critique",
+          "url": "https://www.w3.org/TR/rdf11-concepts/"
+        }
+      ],
+      "lineage": [
+        {
+          "to": "graphs",
+          "label": "feeds"
+        }
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "graphs",
+      "title": "Graphs",
+      "tier": "traced",
+      "kind": "topic",
+      "status": "link-out",
+      "blurb": "The founding obsession, and the one link-out entry that owns something its sibling site does not: the personal history. Where graphs actually entered the thinking is an open question, and it is asked in public.",
+      "anchor": {
+        "title": "The first encounter — likely the O2 Platform's code-flow work",
+        "note": "**Unconfirmed.** Unlike every other entry, this anchor is a personal event rather than a published work, and the pack could not establish which one. Asked as [Q5](../../admin/comms.html#q5) in the briefing queue."
+      },
+      "principle": "Structure is edges. What a thing is matters less than what it connects to, and a model that records connection can answer questions its designer did not anticipate.",
+      "resonance": [
+        "This is the influence with the largest corpus footprint and the least documented origin, which is a strange combination and worth stating rather than smoothing over. Graphs are everywhere in the estate — the substrate, the ontology work, the memory model, an entire sibling site — and nothing in the corpus records the moment they stopped being a data structure and became the way of seeing.",
+        "What the entry can say is that the interest predates the current work by a long way, and that the shape of it is consistent: not graphs as a storage choice, but graphs as the claim that **meaning is relational**. [The Semantic Web entry](../semantic-web/index.html) is the same claim argued with someone; [Luhmann](../luhmann/index.html) is the same claim arrived at on paper index cards in the 1960s."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(corpus-wide)",
+          "note": "too pervasive to count usefully — the mining run found graph thinking in the substrate, the concept documents, the guides and the role definitions"
+        },
+        {
+          "path": "graphs.sgit.ai (sibling site)",
+          "note": "the grammar, the depth model and the book — the material this entry deliberately does not repeat"
+        }
+      ],
+      "trace": {
+        "state": "sibling",
+        "sibling": "graphs.sgit.ai",
+        "sibling_url": "https://graphs.sgit.ai",
+        "note": "**The trace of this influence is an entire site**, and a much larger one than this entry could hold. What this entry owns and the sibling does not carry is the *personal* history: where the interest came from, and when. That part is [an open question](../../admin/comms.html#q5) rather than a claim."
+      },
+      "checklist": [
+        "Is the thing being modelled a set of records, or a set of relationships between records?",
+        "Can the model answer a question nobody thought of when it was built?",
+        "Is the edge typed and addressable, or is it a foreign key with no meaning of its own?",
+        "If this were drawn, would the drawing show structure — or just show the same list in a circle?"
+      ],
+      "sibling_site": {
+        "host": "graphs.sgit.ai",
+        "url": "https://graphs.sgit.ai",
+        "owns": "the grammar, the depth model, the book, and the whole technical treatment"
+      },
+      "briefing_status": "requested",
+      "comms": "Q5"
+    },
+    {
+      "slug": "owasp",
+      "title": "OWASP & the security community",
+      "tier": "traced",
+      "kind": "community + era",
+      "status": "full",
+      "blurb": "Not a person and not a work: two decades inside an open community, and the Summit model in particular. The seed list's own phrasing was *the cyber security community* — an era, treated as an influence in its own right.",
+      "anchor": {
+        "title": "OWASP, and participation in it from the early 2000s onward",
+        "url": "https://owasp.org/",
+        "note": "The anchor for a community or an era is the first documented contact with it, not a work. The Summits are the specific institution this entry is about."
+      },
+      "principle": "Knowledge compounds fastest in the open, among people who owe each other nothing — and the format of the gathering decides whether it compounds at all.",
+      "resonance": [
+        "The claim worth defending here is narrower than *open communities are good*. It is about the **Summit format** specifically: sessions that must produce an artefact, working groups that outlive the room, and outputs published whether or not they are finished. That is an unusual thing to have been formed by, and it shows up in the estate as a set of habits rather than as a topic — publishing unresolved questions as first-class pages, versioning documents rather than replacing them, and treating a working document as a deliverable.",
+        "The second strand is what a global, volunteer, chapter-based organisation teaches about **distributed work** — a lesson learned twenty years before it became a general one, and which nests naturally with [diverse and distributed teams](../diverse-distributed-teams/index.html).",
+        "This entry deliberately does not cover open-source governance or funding models. Those belong to [the open-source sibling](https://open-source.sgit.ai), which carries the full history pack."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(corpus-wide, ~271 files)",
+          "note": "the second-largest footprint in the mining run, including the Summits history"
+        },
+        {
+          "path": "open-source.sgit.ai (sibling site)",
+          "note": "governance and monetisation material, which this entry links to rather than repeats"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "The habits this entry claims — publish unresolved, version rather than replace, treat a working document as a deliverable — are visible across the estate and across this whole site network, and the mining run recorded the volume rather than the instances. Building the rows means naming specific practices and where they are written down, and the entry publishes the claim without them rather than inventing paths to point at. Tracked as [R2](../../admin/comms.html#r2)."
+      },
+      "checklist": [
+        "Did the session produce an artefact, or did it produce agreement that will be gone by Friday?",
+        "Is the unresolved part published, or is it waiting until it is presentable?",
+        "Could someone who was not in the room pick this up from what was written down?",
+        "Is this being kept private because it is sensitive, or because it is unfinished?"
+      ],
+      "wider_library": [
+        {
+          "title": "OWASP Summits",
+          "note": "the working-session format this entry is really about",
+          "url": "https://owasp.org/"
+        },
+        {
+          "title": "The OWASP Top Ten",
+          "note": "the artefact everyone knows, and a case study in what happens when a working document becomes a compliance requirement",
+          "url": "https://owasp.org/www-project-top-ten/"
+        },
+        {
+          "title": "David Rice — Geekonomics",
+          "note": "the wider-library item belonging to the nested keynote entry",
+          "url": "https://www.oreilly.com/library/view/geekonomics-the-real/9780321477897/"
+        }
+      ],
+      "nests": [
+        "david-rice-keynote"
+      ],
+      "lineage": [
+        {
+          "to": "diverse-distributed-teams",
+          "label": "the formative case"
+        }
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "flow",
+      "title": "Flow, and coding in the zone",
+      "tier": "traced",
+      "kind": "practice + research",
+      "status": "full",
+      "blurb": "The best demonstration on this site that influences **compose**. Csikszentmihalyi supplies the state, Victor supplies the mechanism that sustains it, and the estate's development methodology is what was built from both.",
+      "anchor": {
+        "title": "Flow: The Psychology of Optimal Experience",
+        "author": "Mihaly Csikszentmihalyi",
+        "year": 1990,
+        "note": "The book is the anchor for the *state*. [Victor's talk](../bret-victor/index.html) is the anchor for the *mechanism*, and has its own entry — this one is where the two meet."
+      },
+      "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+      "founder_words": [
+        {
+          "quote": "In his seminal work, Mihály Csíkszentmihályi identified programming as one of many activities… that can induce flow",
+          "source": "briefs/.../the-joy-of-programming-in-the-age-of-ai-assisted-development.md",
+          "note": "Cited by name, with the flow criteria applied rather than gestured at — which is what moves this from a reference to an influence."
+        },
+        {
+          "quote": "It centers on preserving developer flow state while leveraging LLMs for code generation.",
+          "source": "briefs/.../ifd/v1.2.1__ifd__intro-and-how-to-use.md",
+          "note": "The opening sentence of the estate's development methodology. Not a mention in a rationale section — **the stated core principle**, in the first line."
+        },
+        {
+          "quote": "IFD is about maintaining flow state.",
+          "source": "briefs/.../ifd/v1.2.1__ifd__intro-and-how-to-use.md",
+          "note": "And the closing line of the same guide. A methodology that opens and closes on the same idea is one whose author means it."
+        }
+      ],
+      "resonance": [
+        "The composition is the interesting part. Csikszentmihalyi describes a state and its preconditions but has nothing to say about software; Victor describes a mechanism — immediate connection — without naming the state it protects. Put them together and you get a testable claim: **the reason immediate feedback matters is that it is what keeps the challenge/skill balance visible**, and a delay of thirty seconds is enough to lose it.",
+        "That claim is what the estate's development methodology is built on, and it explains an otherwise odd design decision: the methodology is organised around *not breaking concentration* rather than around correctness or speed. Correctness is checked afterwards; concentration cannot be.",
+        "The third source is the founder's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "SGraph-AI__App__Send/library/guides/development/ifd/v1.2.1__ifd__intro-and-how-to-use.md",
+          "note": "the estate's development methodology — opens on *preserving developer flow state* and closes on the same idea"
+        },
+        {
+          "path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md",
+          "note": "Csikszentmihalyi cited by name with the flow criteria applied; Victor supplied as the mechanism in the same argument"
+        },
+        {
+          "path": "(corpus-wide, ~43 files)",
+          "note": "flow and zone references across guides, briefs and articles"
+        }
+      ],
+      "trace": {
+        "state": "rows",
+        "note": "This is the closest thing on the site to a complete table, and it is worth saying why: the methodology guide states its principle in its own first sentence, so the rows did not have to be inferred from behaviour. Most entries are not this lucky.",
+        "rows": [
+          {
+            "pattern": "Immediate feedback as a precondition of the state",
+            "where": "The estate's development methodology, whose stated core principle is preserving developer flow state",
+            "version": "v1.2.1",
+            "status": "implemented",
+            "source": "`v1.2.1__ifd__intro-and-how-to-use.md`, opening and closing lines"
+          },
+          {
+            "pattern": "Clear goals — the person always knows what they are trying to do next",
+            "where": "The methodology's structure: work proceeds in units small enough to hold in one head",
+            "version": "v1.2.1",
+            "status": "implemented",
+            "source": "the same guide, cited in 02__ §T6"
+          },
+          {
+            "pattern": "Challenge matched to skill",
+            "where": "The division of labour between person and model — generation delegated, judgement retained",
+            "version": "v1.2.1",
+            "status": "partial",
+            "source": "02__ §T6; the guide states the intent, the balance itself is not measured"
+          },
+          {
+            "pattern": "Programming named as a flow-inducing activity, with the criteria applied",
+            "where": "The Joy-of-Programming argument, which cites Csikszentmihalyi directly and works through the criteria",
+            "version": null,
+            "status": "implemented",
+            "source": "`the-joy-of-programming-in-the-age-of-ai-assisted-development.md` (2025-07-04); no version in the corpus scan"
+          },
+          {
+            "pattern": "Measuring whether the state is actually being preserved",
+            "where": "Nowhere. The methodology's central claim about itself is the one thing it does not instrument",
+            "version": "v1.2.1",
+            "status": "absent",
+            "source": "absence of any measurement in the guide or the surrounding corpus"
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "The methodology does not measure its own central claim",
+          "spec": "The development methodology says its purpose is preserving flow state, and nothing anywhere records whether it does. The cheapest honest instrument is not a wellbeing survey: it is interruption count and time-to-first-feedback per session, both of which fall out of tooling that already exists. Publish the numbers whether or not they flatter the method — the sibling sites' own house rule, applied to the one claim this estate makes about how it works."
+        },
+        {
+          "id": "G2",
+          "title": "Challenge/skill balance is asserted, not tuned",
+          "spec": "Csikszentmihalyi's third condition is the one that actually decides whether the state happens, and it is the one the methodology treats as given. A build spec: record, per work unit, whether the person had to think or only had to review, and look at whether the ratio moves. A methodology where every unit is review is not producing flow, it is producing supervision."
+        }
+      ],
+      "checklist": [
+        "How long is it between doing the thing and seeing the result? If it is more than a few seconds, that is the design decision to argue about first.",
+        "Does the person always know what the next step is, or do they have to stop and work it out?",
+        "Is the work hard enough to hold attention and easy enough not to break it?",
+        "How many times will this interrupt them — and is each interruption load-bearing?",
+        "Is concentration being treated as a resource with a cost, or as free?"
+      ],
+      "wider_library": [
+        {
+          "title": "Flow: The Psychology of Optimal Experience (1990)",
+          "note": "the anchor; the chapter on work is the one to read first"
+        },
+        {
+          "title": "Beyond Boredom and Anxiety (1975)",
+          "note": "the earlier, more empirical statement of the same research"
+        },
+        {
+          "title": "Peopleware — DeMarco & Lister",
+          "note": "not in the corpus, and the obvious companion: the same argument about interruption made about offices rather than tools"
+        }
+      ],
+      "composes_with": [
+        "bret-victor",
+        "csikszentmihalyi"
+      ],
+      "nests": [
+        "csikszentmihalyi"
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "open-source",
+      "title": "Open source & its licences",
+      "tier": "traced",
+      "kind": "topic + movement",
+      "status": "link-out",
+      "blurb": "A link-out entry that owns one thing the sibling site does not foreground: open source as **personal formation**. What two decades of releasing tools taught about licences as social contracts rather than legal ones.",
+      "anchor": {
+        "title": "Releasing tools in the open, from the O2 Platform era onward",
+        "note": "A practice rather than a work. The anchor is the habit of publishing, and what it cost and returned."
+      },
+      "principle": "Releasing work is how it compounds — and the licence is the constitution, not the paperwork: it decides who can build on this and what they owe.",
+      "resonance": [
+        "The sibling site carries the history, the licence positions and the argument for publishing. What belongs here instead is the formation: **what releasing changes about how you write**. Code you will publish is code you explain; a tool with users is a tool with a boundary; and a licence choice made twenty years ago still decides who can use the thing today.",
+        "The second strand is the one that connects to the rest of this register. Open source is the demonstration that [OWASP's](../owasp/index.html) compounding-in-the-open claim works outside a conference, that [Raymond's essay](../cathedral-bazaar/index.html) described something real, and that [Torvalds](../torvalds/index.html) built the two pieces of infrastructure the whole habit now rests on."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "open-source.sgit.ai (sibling site + its brief pack)",
+          "note": "an 11,619-word corpus and a 17,909-word history on file — the material this entry deliberately does not repeat"
+        },
+        {
+          "path": "(corpus-wide)",
+          "note": "licence positions and publishing decisions across the estate"
+        }
+      ],
+      "trace": {
+        "state": "sibling",
+        "sibling": "open-source.sgit.ai",
+        "sibling_url": "https://open-source.sgit.ai",
+        "note": "**The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to the founder's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html)."
+      },
+      "checklist": [
+        "If this were public tomorrow, what would have to change first — and is that thing a defect?",
+        "Does the licence say what someone building on this owes, or only what they may not do?",
+        "Is the boundary of this tool something a stranger could find, or only something the author knows?",
+        "Is this being kept private for a reason that would survive being written down?"
+      ],
+      "sibling_site": {
+        "host": "open-source.sgit.ai",
+        "url": "https://open-source.sgit.ai",
+        "owns": "the licences, the packages, the history pack, and the argument for publishing"
+      },
+      "nests": [
+        "cathedral-bazaar",
+        "torvalds"
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "luhmann",
+      "title": "Niklas Luhmann & the Zettelkasten",
+      "tier": "traced",
+      "discovered": true,
+      "kind": "person + method",
+      "status": "full",
+      "blurb": "Never on the founder's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.",
+      "anchor": {
+        "title": "The Zettelkasten, and *Communicating with Slip Boxes* (1981)",
+        "author": "Niklas Luhmann",
+        "url": "https://luhmann.surge.sh/communicating-with-slip-boxes",
+        "note": "The slip-box itself is the anchor; the essay is the closest thing to Luhmann explaining it in his own words."
+      },
+      "principle": "External memory works as a thinking partner when its units are atomic, uniquely addressed, densely linked and allowed to grow structure rather than being filed into one.",
+      "founder_words": [
+        {
+          "quote": "Luhmann's Zettelkasten was a self-organizing knowledge graph on paper… atomic, uniquely identified, densely linked, emergent in structure, scalable and lifelong",
+          "source": "briefs/.../bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md",
+          "note": "Six properties, named in one sentence — which is why this entry can have a principle at all. A discovered influence usually has to be reconstructed; this one was already written down."
+        }
+      ],
+      "resonance": [
+        "The thing that makes this a discovered entry rather than a citation is the **direction** of the article: it is not about Luhmann. It is about the estate's graph model, and it reaches for Luhmann because the six properties turn out to be the specification. That is what an influence looks like in the corpus — an idea used as a tool, not described as a subject.",
+        "The specific resonance is the *emergent structure* property, and it is the one most systems get wrong. A slip-box has no taxonomy. Nothing is filed under anything; a new note attaches to whatever it relates to, and the structure is a consequence of the attaching. That is the same move as [the Semantic Web entry's](../semantic-web/index.html) edge-first inversion, arrived at independently, on index cards, decades earlier.",
+        "And the article reaches further back still: [Vannevar Bush's memex](../vannevar-bush/index.html) enters this register through it — which means the ancestor of the whole external-memory idea got here by being cited in a document about the thing it is the ancestor of. That is a satisfying loop and it is also, honestly, a circular one; [the disclosure page](../../about/participant.html#lose) says so."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md",
+          "note": "a dedicated published article mapping the slip-box to the estate's graph model, property by property — nearly this entry already"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "**The article is the map; the table is the discipline the article does not have.** It establishes that the six properties describe the estate's graph model. What it does not do is say *which feature, at which version* implements *which property* — and the commissioning pack says exactly that: this entry needs the register's trace-table discipline applied to an argument that already exists. That is a straightforward piece of work for anyone with the repositories open, and it is [R1](../../admin/comms.html#r1)."
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "Emergent structure is claimed and not tested",
+          "spec": "The property that distinguishes a slip-box from a filing cabinet is that structure is a consequence rather than a schema. The build spec is a test rather than a feature: take a body of notes, add fifty more without touching any taxonomy, and show whether navigable structure appeared. If a human had to reorganise anything, the property is not implemented, and the entry should say so."
+        },
+        {
+          "id": "G2",
+          "title": "Lifelong is a property no version of this has demonstrated",
+          "spec": "Luhmann's slip-box ran for forty years and its value was mostly in the last ten. Every claim about atomicity and linking is cheap at small scale. A migration path that survives a format change — proven by actually migrating a corpus across one — is the only version of this property that means anything, and nothing in the corpus claims it."
+        }
+      ],
+      "checklist": [
+        "Is this note about **one** thing? If it needs the word *and* in its title, it is two notes.",
+        "Does it have an address that will still resolve when everything around it has changed?",
+        "What did it attach to? A note that links to nothing is a note that will never be found again.",
+        "Was the structure imposed, or did it appear? If someone had to design a taxonomy, this is a filing cabinet.",
+        "Would this still be useful to someone reading it in ten years with no memory of writing it?"
+      ],
+      "wider_library": [
+        {
+          "title": "Communicating with Slip Boxes (1981)",
+          "note": "Luhmann on his own method, in the only piece where he really explains it",
+          "url": "https://luhmann.surge.sh/communicating-with-slip-boxes"
+        },
+        {
+          "title": "The Luhmann Archive",
+          "note": "the actual slip-box, digitised — 90,000 notes, browsable",
+          "url": "https://niklas-luhmann-archiv.de/"
+        },
+        {
+          "title": "Social Systems (1984)",
+          "note": "the theory the slip-box was built to produce, and a fair warning about what emergent structure reads like from outside"
+        }
+      ],
+      "nests": [
+        "vannevar-bush"
+      ],
+      "lineage": [
+        {
+          "to": "graphs",
+          "label": "the same claim, on paper"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "Q2"
+    },
+    {
+      "slug": "ericsson",
+      "title": "Anders Ericsson & deliberate practice",
+      "tier": "traced",
+      "kind": "person + research",
+      "status": "full",
+      "blurb": "The research behind the ten-thousand-hours number, attributed to the person who did it rather than the person who popularised it — a distinction the corpus is careful about, which is itself the tell.",
+      "anchor": {
+        "title": "Peak: Secrets from the New Science of Expertise",
+        "author": "K. Anders Ericsson and Robert Pool",
+        "year": 2016,
+        "note": "The book is the accessible anchor; the 1993 paper *The Role of Deliberate Practice in the Acquisition of Expert Performance* is the primary source and is in Block 7."
+      },
+      "principle": "Expertise comes from structured practice with immediate feedback at the edge of current ability — not from hours, and not from experience.",
+      "principle_note": "The number is the least interesting part and the only part most people repeat. Ericsson's actual finding is about the **structure** of the practice: a specific target, immediate correction, and deliberate work on what you are worst at.",
+      "resonance": [
+        "Two things resonate here, and the second is the one that matters now. The first is the correction itself — that experience and practice are different things, and that twenty years of doing something the same way is not twenty years of practice. Attributing the research to Ericsson rather than to its popular summary is a small act of the same discipline this whole site runs on: **cite the claim's actual source, and the claim gets sharper.**",
+        "The second is what deliberate practice means when a model writes most of the code. If expertise requires working at the edge of your ability with immediate feedback, and generation removes the part where you struggled, then **the practice loop has been cut** — not made faster. That is an uncomfortable implication for an estate built on AI-assisted development, and it belongs on this site rather than being left implicit.",
+        "The overlap with [flow](../flow/index.html) is not accidental: challenge matched to skill is Csikszentmihalyi's third condition and Ericsson's core mechanism, described by two research programmes that were not talking to each other."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(corpus-wide, ~11 files)",
+          "note": "deliberate practice and the ten-thousand-hours research, attributed to Ericsson rather than to the popularisation"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "The mining run found the volume and the attribution discipline; it did not record which documents make which argument. This entry's real trace question is sharper than a path list, and worth naming while the table is empty: **does anything in the estate's methodology preserve a practice loop, or does it only preserve a delivery loop?** [R2](../../admin/comms.html#r2)."
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "Nothing in the methodology is designed to make someone better",
+          "spec": "The estate's development methodology optimises for flow and throughput. Deliberate practice requires the opposite of flow in one specific respect: working at the edge, where you fail. A build spec that would take this influence seriously: a mode in which the model explains rather than generates, deliberately chosen for the parts the person is weakest at. Nothing like it exists, and the entry says so rather than claiming the methodology covers it."
+        }
+      ],
+      "checklist": [
+        "Is this practice, or is it repetition? What is being worked on that was not already easy?",
+        "Where is the immediate correction? Practice without feedback is just time passing.",
+        "Is the difficulty at the edge of ability, or comfortably inside it?",
+        "If a model does the hard part, who is getting better — and does that matter here?"
+      ],
+      "wider_library": [
+        {
+          "title": "The Role of Deliberate Practice in the Acquisition of Expert Performance (1993)",
+          "note": "the primary source, and the paper the ten-thousand-hours number was extracted from",
+          "url": "https://psycnet.apa.org/record/1993-40718-001"
+        },
+        {
+          "title": "Peak (2016)",
+          "note": "Ericsson's own correction of the popularisation, written because the summary would not stop spreading"
+        }
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "popper",
+      "title": "Karl Popper & falsifiability",
+      "tier": "traced",
+      "kind": "person + idea",
+      "status": "full",
+      "blurb": "The shortest entry with the longest reach. Popper may be the influence that explains the *shape* of all the others' entries — including the trace table you are reading them in.",
+      "anchor": {
+        "title": "The Logic of Scientific Discovery",
+        "author": "Karl Popper",
+        "year": 1959,
+        "note": "First published in German as *Logik der Forschung* (1934). The anchor is the demarcation criterion rather than the whole philosophy of science."
+      },
+      "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+      "resonance": [
+        "The reason this entry is short and load-bearing at once: **it is not a topic in the estate, it is the format of the estate's outputs.** A Wardley map is a claim about where a component sits, refutable by pointing at it. A risk in the risks register is a claim with a named acceptor and a named mitigation, refutable by checking whether the mitigation exists. A trace row on this site is a claim that a pattern appears at a path at a version, refutable by opening the file.",
+        "Those three formats were not designed together and they have the same shape. That is either convergence or a single inherited habit, and Popper is the most economical explanation.",
+        "The uncomfortable corollary is the one this site has to live with: **an influence claim is barely falsifiable.** You cannot open a file and check whether a talk caused a design decision. The trace table is the best available substitute — it makes the *consequence* checkable even when the causation is not — and [the disclosure page](../../about/participant.html#lose) states the limit rather than letting the format imply more rigour than it has."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(corpus-wide, ~7 files)",
+          "note": "falsifiability as an explicit standard, most visibly in the maps-as-claims framing and the risks register's discipline"
+        }
+      ],
+      "trace": {
+        "state": "rows",
+        "note": "Three of these rows point at sibling sites rather than at code, because that is honestly where this influence lands: it shaped the **format of the artefacts**, not a feature. The fourth row points at this page, which is either the strongest evidence in the table or the weakest, depending on how generously you read it.",
+        "rows": [
+          {
+            "pattern": "A claim must be refutable to be worth making",
+            "where": "Wardley mapping as practised here — *a map is a claim* about position and movement, refutable by pointing at a misplaced component",
+            "version": null,
+            "status": "implemented",
+            "source": "02__ §T10, citing the wardley-maps pack; no version in the corpus scan"
+          },
+          {
+            "pattern": "State the conditions under which you would be wrong",
+            "where": "The risks register's falsifiable-statement discipline — an accepted risk with a named acceptor and a named mitigation",
+            "version": null,
+            "status": "implemented",
+            "source": "02__ §T10; [risks.sgit.ai](https://risks.sgit.ai)"
+          },
+          {
+            "pattern": "The demarcation applied to inspiration itself",
+            "where": "**This site's trace tables.** An influence entry is written so that it can be checked against the repositories and found wrong",
+            "version": null,
+            "status": "implemented",
+            "source": "the register format, 01__ §2 — the format's own founding move"
+          },
+          {
+            "pattern": "Publishing the refutations, not only the claims",
+            "where": "Partial. The gaps are published as build specs and the absent rows are kept, but no claim on this network has yet been retracted in public",
+            "version": null,
+            "status": "partial",
+            "source": "absence of any retraction across the network's shipped pages"
+          },
+          {
+            "pattern": "A test that could falsify an influence claim itself",
+            "where": "Nowhere, and probably nowhere possible. See the resonance above",
+            "version": null,
+            "status": "absent",
+            "source": "stated as a limit in 01__ and on [the disclosure page](../../about/participant.html#lose)"
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "Nothing on this network has ever been publicly retracted",
+          "spec": "Every site here publishes its gaps and its open questions, which is the cheap half of the discipline. The expensive half is withdrawing a claim that turned out to be wrong, in public, with the date. A build spec: a standing `/shipped/` row type for *this was wrong, here is what replaced it*, used the first time something qualifies. A register that only ever adds is not practising the principle it cites."
+        },
+        {
+          "id": "G2",
+          "title": "The counter-influence entry does not exist",
+          "spec": "The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs the founder rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm."
+        }
+      ],
+      "checklist": [
+        "What would show this to be wrong? If nothing would, say less.",
+        "Is the claim specific enough that someone could go and check it?",
+        "Have the conditions been stated *before* the evidence was gathered, or after?",
+        "When this turns out to be wrong, where does that get recorded?"
+      ],
+      "wider_library": [
+        {
+          "title": "The Logic of Scientific Discovery (1959)",
+          "note": "the anchor; chapter one carries the whole demarcation argument"
+        },
+        {
+          "title": "Conjectures and Refutations (1963)",
+          "note": "the more readable statement, and the one most people should start with"
+        },
+        {
+          "title": "The Open Society and Its Enemies (1945)",
+          "note": "the political half — same method, applied to institutions rather than theories"
+        }
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "torvalds",
+      "title": "Linus Torvalds",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "blurb": "Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument the founder makes about education.",
+      "anchor": {
+        "title": "Git (2005), and Linux (1991)",
+        "author": "Linus Torvalds",
+        "url": "https://git-scm.com/",
+        "note": "Two works, unusually — the entry is about what they have in common rather than about either."
+      },
+      "principle": "Tools that decentralise trust change how people are able to work together — and the change comes from the data model, not from the policy on top of it.",
+      "resonance": [
+        "Git's interesting property is not distribution, it is that **the history is content-addressed and therefore verifiable by anyone holding a copy**. Nobody has to trust the server. That is a data-model decision that produced a social one, and it is the same move this estate makes with encrypted vaults: put the guarantee in the structure, not in the operator's promise.",
+        "The second strand is why this is an influence rather than a dependency. The corpus's education argument uses Git as its central example — not as a tool students should learn, but as evidence that **the way work is recorded determines what can be learned from it**. An influence you reach for when arguing about something else entirely is one that has been absorbed.",
+        "Kept short deliberately. The governance and community half belongs to [the open-source sibling](https://open-source.sgit.ai); this entry owns the data-model claim."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md",
+          "note": "the Git argument at the centre of the education-gaps article"
+        },
+        {
+          "path": "(corpus-wide, ~5 files)",
+          "note": "Git's history and kernel governance across the open-source history material"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "The obvious rows — content-addressed history, distributed by default, verifiable without the server — are claims about the estate's vault layer that this repository holds no evidence for. The pack did not record them and this site will not invent them. The rows exist to be written by someone with the repositories open, which is [R1](../../admin/comms.html#r1)."
+      },
+      "checklist": [
+        "Is the guarantee in the structure, or in someone's promise to behave?",
+        "Could a person holding only their own copy verify that it is the right one?",
+        "If the central server disappeared tomorrow, what would be lost — the coordination, or the work?",
+        "Does the way this is recorded let someone learn from it later, or only let them read the result?"
+      ],
+      "wider_library": [
+        {
+          "title": "Git",
+          "note": "the tool, and its own history — worth reading how fast it was written and why",
+          "url": "https://git-scm.com/"
+        },
+        {
+          "title": "Just for Fun (2001)",
+          "note": "Torvalds's own account, and a useful corrective to the mythology"
+        },
+        {
+          "title": "The 2007 Google Tech Talk on Git",
+          "note": "the design argument in his own words, including the parts that have aged badly",
+          "url": "https://www.youtube.com/watch?v=4XpnKHJAok8"
+        }
+      ],
+      "nests_under": "open-source",
+      "nests_under_note": "the governance and community half lives there; this entry owns the data-model claim",
+      "briefing_status": "none"
+    },
+    {
+      "slug": "schneier",
+      "title": "Bruce Schneier",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "blurb": "Security as a systems and incentives problem before it is a technical one — and, in the corpus, the person who turns up in two arguments that have nothing to do with each other.",
+      "anchor": {
+        "title": "Schneier on Security — the public writing, from *Applied Cryptography* onward",
+        "author": "Bruce Schneier",
+        "url": "https://www.schneier.com/",
+        "note": "A body of work rather than one book. The specific move being credited is the shift from cryptography to security economics."
+      },
+      "principle": "Security failures are usually incentive failures wearing a technical costume — ask who bears the cost of the failure before asking how the failure happens.",
+      "resonance": [
+        "The thing worth naming is the **shift**, not the writing. Schneier started as a cryptographer and ended up arguing that the interesting question was economic: who pays when this breaks, and does that person get to decide anything? That reframing is now so standard in security that it is easy to forget it had to be made.",
+        "In this corpus it shows up in two unrelated places, which is the pattern this register treats as evidence. One is the argument about language-model failure modes — approached as a question about what the system is incentivised to do rather than as a list of attacks. The other is [the Semantic Web entry's](../semantic-web/index.html) Solid brief, where Schneier's involvement at Inrupt is noted as part of the case that personal-data-control architectures are a serious position rather than a hobby.",
+        "Short entry, and it should stay short. This is a *style* of threat modelling rather than a body of implemented patterns."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(corpus-wide, ~4 files)",
+          "note": "the language-model failure-modes argument, and Schneier's Inrupt involvement in the Solid brief"
+        },
+        {
+          "path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md",
+          "note": "Schneier at Inrupt, cited in the vaults-versus-pods comparison"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "A style of thinking leaves fewer fingerprints than a pattern does, and the honest position is that the rows for this entry may never be strong. What could be traced: whether the estate's threat models actually name who bears the cost of each failure, or only what the failure is. That is a checkable question about existing documents and nobody has asked it. [R2](../../admin/comms.html#r2)."
+      },
+      "checklist": [
+        "Who bears the cost when this fails — and do they have any say in how it is built?",
+        "Is the mitigation aligned with someone's incentives, or does it depend on them acting against them?",
+        "Is this a technical problem, or an economic one that has been handed to engineers?",
+        "What is the *system* doing here, as opposed to what the attacker is doing?"
+      ],
+      "wider_library": [
+        {
+          "title": "Schneier on Security (the blog)",
+          "note": "thirty years of the argument being made in public, continuously",
+          "url": "https://www.schneier.com/"
+        },
+        {
+          "title": "Secrets and Lies (2000)",
+          "note": "the book where the shift from cryptography to systems happens in the open"
+        },
+        {
+          "title": "Liars and Outliers (2012)",
+          "note": "the furthest version of the incentives argument — security as a problem of societal trust"
+        },
+        {
+          "title": "Applied Cryptography (1996)",
+          "note": "the earlier work, and useful mostly as the thing the later work moved away from"
+        }
+      ],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "design",
+      "title": "Design, with a capital D",
+      "tier": "traced",
+      "discovered": true,
+      "founder_confirmed": "2026-08-25 — “Design and Steve Jobs approach to Design (with capital D).”",
+      "kind": "discipline + person",
+      "status": "full",
+      "blurb": "Discovered by mining and confirmed by the founder the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.",
+      "anchor": {
+        "title": "“Design is how it works” — the Jobs formulation the estate's Designer role is built on",
+        "author": "Steve Jobs",
+        "note": "**Anchor unconfirmed.** The formulation is from the 2003 *New York Times Magazine* profile linked above; the candidates for what actually did the shaping are that piece, the MP3-to-CD whiteboard story, a keynote, or a specific product. Asked as [Q2b](../../admin/comms.html#q2b).",
+        "url": "https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html"
+      },
+      "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+      "founder_words": [
+        {
+          "quote": "Design is the coherence between the internal structure and the external experience.",
+          "source": "briefs/.../team/roles/designer/ROLE.md",
+          "note": "The estate's own extension of the Jobs formulation, and a sharper one: it says the two halves must agree, which is a testable claim about a codebase rather than a slogan about products."
+        },
+        {
+          "quote": "Good design is invisible… the only way to notice it is to go back to the previous version and think: “This is way worse.”",
+          "source": "briefs/.../v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md",
+          "note": "And this is the sentence that became a test. Read it again with the next block in mind."
+        }
+      ],
+      "resonance": [
+        "The reason this is the strongest-traced entry on the site is not the number of citations. It is that the influence **turned into process**. The brief's section is titled *The Jonathan Ive Principle: Good Design Starts with the User*; the observation is that you notice good design only by reverting and feeling the loss; and the estate turned that observation into the **Jonathan Ive test** — *is it simpler? would reverting feel worse?* — which is a **mandatory validator for every UI change**.",
+        "That is the difference between a quote on a wall and an influence. A gate in a pipeline is checkable, dated, and possible to fail. Most entries in this register aspire to a trace table; this one had its trace table written as a workflow before anyone asked for the register.",
+        "What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why the founder's confirmation came with a question attached rather than closing the entry."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "SGraph-AI__App__Send/team/roles/designer/ROLE.md",
+          "note": "Jobs quoted twice, and extended: *design is the coherence between the internal structure and the external experience*"
+        },
+        {
+          "path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/27/part-2/v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md",
+          "note": "the section *The Jonathan Ive Principle: Good Design Starts with the User*; the MP3-to-CD whiteboard story retold; *good design is invisible*"
+        },
+        {
+          "path": "SGraph-AI__App__Send/team/humans/dinis_cruz/claude-code-web/02/28/v0.7.4__explorer-response__security-and-process-briefs.md",
+          "note": "the **Jonathan Ive test** as a mandatory validator for every UI change — the influence as a pipeline gate"
+        }
+      ],
+      "trace": {
+        "state": "rows",
+        "note": "Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why the founder's confirmation was a formality rather than a discovery.",
+        "rows": [
+          {
+            "pattern": "Design is how it works, not how it looks",
+            "where": "The estate's Designer role definition, which is built on the formulation and extends it to coherence between internal structure and external experience",
+            "version": null,
+            "status": "implemented",
+            "source": "`team/roles/designer/ROLE.md`, cited in 02__ §D2"
+          },
+          {
+            "pattern": "Start from the user's intent and work backwards (the Ive principle)",
+            "where": "The NotebookLM case-study brief, in a section named for the principle, with the MP3-to-CD story as the worked example",
+            "version": "v0.7.4",
+            "status": "implemented",
+            "source": "`v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md`"
+          },
+          {
+            "pattern": "Good design is invisible — you notice it by reverting and feeling the loss",
+            "where": "**The Jonathan Ive test**: *is it simpler? would reverting feel worse?* — a mandatory validator for every UI change",
+            "version": "v0.7.4",
+            "status": "implemented",
+            "source": "`v0.7.4__explorer-response__security-and-process-briefs.md`"
+          },
+          {
+            "pattern": "Simplicity as subtraction — the feature removed rather than the feature added",
+            "where": "Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change",
+            "version": "v0.7.4",
+            "status": "partial",
+            "source": "the same brief; the test states the criterion, nothing records the outcome"
+          },
+          {
+            "pattern": "The same discipline applied to non-visual surfaces — an API, a CLI, a file format",
+            "where": "Nowhere. The validator is scoped to UI changes, and the estate's public surface is mostly not UI",
+            "version": "v0.7.4",
+            "status": "absent",
+            "source": "the validator's own stated scope"
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "The Ive test is scoped to UI, and this estate is mostly not UI",
+          "spec": "The mandatory validator applies to UI changes. Most of what a person or an agent actually touches here is an API, a CLI, a file format or a document layout — surfaces where *is it simpler? would reverting feel worse?* applies word for word and is not asked. The build spec is a one-line scope change plus the harder part: deciding what *reverting feels worse* means for a function signature, and writing that down before the first argument about it."
+        },
+        {
+          "id": "G2",
+          "title": "Nothing records what a change removed",
+          "spec": "*Is it simpler* is asked and the answer is not kept. A change log that records only additions cannot show a trend, and simplicity is only visible as one. The spec: capture the subtraction alongside the addition in whatever records a change, and publish the ratio. It will be unflattering, which is the point — the sibling sites' house rule is that the bad numbers get published too."
+        }
+      ],
+      "checklist": [
+        "**Is it simpler than what it replaces?** Not smaller — simpler.",
+        "**Would going back to the previous version feel worse?** If not, this change is decoration.",
+        "What did this remove? If the answer is nothing, look again.",
+        "Does the internal structure agree with the external experience, or is the surface hiding the shape?",
+        "Start from what the person is trying to do: does this design fall out of that, or was it designed first and justified after?"
+      ],
+      "wider_library": [
+        {
+          "title": "The 1996 Wired interview",
+          "note": "a different and broader Jobs formulation — design as the fundamental soul of a made thing — and useful beside the anchor rather than instead of it",
+          "url": "https://www.wired.com/1996/02/jobs-2/"
+        },
+        {
+          "title": "Objectified (2009)",
+          "note": "Ive and Rams in the same documentary — the clearest available statement of the lineage this entry nests"
+        },
+        {
+          "title": "Insanely Simple — Ken Segall",
+          "note": "the simplicity-as-subtraction argument, from someone who was in the room"
+        }
+      ],
+      "nests": [
+        "design-canon"
+      ],
+      "briefing_status": "confirmed; anchor and personal history requested",
+      "comms": "Q2b"
+    },
+    {
+      "slug": "design-canon",
+      "title": "The wider design canon",
+      "tier": "traced",
+      "discovered": true,
+      "kind": "canon",
+      "status": "full",
+      "blurb": "Rams, Vignelli, Norman, Eames, Müller-Brockmann, Tschichold, Aalto, Cooper, Krug, and Japanese design philosophy — mapped onto software explicitly in a live role definition, not cited as decoration.",
+      "anchor": {
+        "title": "The industrial, graphic and interaction design tradition, as mapped onto software in the estate's Designer role",
+        "note": "A canon rather than a work. The anchor is the mapping itself — the moment the tradition was written down as engineering guidance rather than as taste."
+      },
+      "principle": "Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.",
+      "resonance": [
+        "What makes this an entry rather than a bibliography is the direction the mapping runs. The role definition does not say *good designers admire Rams*; it takes **less, but better** and treats it as a working principle for an API surface. That is the tradition being used as a tool, which is the test this register applies throughout.",
+        "The most transferable pieces: Rams on subtraction; Norman on affordance — a thing should tell you what it does by its shape, which is a claim about function signatures as much as door handles; Krug on not making the reader think, which is a claim about documentation; Müller-Brockmann on the grid, which is a claim about consistent structure making irregularity visible.",
+        "Nested under [Design](../design/index.html) because it is the same influence at a different resolution: that entry has the principle and the pipeline gate, this one has the vocabulary."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "SGraph-AI__App__Send/team/roles/designer/ROLE.md",
+          "note": "industrial, graphic and interaction design mapped to software explicitly — the canon named and put to work in a live role definition"
+        }
+      ],
+      "trace": {
+        "state": "rows",
+        "note": "Two rows, both from one document, and that is the honest extent of it. A canon leaves a thinner trace than a single work does, because it supplies vocabulary rather than patterns.",
+        "rows": [
+          {
+            "pattern": "*Less, but better* (Rams) as a working principle rather than an aesthetic",
+            "where": "The Designer role definition, applied to API surface rather than to visual design",
+            "version": null,
+            "status": "implemented",
+            "source": "`team/roles/designer/ROLE.md`, cited in 02__ §D2"
+          },
+          {
+            "pattern": "Code as inhabited space — is it navigable, is it comfortable",
+            "where": "The same role definition's criteria for reviewing structure",
+            "version": null,
+            "status": "implemented",
+            "source": "`team/roles/designer/ROLE.md`; shared with [Christopher Alexander](../christopher-alexander/index.html)"
+          },
+          {
+            "pattern": "Affordance (Norman) applied to non-visual surfaces — a signature that tells you what it does",
+            "where": "Not written down anywhere as a review criterion, though the estate's naming conventions arguably practise it",
+            "version": null,
+            "status": "absent",
+            "source": "absence in the role definition and the surrounding corpus"
+          }
+        ]
+      },
+      "checklist": [
+        "Has every element here earned its place, or is some of it present because it was already there?",
+        "Does the shape of this tell you what it does, before any documentation does?",
+        "Is there a grid — a consistent structure — such that the irregular thing stands out?",
+        "Is the reader being asked to think about something that is not the problem?"
+      ],
+      "wider_library": [
+        {
+          "title": "Dieter Rams — Ten Principles for Good Design",
+          "note": "the shortest useful design document ever written; all ten transfer to software",
+          "url": "https://www.vitsoe.com/gb/about/good-design"
+        },
+        {
+          "title": "Massimo Vignelli — The Vignelli Canon",
+          "note": "published free by its author; the discipline of constraint, stated as rules",
+          "url": "https://www.rit.edu/vignellicenter/"
+        },
+        {
+          "title": "Don Norman — The Design of Everyday Things",
+          "note": "affordance and signifiers; the one book on this list an engineer should read first"
+        },
+        {
+          "title": "Steve Krug — Don't Make Me Think",
+          "note": "about web usability, and really about documentation"
+        },
+        {
+          "title": "Josef Müller-Brockmann — Grid Systems in Graphic Design",
+          "note": "why a consistent structure is what makes an exception readable"
+        },
+        {
+          "title": "Jan Tschichold — The New Typography",
+          "note": "and his later repudiation of it, which is the more useful half"
+        },
+        {
+          "title": "Alan Cooper — About Face",
+          "note": "interaction design as a discipline separate from engineering"
+        },
+        {
+          "title": "Charles & Ray Eames, Alvar Aalto",
+          "note": "the material half of the tradition — constraint as a source of form rather than a limit on it"
+        }
+      ],
+      "nests_under": "design",
+      "nests_under_note": "that entry has the principle and the pipeline gate; this one has the vocabulary",
+      "briefing_status": "confirmed via the Design entry"
+    },
+    {
+      "slug": "csikszentmihalyi",
+      "title": "Mihály Csíkszentmihályi",
+      "tier": "traced",
+      "discovered": true,
+      "kind": "person + research",
+      "status": "full",
+      "blurb": "Named directly in the corpus with his flow criteria applied, which is why he gets a row of his own rather than a mention inside the flow entry. The state has a specification; the specification is what makes it engineerable.",
+      "anchor": {
+        "title": "Flow: The Psychology of Optimal Experience",
+        "author": "Mihaly Csikszentmihalyi",
+        "year": 1990,
+        "note": "Shared with [the flow entry](../flow/index.html), deliberately. That entry is about the methodology built from the research; this one is about the research."
+      },
+      "principle": "Optimal experience has measurable preconditions, which means environments can be engineered for it rather than hoped for.",
+      "resonance": [
+        "The move that matters is the one people skip: Csikszentmihalyi did not describe a mood, he **specified a state** — clear goals, immediate feedback, challenge matched to skill, merging of action and awareness, loss of self-consciousness, altered sense of time. A list of preconditions is a thing you can design against. A vibe is not.",
+        "That is why he is here as a separate entry from the methodology built on him. The methodology is a claim about what to do; the research is the claim that **the thing being protected is real and has criteria**, and the second claim is what makes the first one more than a preference.",
+        "He also, usefully, named programming as one of the activities that induces the state — which the corpus cites directly rather than assuming."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md",
+          "note": "cited by name with the flow criteria applied, and programming named as a flow-inducing activity"
+        }
+      ],
+      "trace": {
+        "state": "pending",
+        "note": "**The trace of this influence is [the flow entry's table](../flow/trace/index.html)**, and duplicating it here would be the same mistake the deconfliction rule prevents between sites. This entry owns the research; that one owns the methodology and the rows."
+      },
+      "checklist": [
+        "Are all three preconditions present — clear goal, immediate feedback, challenge matched to skill — or only the ones that were easy to build?",
+        "Is the state being designed for, or hoped for?",
+        "Which of the six criteria could actually be observed here, and is anyone observing them?"
+      ],
+      "wider_library": [
+        {
+          "title": "Flow: The Psychology of Optimal Experience (1990)",
+          "note": "the anchor. Chapter three is where the criteria are set out"
+        },
+        {
+          "title": "Beyond Boredom and Anxiety (1975)",
+          "note": "the earlier empirical work, with the experience-sampling method that produced the data"
+        },
+        {
+          "title": "Creativity (1996)",
+          "note": "the same method applied to people doing original work over decades"
+        }
+      ],
+      "nests_under": "flow",
+      "nests_under_note": "that entry carries the trace table for both",
+      "briefing_status": "none"
+    },
+    {
+      "slug": "neil-peart",
+      "title": "Neil Peart & Rush",
+      "tier": "stated",
+      "kind": "person + music",
+      "status": "stub",
+      "blurb": "On the founder's own list, and with **zero corpus evidence**. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.",
+      "anchor": {
+        "title": "Rush — drums and lyrics, 1974–2015",
+        "author": "Neil Peart",
+        "note": "**Anchor not yet chosen.** Which record, which period, which lyric — that is the founder's to say, and it is [N1](../../admin/comms.html#n1) in the briefing queue."
+      },
+      "principle": "*(hypothesis, not a finding)* Technical mastery in service of meaning — the craftsman-lyricist: virtuosity that exists to say something rather than to be noticed.",
+      "principle_note": "This principle is a **hypothesis constructed from public knowledge about Peart**, not from anything the founder has written. It is published so that the briefing document can correct it, which is more useful than an empty box — but it should not be quoted as this site's claim until it has been.",
+      "resonance": [
+        "There is nothing to put here yet, and inventing it would be the exact failure the tier system exists to prevent. What can be said is why the entry is worth waiting for: an influence from outside software, on a person whose work is entirely inside it, is the kind that shapes taste rather than technique — and taste is the part of an estate that a trace table struggles to reach."
+      ],
+      "corpus_evidence": [],
+      "stub_note": "The founder named this influence and the corpus scan found nothing. That is the definition of the STATED tier, and it is not a defect in the mining: two decades of earlier writing were out of reach, and some of this may never have been written down at all. The entry stays here, visible, with the question attached.",
+      "research_plan": "The founder's own briefing document is the only real source, and it is [N1](../../admin/comms.html#n1). Alongside it: his talks and bios for drumming and music references, and the earlier blog material that was not reachable when the pack was mined ([R3](../../admin/comms.html#r3)). **A boundary that applies to this entry more than any other on the site**: lyrics are the sharpest edge in the whole no-verbatim rule — publishers enforce aggressively even over a single verse — so this entry will describe and link, and quote at most a fragment under analysis. [The release gate enforces the cap](../../admin/index.html#no-verbatim).",
+      "wider_library": [
+        {
+          "title": "Rush — the discography",
+          "note": "listed, linked and not rehosted; the anchor record is still to be chosen",
+          "url": "https://www.rush.com/"
+        },
+        {
+          "title": "Neil Peart — Ghost Rider (2002)",
+          "note": "his own prose. If the craftsman-lyricist hypothesis holds, this is where it would be visible in his own voice"
+        },
+        {
+          "title": "Neil Peart — The Masked Rider (1996)",
+          "note": "the earlier travel writing"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "N1"
+    },
+    {
+      "slug": "kevin-kelly",
+      "title": "Kevin Kelly's books",
+      "tier": "stated",
+      "kind": "books",
+      "status": "stub",
+      "blurb": "On the founder's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.",
+      "anchor": {
+        "title": "*What Technology Wants* (2010), *The Inevitable* (2016), or *1,000 True Fans* (2008)",
+        "author": "Kevin Kelly",
+        "note": "**Three candidates, none confirmed.** They are quite different books and the entry reads differently depending which one did the shaping — [N2](../../admin/comms.html#n2)."
+      },
+      "principle": "*(hypothesis)* Technology is an evolutionary system with its own tendencies — some directions are pushed on us by what has already been built, rather than chosen.",
+      "principle_note": "Stated as a hypothesis because the source is Kelly's public argument, not the founder's account of what he took from it.",
+      "resonance": [
+        "One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If the founder read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html)."
+      ],
+      "corpus_evidence": [],
+      "stub_note": "Named by the founder, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.",
+      "research_plan": "Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check the founder's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).",
+      "wider_library": [
+        {
+          "title": "What Technology Wants (2010)",
+          "note": "the technium argument in full"
+        },
+        {
+          "title": "The Inevitable (2016)",
+          "note": "twelve forces, framed as things already in motion"
+        },
+        {
+          "title": "1,000 True Fans (2008)",
+          "note": "the essay, published free — a different argument entirely, about who has to like your work",
+          "url": "https://kk.org/thetechnium/1000-true-fans/"
+        },
+        {
+          "title": "Out of Control (1994)",
+          "note": "the earliest and strangest of them; decentralised systems before it was a genre"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "N2"
+    },
+    {
+      "slug": "sinek-golden-circle",
+      "title": "Simon Sinek — the golden circle",
+      "tier": "stated",
+      "kind": "framework",
+      "status": "stub",
+      "blurb": "Why → How → What. On the founder's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.",
+      "anchor": {
+        "title": "*Start With Why* — the book (2009) or the TED talk (2009)",
+        "author": "Simon Sinek",
+        "url": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action",
+        "note": "**Anchor not confirmed** — the talk and the book land differently, and which one did the work matters. [N3](../../admin/comms.html#n3)."
+      },
+      "principle": "Purpose before mechanism: say why this exists before saying what it does, because the why is what people can act on.",
+      "resonance": [
+        "The circumstantial evidence: **this site network is organised why-first.** Every site opens on the argument for its own existence before describing what it contains, and every commissioning brief in the network states a thesis before a scope. That is either the golden circle applied, or it is a house style that arrived some other way and now looks like it.",
+        "Only the founder can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**"
+      ],
+      "corpus_evidence": [],
+      "stub_note": "Named by the founder; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.",
+      "research_plan": "Confirm the anchor in [N3](../../admin/comms.html#n3). Then check the founder's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).",
+      "wider_library": [
+        {
+          "title": "How great leaders inspire action (TED, 2009)",
+          "note": "the talk; eighteen minutes and the whole idea",
+          "url": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
+        },
+        {
+          "title": "Start With Why (2009)",
+          "note": "the book-length version"
+        },
+        {
+          "title": "The Infinite Game (2019)",
+          "note": "the later argument, and closer to what a long-lived open-source project actually faces"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "N3"
+    },
+    {
+      "slug": "cathedral-bazaar",
+      "title": "The Cathedral and the Bazaar",
+      "tier": "stated",
+      "kind": "work",
+      "status": "stub",
+      "blurb": "The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to the founder* — which is exactly the part that is not written down anywhere.",
+      "anchor": {
+        "title": "The Cathedral and the Bazaar",
+        "author": "Eric S. Raymond",
+        "year": 1997,
+        "url": "http://www.catb.org/~esr/writings/cathedral-bazaar/",
+        "note": "Published free by its author and still online at its original address, which is itself part of the argument."
+      },
+      "principle": "Release early, release often, and let the people using the thing find what is wrong with it — openness as a development method rather than a licensing choice.",
+      "resonance": [
+        "The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is the founder's to write."
+      ],
+      "corpus_evidence": [],
+      "stub_note": "Named by the founder. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.",
+      "research_plan": "The founder's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).",
+      "wider_library": [
+        {
+          "title": "The Cathedral and the Bazaar (1997)",
+          "note": "the essay, free at its original address",
+          "url": "http://www.catb.org/~esr/writings/cathedral-bazaar/"
+        },
+        {
+          "title": "Homesteading the Noosphere (1998)",
+          "note": "the follow-up on ownership and reputation in open-source projects",
+          "url": "http://www.catb.org/~esr/writings/homesteading/"
+        },
+        {
+          "title": "Two Bits — Christopher Kelty (2008)",
+          "note": "not by Raymond, and the best critical account of what the essay got right and wrong",
+          "url": "https://twobits.net/"
+        }
+      ],
+      "nests_under": "open-source",
+      "nests_under_note": "the essay's history and its effect on the movement live there; this entry owns the personal effect only",
+      "briefing_status": "requested",
+      "comms": "N4"
+    },
+    {
+      "slug": "david-rice-keynote",
+      "title": "David Rice — “Upon the Threshold of Opportunity”",
+      "tier": "stated",
+      "kind": "presentation",
+      "status": "stub",
+      "blurb": "An OWASP keynote, named by the founder from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.",
+      "anchor": {
+        "title": "Upon the Threshold of Opportunity — an OWASP AppSec keynote",
+        "author": "David Rice",
+        "note": "**Year and recording unconfirmed.** Locating the canonical recording is part of the research plan rather than a detail — [N5](../../admin/comms.html#n5)."
+      },
+      "principle": "*(hypothesis)* Security is an economic and societal opportunity rather than a fear industry — the argument of *Geekonomics*, made to a room of practitioners.",
+      "principle_note": "Constructed from Rice's published book rather than from the keynote, because the keynote has not been located. It is a placeholder for the real principle, not the real principle.",
+      "resonance": [
+        "A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only the founder holds.",
+        "Nests under [OWASP](../owasp/index.html), where the community-as-influence claim lives."
+      ],
+      "corpus_evidence": [],
+      "stub_note": "Named by the founder; no corpus trace, and no located recording. Both halves of the entry are open.",
+      "research_plan": "Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one the founder means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: the founder's contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).",
+      "wider_library": [
+        {
+          "title": "Geekonomics: The Real Cost of Insecure Software (2007)",
+          "note": "Rice's book, and the fullest version of the argument the keynote presumably made",
+          "url": "https://www.oreilly.com/library/view/geekonomics-the-real/9780321477897/"
+        },
+        {
+          "title": "OWASP AppSec conference archives",
+          "note": "where the recording should be, and where the search starts",
+          "url": "https://owasp.org/"
+        }
+      ],
+      "nests_under": "owasp",
+      "nests_under_note": "the community-as-influence claim lives there; this entry is one talk inside it",
+      "briefing_status": "requested",
+      "comms": "N5"
+    },
+    {
+      "slug": "music-and-band",
+      "title": "Music, and playing in a band",
+      "tier": "stated",
+      "kind": "practice + era",
+      "status": "stub",
+      "blurb": "The most personal entry on the site, entirely awaiting the founder's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.",
+      "anchor": {
+        "title": "Playing in a band — a personal era",
+        "note": "Not a work, and not a public event. There is nothing to link, which makes this the only entry on the site with no anchor URL at all."
+      },
+      "principle": "*(hypothesis)* Playing together in real time is the original experience of collaborative flow — several people, immediate feedback, no possibility of stopping to plan.",
+      "principle_note": "This is the site's most consequential unverified claim and it is flagged as such everywhere it appears. If the founder confirms it, it becomes the root of a lineage. If he does not, it is a neat story invented by a machine, and the register will say so.",
+      "resonance": [
+        "The hypothesis is worth stating precisely because of what depends on it. [The flow entry](../flow/index.html) is one of the best-traced things in this register: Csikszentmihalyi's state, Victor's mechanism, and a development methodology whose stated core principle is preserving flow. **If band-playing is where the founder first experienced that state, then the most-instrumented influence on this site has an origin that is not written down anywhere.**",
+        "It also has a specific property none of the software influences do: a band is *collaborative* flow. The methodology tries to recreate a state between a person and a machine. The original may have been a state between people — and that difference, if real, is a design constraint nobody has written down."
+      ],
+      "corpus_evidence": [],
+      "stub_note": "Entirely unresearchable by anyone except the founder. There is no public record, no publication to mine and no third party to ask. This entry is a placeholder for something only he can write, and it is published so that its absence is visible rather than tidy.",
+      "research_plan": "There is no research plan, and pretending otherwise would be dishonest. The entry needs [N6](../../admin/comms.html#n6) and nothing else. The specific questions worth answering: what the band was and when; whether the flow hypothesis above is right or a machine's tidy story; and whether the collaborative aspect is the part that carried over.",
+      "lineage": [
+        {
+          "to": "flow",
+          "label": "hypothesised origin"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "N6"
+    },
+    {
+      "slug": "diverse-distributed-teams",
+      "title": "Diverse and distributed teams",
+      "tier": "stated",
+      "kind": "practice",
+      "status": "stub",
+      "blurb": "On the founder's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.",
+      "anchor": {
+        "title": "Working in diverse and distributed teams — a practice",
+        "note": "No single work. The likeliest formative instance is OWASP's global chapter model, which has [its own entry](../owasp/index.html) — the briefing needs to say whether that is the origin or a later example."
+      },
+      "principle": "*(hypothesis)* Distribution forces thinking to become explicit, written and asynchronous — and cognitive diversity is what stops a team agreeing quickly on the wrong thing.",
+      "principle_note": "Two claims bundled into one principle, which is usually a sign the entry has not been thought through yet. The briefing should separate them: distribution and diversity are different mechanisms with different failure modes.",
+      "resonance": [
+        "The circumstantial case is strong enough to be worth stating and weak enough that it must not be presented as evidence. This estate's practices are unusually written-down: role definitions as documents, briefs as first-class artefacts, decisions recorded rather than remembered. **That is what a distributed habit looks like when it has been fully internalised** — but a habit that thorough could equally come from working with agents, who have no other way to receive context.",
+        "Which of those came first is the question, and it is the founder's. [OWASP's global chapters](../owasp/index.html) predate everything else here by two decades, which makes them the best candidate for the origin."
+      ],
+      "corpus_evidence": [],
+      "stub_note": "Named by the founder, with no direct corpus citation. The estate is full of *consequences* that would be consistent with this influence, which is not the same thing as evidence for it — and the difference is what the tier means.",
+      "research_plan": "[N7](../../admin/comms.html#n7). Three places to look, in order of likely yield: the founder's management writing; the estate's own team-roles system, which reads like a formalisation of something learned earlier; and OWASP's global-chapter model as the formative experience. The question the briefing must answer: **which of these is the origin and which are consequences.**",
+      "wider_library": [
+        {
+          "title": "Team Topologies — Skelton & Pais",
+          "note": "the nearest published framework, and itself a discovered entry in this register"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "N7"
+    },
+    {
+      "slug": "christopher-alexander",
+      "title": "Christopher Alexander",
+      "tier": "discovered",
+      "kind": "person",
+      "status": "full",
+      "blurb": "Never named by the founder. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.",
+      "anchor": {
+        "title": "A Pattern Language",
+        "author": "Christopher Alexander, Sara Ishikawa and Murray Silverstein",
+        "year": 1977,
+        "note": "The book everyone in software cites. *The Timeless Way of Building* is the argument behind it and is in Block 7."
+      },
+      "principle": "Code is a space that people inhabit. A pattern is a named solution to a recurring problem in a context — and a language of patterns is what lets a place be built by many hands and still be coherent.",
+      "founder_words": [
+        {
+          "quote": "Christopher Alexander's pattern language is the direct ancestor of software design patterns. The Designer should think of code as a space that developers inhabit: is it navigable? Is it comfortable?",
+          "source": "briefs/.../team/roles/designer/ROLE.md",
+          "note": "Not a nod in a bibliography — a **criterion in a live role definition**, telling a reviewer what to look at. That is what moved this from a citation to a discovered influence."
+        }
+      ],
+      "resonance": [
+        "The move worth noticing is that the role definition does not use Alexander the way software usually does. The Gang of Four took the *pattern* idea and left the rest; this citation takes the part the Gang of Four dropped — **that a building is judged by what it is like to be in it** — and applies it to a codebase. *Is it navigable? Is it comfortable?* are not questions about correctness. They are questions about habitation.",
+        "That reading is closer to what Alexander actually argued, and to his later disappointment with what software did with his work. It is also, honestly, the reading that is hardest to check: comfort is not a property a test can assert.",
+        "**This entry is DISCOVERED and stays that way until the founder confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2)."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "SGraph-AI__App__Send/team/roles/designer/ROLE.md",
+          "note": "the pattern-language lineage stated, and code-as-inhabited-space set as a review criterion"
+        }
+      ],
+      "trace": {
+        "state": "rows",
+        "note": "One implemented row and two absent ones, which is the honest shape of a discovered entry: the citation is real, and almost none of what the anchor work actually asks for has been built.",
+        "rows": [
+          {
+            "pattern": "Code as a space developers inhabit — judge it by navigability and comfort",
+            "where": "The Designer role definition's review criteria",
+            "version": null,
+            "status": "implemented",
+            "source": "`team/roles/designer/ROLE.md`, quoted in 02__ §D1"
+          },
+          {
+            "pattern": "A *language* of patterns — named solutions that compose, each referring to the ones above and below it",
+            "where": "Nowhere. The estate has conventions and a house style; it has no pattern language, and the two are not the same thing",
+            "version": null,
+            "status": "absent",
+            "source": "absence across the corpus; the role definition names the lineage without building one"
+          },
+          {
+            "pattern": "Patterns discovered from use rather than designed in advance",
+            "where": "Nowhere recorded. The estate's conventions were derived by counting the code on [the coding sibling](https://coding.sgit.ai), which is the same method — but it was not done in Alexander's name and the connection is this site's inference",
+            "version": null,
+            "status": "absent",
+            "source": "this site's own reading; flagged as inference rather than evidence"
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "id": "G1",
+          "title": "There is no pattern language, only patterns",
+          "spec": "Alexander's actual contribution is the *language*: each pattern names the larger patterns it completes and the smaller ones that complete it, so that a builder can move between scales. The estate's conventions are a flat list. The build spec is not to write more conventions but to link the existing ones into a structure — each convention naming what it serves and what serves it. The material already exists on [coding.sgit.ai](https://coding.sgit.ai); the edges do not."
+        },
+        {
+          "id": "G2",
+          "title": "Nobody has asked whether the code is comfortable",
+          "spec": "The role definition sets *is it navigable? is it comfortable?* as review criteria and nothing collects an answer. The cheap version is not a survey: time-to-locate for a symbol a newcomer has never seen, measured once. It would produce an uncomfortable number and it would be the first evidence either way."
+        }
+      ],
+      "checklist": [
+        "Is this a space someone can find their way around, or one they need a guide for?",
+        "Does this pattern name what it completes, and what completes it — or is it a loose item on a list?",
+        "Was this pattern found in use, or invented at a whiteboard?",
+        "What is it *like* to be in this part of the codebase? If nobody has asked, that is the finding."
+      ],
+      "wider_library": [
+        {
+          "title": "A Pattern Language (1977)",
+          "note": "the anchor; 253 patterns, and the structure between them is the point"
+        },
+        {
+          "title": "The Timeless Way of Building (1979)",
+          "note": "the argument the patterns were derived from, and the better book"
+        },
+        {
+          "title": "Notes on the Synthesis of Form (1964)",
+          "note": "the early, formal work — and the one Alexander later partly repudiated"
+        },
+        {
+          "title": "Patterns of Software — Richard Gabriel (1996)",
+          "note": "the most serious attempt to say what software actually took from Alexander, and what it dropped",
+          "url": "https://www.dreamsongs.com/Files/PatternsOfSoftware.pdf"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "Q2"
+    },
+    {
+      "slug": "team-topologies-cynefin",
+      "title": "Team Topologies & Cynefin",
+      "tier": "discovered",
+      "kind": "frameworks",
+      "status": "stub",
+      "blurb": "Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and not enough to claim — so this is a discovered stub, published at the strength of its evidence.",
+      "anchor": {
+        "title": "Team Topologies (Skelton & Pais, 2019) and the Cynefin framework (Snowden, 1999)",
+        "note": "Two frameworks, bundled because the corpus bundles them. If the founder confirms, they should probably be separated — they answer different questions.",
+        "url": "https://teamtopologies.com/"
+      },
+      "principle": "Organisational structure and problem-domain sensemaking are engineering concerns: the shape of the team decides the shape of the system, and the kind of problem decides which practice is appropriate.",
+      "resonance": [
+        "The honest statement of the evidence: a hiring post from 2019 lists these beside [Wardley](../wardley/index.html), and Wardley turned out to be one of the deepest-traced influences in the register. **Proximity in a list is not evidence of equal weight**, and this entry is a stub because the site declines to infer one from the other.",
+        "What makes it worth publishing anyway: naming Cynefin means having a position on when a practice is appropriate rather than universally good, and that position — different problems need different methods — is visible in how the estate handles its own uncertainty. Consistent with the influence, and consistent with several other things too."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "(a 2019 hiring post)",
+          "note": "both frameworks listed beside Wardley mapping; the only occurrence the mining run found"
+        }
+      ],
+      "stub_note": "Found by mining and never claimed by the founder, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.",
+      "research_plan": "[Q2](../../admin/comms.html#q2) first: does this belong at all, or is it a citation rather than an influence? If confirmed, separate the two frameworks and look for Team Topologies vocabulary — stream-aligned, platform, enabling, complicated-subsystem — in the estate's team-roles system, and for Cynefin's domains in how work is triaged.",
+      "wider_library": [
+        {
+          "title": "Team Topologies — Skelton & Pais (2019)",
+          "note": "four team types and three interaction modes",
+          "url": "https://teamtopologies.com/"
+        },
+        {
+          "title": "Cynefin — Dave Snowden",
+          "note": "the sensemaking framework; the clear/complicated/complex/chaotic distinction is the transferable part",
+          "url": "https://thecynefin.co/"
+        },
+        {
+          "title": "A Leader's Framework for Decision Making (HBR, 2007)",
+          "note": "Snowden and Boone's most-read statement of it",
+          "url": "https://hbr.org/2007/11/a-leaders-framework-for-decision-making"
+        }
+      ],
+      "briefing_status": "requested",
+      "comms": "Q2"
+    },
+    {
+      "slug": "vannevar-bush",
+      "title": "Vannevar Bush & the memex",
+      "tier": "discovered",
+      "kind": "person + work",
+      "status": "stub",
+      "blurb": "The ancestor of the whole external-memory idea, and it entered this register the long way round — by being cited in an article about a modern implementation of the thing it predicted.",
+      "anchor": {
+        "title": "As We May Think",
+        "author": "Vannevar Bush",
+        "venue": "The Atlantic",
+        "year": 1945,
+        "url": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/"
+      },
+      "principle": "The mind works by association, and an external memory should too — trails between documents, made by a person and followable by anyone afterwards.",
+      "resonance": [
+        "Bush's specific idea was not storage. It was the **trail**: a named path through documents that one person builds and another can follow, which is a claim about *edges being authored* rather than derived. Eighty years on, that is still not what most systems do.",
+        "The loop is worth naming out loud, and so is its weakness. This site network's own thesis is external memory for agents; [Luhmann](../luhmann/index.html) is the paper version arrived at independently; [the Semantic Web](../semantic-web/index.html) is the standards-body version. Bush is upstream of all of it — and the evidence that he shaped *this* work is one citation inside an article about something else. **A satisfying lineage is not the same as a documented one**, which is why this is a stub and not a full entry."
+      ],
+      "corpus_evidence": [
+        {
+          "path": "docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md",
+          "note": "the memex reached via the Luhmann article — the only occurrence the mining run found"
+        }
+      ],
+      "stub_note": "Discovered by mining, one citation deep, and reached through another entry rather than on its own. Published at the strength of its evidence and awaiting [Q2](../../admin/comms.html#q2): does the memex belong in this register, or is it a reference the Luhmann article picked up in passing?",
+      "research_plan": "[Q2](../../admin/comms.html#q2) first. If confirmed, the specific thing to trace is the **trail** rather than the memex in general: does anything in the estate let a person author a path through material and hand it to someone else, or are all its edges derived? That is a checkable question with a yes-or-no answer, and it would settle whether this influence is real or decorative.",
+      "wider_library": [
+        {
+          "title": "As We May Think (1945)",
+          "note": "the anchor, free at The Atlantic; the trails section is the part that matters",
+          "url": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/"
+        },
+        {
+          "title": "Doug Engelbart — Augmenting Human Intellect (1962)",
+          "note": "the report that took Bush seriously and built toward it",
+          "url": "https://www.dougengelbart.org/content/view/138"
+        },
+        {
+          "title": "Ted Nelson — Literary Machines (1981)",
+          "note": "the maximalist descendant; transclusion is the idea the web dropped"
+        }
+      ],
+      "nests_under": "luhmann",
+      "nests_under_note": "the memex entered this register through that entry's article",
+      "briefing_status": "requested",
+      "comms": "Q2"
+    }
+  ]
+}

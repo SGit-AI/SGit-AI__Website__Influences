@@ -1,0 +1,50 @@
+{
+  "slug": "design",
+  "title": "Design, with a capital D",
+  "tier": "traced",
+  "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+  "anchor": {
+    "title": "“Design is how it works” — the Jobs formulation the estate's Designer role is built on",
+    "author": "Steve Jobs",
+    "note": "**Anchor unconfirmed.** The formulation is from the 2003 *New York Times Magazine* profile linked above; the candidates for what actually did the shaping are that piece, the MP3-to-CD whiteboard story, a keynote, or a specific product. Asked as [Q2b](../../admin/comms.html#q2b).",
+    "url": "https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html"
+  },
+  "rows": [
+    {
+      "pattern": "Design is how it works, not how it looks",
+      "where": "The estate's Designer role definition, which is built on the formulation and extends it to coherence between internal structure and external experience",
+      "version": null,
+      "status": "implemented",
+      "source": "`team/roles/designer/ROLE.md`, cited in 02__ §D2"
+    },
+    {
+      "pattern": "Start from the user's intent and work backwards (the Ive principle)",
+      "where": "The NotebookLM case-study brief, in a section named for the principle, with the MP3-to-CD story as the worked example",
+      "version": "v0.7.4",
+      "status": "implemented",
+      "source": "`v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md`"
+    },
+    {
+      "pattern": "Good design is invisible — you notice it by reverting and feeling the loss",
+      "where": "**The Jonathan Ive test**: *is it simpler? would reverting feel worse?* — a mandatory validator for every UI change",
+      "version": "v0.7.4",
+      "status": "implemented",
+      "source": "`v0.7.4__explorer-response__security-and-process-briefs.md`"
+    },
+    {
+      "pattern": "Simplicity as subtraction — the feature removed rather than the feature added",
+      "where": "Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change",
+      "version": "v0.7.4",
+      "status": "partial",
+      "source": "the same brief; the test states the criterion, nothing records the outcome"
+    },
+    {
+      "pattern": "The same discipline applied to non-visual surfaces — an API, a CLI, a file format",
+      "where": "Nowhere. The validator is scoped to UI changes, and the estate's public surface is mostly not UI",
+      "version": "v0.7.4",
+      "status": "absent",
+      "source": "the validator's own stated scope"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

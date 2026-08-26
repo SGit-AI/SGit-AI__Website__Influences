@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>influences.sgit.ai — where the thinking came from</title>
-<meta name="description" content="The provenance layer of the sgit.ai memory network: the people, works, topics and things that shaped the founder's thinking, each written as a falsifiable claim about the codebase. This release is the pipeline; the register follows.">
+<meta name="description" content="The provenance layer of the sgit.ai memory network: 25 people, works, topics and things that shaped the founder's thinking, each written as a falsifiable claim about the codebase — which pattern, at which path, at which version, and which are still absent.">
 <link rel="canonical" href="https://influences.sgit.ai/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="influences.sgit.ai">
 <meta property="og:url" content="https://influences.sgit.ai/index.html">
 <meta property="og:title" content="influences.sgit.ai — an influence is a falsifiable claim">
-<meta property="og:description" content="Not a reading list. Each entry says which patterns from an anchor work appear where in the estate, at which version — and which are still missing.">
+<meta property="og:description" content="Not a reading list. 25 entries in three tiers, each naming which patterns from an anchor work appear where in the estate, at which version — and which are still missing.">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -19,10 +19,30 @@
 <nav class="site"><div class="row">
   <a class="brand" href="index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
-  <span class="stage-pill">the pipeline</span>
-  <a class="ver" href="admin/versions.html" title="Site release history">v0.1.0</a>
+  <span class="stage-pill">the provenance layer</span>
+  <a class="ver" href="admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="register/index.html">The register<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="register/index.html">All the entries</a>
+      <a class="sl" href="register/bret-victor/index.html">Bret Victor — entry one</a>
+      <a class="sl" href="register/semantic-web/index.html">The Semantic Web — argued with</a>
+      <a class="sl" href="register/flow/index.html">Flow — three sources, one method</a>
+      <a class="sl" href="register/design/index.html">Design — discovered, confirmed</a>
+      <a class="sl" href="format/index.html">The register format</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="map/index.html">The map<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="map/index.html">The influence map</a>
+      <a class="sl" href="tiers/index.html">The three tiers</a>
+      <a class="sl" href="library/index.html">The wider library</a>
+      <a class="sl" href="shipped/index.html">Tier movement — the changelog</a>
+      </div>
+    </div>
     <div class="ni ni-has">
       <a class="nl" href="documents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
@@ -52,78 +72,149 @@
 </div></nav>
 
 <header class="hero">
-  <div class="eyebrow">influences.sgit.ai · the sgit.ai network · release v0.1.0</div>
+  <div class="eyebrow">influences.sgit.ai · the sgit.ai network · release v0.2.0</div>
   <h1>Where the thinking<br>came from</h1>
   <p class="sub">The provenance layer of the memory network. The other sites teach an agent <b>what</b> the founder thinks and <b>how</b> the estate works; this one is for <b>where the thinking came from</b> — so an agent extends the instincts on purpose rather than by luck.</p>
   <div class="ctas">
-    <a class="cta1" href="admin/index.html">How this site is built →</a>
-    <a class="cta2" href="admin/versions.html">Release history →</a>
-    <a class="cta2" href="documents/index.html">The source documents →</a>
+    <a class="cta1" href="register/index.html">The register — <span class="tally" data-k="total">25</span> entries →</a>
+    <a class="cta2" href="format/index.html">How an entry is written →</a>
+    <a class="cta2" href="map/index.html">The influence map →</a>
   </div>
 </header>
 
-<!-- what this release is -->
-<section class="band alt" id="release">
+<!-- the hook -->
+<section class="band alt" id="hook">
   <div class="split">
-    <h2 style="text-align:left;font-size:1.5rem;margin-top:0">This release is the pipeline. The register comes next.</h2>
-    <p style="font-size:.95rem;color:#34363c;line-height:1.7">Every sibling site's early releases tell the same story: content lands, then something in the release machinery turns out to be wrong, and the fix is a release of its own. So this repository shipped the gate first, and publishes an almost-empty site through it — on a tree small enough to read in one sitting.</p>
-<pre class="shell"><span class="d"># every push to dev</span>
-<span class="g">validate</span> ──▶ <span class="g">tag-release</span> ──▶ <span class="g">deploy</span>
-   │             │                │
-   │             │                └─ upload-pages-artifact, deploy-pages
-   │             └─ git push origin refs/tags/vX.Y.Z
-   └─ gen_*.py --check ; node admin/build/validate.js
+    <h2 style="text-align:left;font-size:1.5rem;margin-top:0">An influence entry is a falsifiable claim about the codebase</h2>
+    <p style="font-size:.95rem;color:#34363c;line-height:1.7">Anyone can say Bret Victor was an influence. This register says <b>which</b> of Victor's patterns appear <b>where</b> in the estate, at <b>which</b> version — and which are still <b>absent</b>, specified precisely enough that an agent could pick one up as a work item. That single move is what separates it from every books-that-shaped-me listicle.</p>
+<pre class="shell"><span class="d"># /register/design/trace/ — one entry's table, abridged</span>
 
-<span class="d"># six checks in the gate, and two of them are this site's own:</span>
-version agreement · internal links + fragments · canonical host
-<span class="y">the no-verbatim gate</span>   <span class="d"># a third party's words, capped at 40</span>
-<span class="y">the register is the data</span> <span class="d"># tier counts recomputed, never typed</span>
-credential-shape leak tripwire
+<span class="d">pattern from the anchor</span>            <span class="d">where it lands</span>              <span class="d">ver</span>      <span class="d">status</span>
+Design is how it works           the Designer role         —        <span class="g">implemented</span>
+Start from the user's intent     NotebookLM case study     v0.7.4   <span class="g">implemented</span>
+<span class="cy">Good design is invisible</span>         <span class="cy">the Jonathan Ive test —</span>   <span class="cy">v0.7.4</span>   <span class="g">implemented</span>
+                                 <span class="cy">a MANDATORY validator</span>
+                                 <span class="cy">for every UI change</span>
+Simplicity as subtraction        implied, not recorded     v0.7.4   <span class="y">partial</span>
+The same test on an API or CLI   nowhere                   v0.7.4   <span class="r">absent</span>
 </pre>
-    <p class="cap">The two highlighted checks are the site's own rules, made executable rather than stated. <a href="admin/index.html#no-verbatim">Why a quotation cap is a release gate →</a></p>
+    <p class="cap">The highlighted row is what a fully absorbed influence looks like: not a quote on a wall, <b>a gate in a pipeline</b>. The last row is why the format is worth having — it is a build spec, not an omission. <a href="register/design/index.html">The whole entry →</a></p>
   </div>
 </section>
 
-<!-- the thesis -->
-<section class="band" id="thesis">
-  <h2>An influence entry is a falsifiable claim</h2>
-  <p class="blurb">This is what separates the register from every "books that shaped me" listicle, and it is the reason the site exists at all.</p>
+<!-- the tiers -->
+<section class="band" id="tiers">
+  <h2>Three tiers, and the difference is published</h2>
+  <p class="blurb">The tier is a statement about <b>evidence</b>, not importance. A stated influence may well be the deepest one on the list — the tier says only how well the site can currently show it. Every count here is recomputed from the register on each build; none of them is typed.</p>
   <div class="cards">
-    <div class="card">
-      <div class="tag">the move</div>
-      <h3>Not "X inspired me" — <i>which</i> pattern, <i>where</i>, at <i>which</i> version</h3>
-      <p>Anyone can say Bret Victor was an influence. The register says which of Victor's patterns appear where in the estate, at which release, and which are still <b>absent</b> — specified precisely enough that an agent could pick one up as a work item.</p>
-    </div>
-    <div class="card">
-      <div class="tag">the format</div>
-      <h3>Seven blocks, proven in use before it was designed</h3>
-      <p>Anchor → the founder's words → the principle → <b>the trace table</b> → the gaps as build specs → a checklist → the wider library. The format was not invented for this site: it was written first, as a working document, and the site was named afterwards.</p>
-    </div>
-    <div class="card">
-      <div class="tag">the tiers</div>
-      <h3>TRACED, STATED, DISCOVERED — and the difference is published</h3>
-      <p>Corpus evidence exists; on the founder's list but not yet in the corpus; or found by mining and never claimed by him at all. A reader can tell a traced claim from a hypothesis without taking the site's word for it.</p>
-    </div>
-    <div class="card">
-      <div class="tag">the rule</div>
-      <h3>Link, never rehost</h3>
-      <p>The site explains why a work resonated and traces where it was applied. The work itself stays where its author put it. That instinct is also the legally correct one — and here it is <a href="admin/index.html#no-verbatim">a check in the release pipeline</a>, not a paragraph in a footer.</p>
-    </div>
+    <a class="card" href="tiers/index.html#traced">
+      <div class="tag"><span class="tally" data-k="traced">15</span> entries</div>
+      <h3>TRACED — corpus evidence exists</h3>
+      <p>The mining run found files. The entry lists them by path, and a reader with the repositories open can check whether they say what the entry claims. <b>It still cannot show that the anchor work <i>caused</i> the pattern</b> — and the site says so rather than implying more rigour than it has.</p>
+      <span class="go">What TRACED does and does not mean →</span>
+    </a>
+    <a class="card" href="tiers/index.html#stated">
+      <div class="tag"><span class="tally" data-k="stated">7</span> entries</div>
+      <h3>STATED — the founder said so, and the corpus is silent</h3>
+      <p>Most have <b>zero</b> corpus evidence and publish an empty evidence block saying so. Two decades of earlier writing were out of reach; one entry — playing in a band — has no public record at all. <b>This is the roadmap, not the debt.</b></p>
+      <span class="go">Why the corpus is empty →</span>
+    </a>
+    <a class="card" href="tiers/index.html#discovered">
+      <div class="tag"><span class="tally" data-k="discovered">3</span> entries</div>
+      <h3>DISCOVERED — the corpus said so and he never did</h3>
+      <p>Found by mining, never on anyone's list, published as claims <em>about</em> the founder pending his confirmation — and he is <a href="admin/comms.html#q2">asked in public to strike the ones that do not belong</a>. The site's falsifiability applied to itself.</p>
+      <span class="go">The tier the site is proudest of →</span>
+    </a>
+    <a class="card" href="shipped/index.html">
+      <div class="tag">the changelog</div>
+      <h3>Tier movement is the interesting event</h3>
+      <p>An entry going STATED → TRACED because a briefing arrived, or DISCOVERED → TRACED because the founder confirmed it. <b>It has already happened once</b>, before this site existed. A provenance site whose provenance changed silently would be self-refuting.</p>
+      <span class="go">The movement log →</span>
+    </a>
   </div>
 </section>
 
-<!-- what is not here yet -->
-<section class="band alt" id="next">
+<!-- entry points -->
+<section class="band alt" id="start">
+  <h2>Where to start</h2>
+  <p class="blurb">Six entries that show what the format does at its strongest, its weakest and its most awkward.</p>
+  <div class="cards">
+    <a class="card" href="register/design/index.html">
+      <div class="tag"><span class="tierb tb-traced">traced</span> · founder-confirmed</div>
+      <h3>Design, with a capital D</h3>
+      <p><b>The strongest trace on the site.</b> Discovered by mining and confirmed by the founder the day the pack shipped. The influence did not stay a principle — it became the <i>Jonathan Ive test</i>, a mandatory validator for every UI change.</p>
+      <span class="go">An influence that became a pipeline gate →</span>
+    </a>
+    <a class="card" href="register/semantic-web/index.html">
+      <div class="tag"><span class="tierb tb-traced">traced</span> · argued with</div>
+      <h3>Tim Berners-Lee &amp; the Semantic Web</h3>
+      <p><b>The format at its strongest, because this influence is disagreed with.</b> The dream of machine-readable meaning shaped the graph work; the diagnosis — <i>meaning attached to nodes rather than derived from edges</i> — shaped it just as much. Two rows are the influence inverted.</p>
+      <span class="go">Influence is engagement, not agreement →</span>
+    </a>
+    <a class="card" href="register/flow/index.html">
+      <div class="tag"><span class="tierb tb-traced">traced</span> · three sources</div>
+      <h3>Flow, and coding in the zone</h3>
+      <p>The best demonstration that influences <b>compose</b>: Csikszentmihalyi supplies the state, Victor the mechanism, and the estate's development methodology is what was built from both — its stated core principle, in its own first line.</p>
+      <span class="go">And the gap: nothing measures whether it works →</span>
+    </a>
+    <a class="card" href="register/bret-victor/index.html">
+      <div class="tag"><span class="tierb tb-traced">traced</span> · entry one</div>
+      <h3>Bret Victor — and an incomplete table</h3>
+      <p>The entry the format came from, shipped with its <b>trace table missing</b>: the register that contains it is with the founder. Publishing the gap is more useful than holding the site back, and considerably more honest than inventing the rows.</p>
+      <span class="go">The first ask in the queue →</span>
+    </a>
+    <a class="card" href="register/music-and-band/index.html">
+      <div class="tag"><span class="tierb tb-stated">stated</span> · unresearchable</div>
+      <h3>Music, and playing in a band</h3>
+      <p>No anchor URL, no corpus evidence, and no research plan that would work. It carries the hypothesis that, if true, gives the most-instrumented influence on this site an origin nobody has written down.</p>
+      <span class="go">The entry only he can write →</span>
+    </a>
+    <a class="card" href="register/popper/index.html">
+      <div class="tag"><span class="tierb tb-traced">traced</span> · the shape of everything</div>
+      <h3>Karl Popper &amp; falsifiability</h3>
+      <p>The shortest entry with the longest reach. A map is a claim; a risk is a claim; a trace row is a claim. Three formats designed separately with one shape — and the uncomfortable corollary that <b>an influence claim is barely falsifiable at all</b>.</p>
+      <span class="go">The influence that explains the format →</span>
+    </a>
+  </div>
+</section>
+
+<!-- the rules -->
+<section class="band" id="rules">
+  <h2>Two rules, enforced rather than stated</h2>
+  <p class="blurb">This site's editorial commitments are checks in the release pipeline. A site whose thesis is that a claim should be checkable is in a poor position to publish unchecked claims about itself.</p>
   <div class="split">
-    <h2 style="text-align:left;font-size:1.5rem;margin-top:0">What is not here yet</h2>
-    <p style="font-size:.95rem;color:#34363c;line-height:1.7">Stated plainly, because a site about provenance that was vague about its own state would be self-refuting:</p>
+<pre class="shell"><span class="d"># admin/build/validate.js, on every push to dev</span>
+
+<span class="y">the no-verbatim gate</span>
+  every &lt;blockquote&gt; declares whose words it carries
+  data-quote="founder"     <span class="g">unrestricted</span>  <span class="d"># his own writing</span>
+  anything else            <span class="y">40 words max</span>  <span class="d"># quoted to be examined</span>
+  <span class="d"># the fix for a tripped gate is to cut the quotation,</span>
+  <span class="d"># never to raise the cap</span>
+
+<span class="y">the register is the data</span>
+  every influence in the register has a page
+  every page under /register/ is in the register
+  every tier count recomputed  <span class="d"># chrome.py writes them,</span>
+                               <span class="d"># validate.js recomputes them</span>
+                               <span class="d"># independently, and compares</span>
+</pre>
+    <p class="cap"><b>Link, never rehost.</b> Every talk, book, essay, keynote and record here belongs to its author and stays where they put it. That instinct — the founder's own rule — is also the legally correct one: it is what lets the CC BY stamp on this site's analysis stay honest. <a href="format/index.html#no-verbatim">The rule, and what the gate cannot do →</a></p>
+  </div>
+</section>
+
+<!-- honesty -->
+<section class="band alt" id="honest">
+  <div class="split">
+    <h2 style="text-align:left;font-size:1.5rem;margin-top:0">What this site cannot do</h2>
+    <p style="font-size:.95rem;color:#34363c;line-height:1.7">Stated here rather than in a footnote, because a register that only ever confirms itself would be an autobiography with citations:</p>
     <ul style="font-size:.93rem;color:#34363c;line-height:1.7">
-      <li><b>The register itself</b> — twenty-five entries across three tiers, from the commissioning pack's seed data. <a href="register/index.html">The empty index is live</a>, generated from a data file that has not been written.</li>
-      <li><b>The influence map</b> — the graph of influences, principles and estate features. <a href="map/index.html">Computed from the register</a>, so it cannot exist before the register does.</li>
-      <li><b>The source documents</b> — the commissioning pack, to be <a href="documents/index.html">published in full</a>, because a site that argues from a document should let you read the document.</li>
-      <li><b>The register format, documented</b>, the tier definitions, and the union of every entry's wider library.</li>
+      <li><b>A trace table cannot show causation.</b> It shows that a pattern from a talk appears in the codebase. It cannot show the talk put it there — and the Victor register's own finding is that half the estate's strongest features were <i>unknowing</i> implementations of its demos.</li>
+      <li><b>The corpus is cited, not resolved.</b> This repository holds the website, not the estate, so every evidence path is quoted from a dated mining run rather than checked at build time. Seven entries have no trace table for exactly that reason. <a href="admin/comms.html#r1">R1</a>.</li>
+      <li><b>The tiers partly measure what has recently been written down.</b> Two decades of earlier material were unreachable, and that is precisely where the stated influences' evidence will be. An entry sitting at STATED may be the deepest influence on the list.</li>
+      <li><b>Nothing here has ever been retracted.</b> Publishing gaps is the cheap half of falsifiability. <a href="shipped/index.html#wrong">Until something is withdrawn in public, this site is evidence of ambition rather than of practice.</a></li>
     </ul>
-    <p class="cap">Everything above is tracked as a numbered task at <a href="admin/comms.html">comms</a>, and every release says what it shipped in <a href="admin/versions.html">one row</a>.</p>
+    <p class="cap">And the conflict of interest is the sharpest in the network: a project publishing the list of thinkers who shaped its founder is doing something where <b>association is flattery and it costs nothing to claim</b>. <a href="about/participant.html">The disclosure, in full →</a></p>
   </div>
 </section>
 
@@ -133,7 +224,22 @@ credential-shape leak tripwire
     <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="admin/versions.html">v0.1.0</a> · <a href="admin/index.html">engineering</a> · <a href="index.md">this page as markdown</a></p>
+    <p class="verline">site <a href="admin/versions.html">v0.2.0</a> · <a href="admin/index.html">engineering</a> · <a href="index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The register</h4>
+    <a href="register/index.html">All the entries</a>
+    <a href="register/bret-victor/index.html">Bret Victor — entry one</a>
+    <a href="register/semantic-web/index.html">The Semantic Web</a>
+    <a href="register/flow/index.html">Flow</a>
+    <a href="format/index.html">The register format</a>
+  </div>
+  <div>
+    <h4>The shape of it</h4>
+    <a href="map/index.html">The influence map</a>
+    <a href="tiers/index.html">The three tiers</a>
+    <a href="library/index.html">The wider library</a>
+    <a href="shipped/index.html">Tier movement</a>
   </div>
   <div>
     <h4>For agents</h4>
@@ -146,9 +252,6 @@ credential-shape leak tripwire
     <a href="admin/index.html">How it is built</a>
     <a href="admin/versions.html">Release history</a>
     <a href="admin/comms.html">Comms: the briefing queue</a>
-  </div>
-  <div>
-    <h4>The network</h4>
     <a href="network/index.html">The sgit.ai network</a>
     <a href="about/participant.html">Participant disclosure</a>
   </div>

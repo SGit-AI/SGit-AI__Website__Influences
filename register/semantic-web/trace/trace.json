@@ -1,0 +1,52 @@
+{
+  "slug": "semantic-web",
+  "title": "Tim Berners-Lee & the Semantic Web",
+  "tier": "traced",
+  "principle": "Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.",
+  "anchor": {
+    "title": "The Semantic Web",
+    "author": "Tim Berners-Lee, James Hendler and Ora Lassila",
+    "venue": "Scientific American",
+    "year": 2001,
+    "url": "https://www.scientificamerican.com/article/the-semantic-web/",
+    "note": "The article that put the idea in front of a general audience. The wider programme — RDF, OWL, linked data, and later Solid — is in Block 7."
+  },
+  "rows": [
+    {
+      "pattern": "Machine-readable meaning as the target — a graph a machine can act on rather than a document it can only parse",
+      "where": "The estate's graph substrate and the concept document that sets out its thinking",
+      "version": "v0.4.0",
+      "status": "implemented",
+      "source": "`v0_4_0__thinking-in-graphs.md`, cited in 02__ §T3"
+    },
+    {
+      "pattern": "Meaning attached to nodes (RDF's typed-resource model)",
+      "where": "**Deliberately inverted.** The estate derives meaning from edges instead, and the concept document states the inversion as a correction rather than a variation",
+      "version": "v0.4.0",
+      "status": "absent",
+      "source": "`v0_4_0__thinking-in-graphs.md`, the *Insight (and Mistake)* section"
+    },
+    {
+      "pattern": "Meaning derived from connection between things",
+      "where": "The edge-first graph model the estate's ontology work is built on",
+      "version": "v0.4.0",
+      "status": "implemented",
+      "source": "`v0_4_0__thinking-in-graphs.md`"
+    },
+    {
+      "pattern": "Personal data under the person's own control (Solid pods)",
+      "where": "Encrypted vaults, keyed by their holder — compared to pods explicitly, as complementary architectures with different threat models",
+      "version": "v0.6.17",
+      "status": "partial",
+      "source": "`v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md`"
+    },
+    {
+      "pattern": "Interoperation with Solid itself — a vault that can read or write a pod",
+      "where": "Nowhere. The brief is an architectural comparison, not an integration",
+      "version": "v0.6.17",
+      "status": "absent",
+      "source": "the same brief, which scopes itself as a comparison"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

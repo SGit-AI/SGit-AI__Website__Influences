@@ -19,10 +19,30 @@
 <nav class="site"><div class="row">
   <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
-  <span class="stage-pill">the pipeline</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <span class="stage-pill">the provenance layer</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../register/index.html">The register<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../register/index.html">All the entries</a>
+      <a class="sl" href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+      <a class="sl" href="../register/semantic-web/index.html">The Semantic Web — argued with</a>
+      <a class="sl" href="../register/flow/index.html">Flow — three sources, one method</a>
+      <a class="sl" href="../register/design/index.html">Design — discovered, confirmed</a>
+      <a class="sl" href="../format/index.html">The register format</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../map/index.html">The map<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../map/index.html">The influence map</a>
+      <a class="sl" href="../tiers/index.html">The three tiers</a>
+      <a class="sl" href="../library/index.html">The wider library</a>
+      <a class="sl" href="../shipped/index.html">Tier movement — the changelog</a>
+      </div>
+    </div>
     <div class="ni ni-has">
       <a class="nl here" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
@@ -54,7 +74,7 @@
 <main class="doc">
 <div class="crumb"><a href="../index.html">influences.sgit.ai</a> / documents</div>
 <h1>The source documents</h1>
-<p class="lead">This site will be written from a commissioning pack, and the pack will be published in full, because a site that argues from a document should let you read the document. It has not landed in the tree yet.</p>
+<p class="lead">This site is written from a commissioning pack, and the pack is published in full — 11 documents, 5,725 words — because a site that argues from a document should let you read the document.</p>
 
 <div class="note">
   <p><b>The raw markdown is the source of truth.</b> Each reader page renders its document
@@ -65,22 +85,107 @@
   That is a promise, not an accident.</p>
 </div>
 
-<div class="warnbox">
-  <p><b>No source documents are published yet.</b> This release is the pipeline, not the
-  register: validation, auto-tagging and deployment are live and proven, and the commissioning
-  pack this site will be written from has not been unpacked into the tree. When it is, it
-  arrives here in full — raw markdown in <code>briefs/</code>, one reader page each, generated
-  from <code>data/documents.json</code>.</p>
-  <p>That is the order on purpose. A site whose release gate works can publish anything
-  safely; a site full of pages with no gate cannot.</p>
+<h2 id="read">Read them</h2>
+<div class="cards" style="padding:0">
+  <a class="card" href="pack-readme.html">
+    <div class="tag">commission · 310 words</div>
+    <h3>The brief pack — read me first</h3>
+    <p>What the pack is, what each document does, and the tier accounting: 15 traced, 7 stated, 3 discovered across 25 entries, with the seed JSON declared authoritative and the counts to be regenerated from it.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="brief.html">
+    <div class="tag">commission · 840 words</div>
+    <h3>00 — The brief</h3>
+    <p>The commission itself. The name decided, the format already invented, the thesis that this is the provenance layer of the memory network, the three-tier map with its evidence, the honest constraints, and the build order this site was written in.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="format.html">
+    <div class="tag">source · 907 words</div>
+    <h3>01 — The register format</h3>
+    <p>The seven blocks, canonised from the founder's own Bret Victor register — a format proven in use before it was designed. Plus the three reduced forms (link-out, stub, discovered) and the entry metadata schema.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="influence-map.html">
+    <div class="tag">source · 1,732 words</div>
+    <h3>02 — The influence map</h3>
+    <p>Every entry with its corpus evidence, quotes and paths. Twelve traced influences with file counts, the founder's stated seven with zero grep hits, five discovered by mining — and the composition view showing the influences are a graph, not a list.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="architecture.html">
+    <div class="tag">source · 534 words</div>
+    <h3>03 — Site architecture</h3>
+    <p>The URL scheme, the data model, the rule that tier movement is the site's changelog, the special role the comms page plays as a briefing-request queue, the infographic rules, and what the site deliberately does not do.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="boundaries.html">
+    <div class="tag">licence · 542 words</div>
+    <h3>04 — Boundaries and licensing</h3>
+    <p>The no-verbatim rule as licence armour: link never rehost, short attributed quotation for analysis only, lyrics as the sharpest edge, likenesses as original artwork only, and the split an agent ingesting llms-full.txt inherits.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="gaps.html">
+    <div class="tag">source · 539 words</div>
+    <h3>05 — Gaps and open questions</h3>
+    <p>Five gaps the pack owns — the missing full register text, the seven evidence-less entries, two decades of unmined publications, the incomplete trace tables, the artwork — and seven questions only the founder can answer.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="victor-register.html">
+    <div class="tag">source · 124 words</div>
+    <h3>The immediate-connection register — the structural summary</h3>
+    <p>The model entry, in summary. The anchor, and a description of the register's five patterns, two gap specs, six-point checklist and closing argument. The full text is with the founder and is the first ask in the comms queue.</p>
+    <span class="go">Read it →</span>
+  </a>
+  <a class="card" href="licence.html">
+    <div class="tag">licence · 197 words</div>
+    <h3>The pack's licence</h3>
+    <p>CC BY 4.0 on the pack, the seed data and the site's own content — and the explicit list of what it does not cover: every anchor work, which belongs to its author.</p>
+    <span class="go">Read it →</span>
+  </a>
 </div>
 
+<h2 id="all">All 11, with their raw files</h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Document</th><th>Raw file</th><th style="text-align:right">Words</th></tr></thead>
+    <tbody>
+        <tr><td><a href="pack-readme.html">The brief pack — read me first</a></td><td><a href="../briefs/README.md"><code>README.md</code></a></td><td style="text-align:right">310</td></tr>
+        <tr><td><a href="brief.html">00 — The brief</a></td><td><a href="../briefs/00__BRIEF.md"><code>00__BRIEF.md</code></a></td><td style="text-align:right">840</td></tr>
+        <tr><td><a href="format.html">01 — The register format</a></td><td><a href="../briefs/01__the-register-format.md"><code>01__the-register-format.md</code></a></td><td style="text-align:right">907</td></tr>
+        <tr><td><a href="influence-map.html">02 — The influence map</a></td><td><a href="../briefs/02__the-influence-map.md"><code>02__the-influence-map.md</code></a></td><td style="text-align:right">1,732</td></tr>
+        <tr><td><a href="architecture.html">03 — Site architecture</a></td><td><a href="../briefs/03__site-architecture.md"><code>03__site-architecture.md</code></a></td><td style="text-align:right">534</td></tr>
+        <tr><td><a href="boundaries.html">04 — Boundaries and licensing</a></td><td><a href="../briefs/04__boundaries-and-licensing.md"><code>04__boundaries-and-licensing.md</code></a></td><td style="text-align:right">542</td></tr>
+        <tr><td><a href="gaps.html">05 — Gaps and open questions</a></td><td><a href="../briefs/05__gaps-and-open-questions.md"><code>05__gaps-and-open-questions.md</code></a></td><td style="text-align:right">539</td></tr>
+        <tr><td><a href="victor-register.html">The immediate-connection register — the structural summary</a></td><td><a href="../briefs/register__bret-victor__inventing-on-principle.md"><code>register__bret-victor__inventing-on-principle.md</code></a></td><td style="text-align:right">124</td></tr>
+        <tr><td><a href="licence.html">The pack's licence</a></td><td><a href="../briefs/LICENSE.md"><code>LICENSE.md</code></a></td><td style="text-align:right">197</td></tr>
+        <tr><td>influences__seed.json — the seed register</td><td><a href="../briefs/influences__seed.json"><code>influences__seed.json</code></a></td><td style="text-align:right">0</td></tr>
+        <tr><td>09__source-manifest.csv — the source manifest</td><td><a href="../briefs/09__source-manifest.csv"><code>09__source-manifest.csv</code></a></td><td style="text-align:right">0</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="verbatim">Nothing here is redacted — and what that costs</h2>
+<p>The commissioning pack is published exactly as it arrived. It carries no credentials, no
+hostnames and no do-not-publish list, so unlike two of the sibling sites there was nothing to
+remove. <a href="../admin/index.html#leak">The leak tripwire</a> still scans every file in the
+tree on every release, because the check that only runs when you expect a problem is the check
+that is not running when you have one.</p>
+<p>What the pack <em>does</em> carry is a set of judgements about a living person's
+intellectual formation, several of them explicitly flagged as hypotheses. Publishing it whole
+means publishing those flags too, which is the point:
+<a href="../tiers/index.html">the tier system</a> exists so a reader can tell a traced claim
+from a guess without having to take the site's word for it.</p>
+
 <h2 id="licence">Licence, and the split that matters here</h2>
-<p>Every page of this site is released under <b>CC BY 4.0</b>. Attribution:
-Dinis Cruz, with AI co-authorship (Claude, Anthropic). <b>The anchor works are not</b>: every work this site will say
+<p>Every document in the pack, and every page of this site, is released under <b>CC BY 4.0</b>.
+Attribution: Dinis Cruz, with AI co-authorship (Claude, Anthropic).</p>
+<p><b>The anchor works are not.</b> Bret Victor's talks, Simon Wardley's book, Kevin Kelly's
+books, Rush's music, David Rice's keynote, Csikszentmihalyi's <i>Flow</i>,
+<i>A Pattern Language</i>, <i>The Cathedral and the Bazaar</i> — every work this site says
 shaped the thinking belongs to its author, and is linked rather than rehosted.
-<a href="../admin/index.html#no-verbatim">The release gate enforces that</a> rather than the
-site merely stating it — which is why the gate shipped before any of the entries did.</p>
+<a href="../format/index.html#no-verbatim">The no-verbatim rule</a> is what lets the CC BY
+stamp on this site's own text stay honest, and
+<a href="../admin/index.html#no-verbatim">the release gate enforces it</a> rather than the
+site merely stating it.</p>
 
 <div class="pagenav">
   <a href="../index.html">← Front page</a>
@@ -94,7 +199,22 @@ site merely stating it — which is why the gate shipped before any of the entri
     <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>The register</h4>
+    <a href="../register/index.html">All the entries</a>
+    <a href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+    <a href="../register/semantic-web/index.html">The Semantic Web</a>
+    <a href="../register/flow/index.html">Flow</a>
+    <a href="../format/index.html">The register format</a>
+  </div>
+  <div>
+    <h4>The shape of it</h4>
+    <a href="../map/index.html">The influence map</a>
+    <a href="../tiers/index.html">The three tiers</a>
+    <a href="../library/index.html">The wider library</a>
+    <a href="../shipped/index.html">Tier movement</a>
   </div>
   <div>
     <h4>For agents</h4>
@@ -107,9 +227,6 @@ site merely stating it — which is why the gate shipped before any of the entri
     <a href="../admin/index.html">How it is built</a>
     <a href="../admin/versions.html">Release history</a>
     <a href="../admin/comms.html">Comms: the briefing queue</a>
-  </div>
-  <div>
-    <h4>The network</h4>
     <a href="../network/index.html">The sgit.ai network</a>
     <a href="../about/participant.html">Participant disclosure</a>
   </div>

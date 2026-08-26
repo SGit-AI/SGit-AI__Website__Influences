@@ -449,3 +449,104 @@ a.lang:hover{border-color:var(--accent);border-left-color:var(--accent);text-dec
 /* the yes/no emphasis used in the split tables, also needed in ordinary doc tables */
 main.doc td b.yes{color:var(--accent-dk)} main.doc td b.no{color:var(--red)}
 main.doc .verdict{white-space:nowrap}
+
+/* ============================================================================
+   influences.sgit.ai — the register's own components.
+   Everything above this line is the shared network stylesheet. Everything below
+   exists because this site has a shape the siblings do not: tiered entries, a
+   seven-block format, trace tables with a per-row verdict, and quotations that
+   have to declare whose words they are.
+   ========================================================================= */
+
+/* ---------- tier, kind and status badges ---------- */
+.badges{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.2rem 0 1.1rem}
+.tierb,.kindb,.statusb{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  border-radius:99px;padding:.2rem .6rem;white-space:nowrap;border:1px solid var(--line2)}
+a.tierb:hover,a.statusb:hover{text-decoration:none;filter:brightness(.94)}
+.tb-traced{color:var(--accent-dk);border-color:rgba(15,118,110,.4);background:rgba(15,118,110,.09)}
+.tb-stated{color:var(--warm);border-color:rgba(180,83,9,.4);background:rgba(180,83,9,.09)}
+.tb-discovered{color:#3b4c9e;border-color:rgba(59,76,158,.35);background:rgba(59,76,158,.08)}
+.kindb{color:var(--dim);background:var(--panel2);font-weight:600;letter-spacing:.06em;text-transform:none;
+  font-size:.7rem}
+.kb-disc{color:#3b4c9e;background:rgba(59,76,158,.07);border-color:rgba(59,76,158,.25)}
+.statusb{color:var(--dim2);background:var(--panel);font-weight:600;letter-spacing:.06em;text-transform:none;
+  font-size:.7rem}
+h3 .tierb{margin-left:.5rem;vertical-align:middle}
+
+/* ---------- the seven blocks ---------- */
+/* The block number is set as a label rather than folded into the heading text so the
+   heading still reads as prose in the markdown twin, where there is no room for it. */
+main.doc h2 .bn{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--warm);border:1px solid rgba(180,83,9,.3);
+  background:rgba(180,83,9,.06);border-radius:99px;padding:.12rem .5rem;margin-right:.55rem;
+  vertical-align:middle;position:relative;top:-.12em}
+
+/* ---------- block 1: the anchor ---------- */
+.anchorline{font-family:var(--serif);font-size:1.14rem;color:#101114;line-height:1.5;margin:.4rem 0 .8rem}
+.anchorlinks{display:flex;gap:.5rem;flex-wrap:wrap;margin:.7rem 0}
+
+/* ---------- block 2: quotations, which must say whose they are ---------- */
+/* The data-quote attribute is not decoration: validate.js reads it, and a blockquote
+   without one fails the release. The left rule is teal for the founder's own words and
+   amber for a third party's, so the distinction the licence depends on is visible on
+   the page and not only in the source. */
+main.doc blockquote{margin:1.1rem 0;padding:.85rem 1.1rem;background:var(--panel);
+  border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 11px 11px 0;
+  font-family:var(--serif);font-size:1.02rem;line-height:1.6;color:#26282d;box-shadow:var(--shadow)}
+main.doc blockquote[data-quote]:not([data-quote="founder"]){border-left-color:var(--warm)}
+main.doc blockquote footer{display:block;margin-top:.55rem;font-family:var(--sans);font-size:.74rem;
+  color:var(--dim2);font-style:normal}
+main.doc blockquote footer code{font-size:.92em;overflow-wrap:anywhere}
+main.doc .qnote{font-size:.88rem;color:var(--dim);margin:-.4rem 0 1.1rem;padding-left:1.1rem;
+  border-left:1px dashed var(--line2)}
+
+/* ---------- block 3: the principle ---------- */
+.principle{background:linear-gradient(180deg,rgba(15,118,110,.07),rgba(15,118,110,.03));
+  border:1px solid rgba(15,118,110,.25);border-radius:12px;padding:1.05rem 1.25rem;margin:.6rem 0 1rem}
+.principle p{margin:0;font-family:var(--serif);font-size:1.16rem;line-height:1.55;color:#10302c}
+.principle-inline{font-family:var(--serif);font-size:1.02rem;color:#10302c;margin:.2rem 0 .7rem}
+
+/* ---------- block 4: the trace table ---------- */
+table.trace td:first-child{font-weight:600;color:#101114}
+.rowstate{font-size:.64rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  border-radius:99px;padding:.16rem .55rem;white-space:nowrap;border:1px solid var(--line2)}
+.rs-yes{color:var(--accent-dk);border-color:rgba(15,118,110,.4);background:rgba(15,118,110,.09)}
+.rs-part{color:var(--yellow);border-color:rgba(161,98,7,.35);background:rgba(161,98,7,.08)}
+.rs-no{color:var(--red);border-color:rgba(185,28,28,.32);background:rgba(185,28,28,.06)}
+
+/* the link-out pointer that stands where a trace table would be */
+.pointer{border:1px dashed var(--line2);border-radius:12px;background:var(--panel2);
+  padding:1rem 1.15rem;margin:.6rem 0 1rem}
+.pointer .pk{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dim2);margin-bottom:.4rem}
+.pointer p{margin:0 0 .8rem;font-size:.93rem;color:#34363c;line-height:1.6}
+
+/* ---------- block 6: the checklist ---------- */
+ul.checklist{list-style:none;padding-left:0;margin:1rem 0}
+ul.checklist li{position:relative;padding:.5rem .8rem .5rem 2.1rem;margin:.4rem 0;
+  background:var(--panel);border:1px solid var(--line);border-radius:9px;font-size:.92rem;line-height:1.55}
+ul.checklist li::before{content:"?";position:absolute;left:.75rem;top:.5rem;width:1.05rem;height:1.05rem;
+  border-radius:50%;background:var(--accent);color:#fff;font:700 .7rem/1.05rem var(--sans);text-align:center}
+
+/* ---------- block 7 and /library/ ---------- */
+ul.library{padding-left:1.15rem}
+ul.library li{margin:.45rem 0;font-size:.92rem;line-height:1.55;color:#34363c}
+ul.relations{padding-left:1.15rem}
+ul.relations li{margin:.35rem 0;font-size:.93rem}
+
+/* ---------- the map ---------- */
+pre.mermaid{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:1.1rem;margin:1.2rem 0;overflow-x:auto;text-align:center;
+  font-family:var(--mono);font-size:.72rem;line-height:1.5;color:var(--dim);box-shadow:var(--shadow)}
+pre.mermaid svg{max-width:100%;height:auto}
+
+/* ---------- tier legend, on /tiers/ and the front page ---------- */
+.tiercards{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:1.4rem 0}
+.tiercard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem 1.15rem;
+  box-shadow:var(--shadow);border-top:3px solid var(--line2)}
+.tiercard.t-traced{border-top-color:var(--accent)}
+.tiercard.t-stated{border-top-color:var(--warm)}
+.tiercard.t-discovered{border-top-color:#3b4c9e}
+.tiercard .n{font-family:var(--serif);font-size:2rem;line-height:1;color:#101114}
+.tiercard h3{margin:.35rem 0 .4rem;font-size:.95rem}
+.tiercard p{margin:0;font-size:.83rem;color:var(--dim);line-height:1.55}

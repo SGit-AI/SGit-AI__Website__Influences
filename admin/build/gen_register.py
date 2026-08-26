@@ -30,6 +30,7 @@ and this generator implements exactly those:
 A stub is published, not hidden. The roadmap is content.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -126,7 +127,8 @@ def trace_rows_html(i, up):
     unversioned = sum(1 for r in i["trace"]["rows"] if not r.get("version"))
     warn = ""
     if unversioned:
-        warn = (f'<p class="small dim"><b>{unversioned} of {len(i["trace"]["rows"])} rows carry no '
+        verb = "row carries" if unversioned == 1 else "rows carry"
+        warn = (f'<p class="small dim"><b>{unversioned} of {len(i["trace"]["rows"])} {verb} no '
                 f'version.</b> The format\'s own rule is that a trace table without versions is an '
                 f'opinion — these rows name a file the corpus scan reached but not the release it '
                 f'was read at. <a href="{up}format/index.html#generate-or-date">The generate-or-date '
@@ -270,6 +272,27 @@ The full union of every entry's Block 7 is at <a href="{up}library/index.html">/
     ) + body + page_tail())
 
 
+
+# A trace page sits one directory deeper than the entry it belongs to
+# (register/<slug>/trace/ against register/<slug>/), and the register's prose is
+# authored once, at entry depth. Rendering that prose on the deeper page without
+# adjusting it produces links that resolve one level too high — which the release
+# gate catches, loudly, and which is a tax on authoring rather than a bug worth
+# living with. So the depth is a transform rather than a thing to remember:
+# relative links in row prose get one more `../` when they are rendered here.
+# Absolute, mailto and same-page links are left alone.
+_REL_HREF = re.compile(r'(href=")(?!https?:|mailto:|data:|#|/)')
+_REL_MD = re.compile(r'(\]\()(?!https?:|mailto:|#|/)')
+
+
+def deepen_html(s):
+    return _REL_HREF.sub(r'\1../', s)
+
+
+def deepen_md(s):
+    return _REL_MD.sub(r'\1../', s)
+
+
 def library_item(w):
     """One Block-7 row: title, one line on what it adds, and a link out. Never a rehost —
     /library/ is the union of these across every entry and it is a list of addresses."""
@@ -289,8 +312,10 @@ def anchor_links(a):
         if a.get(key):
             links.append(f'<a class="cfgget" href="{esc(a[key])}">↗ {label}</a>')
     if not links:
-        return ('<p class="small dim">No canonical URL recorded yet — the anchor is a personal '
-                'era or an artefact the founder holds, not a published work with an address.</p>')
+        return ('<p class="small dim">No canonical URL. Not every anchor has one address — a '
+                'book, a practice or a personal era does not — and this site links what is '
+                'linkable rather than inventing a canonical home for something that has none. '
+                'The wider library below carries what can be linked.</p>')
     return '<p class="anchorlinks">' + " ".join(links) + ("</p>\n<p class=\"small dim\">Linked, "
             "never rehosted. This site explains why the work resonated and traces where it was "
             "applied; the work itself stays where its author put it.</p>")
@@ -442,12 +467,12 @@ def trace_page(i):
     rel = f'register/{i["slug"]}/trace/index.html'
     up = "../../../"
     rows = "\n".join(
-        f'      <tr><td>{md_inline(r["pattern"])}</td>'
-        f'<td>{md_inline(r["where"])}</td>'
+        f'      <tr><td>{deepen_html(md_inline(r["pattern"]))}</td>'
+        f'<td>{deepen_html(md_inline(r["where"]))}</td>'
         f'<td><code>{esc(r.get("version") or "—")}</code></td>'
         f'<td class="verdict"><span class="rowstate {ROW_STATE[r["status"]][0]}">'
         f'{ROW_STATE[r["status"]][1]}</span></td>'
-        f'<td class="small dim">{md_inline(r.get("source", "—"))}</td></tr>'
+        f'<td class="small dim">{deepen_html(md_inline(r.get("source", "—")))}</td></tr>'
         for r in i["trace"]["rows"])
     body = f'''
 <main class="doc">
@@ -500,9 +525,10 @@ drawn, so the graph cannot disagree with the tables it is made of.</p>
 def trace_md(i):
     return (f'# {i["title"]} — the trace table\n\n'
             f'*Source: <https://{HOST}/register/{i["slug"]}/trace/index.html>*\n\n'
-            + trace_rows_md(i) + "\n\n"
+            + deepen_md(trace_rows_md(i)) + "\n\n"
             + "Row sources:\n\n"
-            + "\n".join(f'- {r["pattern"]} — {r.get("source", "—")}' for r in i["trace"]["rows"])
+            + deepen_md("\n".join(f'- {r["pattern"]} — {r.get("source", "—")}'
+                                  for r in i["trace"]["rows"]))
             + "\n\nCC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic).\n")
 
 
@@ -604,11 +630,68 @@ the founder's confirmation. The counts are computed from
     ) + body + page_tail())
 
 
+# ---------------------------------------------------------------- the library
+def library_page():
+    """/library/ — the union of every entry's Block 7, one section per entry.
+
+    04__ §3 of the pack settles the licensing question this page raises: listing facts
+    about a work — title, year, one line, a link — is uncopyrightable metadata and is
+    safe. Cover images and stills are not, which is why there are none."""
+    rel = "library/index.html"
+    have = [i for i in INF if i.get("wider_library")]
+    items = sum(len(i["wider_library"]) for i in have)
+    linked = sum(1 for i in have for w in i["wider_library"] if w.get("url"))
+    secs = []
+    for i in have:
+        rows = "\n".join(f"  <li>{library_item(w)}</li>" for w in i["wider_library"])
+        secs.append(f'''<h3 id="lib-{esc(i["slug"])}"><a href="../register/{esc(i["slug"])}/index.html">{esc(i["title"])}</a>
+<span class="tierb tb-{i["tier"]}">{i["tier"]}</span></h3>
+<ul class="library">
+{rows}
+</ul>''')
+    body = f'''
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / library</div>
+<h1>The wider library</h1>
+<p class="lead">Every entry's Block 7 in one place: {items} works across {len(have)} entries,
+{linked} of them with a link out. This is a list of <b>addresses</b>, not a collection —
+nothing here is hosted, mirrored or excerpted, and that is a rule rather than an oversight.</p>
+
+<div class="note">
+  <p><b>Why a list of other people's books is safe and a shelf of them is not.</b> Listing
+  facts about a work — its title, its year, one line on what it adds, where to find it — is
+  uncopyrightable metadata. The works themselves are not. So this page carries no cover
+  images, no excerpts and no stills: the moment it did, this site would be redistributing
+  material it does not own under a licence it has no right to grant.
+  <a href="../format/index.html#no-verbatim">The rule, in full →</a></p>
+</div>
+
+<p>Each entry's own Block 7 is the authoritative version; this page is the union, generated
+from the same register on every build. An anchor work is <em>not</em> repeated here — it is
+at the top of its entry, in Block 1.</p>
+
+{"".join(chr(10) + s + chr(10) for s in secs)}
+<div class="pagenav">
+  <a href="../register/index.html">← The register</a>
+  <a href="../format/index.html">The register format →</a>
+</div>
+</main>
+'''
+    return rel, (page_head(
+        rel, "The wider library · influences.sgit.ai",
+        f"Every influence entry's wider library in one place: {items} works, linked and never "
+        f"rehosted. A list of addresses, not a collection.",
+    ) + body + page_tail())
+
+
 def main():
     check = "--check" in sys.argv
     changed, mismatched = [], []
     rel, html = index_page()
     write_or_check(ROOT / rel, html, check, changed, mismatched)
+    if INF:
+        rel, html = library_page()
+        write_or_check(ROOT / rel, html, check, changed, mismatched)
     for n, i in enumerate(INF):
         rel, html = entry_page(i, INF[n - 1] if n else None,
                                INF[n + 1] if n + 1 < len(INF) else None)

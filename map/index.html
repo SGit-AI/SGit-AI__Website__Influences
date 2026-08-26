@@ -4,25 +4,49 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The influence map · influences.sgit.ai</title>
-<meta name="description" content="The influence graph, computed from the register. Not written yet.">
+<meta name="description" content="The register as a graph: 25 influences, 14 recorded relations, and 18 places a pattern lands in the estate. Computed from the register, not drawn.">
 <link rel="canonical" href="https://influences.sgit.ai/map/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="influences.sgit.ai">
 <meta property="og:url" content="https://influences.sgit.ai/map/index.html">
 <meta property="og:title" content="The influence map · influences.sgit.ai">
-<meta property="og:description" content="The influence graph, computed from the register. Not written yet.">
+<meta property="og:description" content="The register as a graph: 25 influences, 14 recorded relations, and 18 places a pattern lands in the estate. Computed from the register, not drawn.">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="../assets/site.css">
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+mermaid.initialize({startOnLoad:true,theme:"neutral",themeVariables:{fontFamily:"ui-sans-serif, system-ui, sans-serif",fontSize:"13px"}});
+</script>
 </head>
 <body>
 
 <nav class="site"><div class="row">
   <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
-  <span class="stage-pill">the pipeline</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <span class="stage-pill">the provenance layer</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../register/index.html">The register<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../register/index.html">All the entries</a>
+      <a class="sl" href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+      <a class="sl" href="../register/semantic-web/index.html">The Semantic Web — argued with</a>
+      <a class="sl" href="../register/flow/index.html">Flow — three sources, one method</a>
+      <a class="sl" href="../register/design/index.html">Design — discovered, confirmed</a>
+      <a class="sl" href="../format/index.html">The register format</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../map/index.html">The map<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../map/index.html">The influence map</a>
+      <a class="sl" href="../tiers/index.html">The three tiers</a>
+      <a class="sl" href="../library/index.html">The wider library</a>
+      <a class="sl" href="../shipped/index.html">Tier movement — the changelog</a>
+      </div>
+    </div>
     <div class="ni ni-has">
       <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
@@ -54,15 +78,193 @@
 <main class="doc">
 <div class="crumb"><a href="../index.html">influences.sgit.ai</a> / map</div>
 <h1>The influence map</h1>
-<p class="lead">Not computed yet — there is no register to compute it from.</p>
-<div class="warnbox">
-  <p><b>This release is the pipeline, not the register.</b> When the entries land, this page is
-  generated from them: every node and every edge a field in
-  <code>data/influences.json</code>, never a drawing.</p>
+<p class="lead">The register as a graph: <span class="tally" data-k="total">25</span>
+influences, 14 recorded relations between them, and 18 places where a pattern from an
+anchor work lands in the estate. <b>Computed, not drawn</b> — every node and every edge on this
+page is a field in <a href="../data/influences.json"><code>data/influences.json</code></a>, so
+the graph cannot disagree with the entries it is made of.</p>
+
+<div class="note">
+  <p><b>This is the site's own G³ demonstration in miniature.</b> The influences that produced
+  the estate's graph thinking — Luhmann's slip-box, the Semantic Web's edges, Bush's associative
+  trails — are here as nodes in a graph, which is either a satisfying loop or a slightly
+  circular one, and the honest answer is that it is both. The
+  <a href="../admin/comms.html#q7">open question</a> is whether this page eventually belongs on
+  the graphs sibling instead.</p>
 </div>
+
+<h2 id="lineage">The lineage</h2>
+<p>Influences are not independent, and the interesting structure is between them: what nests
+under what, what composes with what, and which idea led to which. Colour is tier —
+<span class="tierb tb-traced">traced</span>, <span class="tierb tb-stated">stated</span>,
+<span class="tierb tb-discovered">discovered</span>.</p>
+<pre class="mermaid">
+graph LR
+  bret_victor["Bret Victor"]:::traced
+  wardley["Simon Wardley and Wardley Maps"]:::traced
+  semantic_web["Tim Berners-Lee and the Semantic Web"]:::traced
+  graphs["Graphs"]:::traced
+  owasp["OWASP and the security community"]:::traced
+  flow["Flow, and coding in the zone"]:::traced
+  open_source["Open source and its licences"]:::traced
+  luhmann["Niklas Luhmann and the Zettelkasten"]:::traced
+  popper["Karl Popper and falsifiability"]:::traced
+  torvalds["Linus Torvalds"]:::traced
+  design["Design, with a capital D"]:::traced
+  design_canon["The wider design canon"]:::traced
+  csikszentmihalyi["Mihály Csíkszentmihályi"]:::traced
+  cathedral_bazaar["The Cathedral and the Bazaar"]:::stated
+  david_rice_keynote["David Rice — Upon the Threshold of Opportunity"]:::stated
+  music_and_band["Music, and playing in a band"]:::stated
+  diverse_distributed_teams["Diverse and distributed teams"]:::stated
+  vannevar_bush["Vannevar Bush and the memex"]:::discovered
+  bret_victor -->|supplies the mechanism| flow
+  wardley -->|a map is a claim| popper
+  semantic_web -->|feeds| graphs
+  david_rice_keynote -.->|nests under| owasp
+  owasp -->|the formative case| diverse_distributed_teams
+  csikszentmihalyi -.->|nests under| flow
+  flow ---|composes with| bret_victor
+  flow ---|composes with| csikszentmihalyi
+  cathedral_bazaar -.->|nests under| open_source
+  torvalds -.->|nests under| open_source
+  vannevar_bush -.->|nests under| luhmann
+  luhmann -->|the same claim, on paper| graphs
+  design_canon -.->|nests under| design
+  music_and_band -->|hypothesised origin| flow
+  classDef traced fill:#e7f3f1,stroke:#0f766e,color:#10302c;
+  classDef stated fill:#fdf3e3,stroke:#b45309,color:#3b2708;
+  classDef discovered fill:#eef1fb,stroke:#3b4c9e,color:#1c2445;
+</pre>
+<p class="small dim">The diagram renders in your browser from the fence above. If the module does
+not load, the fence stays readable as text and every edge it draws is also listed in the table
+below — a picture that can fail should never be the only copy of the thing.</p>
+
+<h3 id="isolated">The 7 entries with no recorded relation</h3>
+<p>They are not in the diagram, because a column of unattached boxes made it four times taller
+while saying nothing. <b>Standing alone is a fact about the register rather than about the
+influence</b>: an edge is only drawn where a field in the register records one, and several of
+these are unconnected simply because the briefing document that would connect them has not
+arrived. Where a lineage is plausible but undocumented — Kevin Kelly's technium and Wardley's
+evolution axis are the obvious pair — <b>the edge is deliberately not drawn</b>, because guessing
+one here would be the same failure as inventing a trace row.</p>
+<p class="anchorlinks"><a class="cfgget" href="../register/ericsson/index.html">Anders Ericsson &amp; deliberate practice</a> <a class="cfgget" href="../register/schneier/index.html">Bruce Schneier</a> <a class="cfgget" href="../register/neil-peart/index.html">Neil Peart &amp; Rush</a> <a class="cfgget" href="../register/kevin-kelly/index.html">Kevin Kelly's books</a> <a class="cfgget" href="../register/sinek-golden-circle/index.html">Simon Sinek — the golden circle</a> <a class="cfgget" href="../register/christopher-alexander/index.html">Christopher Alexander</a> <a class="cfgget" href="../register/team-topologies-cynefin/index.html">Team Topologies &amp; Cynefin</a></p>
+
+<h2 id="edges">Every recorded relation</h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>From</th><th>Relation</th><th>To</th><th>Recorded in</th></tr></thead>
+    <tbody>
+      <tr><td><a href="../register/bret-victor/index.html">Bret Victor</a></td><td class="dim">supplies the mechanism</td><td><a href="../register/flow/index.html">Flow, and coding in the zone</a></td><td class="small dim"><code>lineage</code></td></tr>
+      <tr><td><a href="../register/wardley/index.html">Simon Wardley &amp; Wardley Maps</a></td><td class="dim">a map is a claim</td><td><a href="../register/popper/index.html">Karl Popper &amp; falsifiability</a></td><td class="small dim"><code>lineage</code></td></tr>
+      <tr><td><a href="../register/semantic-web/index.html">Tim Berners-Lee &amp; the Semantic Web</a></td><td class="dim">feeds</td><td><a href="../register/graphs/index.html">Graphs</a></td><td class="small dim"><code>lineage</code></td></tr>
+      <tr><td><a href="../register/david-rice-keynote/index.html">David Rice — “Upon the Threshold of Opportunity”</a></td><td class="dim">nests under</td><td><a href="../register/owasp/index.html">OWASP &amp; the security community</a></td><td class="small dim"><code>nests</code></td></tr>
+      <tr><td><a href="../register/owasp/index.html">OWASP &amp; the security community</a></td><td class="dim">the formative case</td><td><a href="../register/diverse-distributed-teams/index.html">Diverse and distributed teams</a></td><td class="small dim"><code>lineage</code></td></tr>
+      <tr><td><a href="../register/csikszentmihalyi/index.html">Mihály Csíkszentmihályi</a></td><td class="dim">nests under</td><td><a href="../register/flow/index.html">Flow, and coding in the zone</a></td><td class="small dim"><code>nests</code></td></tr>
+      <tr><td><a href="../register/flow/index.html">Flow, and coding in the zone</a></td><td class="dim">composes with</td><td><a href="../register/bret-victor/index.html">Bret Victor</a></td><td class="small dim"><code>composes_with</code></td></tr>
+      <tr><td><a href="../register/flow/index.html">Flow, and coding in the zone</a></td><td class="dim">composes with</td><td><a href="../register/csikszentmihalyi/index.html">Mihály Csíkszentmihályi</a></td><td class="small dim"><code>composes_with</code></td></tr>
+      <tr><td><a href="../register/cathedral-bazaar/index.html">The Cathedral and the Bazaar</a></td><td class="dim">nests under</td><td><a href="../register/open-source/index.html">Open source &amp; its licences</a></td><td class="small dim"><code>nests</code></td></tr>
+      <tr><td><a href="../register/torvalds/index.html">Linus Torvalds</a></td><td class="dim">nests under</td><td><a href="../register/open-source/index.html">Open source &amp; its licences</a></td><td class="small dim"><code>nests</code></td></tr>
+      <tr><td><a href="../register/vannevar-bush/index.html">Vannevar Bush &amp; the memex</a></td><td class="dim">nests under</td><td><a href="../register/luhmann/index.html">Niklas Luhmann &amp; the Zettelkasten</a></td><td class="small dim"><code>nests</code></td></tr>
+      <tr><td><a href="../register/luhmann/index.html">Niklas Luhmann &amp; the Zettelkasten</a></td><td class="dim">the same claim, on paper</td><td><a href="../register/graphs/index.html">Graphs</a></td><td class="small dim"><code>lineage</code></td></tr>
+      <tr><td><a href="../register/design-canon/index.html">The wider design canon</a></td><td class="dim">nests under</td><td><a href="../register/design/index.html">Design, with a capital D</a></td><td class="small dim"><code>nests</code></td></tr>
+      <tr><td><a href="../register/music-and-band/index.html">Music, and playing in a band</a></td><td class="dim">hypothesised origin</td><td><a href="../register/flow/index.html">Flow, and coding in the zone</a></td><td class="small dim"><code>lineage</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="lands">Influence → principle → estate</h2>
+<p>The other projection, and the one that makes an entry falsifiable: each influence distilled to
+one transferable principle, and every place a pattern from its anchor work is claimed to land in
+the estate. Rows marked <b>absent</b> on the entry pages are not here — this is what is built,
+not what is specified. The gaps are on the entries.</p>
+
+<h3 id="lands-semantic-web"><a href="../register/semantic-web/index.html">Tim Berners-Lee &amp; the Semantic Web</a></h3>
+<p class="principle-inline">Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Pattern</th><th>Where it lands in the estate</th><th>Version</th></tr></thead>
+    <tbody>
+        <tr><td>Machine-readable meaning as the target — a graph a machine can act on rather than a document it can only parse</td><td>The estate's graph substrate and the concept document that sets out its thinking</td><td><code>v0.4.0</code></td></tr>
+        <tr><td>Meaning derived from connection between things</td><td>The edge-first graph model the estate's ontology work is built on</td><td><code>v0.4.0</code></td></tr>
+        <tr><td>Personal data under the person's own control (Solid pods)</td><td>Encrypted vaults, keyed by their holder — compared to pods explicitly, as complementary architectures with different threat models</td><td><code>v0.6.17</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="lands-flow"><a href="../register/flow/index.html">Flow, and coding in the zone</a></h3>
+<p class="principle-inline">Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Pattern</th><th>Where it lands in the estate</th><th>Version</th></tr></thead>
+    <tbody>
+        <tr><td>Immediate feedback as a precondition of the state</td><td>The estate's development methodology, whose stated core principle is preserving developer flow state</td><td><code>v1.2.1</code></td></tr>
+        <tr><td>Clear goals — the person always knows what they are trying to do next</td><td>The methodology's structure: work proceeds in units small enough to hold in one head</td><td><code>v1.2.1</code></td></tr>
+        <tr><td>Challenge matched to skill</td><td>The division of labour between person and model — generation delegated, judgement retained</td><td><code>v1.2.1</code></td></tr>
+        <tr><td>Programming named as a flow-inducing activity, with the criteria applied</td><td>The Joy-of-Programming argument, which cites Csikszentmihalyi directly and works through the criteria</td><td><code>—</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="lands-popper"><a href="../register/popper/index.html">Karl Popper &amp; falsifiability</a></h3>
+<p class="principle-inline">A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Pattern</th><th>Where it lands in the estate</th><th>Version</th></tr></thead>
+    <tbody>
+        <tr><td>A claim must be refutable to be worth making</td><td>Wardley mapping as practised here — <i>a map is a claim</i> about position and movement, refutable by pointing at a misplaced component</td><td><code>—</code></td></tr>
+        <tr><td>State the conditions under which you would be wrong</td><td>The risks register's falsifiable-statement discipline — an accepted risk with a named acceptor and a named mitigation</td><td><code>—</code></td></tr>
+        <tr><td>The demarcation applied to inspiration itself</td><td><b>This site's trace tables.</b> An influence entry is written so that it can be checked against the repositories and found wrong</td><td><code>—</code></td></tr>
+        <tr><td>Publishing the refutations, not only the claims</td><td>Partial. The gaps are published as build specs and the absent rows are kept, but no claim on this network has yet been retracted in public</td><td><code>—</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="lands-design"><a href="../register/design/index.html">Design, with a capital D</a></h3>
+<p class="principle-inline">Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Pattern</th><th>Where it lands in the estate</th><th>Version</th></tr></thead>
+    <tbody>
+        <tr><td>Design is how it works, not how it looks</td><td>The estate's Designer role definition, which is built on the formulation and extends it to coherence between internal structure and external experience</td><td><code>—</code></td></tr>
+        <tr><td>Start from the user's intent and work backwards (the Ive principle)</td><td>The NotebookLM case-study brief, in a section named for the principle, with the MP3-to-CD story as the worked example</td><td><code>v0.7.4</code></td></tr>
+        <tr><td>Good design is invisible — you notice it by reverting and feeling the loss</td><td><b>The Jonathan Ive test</b>: <i>is it simpler? would reverting feel worse?</i> — a mandatory validator for every UI change</td><td><code>v0.7.4</code></td></tr>
+        <tr><td>Simplicity as subtraction — the feature removed rather than the feature added</td><td>Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change</td><td><code>v0.7.4</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="lands-design-canon"><a href="../register/design-canon/index.html">The wider design canon</a></h3>
+<p class="principle-inline">Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Pattern</th><th>Where it lands in the estate</th><th>Version</th></tr></thead>
+    <tbody>
+        <tr><td><i>Less, but better</i> (Rams) as a working principle rather than an aesthetic</td><td>The Designer role definition, applied to API surface rather than to visual design</td><td><code>—</code></td></tr>
+        <tr><td>Code as inhabited space — is it navigable, is it comfortable</td><td>The same role definition's criteria for reviewing structure</td><td><code>—</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="lands-christopher-alexander"><a href="../register/christopher-alexander/index.html">Christopher Alexander</a></h3>
+<p class="principle-inline">Code is a space that people inhabit. A pattern is a named solution to a recurring problem in a context — and a language of patterns is what lets a place be built by many hands and still be coherent.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Pattern</th><th>Where it lands in the estate</th><th>Version</th></tr></thead>
+    <tbody>
+        <tr><td>Code as a space developers inhabit — judge it by navigability and comfort</td><td>The Designer role definition's review criteria</td><td><code>—</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="data">The graph, as data</h2>
+<p><a href="graph.json"><code>/map/graph.json</code></a> carries the same nodes, edges and
+landing rows in one file, regenerated on every release. Each entry's own rows are also published
+per-entry at <code>/register/&lt;slug&gt;/trace/trace.json</code>.</p>
+
 <div class="pagenav">
-  <a href="../index.html">← Front page</a>
-  <a href="../admin/index.html">How this site is built →</a>
+  <a href="../register/index.html">← The register</a>
+  <a href="../tiers/index.html">The three tiers →</a>
 </div>
 </main>
 
@@ -72,7 +274,22 @@
     <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>The register</h4>
+    <a href="../register/index.html">All the entries</a>
+    <a href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+    <a href="../register/semantic-web/index.html">The Semantic Web</a>
+    <a href="../register/flow/index.html">Flow</a>
+    <a href="../format/index.html">The register format</a>
+  </div>
+  <div>
+    <h4>The shape of it</h4>
+    <a href="../map/index.html">The influence map</a>
+    <a href="../tiers/index.html">The three tiers</a>
+    <a href="../library/index.html">The wider library</a>
+    <a href="../shipped/index.html">Tier movement</a>
   </div>
   <div>
     <h4>For agents</h4>
@@ -85,9 +302,6 @@
     <a href="../admin/index.html">How it is built</a>
     <a href="../admin/versions.html">Release history</a>
     <a href="../admin/comms.html">Comms: the briefing queue</a>
-  </div>
-  <div>
-    <h4>The network</h4>
     <a href="../network/index.html">The sgit.ai network</a>
     <a href="../about/participant.html">Participant disclosure</a>
   </div>

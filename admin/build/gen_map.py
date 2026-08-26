@@ -62,23 +62,52 @@ def edges():
                 out.append((i["slug"], e["to"], e.get("label", "leads to"), "lineage"))
     # nests and nests_under are two spellings of one edge; keep one of each pair
     seen, uniq = set(), []
-    for a, b, label, field in out:
-        key = (a, b, label)
+    for a, b, lab, field in out:
+        key = (a, b, lab)
         if key in seen:
             continue
         seen.add(key)
-        uniq.append((a, b, label, field))
+        uniq.append((a, b, lab, field))
     return uniq
+
+
+def label(s):
+    """Mermaid renders node text as HTML, so an ampersand or a quotation mark in a title
+    is a rendering bug waiting for the one entry that has one. Four of these titles carry
+    an ampersand and one carries curly quotes, so the labels are sanitised rather than
+    trusted — the diagram is a projection of the register, and a projection is allowed to
+    spell a title differently from the page it points at."""
+    return (s.replace("&", "and").replace('"', "").replace("\u201c", "")
+             .replace("\u201d", "").replace("|", "/"))
+
+
+def connected():
+    """The slugs that appear in at least one recorded relation, in register order."""
+    seen = {s for a, b, _, _ in edges() for s in (a, b)}
+    return [i for i in INF if i["slug"] in seen]
+
+
+def isolated():
+    """And the ones that do not. Drawing them as a column of unattached boxes made the
+    diagram four times taller while saying nothing, so they are named under it instead —
+    an entry with no recorded relation is a fact about the register, not a thing to hide,
+    and several are isolated only because the briefing that would connect them has not
+    arrived."""
+    seen = {s for a, b, _, _ in edges() for s in (a, b)}
+    return [i for i in INF if i["slug"] not in seen]
 
 
 def mermaid_src():
     lines = ["graph LR"]
-    arrow = {"nests under": "-.->", "composes with": "<-->", }
-    for i in INF:
+    # `---|text|` rather than `<-->` for the symmetric relation: the bidirectional arrow
+    # is a newer flowchart form and this diagram loads mermaid from a CDN at a pinned
+    # major, so the older spelling is the one that cannot surprise us on an upgrade.
+    arrow = {"nests under": "-.->", "composes with": "---"}
+    for i in connected():
         cls = i["tier"]
-        lines.append(f'  {i["slug"].replace("-", "_")}["{i["title"]}"]:::{cls}')
-    for a, b, label, _ in edges():
-        lines.append(f'  {a.replace("-", "_")} {arrow.get(label, "-->")}|{label}| '
+        lines.append(f'  {i["slug"].replace("-", "_")}["{label(i["title"])}"]:::{cls}')
+    for a, b, lab, _ in edges():
+        lines.append(f'  {a.replace("-", "_")} {arrow.get(lab, "-->")}|{label(lab)}| '
                      f'{b.replace("-", "_")}')
     lines += [
         "  classDef traced fill:#e7f3f1,stroke:#0f766e,color:#10302c;",
@@ -92,8 +121,8 @@ def graph_json():
     nodes = [{"id": i["slug"], "label": i["title"], "tier": i["tier"], "kind": i["kind"],
               "status": i["status"], "principle": i["principle"],
               "url": f'/register/{i["slug"]}/index.html'} for i in INF]
-    links = [{"from": a, "to": b, "label": label, "recorded_in": field}
-             for a, b, label, field in edges()]
+    links = [{"from": a, "to": b, "label": lab, "recorded_in": field}
+             for a, b, lab, field in edges()]
     lands = []
     for i in INF:
         for r in i.get("trace", {}).get("rows", []):
@@ -147,10 +176,10 @@ def index_page():
     E = edges()
     edge_rows = "\n".join(
         f'      <tr><td><a href="../register/{a}/index.html">{esc(BY_SLUG[a]["title"])}</a></td>'
-        f'<td class="dim">{esc(label)}</td>'
+        f'<td class="dim">{esc(lab)}</td>'
         f'<td><a href="../register/{b}/index.html">{esc(BY_SLUG[b]["title"])}</a></td>'
         f'<td class="small dim"><code>{esc(field)}</code></td></tr>'
-        for a, b, label, field in E)
+        for a, b, lab, field in E)
 
     proj = []
     for i, rows in projection_rows():
@@ -169,6 +198,10 @@ def index_page():
 </div>''')
 
     landed = sum(len(r) for _, r in projection_rows())
+    iso = isolated()
+    iso_links = " ".join(
+        f'<a class="cfgget" href="../register/{esc(i["slug"])}/index.html">{esc(i["title"])}</a>'
+        for i in iso)
 
     body = f'''
 <main class="doc">
@@ -200,6 +233,16 @@ under what, what composes with what, and which idea led to which. Colour is tier
 <p class="small dim">The diagram renders in your browser from the fence above. If the module does
 not load, the fence stays readable as text and every edge it draws is also listed in the table
 below — a picture that can fail should never be the only copy of the thing.</p>
+
+<h3 id="isolated">The {len(iso)} entries with no recorded relation</h3>
+<p>They are not in the diagram, because a column of unattached boxes made it four times taller
+while saying nothing. <b>Standing alone is a fact about the register rather than about the
+influence</b>: an edge is only drawn where a field in the register records one, and several of
+these are unconnected simply because the briefing document that would connect them has not
+arrived. Where a lineage is plausible but undocumented — Kevin Kelly's technium and Wardley's
+evolution axis are the obvious pair — <b>the edge is deliberately not drawn</b>, because guessing
+one here would be the same failure as inventing a trace row.</p>
+<p class="anchorlinks">{iso_links}</p>
 
 <h2 id="edges">Every recorded relation</h2>
 <div class="tablewrap">

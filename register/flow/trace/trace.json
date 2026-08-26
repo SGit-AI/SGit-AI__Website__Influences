@@ -1,0 +1,50 @@
+{
+  "slug": "flow",
+  "title": "Flow, and coding in the zone",
+  "tier": "traced",
+  "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+  "anchor": {
+    "title": "Flow: The Psychology of Optimal Experience",
+    "author": "Mihaly Csikszentmihalyi",
+    "year": 1990,
+    "note": "The book is the anchor for the *state*. [Victor's talk](../bret-victor/index.html) is the anchor for the *mechanism*, and has its own entry — this one is where the two meet."
+  },
+  "rows": [
+    {
+      "pattern": "Immediate feedback as a precondition of the state",
+      "where": "The estate's development methodology, whose stated core principle is preserving developer flow state",
+      "version": "v1.2.1",
+      "status": "implemented",
+      "source": "`v1.2.1__ifd__intro-and-how-to-use.md`, opening and closing lines"
+    },
+    {
+      "pattern": "Clear goals — the person always knows what they are trying to do next",
+      "where": "The methodology's structure: work proceeds in units small enough to hold in one head",
+      "version": "v1.2.1",
+      "status": "implemented",
+      "source": "the same guide, cited in 02__ §T6"
+    },
+    {
+      "pattern": "Challenge matched to skill",
+      "where": "The division of labour between person and model — generation delegated, judgement retained",
+      "version": "v1.2.1",
+      "status": "partial",
+      "source": "02__ §T6; the guide states the intent, the balance itself is not measured"
+    },
+    {
+      "pattern": "Programming named as a flow-inducing activity, with the criteria applied",
+      "where": "The Joy-of-Programming argument, which cites Csikszentmihalyi directly and works through the criteria",
+      "version": null,
+      "status": "implemented",
+      "source": "`the-joy-of-programming-in-the-age-of-ai-assisted-development.md` (2025-07-04); no version in the corpus scan"
+    },
+    {
+      "pattern": "Measuring whether the state is actually being preserved",
+      "where": "Nowhere. The methodology's central claim about itself is the one thing it does not instrument",
+      "version": "v1.2.1",
+      "status": "absent",
+      "source": "absence of any measurement in the guide or the surrounding corpus"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

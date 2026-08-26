@@ -1,0 +1,50 @@
+{
+  "slug": "popper",
+  "title": "Karl Popper & falsifiability",
+  "tier": "traced",
+  "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+  "anchor": {
+    "title": "The Logic of Scientific Discovery",
+    "author": "Karl Popper",
+    "year": 1959,
+    "note": "First published in German as *Logik der Forschung* (1934). The anchor is the demarcation criterion rather than the whole philosophy of science."
+  },
+  "rows": [
+    {
+      "pattern": "A claim must be refutable to be worth making",
+      "where": "Wardley mapping as practised here — *a map is a claim* about position and movement, refutable by pointing at a misplaced component",
+      "version": null,
+      "status": "implemented",
+      "source": "02__ §T10, citing the wardley-maps pack; no version in the corpus scan"
+    },
+    {
+      "pattern": "State the conditions under which you would be wrong",
+      "where": "The risks register's falsifiable-statement discipline — an accepted risk with a named acceptor and a named mitigation",
+      "version": null,
+      "status": "implemented",
+      "source": "02__ §T10; [risks.sgit.ai](https://risks.sgit.ai)"
+    },
+    {
+      "pattern": "The demarcation applied to inspiration itself",
+      "where": "**This site's trace tables.** An influence entry is written so that it can be checked against the repositories and found wrong",
+      "version": null,
+      "status": "implemented",
+      "source": "the register format, 01__ §2 — the format's own founding move"
+    },
+    {
+      "pattern": "Publishing the refutations, not only the claims",
+      "where": "Partial. The gaps are published as build specs and the absent rows are kept, but no claim on this network has yet been retracted in public",
+      "version": null,
+      "status": "partial",
+      "source": "absence of any retraction across the network's shipped pages"
+    },
+    {
+      "pattern": "A test that could falsify an influence claim itself",
+      "where": "Nowhere, and probably nowhere possible. See the resonance above",
+      "version": null,
+      "status": "absent",
+      "source": "stated as a limit in 01__ and on [the disclosure page](../../about/participant.html#lose)"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

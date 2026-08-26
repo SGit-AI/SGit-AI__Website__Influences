@@ -34,7 +34,7 @@ GH = "https://github.com/SGit-AI/SGit-AI__Website__Influences"
 PARENT = "https://sgit.ai"
 PARENT_TITLE = ("sgit.ai — the parent project: the vault layer, the shipped CLI and the "
                 "network this site belongs to")
-STAGE = "the pipeline"
+STAGE = "the provenance layer"
 
 # The nav, two levels. Each entry is (label, own page, [(sub-label, href), ...], (path prefixes)).
 #
@@ -45,6 +45,20 @@ STAGE = "the pipeline"
 #     one of the twenty-five generated entries, say — still lights up the group it
 #     belongs to.
 NAV = [
+    ("The register", "register/index.html", [
+        ("All the entries", "register/index.html"),
+        ("Bret Victor — entry one", "register/bret-victor/index.html"),
+        ("The Semantic Web — argued with", "register/semantic-web/index.html"),
+        ("Flow — three sources, one method", "register/flow/index.html"),
+        ("Design — discovered, confirmed", "register/design/index.html"),
+        ("The register format", "format/index.html"),
+    ], ("register/", "format/")),
+    ("The map", "map/index.html", [
+        ("The influence map", "map/index.html"),
+        ("The three tiers", "tiers/index.html"),
+        ("The wider library", "library/index.html"),
+        ("Tier movement — the changelog", "shipped/index.html"),
+    ], ("map/", "tiers/", "library/", "shipped/")),
     ("For agents", "documents/index.html", [
         ("The source documents", "documents/index.html"),
         ("llms.txt", "llms.txt"),
@@ -62,6 +76,19 @@ NAV = [
 ]
 
 FOOTER = [
+    ("The register", [
+        ("All the entries", "register/index.html"),
+        ("Bret Victor — entry one", "register/bret-victor/index.html"),
+        ("The Semantic Web", "register/semantic-web/index.html"),
+        ("Flow", "register/flow/index.html"),
+        ("The register format", "format/index.html"),
+    ]),
+    ("The shape of it", [
+        ("The influence map", "map/index.html"),
+        ("The three tiers", "tiers/index.html"),
+        ("The wider library", "library/index.html"),
+        ("Tier movement", "shipped/index.html"),
+    ]),
     ("For agents", [
         ("The source documents", "documents/index.html"),
         ("llms.txt", "llms.txt"),
@@ -71,8 +98,6 @@ FOOTER = [
         ("How it is built", "admin/index.html"),
         ("Release history", "admin/versions.html"),
         ("Comms: the briefing queue", "admin/comms.html"),
-    ]),
-    ("The network", [
         ("The sgit.ai network", "network/index.html"),
         ("Participant disclosure", "about/participant.html"),
     ]),

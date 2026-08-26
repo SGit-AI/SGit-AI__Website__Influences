@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The register · influences.sgit.ai</title>
-<meta name="description" content="Every influence entry. Not written yet — this release is the pipeline.">
+<title>The register — every influence entry · influences.sgit.ai</title>
+<meta name="description" content="All 25 influence entries in three tiers: 15 traced, 7 stated, 3 discovered. Each entry is a falsifiable claim about the codebase.">
 <link rel="canonical" href="https://influences.sgit.ai/register/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="influences.sgit.ai">
 <meta property="og:url" content="https://influences.sgit.ai/register/index.html">
-<meta property="og:title" content="The register · influences.sgit.ai">
-<meta property="og:description" content="Every influence entry. Not written yet — this release is the pipeline.">
+<meta property="og:title" content="The register — every influence entry · influences.sgit.ai">
+<meta property="og:description" content="All 25 influence entries in three tiers: 15 traced, 7 stated, 3 discovered. Each entry is a falsifiable claim about the codebase.">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
@@ -19,10 +19,30 @@
 <nav class="site"><div class="row">
   <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
-  <span class="stage-pill">the pipeline</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <span class="stage-pill">the provenance layer</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../register/index.html">The register<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../register/index.html">All the entries</a>
+      <a class="sl" href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+      <a class="sl" href="../register/semantic-web/index.html">The Semantic Web — argued with</a>
+      <a class="sl" href="../register/flow/index.html">Flow — three sources, one method</a>
+      <a class="sl" href="../register/design/index.html">Design — discovered, confirmed</a>
+      <a class="sl" href="../format/index.html">The register format</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../map/index.html">The map<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../map/index.html">The influence map</a>
+      <a class="sl" href="../tiers/index.html">The three tiers</a>
+      <a class="sl" href="../library/index.html">The wider library</a>
+      <a class="sl" href="../shipped/index.html">Tier movement — the changelog</a>
+      </div>
+    </div>
     <div class="ni ni-has">
       <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
       <div class="sub">
@@ -54,16 +74,191 @@
 <main class="doc">
 <div class="crumb"><a href="../index.html">influences.sgit.ai</a> / register</div>
 <h1>The register</h1>
-<p class="lead">Not written yet.</p>
-<div class="warnbox">
-  <p><b>This release is the pipeline, not the register.</b> Validation, auto-tagging and
-  deployment are live and proven; the entries have not been written. When they are, each arrives
-  as <code>/register/&lt;slug&gt;/</code> with a markdown twin beside it, generated from
-  <code>data/influences.json</code>.</p>
+<p class="lead">Every influence, in three tiers by how well the claim is evidenced.
+<span class="tally" data-k="total">25</span> entries:
+<span class="tally" data-k="traced">15</span> traced,
+<span class="tally" data-k="stated">7</span> stated,
+<span class="tally" data-k="discovered">3</span> discovered and still awaiting
+the founder's confirmation. The counts are computed from
+<a href="../data/influences.json"><code>data/influences.json</code></a> on every build, not typed
+— because tier movement is the one event this site exists to record.</p>
+
+<div class="note">
+  <p><b>An entry is a falsifiable claim, not an appreciation.</b> Anyone can say Bret Victor was
+  an influence. The register says <i>which</i> of Victor's patterns appear <i>where</i> in the
+  estate, at <i>which</i> version, and which are still missing — specified precisely enough to
+  build. <a href="../format/index.html">The format, in full →</a></p>
 </div>
+
+
+<h2 id="traced">TRACED — <span class="tally" data-k="traced">15</span></h2>
+<p>Corpus evidence exists today. The claim on the page can be checked against the files listed on it. <a href="../tiers/index.html#traced">The definition →</a></p>
+<div class="cards" style="padding:0">
+  <a class="card" href="bret-victor/index.html">
+    <div class="tag">person · full</div>
+    <h3>Bret Victor</h3>
+    <p>The model entry, and the reason this site has a format at all. The register for <i>Inventing on Principle</i> was written as a working document before anyone asked what a site made of such documents should be called.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="wardley/index.html">
+    <div class="tag">person + framework · link-out</div>
+    <h3>Simon Wardley &amp; Wardley Maps</h3>
+    <p>The deepest-traced influence in the corpus by volume — around 210 files — and the one whose material is entirely a sibling site's. This entry owns only the resonance: why a security person reorganised his thinking around an evolution axis.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="semantic-web/index.html">
+    <div class="tag">topic + person · full</div>
+    <h3>Tim Berners-Lee &amp; the Semantic Web</h3>
+    <p>The format at its strongest, because this is an influence <b>argued with</b>. The dream of machine-readable meaning shaped the estate's graph work; the diagnosis of where the community went wrong shaped it just as much.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="graphs/index.html">
+    <div class="tag">topic · link-out</div>
+    <h3>Graphs</h3>
+    <p>The founding obsession, and the one link-out entry that owns something its sibling site does not: the personal history. Where graphs actually entered the thinking is an open question, and it is asked in public.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="owasp/index.html">
+    <div class="tag">community + era · full</div>
+    <h3>OWASP &amp; the security community</h3>
+    <p>Not a person and not a work: two decades inside an open community, and the Summit model in particular. The seed list's own phrasing was <i>the cyber security community</i> — an era, treated as an influence in its own right.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="flow/index.html">
+    <div class="tag">practice + research · full</div>
+    <h3>Flow, and coding in the zone</h3>
+    <p>The best demonstration on this site that influences <b>compose</b>. Csikszentmihalyi supplies the state, Victor supplies the mechanism that sustains it, and the estate's development methodology is what was built from both.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="open-source/index.html">
+    <div class="tag">topic + movement · link-out</div>
+    <h3>Open source &amp; its licences</h3>
+    <p>A link-out entry that owns one thing the sibling site does not foreground: open source as <b>personal formation</b>. What two decades of releasing tools taught about licences as social contracts rather than legal ones.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="luhmann/index.html">
+    <div class="tag">person + method · full</div>
+    <h3>Niklas Luhmann &amp; the Zettelkasten</h3>
+    <p>Never on the founder's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="ericsson/index.html">
+    <div class="tag">person + research · full</div>
+    <h3>Anders Ericsson &amp; deliberate practice</h3>
+    <p>The research behind the ten-thousand-hours number, attributed to the person who did it rather than the person who popularised it — a distinction the corpus is careful about, which is itself the tell.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="popper/index.html">
+    <div class="tag">person + idea · full</div>
+    <h3>Karl Popper &amp; falsifiability</h3>
+    <p>The shortest entry with the longest reach. Popper may be the influence that explains the <i>shape</i> of all the others' entries — including the trace table you are reading them in.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="torvalds/index.html">
+    <div class="tag">person · full</div>
+    <h3>Linus Torvalds</h3>
+    <p>Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument the founder makes about education.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="schneier/index.html">
+    <div class="tag">person · full</div>
+    <h3>Bruce Schneier</h3>
+    <p>Security as a systems and incentives problem before it is a technical one — and, in the corpus, the person who turns up in two arguments that have nothing to do with each other.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="design/index.html">
+    <div class="tag">discipline + person · full</div>
+    <h3>Design, with a capital D</h3>
+    <p>Discovered by mining and confirmed by the founder the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="design-canon/index.html">
+    <div class="tag">canon · full</div>
+    <h3>The wider design canon</h3>
+    <p>Rams, Vignelli, Norman, Eames, Müller-Brockmann, Tschichold, Aalto, Cooper, Krug, and Japanese design philosophy — mapped onto software explicitly in a live role definition, not cited as decoration.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="csikszentmihalyi/index.html">
+    <div class="tag">person + research · full</div>
+    <h3>Mihály Csíkszentmihályi</h3>
+    <p>Named directly in the corpus with his flow criteria applied, which is why he gets a row of his own rather than a mention inside the flow entry. The state has a specification; the specification is what makes it engineerable.</p>
+    <span class="go">The entry →</span>
+  </a>
+</div>
+
+<h2 id="stated">STATED — <span class="tally" data-k="stated">7</span></h2>
+<p>On the founder's own list, and thin or absent in the corpus. Published as commitments with the research plan visible — the roadmap, not the debt. <a href="../tiers/index.html#stated">The definition →</a></p>
+<div class="cards" style="padding:0">
+  <a class="card" href="neil-peart/index.html">
+    <div class="tag">person + music · stub</div>
+    <h3>Neil Peart &amp; Rush</h3>
+    <p>On the founder's own list, and with <b>zero corpus evidence</b>. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="kevin-kelly/index.html">
+    <div class="tag">books · stub</div>
+    <h3>Kevin Kelly's books</h3>
+    <p>On the founder's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="sinek-golden-circle/index.html">
+    <div class="tag">framework · stub</div>
+    <h3>Simon Sinek — the golden circle</h3>
+    <p>Why → How → What. On the founder's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="cathedral-bazaar/index.html">
+    <div class="tag">work · stub</div>
+    <h3>The Cathedral and the Bazaar</h3>
+    <p>The essay's factual history belongs to the open-source sibling site. This entry owns only what it <i>did to the founder</i> — which is exactly the part that is not written down anywhere.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="david-rice-keynote/index.html">
+    <div class="tag">presentation · stub</div>
+    <h3>David Rice — “Upon the Threshold of Opportunity”</h3>
+    <p>An OWASP keynote, named by the founder from memory. The one entry whose anchor is a specific recording that has to be <i>found</i> before it can be linked.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="music-and-band/index.html">
+    <div class="tag">practice + era · stub</div>
+    <h3>Music, and playing in a band</h3>
+    <p>The most personal entry on the site, entirely awaiting the founder's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="diverse-distributed-teams/index.html">
+    <div class="tag">practice · stub</div>
+    <h3>Diverse and distributed teams</h3>
+    <p>On the founder's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.</p>
+    <span class="go">The entry →</span>
+  </a>
+</div>
+
+<h2 id="discovered">DISCOVERED — <span class="tally" data-k="discovered">3</span></h2>
+<p>Surfaced by mining the corpus, never named by the founder. The claim rests entirely on the trace table until he confirms or corrects it. <a href="../tiers/index.html#discovered">The definition →</a></p>
+<div class="cards" style="padding:0">
+  <a class="card" href="christopher-alexander/index.html">
+    <div class="tag">person · full</div>
+    <h3>Christopher Alexander</h3>
+    <p>Never named by the founder. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="team-topologies-cynefin/index.html">
+    <div class="tag">frameworks · stub</div>
+    <h3>Team Topologies &amp; Cynefin</h3>
+    <p>Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and not enough to claim — so this is a discovered stub, published at the strength of its evidence.</p>
+    <span class="go">The entry →</span>
+  </a>
+  <a class="card" href="vannevar-bush/index.html">
+    <div class="tag">person + work · stub</div>
+    <h3>Vannevar Bush &amp; the memex</h3>
+    <p>The ancestor of the whole external-memory idea, and it entered this register the long way round — by being cited in an article about a modern implementation of the thing it predicted.</p>
+    <span class="go">The entry →</span>
+  </a>
+</div>
+
 <div class="pagenav">
   <a href="../index.html">← Front page</a>
-  <a href="../admin/index.html">How this site is built →</a>
+  <a href="../map/index.html">The influence map →</a>
 </div>
 </main>
 
@@ -73,7 +268,22 @@
     <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>The register</h4>
+    <a href="../register/index.html">All the entries</a>
+    <a href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+    <a href="../register/semantic-web/index.html">The Semantic Web</a>
+    <a href="../register/flow/index.html">Flow</a>
+    <a href="../format/index.html">The register format</a>
+  </div>
+  <div>
+    <h4>The shape of it</h4>
+    <a href="../map/index.html">The influence map</a>
+    <a href="../tiers/index.html">The three tiers</a>
+    <a href="../library/index.html">The wider library</a>
+    <a href="../shipped/index.html">Tier movement</a>
   </div>
   <div>
     <h4>For agents</h4>
@@ -86,9 +296,6 @@
     <a href="../admin/index.html">How it is built</a>
     <a href="../admin/versions.html">Release history</a>
     <a href="../admin/comms.html">Comms: the briefing queue</a>
-  </div>
-  <div>
-    <h4>The network</h4>
     <a href="../network/index.html">The sgit.ai network</a>
     <a href="../about/participant.html">Participant disclosure</a>
   </div>

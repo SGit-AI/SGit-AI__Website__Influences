@@ -1,0 +1,36 @@
+{
+  "slug": "christopher-alexander",
+  "title": "Christopher Alexander",
+  "tier": "discovered",
+  "principle": "Code is a space that people inhabit. A pattern is a named solution to a recurring problem in a context — and a language of patterns is what lets a place be built by many hands and still be coherent.",
+  "anchor": {
+    "title": "A Pattern Language",
+    "author": "Christopher Alexander, Sara Ishikawa and Murray Silverstein",
+    "year": 1977,
+    "note": "The book everyone in software cites. *The Timeless Way of Building* is the argument behind it and is in Block 7."
+  },
+  "rows": [
+    {
+      "pattern": "Code as a space developers inhabit — judge it by navigability and comfort",
+      "where": "The Designer role definition's review criteria",
+      "version": null,
+      "status": "implemented",
+      "source": "`team/roles/designer/ROLE.md`, quoted in 02__ §D1"
+    },
+    {
+      "pattern": "A *language* of patterns — named solutions that compose, each referring to the ones above and below it",
+      "where": "Nowhere. The estate has conventions and a house style; it has no pattern language, and the two are not the same thing",
+      "version": null,
+      "status": "absent",
+      "source": "absence across the corpus; the role definition names the lineage without building one"
+    },
+    {
+      "pattern": "Patterns discovered from use rather than designed in advance",
+      "where": "Nowhere recorded. The estate's conventions were derived by counting the code on [the coding sibling](https://coding.sgit.ai), which is the same method — but it was not done in Alexander's name and the connection is this site's inference",
+      "version": null,
+      "status": "absent",
+      "source": "this site's own reading; flagged as inference rather than evidence"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

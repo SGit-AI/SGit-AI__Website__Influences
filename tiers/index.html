@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The three tiers · influences.sgit.ai</title>
+<meta name="description" content="TRACED, STATED, DISCOVERED — what each tier means, what it takes to move between them, and why a site about provenance publishes its weakest claims rather than hiding them.">
+<link rel="canonical" href="https://influences.sgit.ai/tiers/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/tiers/index.html">
+<meta property="og:title" content="The three tiers · influences.sgit.ai">
+<meta property="og:description" content="Corpus evidence exists, the founder said so, or the corpus said so and he never did. The difference is published, and moving between them is this site's changelog.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the provenance layer</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../register/index.html">The register<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../register/index.html">All the entries</a>
+      <a class="sl" href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+      <a class="sl" href="../register/semantic-web/index.html">The Semantic Web — argued with</a>
+      <a class="sl" href="../register/flow/index.html">Flow — three sources, one method</a>
+      <a class="sl" href="../register/design/index.html">Design — discovered, confirmed</a>
+      <a class="sl" href="../format/index.html">The register format</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../map/index.html">The map<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../map/index.html">The influence map</a>
+      <a class="sl here" href="../tiers/index.html">The three tiers</a>
+      <a class="sl" href="../library/index.html">The wider library</a>
+      <a class="sl" href="../shipped/index.html">Tier movement — the changelog</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../documents/index.html">The source documents</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../admin/index.html">The pipeline, end to end</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / tiers</div>
+<h1>The three tiers</h1>
+<p class="lead">Every entry in this register carries a tier, and the tier is a statement about <b>evidence</b>, not about importance. A STATED influence may well be the deepest one on the list — the tier says only how well the site can currently show it. <span class="tally" data-k="total">25</span> entries: <span class="tally" data-k="traced">15</span> traced, <span class="tally" data-k="stated">7</span> stated, <span class="tally" data-k="discovered">3</span> discovered and awaiting confirmation. Those counts are recomputed from <a href="../data/influences.json"><code>data/influences.json</code></a> on every build.</p>
+
+<div class="tiercards">
+  <div class="tiercard t-traced">
+    <div class="n"><span class="tally" data-k="traced">15</span></div>
+    <h3>TRACED</h3>
+    <p>Corpus evidence exists today. The entry lists the files, and the claim can be checked against them.</p>
+  </div>
+  <div class="tiercard t-stated">
+    <div class="n"><span class="tally" data-k="stated">7</span></div>
+    <h3>STATED</h3>
+    <p>On the founder's own list, and thin or absent in the corpus. Published as a stub with the research plan visible.</p>
+  </div>
+  <div class="tiercard t-discovered">
+    <div class="n"><span class="tally" data-k="discovered">3</span></div>
+    <h3>DISCOVERED</h3>
+    <p>Found by mining, never claimed by the founder. A falsifiable claim about him, pending his confirmation.</p>
+  </div>
+</div>
+
+<h2 id="traced">TRACED — corpus evidence exists</h2>
+<p>The mining run found files. The entry lists them by path, and a reader with the repositories open can go and check whether they say what the entry says they say.</p>
+<p><b>What TRACED does not mean.</b> It does not mean the influence is proven, and it does not mean it is important. It means the site can show you something. A trace table shows that a pattern from an anchor work appears at a named place in the estate; <b>it cannot show that the anchor work caused it</b>. That limit is stated on <a href="../register/popper/index.html">the Popper entry</a>, which is the influence that explains why this site is shaped the way it is, and again on <a href="../about/participant.html#lose">the disclosure page</a>.</p>
+<p><span class="tally" data-k="discovered-origin">7</span> of the entries in this register were surfaced by mining rather than named by the founder. Four of those now sit at TRACED — three because the evidence was too strong to leave them anywhere else, and one, <a href="../register/design/index.html">Design</a>, because the founder confirmed it in writing on 25 August 2026. Those carry a <span class="kindb kb-disc">discovered → traced</span> badge, because how an entry got here is part of what it is.</p>
+
+<h2 id="stated">STATED — on the founder's list, and not yet in the corpus</h2>
+<p><span class="tally" data-k="stated">7</span> entries. Most of them have <b>zero</b> corpus evidence: the mining run found nothing at all, and the entry publishes an empty evidence block saying so.</p>
+<div class="note">
+  <p><b>This is the roadmap, not the debt.</b> The founder's own plan was to write a detailed briefing document about each one, and the site's job is to make that plan addressable rather than to wait quietly. Every stated entry has <a href="../admin/comms.html#briefing">an open thread in the briefing queue</a>, a published research plan, and a tier that will move when the document arrives.</p>
+</div>
+<p>Two reasons the corpus is empty, and they are different problems:</p>
+<ul>
+  <li><b>The material exists and was not reachable.</b> Two decades of earlier writing — the O2 Platform-era blog, OWASP talks, conference decks, the earlier books — were outside the scan. This is a tooling problem with a known fix, and it is <a href="../admin/comms.html#r3">R3</a>.</li>
+  <li><b>The material never existed.</b> <a href="../register/music-and-band/index.html">Playing in a band</a> has no public record, no publication to mine and no third party to ask. No amount of access closes that one; only the founder can.</li>
+</ul>
+<p>A stub is <b>published, not hidden</b>. Every one carries Block 1 and Block 3 at best current knowledge, an explicit awaiting-briefing marker, and the research plan — and where a principle is a hypothesis constructed from public material rather than from the founder's account, <b>the entry says so in the principle itself</b>.</p>
+
+<h2 id="discovered">DISCOVERED — the corpus said so and the founder never did</h2>
+<p>These entries were found by mining and were never on anybody's list. The claim that they shaped the work rests entirely on the evidence in the entry, and <b>they stay at DISCOVERED until the founder confirms or corrects them</b>.</p>
+<p>This is the tier the site is proudest of and the one that most needs explaining. A register that only records what its subject already believed about himself is an autobiography. Publishing claims <em>about</em> him that he has not agreed to — and <a href="../admin/comms.html#q2">asking him in public to strike the ones that do not belong</a> — is the site's falsifiability applied to itself.</p>
+<p>It has already worked once, before this site existed. <a href="../register/design/index.html">Design, with a capital D</a> was surfaced by mining a role definition and three briefs; the founder confirmed it on 25 August 2026, the day the commissioning pack shipped. That was the first DISCOVERED → confirmed transition, and it is the model for the rest.</p>
+
+<h2 id="movement">Tier movement is this site's changelog</h2>
+<p>The interesting events here are not new pages. They are <b>transitions</b>, and each one is a dated row on <a href="../shipped/index.html">the movement log</a>:</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Transition</th><th>What causes it</th><th>What it changes</th></tr></thead>
+    <tbody>
+      <tr><td><b>STATED → TRACED</b></td><td>A briefing document arrives and is integrated, or the earlier material becomes reachable and the scan finds something</td><td>The stub becomes a full entry: evidence, a trace table, gaps and a checklist. Its <a href="../admin/comms.html#briefing">briefing thread closes</a></td></tr>
+      <tr><td><b>DISCOVERED → TRACED</b></td><td>The founder confirms the influence is real</td><td>The tier moves and the entry keeps a <span class="kindb kb-disc">discovered → traced</span> badge — how it got here stays visible</td></tr>
+      <tr><td><b>DISCOVERED → removed</b></td><td>The founder says it was a citation, not an influence</td><td>The entry goes, and <a href="../shipped/index.html">the movement log records that it was here and why it left</a>. This has not happened yet</td></tr>
+      <tr><td><b>A trace row: absent → implemented</b></td><td>The estate builds one of the gaps an entry specified</td><td>The row flips, and an influence page turns out to have been a backlog that got worked</td></tr>
+    </tbody>
+  </table>
+</div>
+<p><b>A provenance site whose provenance changed silently would be self-refuting</b>, which is why the counts on this page are recomputed from the register on every build rather than typed, and why <a href="../admin/index.html#tallies">the release gate fails if a page disagrees with the data</a>.</p>
+
+<h2 id="counting">How the counting works, exactly</h2>
+<p>Two numbers on this site can be read two ways, so both are published:</p>
+<ul>
+  <li><b>Tier</b> is where an entry sits <em>now</em>: <span class="tally" data-k="traced">15</span> / <span class="tally" data-k="stated">7</span> / <span class="tally" data-k="discovered">3</span>.</li>
+  <li><b>Origin</b> is how it got into the register. <span class="tally" data-k="discovered-origin">7</span> entries were surfaced by mining rather than named by the founder — the <span class="tally" data-k="discovered">3</span> still awaiting confirmation, plus four already promoted.</li>
+</ul>
+<p>The commissioning pack's prose used an earlier snapshot (12 traced, 7 stated, 5 discovered) taken at mining time, before the promotions and before the Design confirmation. <b>The pack says its own seed JSON is authoritative and that the counts should be regenerated from it</b>, and this site does exactly that — which is why the numbers here differ from the numbers in <a href="../documents/influence-map.html">the document you can read at /documents/</a>. Both are published; the computed one wins.</p>
+
+<h2 id="status">Tier is not the same as status</h2>
+<p>A second axis, easy to confuse with the first. <b>Tier</b> is about evidence; <b>status</b> is about which of <a href="../format/index.html">the seven blocks</a> an entry has earned:</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Status</th><th>Count</th><th>What it is</th></tr></thead>
+    <tbody>
+      <tr><td><a href="../format/index.html#full"><b>full</b></a></td><td><span class="tally" data-k="full">13</span></td><td>All seven blocks, or as many as the evidence supports</td></tr>
+      <tr><td><a href="../format/index.html#link-out"><b>link-out</b></a></td><td><span class="tally" data-k="link-out">3</span></td><td>Blocks 1–3 plus a pointer where the trace table would be. The trace of that influence is an entire sibling site, and duplicating it would break <a href="../network/index.html#deconflict">the deconfliction rule</a></td></tr>
+      <tr><td><a href="../format/index.html#stub"><b>stub</b></a></td><td><span class="tally" data-k="stub">9</span></td><td>Blocks 1 and 3 at best current knowledge, plus the research plan</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The two axes are independent. A TRACED entry can be a link-out — <a href="../register/wardley/index.html">Wardley</a> is the most heavily evidenced influence in the corpus and has the shortest entry, because its material belongs to a sibling. A DISCOVERED entry can be full: <a href="../register/christopher-alexander/index.html">Christopher Alexander</a> has a trace table with one implemented row and two absent ones, which is a more useful thing to publish than nothing.</p>
+
+<div class="pagenav">
+  <a href="../register/index.html">← The register</a>
+  <a href="../format/index.html">The register format →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>The register</h4>
+    <a href="../register/index.html">All the entries</a>
+    <a href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+    <a href="../register/semantic-web/index.html">The Semantic Web</a>
+    <a href="../register/flow/index.html">Flow</a>
+    <a href="../format/index.html">The register format</a>
+  </div>
+  <div>
+    <h4>The shape of it</h4>
+    <a href="../map/index.html">The influence map</a>
+    <a href="../tiers/index.html">The three tiers</a>
+    <a href="../library/index.html">The wider library</a>
+    <a href="../shipped/index.html">Tier movement</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../documents/index.html">The source documents</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="../admin/index.html">How it is built</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../admin/comms.html">Comms: the briefing queue</a>
+    <a href="../network/index.html">The sgit.ai network</a>
+    <a href="../about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

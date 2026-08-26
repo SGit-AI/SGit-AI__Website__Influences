@@ -1,0 +1,23 @@
+tier,path,words,role,notes
+0,00__BRIEF.md,840,pack,the commission
+0,01__the-register-format.md,907,pack,entry template canonised from the Victor register
+0,02__the-influence-map.md,1581,pack,all 24 entries with evidence
+0,03__site-architecture.md,534,pack,URLs / data model / tier movement
+0,04__boundaries-and-licensing.md,542,pack,no-verbatim rule as licence armour
+0,05__gaps-and-open-questions.md,483,pack,5 gaps / 7 comms questions
+0,influences__seed.json,,pack,24 entries; authoritative tier state
+0,sources/register__bret-victor__inventing-on-principle.md,124,pack,structural summary; full register text with the founder (comms Q1)
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md,943,evidence,"contains the section 'The Brett Victor Problem'"
+1,docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md,5614,evidence,"Victor immediate-feedback thesis; Csikszentmihalyi named; flow criteria applied"
+1,docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md,4673,evidence,"Luhmann/Zettelkasten mapped to G3; Vannevar Bush memex entry point"
+1,SGraph-AI__App__Send/library/concepts/v0_4_0__thinking-in-graphs.md,5013,evidence,"section 'The Semantic Web's Insight (and Mistake)' — node-first vs edge-first"
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md,3278,evidence,"TBL's Solid vs sgit vaults; Schneier at Inrupt"
+1,SGraph-AI__App__Send/team/roles/designer/ROLE.md,3076,evidence,"Christopher Alexander; Rams; Vignelli; Norman; the design canon"
+1,SGraph-AI__App__Send/library/guides/development/ifd/v1.2.1__ifd__intro-and-how-to-use.md,1956,evidence,"IFD centers on preserving developer flow state"
+2,wardley-maps.sgit.ai (sibling pack),,deconflict,Wardley material lives there; influence entry links out
+2,open-source.sgit.ai (sibling pack),,deconflict,open-source history lives there; Cathedral & Bazaar / Torvalds nest under the influence entry
+2,graphs + owasp sibling sites,,deconflict,link-out entries own resonance only
+3,founder's full immediate-connection register (in conversation),,DO-NOT-PUBLISH-YET,supplied verbatim by founder; not retained in this environment; request via comms Q1 then publish as entry one
+3,founder's briefing documents for the STATED seven,,PENDING,do not fabricate; stubs carry status awaiting-briefing until these arrive
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/27/part-2/v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md,2879,evidence,"'The Jonathan Ive Principle'; the Jobs MP3-to-CD whiteboard story; good design is invisible"
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/claude-code-web/02/28/v0.7.4__explorer-response__security-and-process-briefs.md,2479,evidence,"the 'Jonathan Ive test' as mandatory validator for every UI change"

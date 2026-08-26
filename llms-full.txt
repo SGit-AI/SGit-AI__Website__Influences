@@ -1,6 +1,6 @@
 # influences.sgit.ai — full text
 
-Site version: v0.1.0. Every page and every source document of https://influences.sgit.ai/ in one
+Site version: v0.2.0. Every page and every source document of https://influences.sgit.ai/ in one
 file, so an agent can read the whole thing in a single fetch.
 
 GENERATED — assembled by admin/build/gen_llms_full.py from llms.txt, index.md,
@@ -10,8 +10,8 @@ site does not.
 Structure of this file:
   PART 1  the index (llms.txt), for orientation and the stable-URL promises
   PART 2  the front page in full (index.md)
-  PART 3  the 0 register entries, each the markdown twin of its page
-  PART 4  the 0 source documents this site is written from, verbatim
+  PART 3  the 25 register entries, each the markdown twin of its page
+  PART 4  the 10 source documents this site is written from, verbatim
 
 WHAT IS NOT IN THIS FILE, BY RULE: the anchor works. This site explains why an
 influence resonated and traces where it was applied; it does not reproduce the talks,
@@ -39,15 +39,9 @@ PART 1 — THE INDEX (source: /llms.txt)
 > than an appreciation. An entry names which patterns from an anchor work appear where in the
 > estate, at which version, and which are still absent — specified precisely enough to build.
 
-Site version: v0.1.0 (26 August 2026). Published by the sgit project, which is also the subject
+Site version: v0.2.0 (26 August 2026). Published by the sgit project, which is also the subject
 of every claim on this site — participant disclosure at /about/participant.html. All site content
 CC BY 4.0.
-
-## What this release is
-
-The pipeline, before the register. Validation, auto-tagging and deployment are live and proven;
-the twenty-five influence entries have not been written. That order is deliberate: a site whose
-release gate works can publish anything safely, and a site full of pages with no gate cannot.
 
 ## The rule an agent consuming this site must inherit
 
@@ -55,66 +49,107 @@ THE ANCHOR WORKS ARE NOT HERE, AND WILL NEVER BE. This site explains why a work 
 traces where it was applied; it does not reproduce the talks, essays, books or lyrics that did
 the influencing. Those are linked, never rehosted — they belong to their authors, and a CC BY
 site that carried them would be relicensing what it does not own. Short attributed quotation for
-analysis is capped at 40 words BY THE RELEASE GATE, not by convention. Lyrics are the sharpest
-edge and get description and a link, never reproduction.
+analysis is capped at 40 words BY THE RELEASE GATE, not by convention: every <blockquote> on the
+site declares whose words it carries, data-quote="founder" is unrestricted because his own
+writing is his to publish, and anything else fails the build over forty words. Lyrics are the
+sharpest edge and get description and a link, never reproduction. Likenesses are original artwork
+only — never scraped photographs, and never AI renderings presented as portraits.
 
 Concretely: /llms-full.txt is safe to ingest wholesale. It contains this site's own analysis and
 nothing that belongs to a third party.
 
+## The register: 25 entries in three tiers
+
+15 TRACED, 7 STATED, 3 DISCOVERED. Counts are recomputed from /data/influences.json on every
+build and checked independently by the release gate; no number about this site's own shape is
+typed by a person.
+
+- TRACED — corpus evidence exists today. The entry lists the files by path and the claim is
+  checkable against them. It does NOT mean the influence is proven: a trace table shows that a
+  pattern appears at a named place, not that the anchor work caused it.
+- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
+  the research plan visible and an open thread in the briefing queue. Most have ZERO evidence and
+  say so in an empty evidence block. The roadmap, not the debt.
+- DISCOVERED — surfaced by mining the corpus, never named by the founder. Published as a claim
+  ABOUT him pending his confirmation, and he is asked in public to strike the ones that do not
+  belong. 7 entries were discovered in origin; 4 have since been promoted and keep the flag.
+
+Tier movement is this site's changelog, at /shipped/: STATED → TRACED when a briefing lands,
+DISCOVERED → TRACED when the founder confirms, DISCOVERED → removed when he does not, and a trace
+row flipping absent → implemented when the estate builds a gap an entry specified.
+
 ## Properties agents may rely on
 
-- The register will live at /register/<slug>/index.html, with a markdown twin at
-  /register/<slug>/index.md and, where the entry has a trace table, the same rows as data at
-  /register/<slug>/trace/trace.json. Slugs are people or topics, never works — an anchor work is
-  metadata inside the entry, because a briefing document may reveal the real anchor was a
-  different talk.
-- /data/influences.json will be the register. Every page under /register/ is generated from it;
-  the tier counts on every page are recomputed from it on every build and checked independently
-  by the release gate. No number about this site's own shape is typed by a person.
-- /map/graph.json will carry the influence graph — nodes, edges and the places a pattern lands
-  in the estate — computed from the same file. The map is generated, not drawn.
-- /llms-full.txt is this site in one fetch: the index, the front page, every register entry's
-  markdown twin and every source document. GENERATED and re-checked in CI, so it cannot say
-  anything the site does not.
+- Every entry is at /register/<slug>/index.html with a markdown twin at
+  /register/<slug>/index.md. Slugs are people or topics, never works — an anchor work is metadata
+  inside the entry, because a briefing document may reveal the real anchor was a different talk.
+- Entries with a trace table publish it three ways: /register/<slug>/trace/index.html,
+  /register/<slug>/trace/trace.md and /register/<slug>/trace/trace.json. Six entries have one.
+- /data/influences.json IS the register. Every page under /register/ is generated from it, /map/
+  is computed from it, and the prose is authored there once and rendered twice — the HTML page
+  and its markdown twin are two renderings of one string, so they cannot drift.
+- /map/graph.json carries the influence graph: nodes, edges and the places a pattern lands in the
+  estate. Computed from the register, not drawn.
+- /llms-full.txt is this site in one fetch: the index, the front page, every entry's markdown
+  twin and every source document. GENERATED and re-checked in CI, so it cannot say anything the
+  site does not.
+- The nine documents of the commissioning pack are published verbatim at /briefs/<filename>,
+  unredacted, with a reader page each under /documents/.
 - /sitemap.xml is generated from the tree, so it cannot omit a page somebody forgot to add.
 - The version in /admin/build/version.txt agrees with the badge on every page, the release
   history table, this file, /llms-full.txt and /index.md — CI fails the release otherwise.
 
-## The three tiers
+## Trace-row statuses, and what they mean
 
-- TRACED — corpus evidence exists today. The claim is checkable against the files the entry
-  lists.
-- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
-  the research plan visible, awaiting his briefing document. The roadmap, not the debt.
-- DISCOVERED — surfaced by mining the corpus, never named by the founder. The claim rests
-  entirely on the trace table until he confirms or corrects it. The site's falsifiability applied
-  to itself.
+implemented — the pattern appears at the named place.
+partial     — something of it appears; the pattern is not fully realised.
+absent      — the anchor work names it and the estate does not have it. KEPT IN THE TABLE rather
+              than dropped, and usually restated in Block 5 as a build spec.
 
-Tier movement is this site's changelog: STATED → TRACED when a briefing lands, DISCOVERED →
-TRACED when the founder confirms, and a trace row flipping absent → implemented when the estate
-builds a gap. A provenance site whose provenance changed silently would be self-refuting.
+A row without a version is flagged by the entry itself: the format's own rule is that a trace
+table without versions is an opinion.
 
-## The pages that exist today
+## The pages
 
-- /index.html — what this release is, and what an influence entry is. Markdown twin: /index.md
-- /register/index.html — the register index. Empty: the entries are not written.
-- /map/index.html — the influence map. Empty: it is computed from the register.
-- /documents/index.html — the source documents. Empty: the commissioning pack is not unpacked
-  into the tree yet.
-- /admin/index.html — how this site is built: the pipeline, the gate, the tagger, the
-  generators. /admin/versions.html — the release history. /admin/comms.html — tasks, and the
-  briefing-document request queue.
-- /network/index.html — the sibling sites and the boundaries between them.
-- /about/participant.html — who publishes this and how it is written.
+- /index.html — the thesis, the tiers, six entries worth starting with, and what the site cannot
+  do. Markdown twin: /index.md
+- /register/index.html — all 25 entries, grouped by tier
+- /register/<slug>/index.html — one entry, in the seven-block format: anchor, the founder's words,
+  the principle, the trace table, the gaps as build specs, the checklist, the wider library
+- /tiers/index.html — what each tier means, what moves an entry between them, and why tier is not
+  the same as status
+- /format/index.html — the seven blocks, the three reduced forms, the no-verbatim rule and the
+  generate-or-date rule
+- /map/index.html — the lineage diagram, every recorded relation, and the influence → principle →
+  estate projection. Computed from the register
+- /library/index.html — the union of every entry's Block 7. A list of addresses, not a collection:
+  no cover images, no excerpts
+- /shipped/index.html — tier movement, what is expected to move next, and what would be recorded
+  here if this site were wrong
+- /documents/index.html — the commissioning pack, published in full
+- /admin/index.html — the pipeline, the gate, the tagger, the generators.
+  /admin/versions.html — release history. /admin/comms.html — tasks, the briefing queue, and the
+  questions only the founder can answer
+- /network/index.html — the sibling sites, and the deconfliction rule three entries run on
+- /about/participant.html — who publishes this, the conflict stated plainly, and the five places
+  the approach is weakest
 
-## What is NOT here, and is next
+## What this site cannot do, stated on the site itself
 
-- The twenty-five register entries, from the pack's seed data: 15 traced, 7 stated, 3 discovered
-  and still awaiting confirmation.
-- /tiers/, /format/, /library/ and /shipped/ — the tier definitions, the register format
-  documented, the union of every entry's wider library, and the tier-movement changelog.
-- The full text of the founder's Bret Victor register, which is entry one and which this
-  environment does not hold. First ask in the comms queue.
+- A trace table cannot show causation. The Victor register's own finding is that half the estate's
+  strongest viewer features were UNKNOWING implementations of the talk's demos — which is evidence
+  that the instinct and the principle agree, and is weaker than "this shaped the work".
+- The corpus is cited, not resolved. This repository holds the website, not the estate, so every
+  evidence path is quoted from a dated mining run (v0.33.62, 25 August 2026) rather than checked at
+  build time. Seven entries have no trace table for that reason. Tracked as R1.
+- Two decades of earlier material — the O2 Platform-era blog, OWASP talks, conference decks — were
+  unreachable when the mining ran, and that is exactly where the STATED entries' evidence will be.
+  The tiers therefore partly measure what has recently been written down. Tracked as R3.
+- Entry one is incomplete. The full text of the founder's Bret Victor register is with him; the
+  entry ships with its trace table empty and the reason stated rather than with invented rows.
+  First ask in the queue, Q1.
+- Nothing on this network has ever been publicly retracted. Publishing gaps is the cheap half of
+  falsifiability.
 
 ## Related
 
@@ -138,72 +173,124 @@ PART 2 — THE FRONT PAGE (source: /index.md)
 > the founder thinks and **how** the estate works; this one is for **where the thinking came
 > from** — so an agent extends the instincts on purpose rather than by luck.
 
-*Source: <https://influences.sgit.ai/index.html> · site v0.1.0 · markdown twin of the front page.*
+*Source: <https://influences.sgit.ai/index.html> · site v0.2.0 · markdown twin of the front page.*
 
 ---
 
-## This release is the pipeline. The register comes next.
+## An influence entry is a falsifiable claim about the codebase
 
-Every sibling site's early releases tell the same story: content lands, then something in the
-release machinery turns out to be wrong, and the fix is a release of its own. So this repository
-shipped the gate first, and publishes an almost-empty site through it — on a tree small enough to
-read in one sitting.
+Anyone can say Bret Victor was an influence. This register says **which** of Victor's patterns
+appear **where** in the estate, at **which** version — and which are still **absent**, specified
+precisely enough that an agent could pick one up as a work item. That single move is what
+separates it from every books-that-shaped-me listicle.
 
 ```
-# every push to dev
-validate ──▶ tag-release ──▶ deploy
-   │             │                │
-   │             │                └─ upload-pages-artifact, deploy-pages
-   │             └─ git push origin refs/tags/vX.Y.Z
-   └─ gen_*.py --check ; node admin/build/validate.js
+# /register/design/trace/ — one entry's table, abridged
 
-# six checks in the gate, and two of them are this site's own:
-version agreement · internal links + fragments · canonical host
-the no-verbatim gate     # a third party's words, capped at 40
-the register is the data # tier counts recomputed, never typed
-credential-shape leak tripwire
+pattern from the anchor            where it lands              ver      status
+Design is how it works             the Designer role           —        implemented
+Start from the user's intent       NotebookLM case study       v0.7.4   implemented
+Good design is invisible           the Jonathan Ive test —     v0.7.4   implemented
+                                   a MANDATORY validator
+                                   for every UI change
+Simplicity as subtraction          implied, not recorded       v0.7.4   partial
+The same test on an API or CLI     nowhere                     v0.7.4   absent
 ```
 
-The two middle checks are the site's own rules, made executable rather than stated.
-[Why a quotation cap is a release gate](admin/index.html#no-verbatim).
+The third row is what a fully absorbed influence looks like: not a quote on a wall, **a gate in a
+pipeline**. The last row is why the format is worth having — it is a build spec, not an omission.
+[The whole entry](register/design/index.html).
 
-## An influence entry is a falsifiable claim
+## Three tiers, and the difference is published
 
-This is what separates the register from every "books that shaped me" listicle, and it is the
-reason the site exists at all.
+The tier is a statement about **evidence**, not importance. A stated influence may well be the
+deepest one on the list — the tier says only how well the site can currently show it. Every count
+is recomputed from the register on each build; none of them is typed.
 
-- **Not "X inspired me" — which pattern, where, at which version.** Anyone can say Bret Victor
-  was an influence. The register says which of Victor's patterns appear where in the estate, at
-  which release, and which are still **absent** — specified precisely enough that an agent could
-  pick one up as a work item.
-- **Seven blocks, proven in use before they were designed.** Anchor → the founder's words → the
-  principle → **the trace table** → the gaps as build specs → a checklist → the wider library.
-  The format was not invented for this site: it was written first, as a working document, and
-  the site was named afterwards.
-- **TRACED, STATED, DISCOVERED — and the difference is published.** Corpus evidence exists; on
-  the founder's list but not yet in the corpus; or found by mining and never claimed by him at
-  all. A reader can tell a traced claim from a hypothesis without taking the site's word for it.
-- **Link, never rehost.** The site explains why a work resonated and traces where it was
-  applied. The work itself stays where its author put it. That instinct is also the legally
-  correct one — and here it is a check in the release pipeline, not a paragraph in a footer.
+- **TRACED — 15 entries.** The mining run found files. The entry lists them by path, and a reader
+  with the repositories open can check whether they say what the entry claims. It still cannot
+  show that the anchor work *caused* the pattern, and the site says so rather than implying more
+  rigour than it has. [What TRACED does and does not mean](tiers/index.html#traced).
+- **STATED — 7 entries.** On the founder's own list, and the corpus is silent. Most have **zero**
+  evidence and publish an empty evidence block saying so. Two decades of earlier writing were out
+  of reach; one entry — playing in a band — has no public record at all. **This is the roadmap,
+  not the debt.** [Why the corpus is empty](tiers/index.html#stated).
+- **DISCOVERED — 3 entries.** Found by mining, never on anyone's list, published as claims *about*
+  the founder pending his confirmation — and he is
+  [asked in public to strike the ones that do not belong](admin/comms.html#q2). The site's
+  falsifiability applied to itself. [The tier the site is proudest of](tiers/index.html#discovered).
+- **Tier movement is the changelog.** An entry going STATED → TRACED because a briefing arrived,
+  or DISCOVERED → TRACED because the founder confirmed it. It has already happened once, before
+  this site existed. [The movement log](shipped/index.html).
 
-## What is not here yet
+## Where to start
 
-Stated plainly, because a site about provenance that was vague about its own state would be
-self-refuting:
+- [**Design, with a capital D**](register/design/index.html) — the strongest trace on the site.
+  Discovered by mining and confirmed by the founder the day the pack shipped. The influence became
+  the *Jonathan Ive test*, a mandatory validator for every UI change.
+- [**Tim Berners-Lee & the Semantic Web**](register/semantic-web/index.html) — the format at its
+  strongest, because this influence is disagreed with. Two of its trace rows are the influence
+  *inverted*.
+- [**Flow, and coding in the zone**](register/flow/index.html) — the best demonstration that
+  influences compose: Csikszentmihalyi supplies the state, Victor the mechanism, and the estate's
+  development methodology is what was built from both.
+- [**Bret Victor**](register/bret-victor/index.html) — the entry the format came from, shipped
+  with its trace table missing because the register that contains it is with the founder.
+- [**Music, and playing in a band**](register/music-and-band/index.html) — no anchor URL, no
+  evidence, no research plan that would work. The entry only he can write.
+- [**Karl Popper & falsifiability**](register/popper/index.html) — the shortest entry with the
+  longest reach, and the influence that explains the shape of all the others.
 
-- **The register itself** — twenty-five entries across three tiers, from the commissioning
-  pack's seed data. The empty index is live, generated from a data file that has not been
-  written.
-- **The influence map** — the graph of influences, principles and estate features. Computed from
-  the register, so it cannot exist before the register does.
-- **The source documents** — the commissioning pack, to be published in full, because a site
-  that argues from a document should let you read the document.
-- **The register format, documented**, the tier definitions, and the union of every entry's
-  wider library.
+## Two rules, enforced rather than stated
 
-Everything above is tracked as a numbered task at [comms](admin/comms.html), and every release
-says what it shipped in [one row](admin/versions.html).
+This site's editorial commitments are checks in the release pipeline, because a site whose thesis
+is that a claim should be checkable is in a poor position to publish unchecked claims about
+itself.
+
+```
+# admin/build/validate.js, on every push to dev
+
+the no-verbatim gate
+  every <blockquote> declares whose words it carries
+  data-quote="founder"     unrestricted  # his own writing
+  anything else            40 words max  # quoted to be examined
+  # the fix for a tripped gate is to cut the quotation,
+  # never to raise the cap
+
+the register is the data
+  every influence in the register has a page
+  every page under /register/ is in the register
+  every tier count recomputed  # chrome.py writes them,
+                               # validate.js recomputes them
+                               # independently, and compares
+```
+
+**Link, never rehost.** Every talk, book, essay, keynote and record here belongs to its author and
+stays where they put it. That instinct — the founder's own rule — is also the legally correct one:
+it is what lets the CC BY stamp on this site's analysis stay honest.
+[The rule, and what the gate cannot do](format/index.html#no-verbatim).
+
+## What this site cannot do
+
+Stated here rather than in a footnote, because a register that only ever confirms itself would be
+an autobiography with citations:
+
+- **A trace table cannot show causation.** It shows that a pattern from a talk appears in the
+  codebase. It cannot show the talk put it there — and the Victor register's own finding is that
+  half the estate's strongest features were *unknowing* implementations of its demos.
+- **The corpus is cited, not resolved.** This repository holds the website, not the estate, so
+  every evidence path is quoted from a dated mining run rather than checked at build time. Seven
+  entries have no trace table for exactly that reason. [R1](admin/comms.html#r1).
+- **The tiers partly measure what has recently been written down.** Two decades of earlier
+  material were unreachable, and that is precisely where the stated influences' evidence will be.
+  An entry sitting at STATED may be the deepest influence on the list.
+- **Nothing here has ever been retracted.** Publishing gaps is the cheap half of falsifiability.
+  [Until something is withdrawn in public, this site is evidence of ambition rather than of
+  practice](shipped/index.html#wrong).
+
+And the conflict of interest is the sharpest in the network: a project publishing the list of
+thinkers who shaped its founder is doing something where **association is flattery and it costs
+nothing to claim**. [The disclosure, in full](about/participant.html).
 
 ---
 
@@ -212,23 +299,2271 @@ works belong to their authors and are linked, never rehosted.
 
 
 ==============================================================================
-PART 3 — THE REGISTER ENTRIES
+PART 3 — THE 25 REGISTER ENTRIES
 
 ==============================================================================
 
 
-None are published yet. This release is the pipeline rather than the register:
-validation, auto-tagging and deployment are live, and the entries have not been
-written. When they are, each arrives as /register/<slug>/index.html with a markdown
-twin beside it, and this part of this file fills itself in.
+Each is also fetchable on its own at /register/<slug>/index.md, the markdown
+twin of /register/<slug>/index.html. Entries with a trace table also publish
+it as data at /register/<slug>/trace/trace.json.
+
+
+
+==============================================================================
+source: /register/bret-victor/index.md
+
+==============================================================================
+
+
+# Bret Victor
+
+*Source: <https://influences.sgit.ai/register/bret-victor/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person
+- **status** full — the seven-block register format
+- **briefing** integrated
+
+The model entry, and the reason this site has a format at all. The register for *Inventing on Principle* was written as a working document before anyone asked what a site made of such documents should be called.
+
+## Block 1 — The anchor
+
+Inventing on Principle — Bret Victor — CUSEC · 2012
+- anchor: <https://vimeo.com/36579366>
+- transcript: <https://worrydream.com/>
+
+One anchor per entry: not the whole career, the single work that did the shaping. Victor's wider work is in Block 7.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+> That is the kind of experience and feedback loops I'm trying to create here.
+>
+> — Dinis Cruz, `the immediate-connection register (held by the founder)`
+
+The line the register opens on, and the reason it exists. The register is a working document about the estate's viewer, not an essay about Victor.
+
+> the problem with dogma is not that it exists, but that you stop asking the question.
+>
+> — Dinis Cruz, `briefs/.../v0.19.7__article__education-gaps-git-opensource.md`
+
+From a section titled **The Brett Victor Problem** — in an article about education policy, not developer tooling. One influence applied in two unrelated domains, which is itself trace evidence: an idea that only shows up where you first met it has not been absorbed.
+
+The talk's argument is not about tools. It is that ideas can only grow where their creator can see them growing, and that most of the ways we build software put a compile step, a deploy step or a refresh between a person and the thing they are making. Every one of those steps is a place an idea dies.
+
+What makes this the founding entry is what the register found when it was written: **the estate's viewer had already implemented several of the talk's demos without knowing it.** That is a weaker claim than *Victor caused this* and a more interesting one — the instinct and the principle agree, and writing the register is what turns an agreement into something the next agent can extend deliberately rather than rediscover.
+
+## Block 3 — The principle
+
+**Immediate connection between creator and creation — a creator needs to see what they are making, as they make it.**
+
+The test the format sets for a principle is that it must be usable by someone who has never consumed the anchor work. This one passes: you can apply it to a build pipeline, a form, a CLI or a lesson plan without having watched the talk.
+
+## Block 4 — The trace table
+
+**No trace table yet.** **The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by the founder and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered.
+
+## Block 5 — The gaps, as build specs
+
+### G1 — View time travel
+
+The register names this as a specified gap: the viewer cannot step backwards through the states a view has been in. Victor's demos treat time as a dimension you can scrub, not a sequence you can only move forward through — the binary-search-for-the-bug case in the talk is the canonical demonstration. Precise scope is in the register text this site does not yet hold.
+
+### G2 — Relayout ghosts
+
+The register's second named gap: when a layout changes, the previous positions leave no trace, so a person cannot see what moved. Victor's argument is that a change you cannot see the shape of is a change you cannot reason about. Precise scope is in the register text this site does not yet hold.
+
+
+## Block 6 — The checklist
+
+- Does the person see the effect of their change **immediately**, or is there a step between them and it?
+- If there is a step, is it there because it has to be, or because it was easiest to build that way?
+- Can they see the *state* the system is in, or only the output it produced?
+- When something goes wrong, can they scrub backwards to the moment it went wrong — or only re-run it and hope?
+- Is a value on screen something they can reach into and change, or only something they can read?
+- Would someone who has never used this be able to tell what it does by moving one thing?
+
+## Block 7 — The wider library
+
+- **The Future of Programming** — the 1973 costume talk — a history of ideas that were abandoned rather than disproved <https://worrydream.com/dbx/>
+- **Media for Thinking the Unthinkable** — why the representations we use bound the thoughts we can have <https://worrydream.com/MediaForThinkingTheUnthinkable/>
+- **Up and Down the Ladder of Abstraction** — the interactive essay about moving between the concrete and the general — arguably the most directly applicable to graph work <https://worrydream.com/LadderOfAbstraction/>
+- **Stop Drawing Dead Fish** — on tools that produce artefacts versus tools that produce behaviour <https://worrydream.com/StopDrawingDeadFish/>
+- **Drawing Dynamic Visualizations** — direct manipulation applied to data visualisation itself <https://worrydream.com/DrawingDynamicVisualizationsTalk/>
+- **The Humane Representation of Thought** — the widest version of the argument: thinking with the whole body, not a rectangle <https://worrydream.com/TheHumaneRepresentationOfThought/>
+- **Dynamicland** — the research programme the ideas went into <https://dynamicland.org/>
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `sources/register__bret-victor__inventing-on-principle.md` | the founder's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is with the founder |
+| `docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md` | builds its central argument on Victor's immediate-feedback thesis, and quotes the talk's core line about creators needing an immediate connection to what they create |
+| `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md` | a section titled *The Brett Victor Problem*, applying the talk's point about dogma to education policy |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
 
 
 ==============================================================================
-PART 4 — THE SOURCE DOCUMENTS
+source: /register/wardley/index.md
 
 ==============================================================================
 
 
-None are published yet. When the commissioning pack lands it arrives verbatim
-under /briefs/<filename>, one reader page each under /documents/, and this part
-of this file fills itself in — nobody has to remember to update it.
+# Simon Wardley & Wardley Maps
+
+*Source: <https://influences.sgit.ai/register/wardley/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person + framework
+- **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
+- **briefing** none
+
+The deepest-traced influence in the corpus by volume — around 210 files — and the one whose material is entirely a sibling site's. This entry owns only the resonance: why a security person reorganised his thinking around an evolution axis.
+
+## Block 1 — The anchor
+
+Wardley Maps — Simon Wardley
+- anchor: <https://learnwardleymapping.com/>
+
+The book/blog series, published in the open. The anchor is the mapping method itself rather than any single post.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The resonance is not the diagrams. It is that mapping makes a strategy **arguable**: two people looking at the same map can disagree about where a component sits and settle it with evidence, which is impossible when the strategy is a paragraph of prose.
+
+That is also why this influence keeps appearing in places that have nothing to do with strategy. The evolution axis is a claim about a component's state; the risks register's accepted-risk format is a claim with a named acceptor; a trace row on this site is a claim about a codebase. **The shape is the same, and it came from here.** [Popper](../popper/index.html) is the other half of that story.
+
+## Block 3 — The principle
+
+**Situational awareness before strategy — draw the map before you argue about the move, and the map is a falsifiable claim about position and movement rather than a picture of your opinions.**
+
+## Block 4 — The trace table
+
+**Where the trace table would be:** **The trace of this influence is an entire site.** Reproducing it here would break the deconfliction rule the network runs on: two sites making the same argument slightly differently is worse than a dead link. The influence entry owns the *resonance*; the sibling owns the *material* — the maps, the evolution axes, the maps-as-code work and its own release history.
+
+wardley-maps.sgit.ai — https://wardley-maps.sgit.ai
+
+## Block 6 — The checklist
+
+- Is the map drawn before the strategy is argued, or produced afterwards to justify it?
+- Does every component on it sit somewhere on the evolution axis, or are some of them just boxes?
+- Is the claim about **movement** — where this is going — or only about where it is now?
+- Could someone who disagrees point at the specific thing they think is misplaced?
+
+## Block 7 — The wider library
+
+- **Wardley Maps (the online book)** — the whole method, published free by its author <https://medium.com/wardleymaps>
+- **Learn Wardley Mapping** — the community's structured entry point <https://learnwardleymapping.com/>
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(corpus-wide, ~210 files)` | the largest single-influence footprint the mining run found, spanning strategy documents, briefs and the published mapping material |
+| `wardley-maps.sgit.ai (sibling site + its own brief pack)` | the founder's own published Wardley material — videos, infographics and the maps-as-code work |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/semantic-web/index.md
+
+==============================================================================
+
+
+# Tim Berners-Lee & the Semantic Web
+
+*Source: <https://influences.sgit.ai/register/semantic-web/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** topic + person
+- **status** full — the seven-block register format
+- **briefing** none
+
+The format at its strongest, because this is an influence **argued with**. The dream of machine-readable meaning shaped the estate's graph work; the diagnosis of where the community went wrong shaped it just as much.
+
+## Block 1 — The anchor
+
+The Semantic Web — Tim Berners-Lee, James Hendler and Ora Lassila — Scientific American · 2001
+- anchor: <https://www.scientificamerican.com/article/the-semantic-web/>
+
+The article that put the idea in front of a general audience. The wider programme — RDF, OWL, linked data, and later Solid — is in Block 7.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+> The Semantic Web community identified the right problem… But the community made a subtle mistake in practice. They ended up attaching meaning to nodes rather than deriving meaning from edges.
+>
+> — Dinis Cruz, `briefs/.../library/concepts/v0_4_0__thinking-in-graphs.md`
+
+The section is titled *The Semantic Web's Insight (and Mistake)*, and the ordering of those two words is the entry. An influence you have a technical disagreement with is an influence you have read closely.
+
+Two things resonate, and they pull in opposite directions. The first is the ambition: a web where a machine can act on meaning rather than pattern-match on strings is still the right target, twenty-five years later, and most of what is now called an AI agent is a worse-engineered attempt at it.
+
+The second is the diagnosis of the failure, and it is a technical one rather than a sociological one. Attaching meaning to a node makes every node an assertion that has to be agreed on before anyone can use it; **deriving meaning from edges** makes agreement local and lets two parties disagree about what a thing *is* while still agreeing about how it *relates*. That inversion is load-bearing in the estate's graph substrate.
+
+The third strand is live rather than historical: Berners-Lee's Solid puts personal data in pods the person controls, and this estate puts it in encrypted vaults the person holds the key to. Those are the same instinct with different threat models, and the corpus treats them as complementary architectures rather than competitors.
+
+## Block 3 — The principle
+
+**Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.**
+
+Note what the principle does **not** say: that meaning lives in the things. That distinction is the whole content of this entry's disagreement.
+
+## Block 4 — The trace table
+
+| Pattern from the anchor | Where the estate implements it | Version | Status |
+|---|---|---|---|
+| Machine-readable meaning as the target — a graph a machine can act on rather than a document it can only parse | The estate's graph substrate and the concept document that sets out its thinking | v0.4.0 | implemented |
+| Meaning attached to nodes (RDF's typed-resource model) | **Deliberately inverted.** The estate derives meaning from edges instead, and the concept document states the inversion as a correction rather than a variation | v0.4.0 | absent |
+| Meaning derived from connection between things | The edge-first graph model the estate's ontology work is built on | v0.4.0 | implemented |
+| Personal data under the person's own control (Solid pods) | Encrypted vaults, keyed by their holder — compared to pods explicitly, as complementary architectures with different threat models | v0.6.17 | partial |
+| Interoperation with Solid itself — a vault that can read or write a pod | Nowhere. The brief is an architectural comparison, not an integration | v0.6.17 | absent |
+
+Two of these rows are the influence being *inverted* rather than implemented, and they are marked as such. A trace table that could only record agreement would be useless on an entry like this one.
+
+## Block 5 — The gaps, as build specs
+
+### G1 — The Solid bridge the comparison implies
+
+The integration brief establishes that pods and vaults solve the same problem with different trust assumptions, and stops there. The build spec is the smallest thing that would make the comparison real: a read path from a Solid pod into a vault, or a vault snapshot published in a pod-readable shape. Either direction would turn an argument into an artefact and would be the first interoperation this estate has with the programme it says it inherited from.
+
+### G2 — The edge-first claim has no published counter-test
+
+The entry asserts that deriving meaning from edges avoids a failure mode that node-typing has. That is a falsifiable claim and nothing in the corpus falsifies it — there is no worked case showing a query the node-first model answers and the edge-first model cannot. Building that case, and publishing it whether or not it is comfortable, is the honest version of this disagreement.
+
+
+## Block 6 — The checklist
+
+- Is the meaning in the **node** or in the **edge**? If it is in the node, who has to agree with you before anyone can use it?
+- Can two parties disagree about what a thing *is* while still agreeing about how it *relates*?
+- Is the machine-readable version derived from the human-readable one, or maintained beside it?
+- If this data left our control tomorrow, would it still mean anything to whoever holds it?
+
+## Block 7 — The wider library
+
+- **Weaving the Web (1999)** — Berners-Lee's own account of the design decisions, including the ones he regrets <https://www.w3.org/People/Berners-Lee/Weaving/>
+- **Linked Data — Design Issues (2006)** — the four rules, and the most compact statement of the programme <https://www.w3.org/DesignIssues/LinkedData.html>
+- **The Solid Protocol** — the personal-data-store programme; the direct comparator to vaults <https://solidproject.org/>
+- **RDF 1.1 Concepts** — the model the edge-first critique is aimed at — worth reading before agreeing with the critique <https://www.w3.org/TR/rdf11-concepts/>
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `SGraph-AI__App__Send/library/concepts/v0_4_0__thinking-in-graphs.md` | the section *The Semantic Web's Insight (and Mistake)* — the node-first versus edge-first critique, in the document that sets out the estate's graph thinking |
+| `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md` | Solid pods and sgit vaults as complementary architectures, with Bruce Schneier's involvement at Inrupt noted |
+| `(corpus-wide, ~35 files)` | the wider footprint the mining run found across briefs and concept documents |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/graphs/index.md
+
+==============================================================================
+
+
+# Graphs
+
+*Source: <https://influences.sgit.ai/register/graphs/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** topic
+- **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
+- **briefing** requested
+
+The founding obsession, and the one link-out entry that owns something its sibling site does not: the personal history. Where graphs actually entered the thinking is an open question, and it is asked in public.
+
+## Block 1 — The anchor
+
+The first encounter — likely the O2 Platform's code-flow work
+
+**Unconfirmed.** Unlike every other entry, this anchor is a personal event rather than a published work, and the pack could not establish which one. Asked as [Q5](../../admin/comms.html#q5) in the briefing queue.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+This is the influence with the largest corpus footprint and the least documented origin, which is a strange combination and worth stating rather than smoothing over. Graphs are everywhere in the estate — the substrate, the ontology work, the memory model, an entire sibling site — and nothing in the corpus records the moment they stopped being a data structure and became the way of seeing.
+
+What the entry can say is that the interest predates the current work by a long way, and that the shape of it is consistent: not graphs as a storage choice, but graphs as the claim that **meaning is relational**. [The Semantic Web entry](../semantic-web/index.html) is the same claim argued with someone; [Luhmann](../luhmann/index.html) is the same claim arrived at on paper index cards in the 1960s.
+
+## Block 3 — The principle
+
+**Structure is edges. What a thing is matters less than what it connects to, and a model that records connection can answer questions its designer did not anticipate.**
+
+## Block 4 — The trace table
+
+**Where the trace table would be:** **The trace of this influence is an entire site**, and a much larger one than this entry could hold. What this entry owns and the sibling does not carry is the *personal* history: where the interest came from, and when. That part is [an open question](../../admin/comms.html#q5) rather than a claim.
+
+graphs.sgit.ai — https://graphs.sgit.ai
+
+## Block 6 — The checklist
+
+- Is the thing being modelled a set of records, or a set of relationships between records?
+- Can the model answer a question nobody thought of when it was built?
+- Is the edge typed and addressable, or is it a foreign key with no meaning of its own?
+- If this were drawn, would the drawing show structure — or just show the same list in a circle?
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(corpus-wide)` | too pervasive to count usefully — the mining run found graph thinking in the substrate, the concept documents, the guides and the role definitions |
+| `graphs.sgit.ai (sibling site)` | the grammar, the depth model and the book — the material this entry deliberately does not repeat |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/owasp/index.md
+
+==============================================================================
+
+
+# OWASP & the security community
+
+*Source: <https://influences.sgit.ai/register/owasp/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** community + era
+- **status** full — the seven-block register format
+- **briefing** none
+
+Not a person and not a work: two decades inside an open community, and the Summit model in particular. The seed list's own phrasing was *the cyber security community* — an era, treated as an influence in its own right.
+
+## Block 1 — The anchor
+
+OWASP, and participation in it from the early 2000s onward
+- anchor: <https://owasp.org/>
+
+The anchor for a community or an era is the first documented contact with it, not a work. The Summits are the specific institution this entry is about.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The claim worth defending here is narrower than *open communities are good*. It is about the **Summit format** specifically: sessions that must produce an artefact, working groups that outlive the room, and outputs published whether or not they are finished. That is an unusual thing to have been formed by, and it shows up in the estate as a set of habits rather than as a topic — publishing unresolved questions as first-class pages, versioning documents rather than replacing them, and treating a working document as a deliverable.
+
+The second strand is what a global, volunteer, chapter-based organisation teaches about **distributed work** — a lesson learned twenty years before it became a general one, and which nests naturally with [diverse and distributed teams](../diverse-distributed-teams/index.html).
+
+This entry deliberately does not cover open-source governance or funding models. Those belong to [the open-source sibling](https://open-source.sgit.ai), which carries the full history pack.
+
+## Block 3 — The principle
+
+**Knowledge compounds fastest in the open, among people who owe each other nothing — and the format of the gathering decides whether it compounds at all.**
+
+## Block 4 — The trace table
+
+**No trace table yet.** The habits this entry claims — publish unresolved, version rather than replace, treat a working document as a deliverable — are visible across the estate and across this whole site network, and the mining run recorded the volume rather than the instances. Building the rows means naming specific practices and where they are written down, and the entry publishes the claim without them rather than inventing paths to point at. Tracked as [R2](../../admin/comms.html#r2).
+
+## Block 6 — The checklist
+
+- Did the session produce an artefact, or did it produce agreement that will be gone by Friday?
+- Is the unresolved part published, or is it waiting until it is presentable?
+- Could someone who was not in the room pick this up from what was written down?
+- Is this being kept private because it is sensitive, or because it is unfinished?
+
+## Block 7 — The wider library
+
+- **OWASP Summits** — the working-session format this entry is really about <https://owasp.org/>
+- **The OWASP Top Ten** — the artefact everyone knows, and a case study in what happens when a working document becomes a compliance requirement <https://owasp.org/www-project-top-ten/>
+- **David Rice — Geekonomics** — the wider-library item belonging to the nested keynote entry <https://www.oreilly.com/library/view/geekonomics-the-real/9780321477897/>
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(corpus-wide, ~271 files)` | the second-largest footprint in the mining run, including the Summits history |
+| `open-source.sgit.ai (sibling site)` | governance and monetisation material, which this entry links to rather than repeats |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/flow/index.md
+
+==============================================================================
+
+
+# Flow, and coding in the zone
+
+*Source: <https://influences.sgit.ai/register/flow/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** practice + research
+- **status** full — the seven-block register format
+- **briefing** none
+
+The best demonstration on this site that influences **compose**. Csikszentmihalyi supplies the state, Victor supplies the mechanism that sustains it, and the estate's development methodology is what was built from both.
+
+## Block 1 — The anchor
+
+Flow: The Psychology of Optimal Experience — Mihaly Csikszentmihalyi — 1990
+
+The book is the anchor for the *state*. [Victor's talk](../bret-victor/index.html) is the anchor for the *mechanism*, and has its own entry — this one is where the two meet.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+> In his seminal work, Mihály Csíkszentmihályi identified programming as one of many activities… that can induce flow
+>
+> — Dinis Cruz, `briefs/.../the-joy-of-programming-in-the-age-of-ai-assisted-development.md`
+
+Cited by name, with the flow criteria applied rather than gestured at — which is what moves this from a reference to an influence.
+
+> It centers on preserving developer flow state while leveraging LLMs for code generation.
+>
+> — Dinis Cruz, `briefs/.../ifd/v1.2.1__ifd__intro-and-how-to-use.md`
+
+The opening sentence of the estate's development methodology. Not a mention in a rationale section — **the stated core principle**, in the first line.
+
+> IFD is about maintaining flow state.
+>
+> — Dinis Cruz, `briefs/.../ifd/v1.2.1__ifd__intro-and-how-to-use.md`
+
+And the closing line of the same guide. A methodology that opens and closes on the same idea is one whose author means it.
+
+The composition is the interesting part. Csikszentmihalyi describes a state and its preconditions but has nothing to say about software; Victor describes a mechanism — immediate connection — without naming the state it protects. Put them together and you get a testable claim: **the reason immediate feedback matters is that it is what keeps the challenge/skill balance visible**, and a delay of thirty seconds is enough to lose it.
+
+That claim is what the estate's development methodology is built on, and it explains an otherwise odd design decision: the methodology is organised around *not breaking concentration* rather than around correctness or speed. Correctness is checked afterwards; concentration cannot be.
+
+The third source is the founder's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place.
+
+## Block 3 — The principle
+
+**Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.**
+
+## Block 4 — The trace table
+
+| Pattern from the anchor | Where the estate implements it | Version | Status |
+|---|---|---|---|
+| Immediate feedback as a precondition of the state | The estate's development methodology, whose stated core principle is preserving developer flow state | v1.2.1 | implemented |
+| Clear goals — the person always knows what they are trying to do next | The methodology's structure: work proceeds in units small enough to hold in one head | v1.2.1 | implemented |
+| Challenge matched to skill | The division of labour between person and model — generation delegated, judgement retained | v1.2.1 | partial |
+| Programming named as a flow-inducing activity, with the criteria applied | The Joy-of-Programming argument, which cites Csikszentmihalyi directly and works through the criteria | — | implemented |
+| Measuring whether the state is actually being preserved | Nowhere. The methodology's central claim about itself is the one thing it does not instrument | v1.2.1 | absent |
+
+This is the closest thing on the site to a complete table, and it is worth saying why: the methodology guide states its principle in its own first sentence, so the rows did not have to be inferred from behaviour. Most entries are not this lucky.
+
+## Block 5 — The gaps, as build specs
+
+### G1 — The methodology does not measure its own central claim
+
+The development methodology says its purpose is preserving flow state, and nothing anywhere records whether it does. The cheapest honest instrument is not a wellbeing survey: it is interruption count and time-to-first-feedback per session, both of which fall out of tooling that already exists. Publish the numbers whether or not they flatter the method — the sibling sites' own house rule, applied to the one claim this estate makes about how it works.
+
+### G2 — Challenge/skill balance is asserted, not tuned
+
+Csikszentmihalyi's third condition is the one that actually decides whether the state happens, and it is the one the methodology treats as given. A build spec: record, per work unit, whether the person had to think or only had to review, and look at whether the ratio moves. A methodology where every unit is review is not producing flow, it is producing supervision.
+
+
+## Block 6 — The checklist
+
+- How long is it between doing the thing and seeing the result? If it is more than a few seconds, that is the design decision to argue about first.
+- Does the person always know what the next step is, or do they have to stop and work it out?
+- Is the work hard enough to hold attention and easy enough not to break it?
+- How many times will this interrupt them — and is each interruption load-bearing?
+- Is concentration being treated as a resource with a cost, or as free?
+
+## Block 7 — The wider library
+
+- **Flow: The Psychology of Optimal Experience (1990)** — the anchor; the chapter on work is the one to read first
+- **Beyond Boredom and Anxiety (1975)** — the earlier, more empirical statement of the same research
+- **Peopleware — DeMarco & Lister** — not in the corpus, and the obvious companion: the same argument about interruption made about offices rather than tools
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `SGraph-AI__App__Send/library/guides/development/ifd/v1.2.1__ifd__intro-and-how-to-use.md` | the estate's development methodology — opens on *preserving developer flow state* and closes on the same idea |
+| `docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md` | Csikszentmihalyi cited by name with the flow criteria applied; Victor supplied as the mechanism in the same argument |
+| `(corpus-wide, ~43 files)` | flow and zone references across guides, briefs and articles |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/open-source/index.md
+
+==============================================================================
+
+
+# Open source & its licences
+
+*Source: <https://influences.sgit.ai/register/open-source/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** topic + movement
+- **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
+- **briefing** none
+
+A link-out entry that owns one thing the sibling site does not foreground: open source as **personal formation**. What two decades of releasing tools taught about licences as social contracts rather than legal ones.
+
+## Block 1 — The anchor
+
+Releasing tools in the open, from the O2 Platform era onward
+
+A practice rather than a work. The anchor is the habit of publishing, and what it cost and returned.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The sibling site carries the history, the licence positions and the argument for publishing. What belongs here instead is the formation: **what releasing changes about how you write**. Code you will publish is code you explain; a tool with users is a tool with a boundary; and a licence choice made twenty years ago still decides who can use the thing today.
+
+The second strand is the one that connects to the rest of this register. Open source is the demonstration that [OWASP's](../owasp/index.html) compounding-in-the-open claim works outside a conference, that [Raymond's essay](../cathedral-bazaar/index.html) described something real, and that [Torvalds](../torvalds/index.html) built the two pieces of infrastructure the whole habit now rests on.
+
+## Block 3 — The principle
+
+**Releasing work is how it compounds — and the licence is the constitution, not the paperwork: it decides who can build on this and what they owe.**
+
+## Block 4 — The trace table
+
+**Where the trace table would be:** **The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to the founder's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html).
+
+open-source.sgit.ai — https://open-source.sgit.ai
+
+## Block 6 — The checklist
+
+- If this were public tomorrow, what would have to change first — and is that thing a defect?
+- Does the licence say what someone building on this owes, or only what they may not do?
+- Is the boundary of this tool something a stranger could find, or only something the author knows?
+- Is this being kept private for a reason that would survive being written down?
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `open-source.sgit.ai (sibling site + its brief pack)` | an 11,619-word corpus and a 17,909-word history on file — the material this entry deliberately does not repeat |
+| `(corpus-wide)` | licence positions and publishing decisions across the estate |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/luhmann/index.md
+
+==============================================================================
+
+
+# Niklas Luhmann & the Zettelkasten
+
+*Source: <https://influences.sgit.ai/register/luhmann/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person + method
+- **status** full — the seven-block register format
+- **briefing** requested
+
+Never on the founder's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.
+
+## Block 1 — The anchor
+
+The Zettelkasten, and *Communicating with Slip Boxes* (1981) — Niklas Luhmann
+- anchor: <https://luhmann.surge.sh/communicating-with-slip-boxes>
+
+The slip-box itself is the anchor; the essay is the closest thing to Luhmann explaining it in his own words.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+> Luhmann's Zettelkasten was a self-organizing knowledge graph on paper… atomic, uniquely identified, densely linked, emergent in structure, scalable and lifelong
+>
+> — Dinis Cruz, `briefs/.../bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md`
+
+Six properties, named in one sentence — which is why this entry can have a principle at all. A discovered influence usually has to be reconstructed; this one was already written down.
+
+The thing that makes this a discovered entry rather than a citation is the **direction** of the article: it is not about Luhmann. It is about the estate's graph model, and it reaches for Luhmann because the six properties turn out to be the specification. That is what an influence looks like in the corpus — an idea used as a tool, not described as a subject.
+
+The specific resonance is the *emergent structure* property, and it is the one most systems get wrong. A slip-box has no taxonomy. Nothing is filed under anything; a new note attaches to whatever it relates to, and the structure is a consequence of the attaching. That is the same move as [the Semantic Web entry's](../semantic-web/index.html) edge-first inversion, arrived at independently, on index cards, decades earlier.
+
+And the article reaches further back still: [Vannevar Bush's memex](../vannevar-bush/index.html) enters this register through it — which means the ancestor of the whole external-memory idea got here by being cited in a document about the thing it is the ancestor of. That is a satisfying loop and it is also, honestly, a circular one; [the disclosure page](../../about/participant.html#lose) says so.
+
+## Block 3 — The principle
+
+**External memory works as a thinking partner when its units are atomic, uniquely addressed, densely linked and allowed to grow structure rather than being filed into one.**
+
+## Block 4 — The trace table
+
+**No trace table yet.** **The article is the map; the table is the discipline the article does not have.** It establishes that the six properties describe the estate's graph model. What it does not do is say *which feature, at which version* implements *which property* — and the commissioning pack says exactly that: this entry needs the register's trace-table discipline applied to an argument that already exists. That is a straightforward piece of work for anyone with the repositories open, and it is [R1](../../admin/comms.html#r1).
+
+## Block 5 — The gaps, as build specs
+
+### G1 — Emergent structure is claimed and not tested
+
+The property that distinguishes a slip-box from a filing cabinet is that structure is a consequence rather than a schema. The build spec is a test rather than a feature: take a body of notes, add fifty more without touching any taxonomy, and show whether navigable structure appeared. If a human had to reorganise anything, the property is not implemented, and the entry should say so.
+
+### G2 — Lifelong is a property no version of this has demonstrated
+
+Luhmann's slip-box ran for forty years and its value was mostly in the last ten. Every claim about atomicity and linking is cheap at small scale. A migration path that survives a format change — proven by actually migrating a corpus across one — is the only version of this property that means anything, and nothing in the corpus claims it.
+
+
+## Block 6 — The checklist
+
+- Is this note about **one** thing? If it needs the word *and* in its title, it is two notes.
+- Does it have an address that will still resolve when everything around it has changed?
+- What did it attach to? A note that links to nothing is a note that will never be found again.
+- Was the structure imposed, or did it appear? If someone had to design a taxonomy, this is a filing cabinet.
+- Would this still be useful to someone reading it in ten years with no memory of writing it?
+
+## Block 7 — The wider library
+
+- **Communicating with Slip Boxes (1981)** — Luhmann on his own method, in the only piece where he really explains it <https://luhmann.surge.sh/communicating-with-slip-boxes>
+- **The Luhmann Archive** — the actual slip-box, digitised — 90,000 notes, browsable <https://niklas-luhmann-archiv.de/>
+- **Social Systems (1984)** — the theory the slip-box was built to produce, and a fair warning about what emergent structure reads like from outside
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md` | a dedicated published article mapping the slip-box to the estate's graph model, property by property — nearly this entry already |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/ericsson/index.md
+
+==============================================================================
+
+
+# Anders Ericsson & deliberate practice
+
+*Source: <https://influences.sgit.ai/register/ericsson/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person + research
+- **status** full — the seven-block register format
+- **briefing** none
+
+The research behind the ten-thousand-hours number, attributed to the person who did it rather than the person who popularised it — a distinction the corpus is careful about, which is itself the tell.
+
+## Block 1 — The anchor
+
+Peak: Secrets from the New Science of Expertise — K. Anders Ericsson and Robert Pool — 2016
+
+The book is the accessible anchor; the 1993 paper *The Role of Deliberate Practice in the Acquisition of Expert Performance* is the primary source and is in Block 7.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+Two things resonate here, and the second is the one that matters now. The first is the correction itself — that experience and practice are different things, and that twenty years of doing something the same way is not twenty years of practice. Attributing the research to Ericsson rather than to its popular summary is a small act of the same discipline this whole site runs on: **cite the claim's actual source, and the claim gets sharper.**
+
+The second is what deliberate practice means when a model writes most of the code. If expertise requires working at the edge of your ability with immediate feedback, and generation removes the part where you struggled, then **the practice loop has been cut** — not made faster. That is an uncomfortable implication for an estate built on AI-assisted development, and it belongs on this site rather than being left implicit.
+
+The overlap with [flow](../flow/index.html) is not accidental: challenge matched to skill is Csikszentmihalyi's third condition and Ericsson's core mechanism, described by two research programmes that were not talking to each other.
+
+## Block 3 — The principle
+
+**Expertise comes from structured practice with immediate feedback at the edge of current ability — not from hours, and not from experience.**
+
+The number is the least interesting part and the only part most people repeat. Ericsson's actual finding is about the **structure** of the practice: a specific target, immediate correction, and deliberate work on what you are worst at.
+
+## Block 4 — The trace table
+
+**No trace table yet.** The mining run found the volume and the attribution discipline; it did not record which documents make which argument. This entry's real trace question is sharper than a path list, and worth naming while the table is empty: **does anything in the estate's methodology preserve a practice loop, or does it only preserve a delivery loop?** [R2](../../admin/comms.html#r2).
+
+## Block 5 — The gaps, as build specs
+
+### G1 — Nothing in the methodology is designed to make someone better
+
+The estate's development methodology optimises for flow and throughput. Deliberate practice requires the opposite of flow in one specific respect: working at the edge, where you fail. A build spec that would take this influence seriously: a mode in which the model explains rather than generates, deliberately chosen for the parts the person is weakest at. Nothing like it exists, and the entry says so rather than claiming the methodology covers it.
+
+
+## Block 6 — The checklist
+
+- Is this practice, or is it repetition? What is being worked on that was not already easy?
+- Where is the immediate correction? Practice without feedback is just time passing.
+- Is the difficulty at the edge of ability, or comfortably inside it?
+- If a model does the hard part, who is getting better — and does that matter here?
+
+## Block 7 — The wider library
+
+- **The Role of Deliberate Practice in the Acquisition of Expert Performance (1993)** — the primary source, and the paper the ten-thousand-hours number was extracted from <https://psycnet.apa.org/record/1993-40718-001>
+- **Peak (2016)** — Ericsson's own correction of the popularisation, written because the summary would not stop spreading
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(corpus-wide, ~11 files)` | deliberate practice and the ten-thousand-hours research, attributed to Ericsson rather than to the popularisation |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/popper/index.md
+
+==============================================================================
+
+
+# Karl Popper & falsifiability
+
+*Source: <https://influences.sgit.ai/register/popper/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person + idea
+- **status** full — the seven-block register format
+- **briefing** none
+
+The shortest entry with the longest reach. Popper may be the influence that explains the *shape* of all the others' entries — including the trace table you are reading them in.
+
+## Block 1 — The anchor
+
+The Logic of Scientific Discovery — Karl Popper — 1959
+
+First published in German as *Logik der Forschung* (1934). The anchor is the demarcation criterion rather than the whole philosophy of science.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The reason this entry is short and load-bearing at once: **it is not a topic in the estate, it is the format of the estate's outputs.** A Wardley map is a claim about where a component sits, refutable by pointing at it. A risk in the risks register is a claim with a named acceptor and a named mitigation, refutable by checking whether the mitigation exists. A trace row on this site is a claim that a pattern appears at a path at a version, refutable by opening the file.
+
+Those three formats were not designed together and they have the same shape. That is either convergence or a single inherited habit, and Popper is the most economical explanation.
+
+The uncomfortable corollary is the one this site has to live with: **an influence claim is barely falsifiable.** You cannot open a file and check whether a talk caused a design decision. The trace table is the best available substitute — it makes the *consequence* checkable even when the causation is not — and [the disclosure page](../../about/participant.html#lose) states the limit rather than letting the format imply more rigour than it has.
+
+## Block 3 — The principle
+
+**A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.**
+
+## Block 4 — The trace table
+
+| Pattern from the anchor | Where the estate implements it | Version | Status |
+|---|---|---|---|
+| A claim must be refutable to be worth making | Wardley mapping as practised here — *a map is a claim* about position and movement, refutable by pointing at a misplaced component | — | implemented |
+| State the conditions under which you would be wrong | The risks register's falsifiable-statement discipline — an accepted risk with a named acceptor and a named mitigation | — | implemented |
+| The demarcation applied to inspiration itself | **This site's trace tables.** An influence entry is written so that it can be checked against the repositories and found wrong | — | implemented |
+| Publishing the refutations, not only the claims | Partial. The gaps are published as build specs and the absent rows are kept, but no claim on this network has yet been retracted in public | — | partial |
+| A test that could falsify an influence claim itself | Nowhere, and probably nowhere possible. See the resonance above | — | absent |
+
+Three of these rows point at sibling sites rather than at code, because that is honestly where this influence lands: it shaped the **format of the artefacts**, not a feature. The fourth row points at this page, which is either the strongest evidence in the table or the weakest, depending on how generously you read it.
+
+## Block 5 — The gaps, as build specs
+
+### G1 — Nothing on this network has ever been publicly retracted
+
+Every site here publishes its gaps and its open questions, which is the cheap half of the discipline. The expensive half is withdrawing a claim that turned out to be wrong, in public, with the date. A build spec: a standing `/shipped/` row type for *this was wrong, here is what replaced it*, used the first time something qualifies. A register that only ever adds is not practising the principle it cites.
+
+### G2 — The counter-influence entry does not exist
+
+The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs the founder rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm.
+
+
+## Block 6 — The checklist
+
+- What would show this to be wrong? If nothing would, say less.
+- Is the claim specific enough that someone could go and check it?
+- Have the conditions been stated *before* the evidence was gathered, or after?
+- When this turns out to be wrong, where does that get recorded?
+
+## Block 7 — The wider library
+
+- **The Logic of Scientific Discovery (1959)** — the anchor; chapter one carries the whole demarcation argument
+- **Conjectures and Refutations (1963)** — the more readable statement, and the one most people should start with
+- **The Open Society and Its Enemies (1945)** — the political half — same method, applied to institutions rather than theories
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(corpus-wide, ~7 files)` | falsifiability as an explicit standard, most visibly in the maps-as-claims framing and the risks register's discipline |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/torvalds/index.md
+
+==============================================================================
+
+
+# Linus Torvalds
+
+*Source: <https://influences.sgit.ai/register/torvalds/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person
+- **status** full — the seven-block register format
+- **briefing** none
+
+Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument the founder makes about education.
+
+## Block 1 — The anchor
+
+Git (2005), and Linux (1991) — Linus Torvalds
+- anchor: <https://git-scm.com/>
+
+Two works, unusually — the entry is about what they have in common rather than about either.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+Git's interesting property is not distribution, it is that **the history is content-addressed and therefore verifiable by anyone holding a copy**. Nobody has to trust the server. That is a data-model decision that produced a social one, and it is the same move this estate makes with encrypted vaults: put the guarantee in the structure, not in the operator's promise.
+
+The second strand is why this is an influence rather than a dependency. The corpus's education argument uses Git as its central example — not as a tool students should learn, but as evidence that **the way work is recorded determines what can be learned from it**. An influence you reach for when arguing about something else entirely is one that has been absorbed.
+
+Kept short deliberately. The governance and community half belongs to [the open-source sibling](https://open-source.sgit.ai); this entry owns the data-model claim.
+
+## Block 3 — The principle
+
+**Tools that decentralise trust change how people are able to work together — and the change comes from the data model, not from the policy on top of it.**
+
+## Block 4 — The trace table
+
+**No trace table yet.** The obvious rows — content-addressed history, distributed by default, verifiable without the server — are claims about the estate's vault layer that this repository holds no evidence for. The pack did not record them and this site will not invent them. The rows exist to be written by someone with the repositories open, which is [R1](../../admin/comms.html#r1).
+
+## Block 6 — The checklist
+
+- Is the guarantee in the structure, or in someone's promise to behave?
+- Could a person holding only their own copy verify that it is the right one?
+- If the central server disappeared tomorrow, what would be lost — the coordination, or the work?
+- Does the way this is recorded let someone learn from it later, or only let them read the result?
+
+## Block 7 — The wider library
+
+- **Git** — the tool, and its own history — worth reading how fast it was written and why <https://git-scm.com/>
+- **Just for Fun (2001)** — Torvalds's own account, and a useful corrective to the mythology
+- **The 2007 Google Tech Talk on Git** — the design argument in his own words, including the parts that have aged badly <https://www.youtube.com/watch?v=4XpnKHJAok8>
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md` | the Git argument at the centre of the education-gaps article |
+| `(corpus-wide, ~5 files)` | Git's history and kernel governance across the open-source history material |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/schneier/index.md
+
+==============================================================================
+
+
+# Bruce Schneier
+
+*Source: <https://influences.sgit.ai/register/schneier/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person
+- **status** full — the seven-block register format
+- **briefing** none
+
+Security as a systems and incentives problem before it is a technical one — and, in the corpus, the person who turns up in two arguments that have nothing to do with each other.
+
+## Block 1 — The anchor
+
+Schneier on Security — the public writing, from *Applied Cryptography* onward — Bruce Schneier
+- anchor: <https://www.schneier.com/>
+
+A body of work rather than one book. The specific move being credited is the shift from cryptography to security economics.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The thing worth naming is the **shift**, not the writing. Schneier started as a cryptographer and ended up arguing that the interesting question was economic: who pays when this breaks, and does that person get to decide anything? That reframing is now so standard in security that it is easy to forget it had to be made.
+
+In this corpus it shows up in two unrelated places, which is the pattern this register treats as evidence. One is the argument about language-model failure modes — approached as a question about what the system is incentivised to do rather than as a list of attacks. The other is [the Semantic Web entry's](../semantic-web/index.html) Solid brief, where Schneier's involvement at Inrupt is noted as part of the case that personal-data-control architectures are a serious position rather than a hobby.
+
+Short entry, and it should stay short. This is a *style* of threat modelling rather than a body of implemented patterns.
+
+## Block 3 — The principle
+
+**Security failures are usually incentive failures wearing a technical costume — ask who bears the cost of the failure before asking how the failure happens.**
+
+## Block 4 — The trace table
+
+**No trace table yet.** A style of thinking leaves fewer fingerprints than a pattern does, and the honest position is that the rows for this entry may never be strong. What could be traced: whether the estate's threat models actually name who bears the cost of each failure, or only what the failure is. That is a checkable question about existing documents and nobody has asked it. [R2](../../admin/comms.html#r2).
+
+## Block 6 — The checklist
+
+- Who bears the cost when this fails — and do they have any say in how it is built?
+- Is the mitigation aligned with someone's incentives, or does it depend on them acting against them?
+- Is this a technical problem, or an economic one that has been handed to engineers?
+- What is the *system* doing here, as opposed to what the attacker is doing?
+
+## Block 7 — The wider library
+
+- **Schneier on Security (the blog)** — thirty years of the argument being made in public, continuously <https://www.schneier.com/>
+- **Secrets and Lies (2000)** — the book where the shift from cryptography to systems happens in the open
+- **Liars and Outliers (2012)** — the furthest version of the incentives argument — security as a problem of societal trust
+- **Applied Cryptography (1996)** — the earlier work, and useful mostly as the thing the later work moved away from
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(corpus-wide, ~4 files)` | the language-model failure-modes argument, and Schneier's Inrupt involvement in the Solid brief |
+| `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md` | Schneier at Inrupt, cited in the vaults-versus-pods comparison |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/design/index.md
+
+==============================================================================
+
+
+# Design, with a capital D
+
+*Source: <https://influences.sgit.ai/register/design/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** discipline + person
+- **status** full — the seven-block register format
+- **briefing** confirmed; anchor and personal history requested
+- **founder-confirmed** 2026-08-25 — “Design and Steve Jobs approach to Design (with capital D).”
+
+Discovered by mining and confirmed by the founder the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.
+
+## Block 1 — The anchor
+
+“Design is how it works” — the Jobs formulation the estate's Designer role is built on — Steve Jobs
+- anchor: <https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html>
+
+**Anchor unconfirmed.** The formulation is from the 2003 *New York Times Magazine* profile linked above; the candidates for what actually did the shaping are that piece, the MP3-to-CD whiteboard story, a keynote, or a specific product. Asked as [Q2b](../../admin/comms.html#q2b).
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+> Design is the coherence between the internal structure and the external experience.
+>
+> — Dinis Cruz, `briefs/.../team/roles/designer/ROLE.md`
+
+The estate's own extension of the Jobs formulation, and a sharper one: it says the two halves must agree, which is a testable claim about a codebase rather than a slogan about products.
+
+> Good design is invisible… the only way to notice it is to go back to the previous version and think: “This is way worse.”
+>
+> — Dinis Cruz, `briefs/.../v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md`
+
+And this is the sentence that became a test. Read it again with the next block in mind.
+
+The reason this is the strongest-traced entry on the site is not the number of citations. It is that the influence **turned into process**. The brief's section is titled *The Jonathan Ive Principle: Good Design Starts with the User*; the observation is that you notice good design only by reverting and feeling the loss; and the estate turned that observation into the **Jonathan Ive test** — *is it simpler? would reverting feel worse?* — which is a **mandatory validator for every UI change**.
+
+That is the difference between a quote on a wall and an influence. A gate in a pipeline is checkable, dated, and possible to fail. Most entries in this register aspire to a trace table; this one had its trace table written as a workflow before anyone asked for the register.
+
+What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why the founder's confirmation came with a question attached rather than closing the entry.
+
+## Block 3 — The principle
+
+**Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.**
+
+## Block 4 — The trace table
+
+| Pattern from the anchor | Where the estate implements it | Version | Status |
+|---|---|---|---|
+| Design is how it works, not how it looks | The estate's Designer role definition, which is built on the formulation and extends it to coherence between internal structure and external experience | — | implemented |
+| Start from the user's intent and work backwards (the Ive principle) | The NotebookLM case-study brief, in a section named for the principle, with the MP3-to-CD story as the worked example | v0.7.4 | implemented |
+| Good design is invisible — you notice it by reverting and feeling the loss | **The Jonathan Ive test**: *is it simpler? would reverting feel worse?* — a mandatory validator for every UI change | v0.7.4 | implemented |
+| Simplicity as subtraction — the feature removed rather than the feature added | Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change | v0.7.4 | partial |
+| The same discipline applied to non-visual surfaces — an API, a CLI, a file format | Nowhere. The validator is scoped to UI changes, and the estate's public surface is mostly not UI | v0.7.4 | absent |
+
+Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why the founder's confirmation was a formality rather than a discovery.
+
+## Block 5 — The gaps, as build specs
+
+### G1 — The Ive test is scoped to UI, and this estate is mostly not UI
+
+The mandatory validator applies to UI changes. Most of what a person or an agent actually touches here is an API, a CLI, a file format or a document layout — surfaces where *is it simpler? would reverting feel worse?* applies word for word and is not asked. The build spec is a one-line scope change plus the harder part: deciding what *reverting feels worse* means for a function signature, and writing that down before the first argument about it.
+
+### G2 — Nothing records what a change removed
+
+*Is it simpler* is asked and the answer is not kept. A change log that records only additions cannot show a trend, and simplicity is only visible as one. The spec: capture the subtraction alongside the addition in whatever records a change, and publish the ratio. It will be unflattering, which is the point — the sibling sites' house rule is that the bad numbers get published too.
+
+
+## Block 6 — The checklist
+
+- **Is it simpler than what it replaces?** Not smaller — simpler.
+- **Would going back to the previous version feel worse?** If not, this change is decoration.
+- What did this remove? If the answer is nothing, look again.
+- Does the internal structure agree with the external experience, or is the surface hiding the shape?
+- Start from what the person is trying to do: does this design fall out of that, or was it designed first and justified after?
+
+## Block 7 — The wider library
+
+- **The 1996 Wired interview** — a different and broader Jobs formulation — design as the fundamental soul of a made thing — and useful beside the anchor rather than instead of it <https://www.wired.com/1996/02/jobs-2/>
+- **Objectified (2009)** — Ive and Rams in the same documentary — the clearest available statement of the lineage this entry nests
+- **Insanely Simple — Ken Segall** — the simplicity-as-subtraction argument, from someone who was in the room
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `SGraph-AI__App__Send/team/roles/designer/ROLE.md` | Jobs quoted twice, and extended: *design is the coherence between the internal structure and the external experience* |
+| `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/27/part-2/v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md` | the section *The Jonathan Ive Principle: Good Design Starts with the User*; the MP3-to-CD whiteboard story retold; *good design is invisible* |
+| `SGraph-AI__App__Send/team/humans/dinis_cruz/claude-code-web/02/28/v0.7.4__explorer-response__security-and-process-briefs.md` | the **Jonathan Ive test** as a mandatory validator for every UI change — the influence as a pipeline gate |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/design-canon/index.md
+
+==============================================================================
+
+
+# The wider design canon
+
+*Source: <https://influences.sgit.ai/register/design-canon/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** canon
+- **status** full — the seven-block register format
+- **briefing** confirmed via the Design entry
+
+Rams, Vignelli, Norman, Eames, Müller-Brockmann, Tschichold, Aalto, Cooper, Krug, and Japanese design philosophy — mapped onto software explicitly in a live role definition, not cited as decoration.
+
+## Block 1 — The anchor
+
+The industrial, graphic and interaction design tradition, as mapped onto software in the estate's Designer role
+
+A canon rather than a work. The anchor is the mapping itself — the moment the tradition was written down as engineering guidance rather than as taste.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+What makes this an entry rather than a bibliography is the direction the mapping runs. The role definition does not say *good designers admire Rams*; it takes **less, but better** and treats it as a working principle for an API surface. That is the tradition being used as a tool, which is the test this register applies throughout.
+
+The most transferable pieces: Rams on subtraction; Norman on affordance — a thing should tell you what it does by its shape, which is a claim about function signatures as much as door handles; Krug on not making the reader think, which is a claim about documentation; Müller-Brockmann on the grid, which is a claim about consistent structure making irregularity visible.
+
+Nested under [Design](../design/index.html) because it is the same influence at a different resolution: that entry has the principle and the pipeline gate, this one has the vocabulary.
+
+## Block 3 — The principle
+
+**Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.**
+
+## Block 4 — The trace table
+
+| Pattern from the anchor | Where the estate implements it | Version | Status |
+|---|---|---|---|
+| *Less, but better* (Rams) as a working principle rather than an aesthetic | The Designer role definition, applied to API surface rather than to visual design | — | implemented |
+| Code as inhabited space — is it navigable, is it comfortable | The same role definition's criteria for reviewing structure | — | implemented |
+| Affordance (Norman) applied to non-visual surfaces — a signature that tells you what it does | Not written down anywhere as a review criterion, though the estate's naming conventions arguably practise it | — | absent |
+
+Two rows, both from one document, and that is the honest extent of it. A canon leaves a thinner trace than a single work does, because it supplies vocabulary rather than patterns.
+
+## Block 6 — The checklist
+
+- Has every element here earned its place, or is some of it present because it was already there?
+- Does the shape of this tell you what it does, before any documentation does?
+- Is there a grid — a consistent structure — such that the irregular thing stands out?
+- Is the reader being asked to think about something that is not the problem?
+
+## Block 7 — The wider library
+
+- **Dieter Rams — Ten Principles for Good Design** — the shortest useful design document ever written; all ten transfer to software <https://www.vitsoe.com/gb/about/good-design>
+- **Massimo Vignelli — The Vignelli Canon** — published free by its author; the discipline of constraint, stated as rules <https://www.rit.edu/vignellicenter/>
+- **Don Norman — The Design of Everyday Things** — affordance and signifiers; the one book on this list an engineer should read first
+- **Steve Krug — Don't Make Me Think** — about web usability, and really about documentation
+- **Josef Müller-Brockmann — Grid Systems in Graphic Design** — why a consistent structure is what makes an exception readable
+- **Jan Tschichold — The New Typography** — and his later repudiation of it, which is the more useful half
+- **Alan Cooper — About Face** — interaction design as a discipline separate from engineering
+- **Charles & Ray Eames, Alvar Aalto** — the material half of the tradition — constraint as a source of form rather than a limit on it
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `SGraph-AI__App__Send/team/roles/designer/ROLE.md` | industrial, graphic and interaction design mapped to software explicitly — the canon named and put to work in a live role definition |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/csikszentmihalyi/index.md
+
+==============================================================================
+
+
+# Mihály Csíkszentmihályi
+
+*Source: <https://influences.sgit.ai/register/csikszentmihalyi/index.html> · markdown twin of the entry page.*
+
+- **tier** traced — corpus evidence exists today
+- **kind** person + research
+- **status** full — the seven-block register format
+- **briefing** none
+
+Named directly in the corpus with his flow criteria applied, which is why he gets a row of his own rather than a mention inside the flow entry. The state has a specification; the specification is what makes it engineerable.
+
+## Block 1 — The anchor
+
+Flow: The Psychology of Optimal Experience — Mihaly Csikszentmihalyi — 1990
+
+Shared with [the flow entry](../flow/index.html), deliberately. That entry is about the methodology built from the research; this one is about the research.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The move that matters is the one people skip: Csikszentmihalyi did not describe a mood, he **specified a state** — clear goals, immediate feedback, challenge matched to skill, merging of action and awareness, loss of self-consciousness, altered sense of time. A list of preconditions is a thing you can design against. A vibe is not.
+
+That is why he is here as a separate entry from the methodology built on him. The methodology is a claim about what to do; the research is the claim that **the thing being protected is real and has criteria**, and the second claim is what makes the first one more than a preference.
+
+He also, usefully, named programming as one of the activities that induces the state — which the corpus cites directly rather than assuming.
+
+## Block 3 — The principle
+
+**Optimal experience has measurable preconditions, which means environments can be engineered for it rather than hoped for.**
+
+## Block 4 — The trace table
+
+**No trace table yet.** **The trace of this influence is [the flow entry's table](../flow/trace/index.html)**, and duplicating it here would be the same mistake the deconfliction rule prevents between sites. This entry owns the research; that one owns the methodology and the rows.
+
+## Block 6 — The checklist
+
+- Are all three preconditions present — clear goal, immediate feedback, challenge matched to skill — or only the ones that were easy to build?
+- Is the state being designed for, or hoped for?
+- Which of the six criteria could actually be observed here, and is anyone observing them?
+
+## Block 7 — The wider library
+
+- **Flow: The Psychology of Optimal Experience (1990)** — the anchor. Chapter three is where the criteria are set out
+- **Beyond Boredom and Anxiety (1975)** — the earlier empirical work, with the experience-sampling method that produced the data
+- **Creativity (1996)** — the same method applied to people doing original work over decades
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md` | cited by name with the flow criteria applied, and programming named as a flow-inducing activity |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/neil-peart/index.md
+
+==============================================================================
+
+
+# Neil Peart & Rush
+
+*Source: <https://influences.sgit.ai/register/neil-peart/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** person + music
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+On the founder's own list, and with **zero corpus evidence**. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.
+
+## Block 1 — The anchor
+
+Rush — drums and lyrics, 1974–2015 — Neil Peart
+
+**Anchor not yet chosen.** Which record, which period, which lyric — that is the founder's to say, and it is [N1](../../admin/comms.html#n1) in the briefing queue.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+There is nothing to put here yet, and inventing it would be the exact failure the tier system exists to prevent. What can be said is why the entry is worth waiting for: an influence from outside software, on a person whose work is entirely inside it, is the kind that shapes taste rather than technique — and taste is the part of an estate that a trace table struggles to reach.
+
+## Block 3 — The principle
+
+***(hypothesis, not a finding)* Technical mastery in service of meaning — the craftsman-lyricist: virtuosity that exists to say something rather than to be noticed.**
+
+This principle is a **hypothesis constructed from public knowledge about Peart**, not from anything the founder has written. It is published so that the briefing document can correct it, which is more useful than an empty box — but it should not be quoted as this site's claim until it has been.
+
+## Block 7 — The wider library
+
+- **Rush — the discography** — listed, linked and not rehosted; the anchor record is still to be chosen <https://www.rush.com/>
+- **Neil Peart — Ghost Rider (2002)** — his own prose. If the craftsman-lyricist hypothesis holds, this is where it would be visible in his own voice
+- **Neil Peart — The Masked Rider (1996)** — the earlier travel writing
+
+## Awaiting the briefing document
+
+The founder named this influence and the corpus scan found nothing. That is the definition of the STATED tier, and it is not a defect in the mining: two decades of earlier writing were out of reach, and some of this may never have been written down at all. The entry stays here, visible, with the question attached.
+
+**Research plan.** The founder's own briefing document is the only real source, and it is [N1](../../admin/comms.html#n1). Alongside it: his talks and bios for drumming and music references, and the earlier blog material that was not reachable when the pack was mined ([R3](../../admin/comms.html#r3)). **A boundary that applies to this entry more than any other on the site**: lyrics are the sharpest edge in the whole no-verbatim rule — publishers enforce aggressively even over a single verse — so this entry will describe and link, and quote at most a fragment under analysis. [The release gate enforces the cap](../../admin/index.html#no-verbatim).
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/kevin-kelly/index.md
+
+==============================================================================
+
+
+# Kevin Kelly's books
+
+*Source: <https://influences.sgit.ai/register/kevin-kelly/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** books
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+On the founder's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.
+
+## Block 1 — The anchor
+
+*What Technology Wants* (2010), *The Inevitable* (2016), or *1,000 True Fans* (2008) — Kevin Kelly
+
+**Three candidates, none confirmed.** They are quite different books and the entry reads differently depending which one did the shaping — [N2](../../admin/comms.html#n2).
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If the founder read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html).
+
+## Block 3 — The principle
+
+***(hypothesis)* Technology is an evolutionary system with its own tendencies — some directions are pushed on us by what has already been built, rather than chosen.**
+
+Stated as a hypothesis because the source is Kelly's public argument, not the founder's account of what he took from it.
+
+## Block 7 — The wider library
+
+- **What Technology Wants (2010)** — the technium argument in full
+- **The Inevitable (2016)** — twelve forces, framed as things already in motion
+- **1,000 True Fans (2008)** — the essay, published free — a different argument entirely, about who has to like your work <https://kk.org/thetechnium/1000-true-fans/>
+- **Out of Control (1994)** — the earliest and strangest of them; decentralised systems before it was a genre
+
+## Awaiting the briefing document
+
+Named by the founder, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.
+
+**Research plan.** Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check the founder's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/sinek-golden-circle/index.md
+
+==============================================================================
+
+
+# Simon Sinek — the golden circle
+
+*Source: <https://influences.sgit.ai/register/sinek-golden-circle/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** framework
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+Why → How → What. On the founder's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.
+
+## Block 1 — The anchor
+
+*Start With Why* — the book (2009) or the TED talk (2009) — Simon Sinek
+- anchor: <https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action>
+
+**Anchor not confirmed** — the talk and the book land differently, and which one did the work matters. [N3](../../admin/comms.html#n3).
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The circumstantial evidence: **this site network is organised why-first.** Every site opens on the argument for its own existence before describing what it contains, and every commissioning brief in the network states a thesis before a scope. That is either the golden circle applied, or it is a house style that arrived some other way and now looks like it.
+
+Only the founder can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**
+
+## Block 3 — The principle
+
+**Purpose before mechanism: say why this exists before saying what it does, because the why is what people can act on.**
+
+## Block 7 — The wider library
+
+- **How great leaders inspire action (TED, 2009)** — the talk; eighteen minutes and the whole idea <https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action>
+- **Start With Why (2009)** — the book-length version
+- **The Infinite Game (2019)** — the later argument, and closer to what a long-lived open-source project actually faces
+
+## Awaiting the briefing document
+
+Named by the founder; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.
+
+**Research plan.** Confirm the anchor in [N3](../../admin/comms.html#n3). Then check the founder's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/cathedral-bazaar/index.md
+
+==============================================================================
+
+
+# The Cathedral and the Bazaar
+
+*Source: <https://influences.sgit.ai/register/cathedral-bazaar/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** work
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to the founder* — which is exactly the part that is not written down anywhere.
+
+## Block 1 — The anchor
+
+The Cathedral and the Bazaar — Eric S. Raymond — 1997
+- anchor: <http://www.catb.org/~esr/writings/cathedral-bazaar/>
+
+Published free by its author and still online at its original address, which is itself part of the argument.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is the founder's to write.
+
+## Block 3 — The principle
+
+**Release early, release often, and let the people using the thing find what is wrong with it — openness as a development method rather than a licensing choice.**
+
+## Block 7 — The wider library
+
+- **The Cathedral and the Bazaar (1997)** — the essay, free at its original address <http://www.catb.org/~esr/writings/cathedral-bazaar/>
+- **Homesteading the Noosphere (1998)** — the follow-up on ownership and reputation in open-source projects <http://www.catb.org/~esr/writings/homesteading/>
+- **Two Bits — Christopher Kelty (2008)** — not by Raymond, and the best critical account of what the essay got right and wrong <https://twobits.net/>
+
+## Awaiting the briefing document
+
+Named by the founder. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.
+
+**Research plan.** The founder's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/david-rice-keynote/index.md
+
+==============================================================================
+
+
+# David Rice — “Upon the Threshold of Opportunity”
+
+*Source: <https://influences.sgit.ai/register/david-rice-keynote/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** presentation
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+An OWASP keynote, named by the founder from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.
+
+## Block 1 — The anchor
+
+Upon the Threshold of Opportunity — an OWASP AppSec keynote — David Rice
+
+**Year and recording unconfirmed.** Locating the canonical recording is part of the research plan rather than a detail — [N5](../../admin/comms.html#n5).
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only the founder holds.
+
+Nests under [OWASP](../owasp/index.html), where the community-as-influence claim lives.
+
+## Block 3 — The principle
+
+***(hypothesis)* Security is an economic and societal opportunity rather than a fear industry — the argument of *Geekonomics*, made to a room of practitioners.**
+
+Constructed from Rice's published book rather than from the keynote, because the keynote has not been located. It is a placeholder for the real principle, not the real principle.
+
+## Block 7 — The wider library
+
+- **Geekonomics: The Real Cost of Insecure Software (2007)** — Rice's book, and the fullest version of the argument the keynote presumably made <https://www.oreilly.com/library/view/geekonomics-the-real/9780321477897/>
+- **OWASP AppSec conference archives** — where the recording should be, and where the search starts <https://owasp.org/>
+
+## Awaiting the briefing document
+
+Named by the founder; no corpus trace, and no located recording. Both halves of the entry are open.
+
+**Research plan.** Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one the founder means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: the founder's contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/music-and-band/index.md
+
+==============================================================================
+
+
+# Music, and playing in a band
+
+*Source: <https://influences.sgit.ai/register/music-and-band/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** practice + era
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+The most personal entry on the site, entirely awaiting the founder's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.
+
+## Block 1 — The anchor
+
+Playing in a band — a personal era
+
+Not a work, and not a public event. There is nothing to link, which makes this the only entry on the site with no anchor URL at all.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The hypothesis is worth stating precisely because of what depends on it. [The flow entry](../flow/index.html) is one of the best-traced things in this register: Csikszentmihalyi's state, Victor's mechanism, and a development methodology whose stated core principle is preserving flow. **If band-playing is where the founder first experienced that state, then the most-instrumented influence on this site has an origin that is not written down anywhere.**
+
+It also has a specific property none of the software influences do: a band is *collaborative* flow. The methodology tries to recreate a state between a person and a machine. The original may have been a state between people — and that difference, if real, is a design constraint nobody has written down.
+
+## Block 3 — The principle
+
+***(hypothesis)* Playing together in real time is the original experience of collaborative flow — several people, immediate feedback, no possibility of stopping to plan.**
+
+This is the site's most consequential unverified claim and it is flagged as such everywhere it appears. If the founder confirms it, it becomes the root of a lineage. If he does not, it is a neat story invented by a machine, and the register will say so.
+
+## Awaiting the briefing document
+
+Entirely unresearchable by anyone except the founder. There is no public record, no publication to mine and no third party to ask. This entry is a placeholder for something only he can write, and it is published so that its absence is visible rather than tidy.
+
+**Research plan.** There is no research plan, and pretending otherwise would be dishonest. The entry needs [N6](../../admin/comms.html#n6) and nothing else. The specific questions worth answering: what the band was and when; whether the flow hypothesis above is right or a machine's tidy story; and whether the collaborative aspect is the part that carried over.
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/diverse-distributed-teams/index.md
+
+==============================================================================
+
+
+# Diverse and distributed teams
+
+*Source: <https://influences.sgit.ai/register/diverse-distributed-teams/index.html> · markdown twin of the entry page.*
+
+- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+- **kind** practice
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+On the founder's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.
+
+## Block 1 — The anchor
+
+Working in diverse and distributed teams — a practice
+
+No single work. The likeliest formative instance is OWASP's global chapter model, which has [its own entry](../owasp/index.html) — the briefing needs to say whether that is the origin or a later example.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The circumstantial case is strong enough to be worth stating and weak enough that it must not be presented as evidence. This estate's practices are unusually written-down: role definitions as documents, briefs as first-class artefacts, decisions recorded rather than remembered. **That is what a distributed habit looks like when it has been fully internalised** — but a habit that thorough could equally come from working with agents, who have no other way to receive context.
+
+Which of those came first is the question, and it is the founder's. [OWASP's global chapters](../owasp/index.html) predate everything else here by two decades, which makes them the best candidate for the origin.
+
+## Block 3 — The principle
+
+***(hypothesis)* Distribution forces thinking to become explicit, written and asynchronous — and cognitive diversity is what stops a team agreeing quickly on the wrong thing.**
+
+Two claims bundled into one principle, which is usually a sign the entry has not been thought through yet. The briefing should separate them: distribution and diversity are different mechanisms with different failure modes.
+
+## Block 7 — The wider library
+
+- **Team Topologies — Skelton & Pais** — the nearest published framework, and itself a discovered entry in this register
+
+## Awaiting the briefing document
+
+Named by the founder, with no direct corpus citation. The estate is full of *consequences* that would be consistent with this influence, which is not the same thing as evidence for it — and the difference is what the tier means.
+
+**Research plan.** [N7](../../admin/comms.html#n7). Three places to look, in order of likely yield: the founder's management writing; the estate's own team-roles system, which reads like a formalisation of something learned earlier; and OWASP's global-chapter model as the formative experience. The question the briefing must answer: **which of these is the origin and which are consequences.**
+
+## The corpus evidence
+
+None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/christopher-alexander/index.md
+
+==============================================================================
+
+
+# Christopher Alexander
+
+*Source: <https://influences.sgit.ai/register/christopher-alexander/index.html> · markdown twin of the entry page.*
+
+- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+- **kind** person
+- **status** full — the seven-block register format
+- **briefing** requested
+
+Never named by the founder. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.
+
+## Block 1 — The anchor
+
+A Pattern Language — Christopher Alexander, Sara Ishikawa and Murray Silverstein — 1977
+
+The book everyone in software cites. *The Timeless Way of Building* is the argument behind it and is in Block 7.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+> Christopher Alexander's pattern language is the direct ancestor of software design patterns. The Designer should think of code as a space that developers inhabit: is it navigable? Is it comfortable?
+>
+> — Dinis Cruz, `briefs/.../team/roles/designer/ROLE.md`
+
+Not a nod in a bibliography — a **criterion in a live role definition**, telling a reviewer what to look at. That is what moved this from a citation to a discovered influence.
+
+The move worth noticing is that the role definition does not use Alexander the way software usually does. The Gang of Four took the *pattern* idea and left the rest; this citation takes the part the Gang of Four dropped — **that a building is judged by what it is like to be in it** — and applies it to a codebase. *Is it navigable? Is it comfortable?* are not questions about correctness. They are questions about habitation.
+
+That reading is closer to what Alexander actually argued, and to his later disappointment with what software did with his work. It is also, honestly, the reading that is hardest to check: comfort is not a property a test can assert.
+
+**This entry is DISCOVERED and stays that way until the founder confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2).
+
+## Block 3 — The principle
+
+**Code is a space that people inhabit. A pattern is a named solution to a recurring problem in a context — and a language of patterns is what lets a place be built by many hands and still be coherent.**
+
+## Block 4 — The trace table
+
+| Pattern from the anchor | Where the estate implements it | Version | Status |
+|---|---|---|---|
+| Code as a space developers inhabit — judge it by navigability and comfort | The Designer role definition's review criteria | — | implemented |
+| A *language* of patterns — named solutions that compose, each referring to the ones above and below it | Nowhere. The estate has conventions and a house style; it has no pattern language, and the two are not the same thing | — | absent |
+| Patterns discovered from use rather than designed in advance | Nowhere recorded. The estate's conventions were derived by counting the code on [the coding sibling](https://coding.sgit.ai), which is the same method — but it was not done in Alexander's name and the connection is this site's inference | — | absent |
+
+One implemented row and two absent ones, which is the honest shape of a discovered entry: the citation is real, and almost none of what the anchor work actually asks for has been built.
+
+## Block 5 — The gaps, as build specs
+
+### G1 — There is no pattern language, only patterns
+
+Alexander's actual contribution is the *language*: each pattern names the larger patterns it completes and the smaller ones that complete it, so that a builder can move between scales. The estate's conventions are a flat list. The build spec is not to write more conventions but to link the existing ones into a structure — each convention naming what it serves and what serves it. The material already exists on [coding.sgit.ai](https://coding.sgit.ai); the edges do not.
+
+### G2 — Nobody has asked whether the code is comfortable
+
+The role definition sets *is it navigable? is it comfortable?* as review criteria and nothing collects an answer. The cheap version is not a survey: time-to-locate for a symbol a newcomer has never seen, measured once. It would produce an uncomfortable number and it would be the first evidence either way.
+
+
+## Block 6 — The checklist
+
+- Is this a space someone can find their way around, or one they need a guide for?
+- Does this pattern name what it completes, and what completes it — or is it a loose item on a list?
+- Was this pattern found in use, or invented at a whiteboard?
+- What is it *like* to be in this part of the codebase? If nobody has asked, that is the finding.
+
+## Block 7 — The wider library
+
+- **A Pattern Language (1977)** — the anchor; 253 patterns, and the structure between them is the point
+- **The Timeless Way of Building (1979)** — the argument the patterns were derived from, and the better book
+- **Notes on the Synthesis of Form (1964)** — the early, formal work — and the one Alexander later partly repudiated
+- **Patterns of Software — Richard Gabriel (1996)** — the most serious attempt to say what software actually took from Alexander, and what it dropped <https://www.dreamsongs.com/Files/PatternsOfSoftware.pdf>
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `SGraph-AI__App__Send/team/roles/designer/ROLE.md` | the pattern-language lineage stated, and code-as-inhabited-space set as a review criterion |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/team-topologies-cynefin/index.md
+
+==============================================================================
+
+
+# Team Topologies & Cynefin
+
+*Source: <https://influences.sgit.ai/register/team-topologies-cynefin/index.html> · markdown twin of the entry page.*
+
+- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+- **kind** frameworks
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and not enough to claim — so this is a discovered stub, published at the strength of its evidence.
+
+## Block 1 — The anchor
+
+Team Topologies (Skelton & Pais, 2019) and the Cynefin framework (Snowden, 1999)
+- anchor: <https://teamtopologies.com/>
+
+Two frameworks, bundled because the corpus bundles them. If the founder confirms, they should probably be separated — they answer different questions.
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+The honest statement of the evidence: a hiring post from 2019 lists these beside [Wardley](../wardley/index.html), and Wardley turned out to be one of the deepest-traced influences in the register. **Proximity in a list is not evidence of equal weight**, and this entry is a stub because the site declines to infer one from the other.
+
+What makes it worth publishing anyway: naming Cynefin means having a position on when a practice is appropriate rather than universally good, and that position — different problems need different methods — is visible in how the estate handles its own uncertainty. Consistent with the influence, and consistent with several other things too.
+
+## Block 3 — The principle
+
+**Organisational structure and problem-domain sensemaking are engineering concerns: the shape of the team decides the shape of the system, and the kind of problem decides which practice is appropriate.**
+
+## Block 7 — The wider library
+
+- **Team Topologies — Skelton & Pais (2019)** — four team types and three interaction modes <https://teamtopologies.com/>
+- **Cynefin — Dave Snowden** — the sensemaking framework; the clear/complicated/complex/chaotic distinction is the transferable part <https://thecynefin.co/>
+- **A Leader's Framework for Decision Making (HBR, 2007)** — Snowden and Boone's most-read statement of it <https://hbr.org/2007/11/a-leaders-framework-for-decision-making>
+
+## Awaiting the briefing document
+
+Found by mining and never claimed by the founder, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.
+
+**Research plan.** [Q2](../../admin/comms.html#q2) first: does this belong at all, or is it a citation rather than an influence? If confirmed, separate the two frameworks and look for Team Topologies vocabulary — stream-aligned, platform, enabling, complicated-subsystem — in the estate's team-roles system, and for Cynefin's domains in how work is triaged.
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `(a 2019 hiring post)` | both frameworks listed beside Wardley mapping; the only occurrence the mining run found |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+source: /register/vannevar-bush/index.md
+
+==============================================================================
+
+
+# Vannevar Bush & the memex
+
+*Source: <https://influences.sgit.ai/register/vannevar-bush/index.html> · markdown twin of the entry page.*
+
+- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+- **kind** person + work
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **briefing** requested
+
+The ancestor of the whole external-memory idea, and it entered this register the long way round — by being cited in an article about a modern implementation of the thing it predicted.
+
+## Block 1 — The anchor
+
+As We May Think — Vannevar Bush — The Atlantic · 1945
+- anchor: <https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/>
+
+*Linked, never rehosted.*
+
+## Block 2 — The founder's words
+
+Bush's specific idea was not storage. It was the **trail**: a named path through documents that one person builds and another can follow, which is a claim about *edges being authored* rather than derived. Eighty years on, that is still not what most systems do.
+
+The loop is worth naming out loud, and so is its weakness. This site network's own thesis is external memory for agents; [Luhmann](../luhmann/index.html) is the paper version arrived at independently; [the Semantic Web](../semantic-web/index.html) is the standards-body version. Bush is upstream of all of it — and the evidence that he shaped *this* work is one citation inside an article about something else. **A satisfying lineage is not the same as a documented one**, which is why this is a stub and not a full entry.
+
+## Block 3 — The principle
+
+**The mind works by association, and an external memory should too — trails between documents, made by a person and followable by anyone afterwards.**
+
+## Block 7 — The wider library
+
+- **As We May Think (1945)** — the anchor, free at The Atlantic; the trails section is the part that matters <https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/>
+- **Doug Engelbart — Augmenting Human Intellect (1962)** — the report that took Bush seriously and built toward it <https://www.dougengelbart.org/content/view/138>
+- **Ted Nelson — Literary Machines (1981)** — the maximalist descendant; transclusion is the idea the web dropped
+
+## Awaiting the briefing document
+
+Discovered by mining, one citation deep, and reached through another entry rather than on its own. Published at the strength of its evidence and awaiting [Q2](../../admin/comms.html#q2): does the memex belong in this register, or is it a reference the Luhmann article picked up in passing?
+
+**Research plan.** [Q2](../../admin/comms.html#q2) first. If confirmed, the specific thing to trace is the **trail** rather than the memex in general: does anything in the estate let a person author a path through material and hand it to someone else, or are all its edges derived? That is a checkable question with a yes-or-no answer, and it would settle whether this influence is real or decorative.
+
+## The corpus evidence
+
+| Path in the corpus | What it carries |
+|---|---|
+| `docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md` | the memex reached via the Luhmann article — the only occurrence the mining run found |
+
+---
+
+CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor work belongs to its author and is linked, not licensed here.
+
+
+==============================================================================
+PART 4 — THE 10 SOURCE DOCUMENTS
+
+==============================================================================
+
+
+The commissioning pack, verbatim. Each is also fetchable on its own at
+/briefs/<filename>.
+
+
+
+==============================================================================
+source: /briefs/00__BRIEF.md
+
+==============================================================================
+
+
+# 00 — The Brief: `influences.sgit.ai`
+
+**Version** v0.33.62 · 25 August 2026
+**From** Dinis Cruz, via the SG/Send Librarian
+**To** the agent commissioned to build `influences.sgit.ai`
+**Licence** CC BY 4.0 — with this site's special rule: **the influences' own work is never reproduced verbatim at length**; see `04__`
+
+---
+
+## 1. The commission
+
+A site of the people, works, topics and things that shaped the founder's thinking — *"individuals, topics, eras, things"* — each with a detailed section explaining **what resonates and why**, and **examples of where it was applied in practice**. Including books, and including musicians. The stated rule: no verbatim reproduction — the site explains resonance and traces application; the anchor works stay links.
+
+**The name, decided:** `influences.sgit.ai` — an *inspiration* is something that moved you; an *influence* is something that **shaped the work**, and this site proves the shaping.
+
+**The format, already invented:** the founder's Bret Victor register (shipped in `sources/`) is the model entry — anchor → the founder's words → the principle → **the trace table** (where the estate implements it, with version numbers) → the gaps as build specs → a checklist. `01__` canonises it.
+
+---
+
+## 2. The thesis
+
+> **This is the provenance layer of the memory network.** The other sites teach agents *what* the founder thinks and *how* the estate works; this one teaches **where the thinking came from** — so an agent extends the instincts *"on purpose rather than by luck"* (the Victor register's own closing words).
+
+And the quality bar, which is what separates this from every awesome-list: **an influence entry is a falsifiable claim about the work.** The trace table can be checked against the repos; the corpus's computed-not-claimed discipline applies to inspiration itself.
+
+---
+
+## 3. The map — three tiers, measured
+
+The corpus was mined for every external influence. Full detail in `02__`; the shape:
+
+**TRACED — corpus evidence exists (12).** Bret Victor (a *"Brett Victor Problem"* section header in the founder's own article; the Joy-of-Programming white paper; the register). Simon Wardley (210 files; a whole sibling site). The Semantic Web & Tim Berners-Lee (35 files — including a dedicated **Solid-integration brief** and the *"Semantic Web's Insight (and Mistake)"* section in thinking-in-graphs). Graphs (the founding obsession; its own site). OWASP & the security community (271 files; the summits history). Flow / coding in the zone (43 files — **IFD's core principle is "preserving developer flow state"**, with Csikszentmihalyi cited by name in the Aug 2025 IFD article). Open source (its own site; the licence positions). **Niklas Luhmann & the Zettelkasten** (a dedicated published article mapping it to G³ — a discovered influence not on the seed list). Ericsson & deliberate practice / the 10,000 hours (11 files). Popper & falsifiability (7 — *"a map is a claim"*). Torvalds (5). Bruce Schneier (4 — the LLM-failure-modes argument and Solid).
+
+**STATED — on the founder's list, thin or absent in the corpus (7).** Neil Peart & Rush · Kevin Kelly's books · Simon Sinek's golden circle · *The Cathedral and the Bazaar* · David Rice's *"Upon the Threshold of Opportunity"* OWASP keynote · music & playing in a band · diverse and distributed teams. **Zero grep hits for most** — these need the founder's briefing documents and research into his past publications, exactly as he intends. They are the site's roadmap, not its debt.
+
+**DISCOVERED — in the corpus, not on the seed list (5).** Luhmann (above). **Christopher Alexander** (the Designer role: *"pattern language is the direct ancestor of software design patterns… think of code as a space that developers inhabit"*). The Designer role's wider canon (**Rams, Vignelli, Norman**, Japanese design philosophy). **Team Topologies & Cynefin** (the 2019 hiring post lists them beside Wardley). **Vannevar Bush's memex** (via the Luhmann article).
+
+---
+
+## 4. The honest constraints
+
+- **Most STATED entries have no corpus trace yet.** The site publishes them as commitments with research pending — the founder's own plan (*"in time I will create a detailed briefing document about each one"*) becomes the visible roadmap.
+- **The trace tables age.** Version-stamped claims about the estate need the generate-or-date rule.
+- **This is the most personal site in the network** — first person is correct here, unlike everywhere else. The house style bends: *"what resonates with me"* is the genre.
+- **The likeness problem**: infographics *of people* need original artwork, never scraped photos. `04__`.
+
+---
+
+## 5. Build order
+
+1. **`/register/bret-victor/`** — entry one exists. Publish it as both content and template.
+2. **`/wardley/`, `/graphs/`, `/owasp/`, `/open-source/`** — the influences that already have sibling sites: short resonance-and-trace entries that link out (the deconflict rule).
+3. **`/semantic-web/`** — the best full-format second entry: TBL, the *Insight-and-Mistake* critique, the Solid brief, vaults-vs-pods. An influence *argued with* is the format at its strongest.
+4. **`/flow/`** — Victor × Csikszentmihalyi × IFD: three sources converging on one methodology. The trace is the whole IFD guide.
+5. **`/luhmann/`** — the discovered entry; the article is nearly the page already.
+6. **The STATED seven** — as the founder's briefing documents arrive, each processed into the register format with the past-publications research he named.
+7. **`/map/`** — the influence graph: influences → principles → estate features. Eventually the site's own G³ demonstration.
+
+---
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+
+==============================================================================
+source: /briefs/01__the-register-format.md
+
+==============================================================================
+
+
+# 01 — The Register Format: how an influence entry is written
+
+**Version** v0.33.62 · 25 August 2026
+**Purpose** Canonise the founder's Bret Victor register into the template every influence page follows.
+
+---
+
+## 1. Where the format comes from
+
+The founder did not ask for this site and then invent a format for it. The format existed first: he wrote an *"immediate-connection register"* for Bret Victor's *Inventing on Principle* (2012) as a working document for the estate's viewer, and then asked what a site made of such documents should be called. That ordering matters — the register format is **proven in use**, not designed on spec. `sources/register__bret-victor__inventing-on-principle.md` carries the anchor and structure; the founder holds the full original text and it should be shipped verbatim into `/register/bret-victor/` as entry one.
+
+What makes the register different from every "books that shaped me" listicle is one move: **it treats influence as a falsifiable claim about the codebase.** Anyone can say Victor inspired them. The register says *which* of Victor's patterns appear *where* in the estate, at *which* version — and which are still missing, specified precisely enough to build.
+
+---
+
+## 2. The template — seven blocks
+
+Every full influence entry has these blocks, in this order:
+
+### Block 1 — The anchor
+The primary work, precisely cited: title, venue, date, canonical URL (and a durable mirror where one exists — e.g. the talk on Vimeo *and* the transcript on worrydream.com). One anchor per entry; the wider bibliography goes in Block 7. For a person, the anchor is the single work that did the shaping, not the whole career. For a topic or era ("graphs", "OWASP Summits"), the anchor is the founder's first documented contact with it.
+
+### Block 2 — The founder's words
+Why this resonates, in first person. This is the only site in the network where first person is the house style — *"what resonates with me and why"* is the genre, and paraphrasing it into corporate third person would destroy the evidence. Until the founder writes the briefing document for an entry, this block carries whatever first-person statements already exist in the corpus, cited by file and version.
+
+### Block 3 — The principle
+The influence distilled to one transferable sentence — the thing an agent can actually apply. Victor's is *immediate connection between creator and creation*. Wardley's is *situational awareness before strategy*. The test: the principle must be usable by someone who has never consumed the anchor work.
+
+### Block 4 — The trace table
+The heart of the format and the falsifiable part. Rows of: **pattern from the anchor → where the estate implements it → version → status (implemented / partial / absent)**. The Victor register's own closing observation is the standard to aim for: half the viewer's strongest features turned out to be *unknowing* implementations of the talk's demos — *"evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck."* Trace rows carry version numbers, so the generate-or-date rule applies: a trace table without versions is an opinion.
+
+### Block 5 — The gaps, as build specs
+Patterns from the anchor the estate does *not* yet implement — written precisely enough that an agent could pick one up as a work item (the Victor register specifies two: view time travel and relayout ghosts). This is what makes an influence page *forward-looking*: it is simultaneously provenance and backlog.
+
+### Block 6 — The checklist
+A short list of questions an agent should ask of new work in this influence's light ("does the user see the effect of the change immediately?", "is the map drawn before the strategy is argued?"). The checklist is the influence made operational.
+
+### Block 7 — The wider library
+The rest of the person's/topic's work, linked never rehosted, each item with one line on what it adds. This is where "other presentations by Bret Victor" live, where Rush's discography lives, where the rest of Kevin Kelly's books live.
+
+---
+
+## 3. Reduced forms
+
+Not every entry earns all seven blocks on day one.
+
+**The link-out entry** (for influences with sibling sites — Wardley, graphs, OWASP, open source): blocks 1–3 plus a *pointer* where the trace table would be: "the trace of this influence is an entire site — wardley-maps.sgit.ai". Duplicating the sibling's content would break the deconfliction rule; the influence entry owns only the *resonance*, the sibling owns the *material*.
+
+**The stub entry** (for STATED influences awaiting the founder's briefing document): blocks 1 and 3 as best current knowledge, an explicit `status: awaiting-briefing` marker, and the research plan — which of the founder's past publications and talks should be mined when the briefing arrives. A stub is published, not hidden: the roadmap is content.
+
+**The discovered entry**: same as full format, but Block 2 opens with honesty — the founder never listed this influence; the corpus surfaced it. The claim "this shaped the work" rests entirely on the trace table until the founder confirms or corrects it. Discovered entries are the site's falsifiability applied to itself.
+
+---
+
+## 4. Entry metadata
+
+Every entry carries front-matter: `tier` (traced / stated / discovered), `kind` (person / work / topic / era / practice / community), `status` (full / link-out / stub), `anchor-url`, `corpus-evidence` (file paths + counts, generated), `sibling-site` (if any), and `briefing-status` (none / requested / received / integrated). `influences__seed.json` in this pack is the initial population of exactly this schema.
+
+---
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+
+==============================================================================
+source: /briefs/02__the-influence-map.md
+
+==============================================================================
+
+
+# 02 — The Influence Map: every entry, with its evidence
+
+**Version** v0.33.62 · 25 August 2026
+**Method** The corpus (`SGraph-AI__App__Send`, `docs.diniscruz.ai`, `files.diniscruz.ai`, `Issues-FS__*`) was grep-mined for every seed term the founder listed plus every external name the mining surfaced. Counts below are from those runs; the site must regenerate them. Tier definitions: **TRACED** = corpus evidence exists today; **STATED** = on the founder's list but thin/absent in the corpus (awaiting his briefing document); **DISCOVERED** = in the corpus but not on his list (published as a falsifiable claim until he confirms).
+
+---
+
+## TRACED — twelve entries with corpus evidence
+
+### T1 · Bret Victor — *Inventing on Principle* (2012)
+**The model entry — the register exists** (`sources/`, and the founder holds the full text). Corpus evidence beyond the register: the Joy-of-Programming white paper (`docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md`) builds its central argument on Victor — *"Bret Victor, in his influential talk 'Inventing on Principle,' argued that one key to unlocking creative flow is immediate feedback"* — and quotes the talk's core line about creators needing an immediate connection to what they create. And the education-gaps article (`team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md`) has a section *titled* **"The Brett Victor Problem"**, applying Victor's point about dogma to education: *"the problem with dogma is not that it exists, but that you stop asking the question."* One influence, applied in two unrelated domains (developer tooling and education policy) — that breadth is itself trace evidence.
+**Principle**: immediate connection between creator and creation.
+**Trace**: the register's own table (viewer features as unknowing implementations of the talk's demos). **Gaps as specs**: view time travel; relayout ghosts.
+**Wider library** (the founder asked for other Victor presentations): *The Future of Programming* (1973 costume talk), *Media for Thinking the Unthinkable*, *Up and Down the Ladder of Abstraction*, *Stop Drawing Dead Fish*, *Drawing Dynamic Visualizations*, *The Humane Representation of Thought*, Dynamicland. Each gets one line in Block 7, linked to worrydream.com — never rehosted.
+
+### T2 · Simon Wardley & Wardley Maps
+**Corpus**: ~210 files; an entire sibling site (`wardley-maps.sgit.ai`) whose pack documents the founder's own published Wardley materials — videos, infographics, the maps-as-code work.
+**Principle**: situational awareness before strategy — the map is a falsifiable claim about position and movement.
+**Format**: link-out entry (blocks 1–3 + pointer). The influence page owns the *resonance* — why a security person reorganised his thinking around evolution axes; the sibling owns the material.
+
+### T3 · Tim Berners-Lee & the Semantic Web
+**The best full-format second entry, because it is an influence argued with.** Corpus: ~35 files. Two star exhibits: the Solid-integration brief (`team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md` — TBL's Solid pods vs sgit vaults as complementary architectures, with Schneier's involvement at Inrupt noted), and the *"Semantic Web's Insight (and Mistake)"* section in `library/concepts/v0_4_0__thinking-in-graphs.md`: *"The Semantic Web community identified the right problem… But the community made a subtle mistake in practice. They ended up attaching meaning to nodes rather than deriving meaning from edges."*
+**Why this is the format at its strongest**: the entry can show resonance (the dream of machine-readable meaning shaped G³, MGraph-DB, the ontology work), disagreement (node-first vs edge-first), and a live architectural conversation (vaults vs pods). Influence is not agreement; it is engagement.
+
+### T4 · Graphs
+**The founding obsession.** Corpus: everywhere; its own sibling site. The entry is a link-out with one addition the sibling does not carry: the *personal* history — where graphs entered the founder's thinking (O2 Platform's code-flow graphs, a research pointer for his briefing doc).
+
+### T5 · OWASP & the security community
+**Corpus**: ~271 files, including the Summits history. Link-out to the open-source pack's OWASP material for governance/monetisation (deconfliction), but this entry owns the *community-as-influence* claim: two decades of participation, the Summit model, and the era itself ("cyber security community" is a *kind: era/community* entry, the seed list's own phrasing). David Rice's keynote (S5 below) nests under this influence's wider library.
+
+### T6 · Flow, and coding in the zone
+**Three sources converging on one methodology — the site's best demonstration that influences compose.** Corpus: ~43 files. Csikszentmihalyi is named and his flow criteria applied in the Joy-of-Programming paper (*"In his seminal work, Mihály Csíkszentmihályi identified programming as one of many activities… that can induce flow"*); Victor supplies the mechanism (immediate feedback keeps you in it); and IFD is the methodology built from both — `library/guides/development/ifd/v1.2.1__ifd__intro-and-how-to-use.md` opens: *"It centers on **preserving developer flow state** while leveraging LLMs for code generation"* and closes *"IFD is about maintaining flow state."*
+**Trace**: the entire IFD guide is the trace table. The entry's diagram: Csikszentmihalyi (the state) × Victor (the mechanism) × the founder's practice (the methodology).
+
+### T7 · Open source & its licences
+**Corpus**: its own sibling site with the full history pack (11,619-word corpus + 17,909-word history on file). Link-out entry. This entry owns one thing the sibling does not foreground: open source as *personal formation* — what two decades of releasing tools (O2 Platform onward) taught the founder about licences as social contracts. *The Cathedral and the Bazaar* (S4) nests here.
+
+### T8 · Niklas Luhmann & the Zettelkasten — **discovered, now traced**
+Not on the seed list; the corpus surfaced a dedicated published article: `docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md` — a full mapping of the slip-box to G³ (*"Luhmann's Zettelkasten was a self-organizing knowledge graph on paper… atomic, uniquely identified, densely linked, emergent in structure, scalable and lifelong"*). The article is nearly the influence page already; it needs only the register's trace-table discipline (which G³/MGraph-DB features implement which Zettelkasten property, with versions).
+**Bonus**: the article reaches back to **Vannevar Bush's memex** — the D5 entry enters through this one.
+
+### T9 · Anders Ericsson & deliberate practice
+**Corpus**: ~11 files on the 10,000-hours / deliberate-practice research (properly attributed to Ericsson, not the popularisation). Resonates with the founder's position on skill formation in the AI era. Full entry, medium depth.
+
+### T10 · Karl Popper & falsifiability
+**Corpus**: ~7 files. The deepest-running discovered thread: *"a map is a claim"* (wardley pack), the risks register's falsifiable-statements discipline, this very site's trace-table rule. Popper may be the influence that explains the *shape* of all the others' entries. Short entry, high leverage.
+
+### T11 · Linus Torvalds
+**Corpus**: ~5 files (Git's history, the education-gaps article's Git argument, kernel governance in the open-source history). Nested under T7's wider library or a short standalone — builder of *two* of the tools the estate stands on (Linux, Git).
+
+### T12 · Bruce Schneier
+**Corpus**: ~4 files (the LLM-failure-modes argument; Solid/Inrupt in the TBL brief). Short entry; security-economics thinking as influence on the founder's threat-modelling style.
+
+---
+
+## STATED — the founder's seven, awaiting his briefing documents
+
+Zero or near-zero grep hits today. Published as stubs with `status: awaiting-briefing` and a research plan each. **They are the roadmap, not the debt.**
+
+**S1 · Neil Peart & Rush.** *kind: person/music.* Research plan: the founder's talks/bios for drumming references; Peart as the craftsman-lyricist archetype — technical mastery plus meaning — an obvious resonance hypothesis to test against the briefing, not assert.
+**S2 · Kevin Kelly's books.** *kind: books.* Candidate anchors to confirm: *What Technology Wants*, *The Inevitable*, *1,000 True Fans* (essay). The technium's evolutionary framing plausibly connects to Wardley evolution — flag as hypothesis.
+**S3 · Simon Sinek — the golden circle.** *kind: framework.* Why→How→What. Research plan: check his conference talks for golden-circle framing; the sgit.ai site network itself is organised why-first.
+**S4 · *The Cathedral and the Bazaar* (Eric S. Raymond).** *kind: work.* Nests under T7. The open-source history pack already covers the essay's factual history — this entry owns only what it *did to the founder*.
+**S5 · David Rice — "Upon the Threshold of Opportunity" (OWASP keynote).** *kind: presentation.* Nests under T5. Research plan: locate the recording (OWASP AppSec archives), and the founder's contemporaneous blog reactions. Rice's *Geekonomics* is the wider-library item.
+**S6 · Music, and playing in a band.** *kind: practice/era.* The most personal entry; entirely awaiting the briefing. Hypothesis to test: band-playing as the original experience of real-time collaborative flow — the thing IFD tries to recreate in software.
+**S7 · Diverse and distributed teams.** *kind: practice.* Research plan: the founder's management writing, the team-roles system in the corpus, OWASP's global-chapter model as the formative experience.
+
+---
+
+## DISCOVERED — five the corpus surfaced beyond Luhmann
+
+**D1 · Christopher Alexander.** `team/roles/designer/ROLE.md`: *"Christopher Alexander's pattern language is the direct ancestor of software design patterns. The Designer should think of code as a space that developers inhabit: is it navigable? Is it comfortable?"* A load-bearing citation in a live role definition — strong trace.
+**D2 · Design (capital D) & Steve Jobs — discovered, founder-confirmed 2026-08-25.** The founder confirmed this the day the pack shipped: *"Design and Steve Jobs approach to Design (with capital D)."* The trace was already deep. The Designer ROLE.md is built on Jobs's formulation — *"Design is not just what it looks like and feels like. Design is how it works"* — and extends it: *"Design is the coherence between the internal structure and the external experience."* The NotebookLM case-study brief (`v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md`) has a section titled **"The Jonathan Ive Principle: Good Design Starts with the User"**, retells the Jobs MP3-to-CD whiteboard story, and lands the principle: *"Good design is invisible… the only way to notice it is to go back to the previous version and think: 'This is way worse.'"* And the strongest kind of trace this site recognises — influence turned into *process*: the **"Jonathan Ive test"** (*is it simpler? would reverting feel worse?*) is a **mandatory validator for every UI change** in the explorer-response brief. Not a quote on a wall; a gate in the pipeline. The wider canon — Rams (*"less, but better"* as a working API principle), Vignelli, Norman, Eames, Muller-Brockmann, Tschichold, Aalto, Cooper, Krug, Japanese design philosophy — nests under this entry.
+**D3 · Team Topologies & Cynefin.** Listed beside Wardley in the 2019 hiring post. Short entry pending founder confirmation of depth.
+**D4 · Vannevar Bush & the memex.** Enters via the Luhmann article; *As We May Think* (1945) as the ancestor of the whole external-memory thread — which is also this site network's own thesis. A satisfying loop: the memory network's provenance site tracing the idea of memory networks.
+**D5 · Mihály Csíkszentmihályi.** Named in T6 but deserves his own row in the seed data: *Flow* (1990) as anchor; the founder's flow entries cite him directly.
+
+---
+
+## The composition view
+
+The entries are not independent — the site's eventual `/map/` page (build-order step 7) draws the graph: Bush → Luhmann → graphs → Semantic Web → G³; Victor → flow ← Csikszentmihalyi, both → IFD; Wardley → Popper (maps as claims) → the register format itself; Raymond → open source ← Torvalds; Rice → OWASP. The influence map is itself a G³ instance — the site becomes a demonstration of the thing the influences taught.
+
+---
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+
+==============================================================================
+source: /briefs/03__site-architecture.md
+
+==============================================================================
+
+
+# 03 — Site Architecture: `influences.sgit.ai`
+
+**Version** v0.33.62 · 25 August 2026
+**Base** The house pattern (copy `pki.sgit.ai`): `llms.txt` + `/llms-full.txt`, `/documents/` raw markdown, markdown twin at every URL, `/admin/comms.html` with N1…/T1… threads, `/shipped/`, versioned everything, participant page.
+
+---
+
+## 1. URL scheme
+
+```
+/                          the thesis + the three-tier map (counts generated)
+/register/<slug>/          one influence entry (full format, 7 blocks)
+/register/<slug>/trace/    the trace table alone, as data (md + json twins)
+/tiers/                    TRACED / STATED / DISCOVERED, with definitions
+/map/                      the influence graph (influences → principles → estate features)
+/format/                   the register format itself, documented (from 01__)
+/library/                  the union of all Block-7 wider libraries, one page per person/topic
+/documents/                raw markdown of everything
+/admin/comms.html          questions to the founder (see §4)
+```
+
+Slugs are people or topics, not works: `/register/bret-victor/`, `/register/wardley/`, `/register/semantic-web/`, `/register/flow/`, `/register/luhmann/`, `/register/neil-peart/`… The anchor work is metadata inside the entry, because anchors can be superseded (a briefing document may reveal the *real* anchor was a different talk).
+
+## 2. Data model
+
+`influences__seed.json` (this pack) is the initial vault content. Each record: `slug`, `tier`, `kind`, `status`, `anchor`, `principle`, `corpus-evidence[]` (path + note, regenerable), `sibling-site`, `nests-under`, `briefing-status`, `research-plan`. The site is a projection of this data — same architecture as standards.sgit.ai: the register lives in a vault, the site renders it. Trace tables are per-entry JSON so `/map/` can be generated, not drawn.
+
+**Generated, not claimed**: tier counts, corpus-evidence file counts, and the `/map/` graph are all derivable from the seed JSON + a corpus scan. Publish the scan script's identity and date beside every number.
+
+## 3. Tier movement is the site's changelog
+
+The interesting events on this site are transitions: STATED → TRACED (a briefing document arrived and was integrated), DISCOVERED → TRACED (the founder confirmed), a trace row flipping absent → implemented (the estate built a gap). Each transition is a dated entry on `/shipped/`. A provenance site whose provenance changes silently would be self-refuting.
+
+## 4. The comms channel has a special role here
+
+On other sites `/admin/comms.html` carries build questions. Here it is also the **briefing-document request queue**: one thread per STATED entry (N1: Neil Peart — awaiting briefing; N2: Kevin Kelly — …), so the founder's stated plan (*"in time I will create a detailed briefing document about each one"*) has a visible, addressable inbox. When a briefing lands, the thread closes and the entry's tier moves.
+
+## 5. Infographics
+
+The founder asked for infographics of people and ideas. Two rules from `04__`: likenesses are **original artwork only** (never scraped photos); idea-infographics (the golden circle, the flow channel, evolution axes) are **redrawn in house style with attribution**, never copied. Every infographic's source data is a markdown/JSON twin — the house rule that a picture is a projection of data, not an original.
+
+## 6. What this site does NOT do
+
+No hosting of anchor works (talks, book excerpts, essays) — links only, per `04__`. No hagiography — entries carry disagreements (the Semantic Web entry is the model). No rankings — influences are a graph, not a top-ten. And no silent scope creep into siblings: if an entry's material grows past resonance-and-trace, the material moves to the sibling site and the entry keeps the pointer.
+
+---
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+
+==============================================================================
+source: /briefs/04__boundaries-and-licensing.md
+
+==============================================================================
+
+
+# 04 — Boundaries and Licensing: the no-verbatim rule as armour
+
+**Version** v0.33.62 · 25 August 2026
+
+---
+
+## 1. The founder's rule, and why it is also the legally correct one
+
+The founder set the rule himself: *"we will not quote verbatim, but should have detailed sections… where we explain what (and why) from them really resonate with me, and examples of where I applied that in practice."* That instinct happens to be exactly what copyright law rewards. The site's own **analysis, resonance and trace tables are original work** and carry CC BY 4.0 cleanly. The anchor works — Victor's talks, Kelly's books, Rush's music, Rice's keynote — are other people's copyrighted material, and a CC BY site that rehosted them would be relicensing what it does not own.
+
+The boundary, precisely:
+
+- **Link, never rehost.** Talks embed from their canonical host (Vimeo/YouTube embeds are the host's licence, fine) or link out; transcripts stay at worrydream.com; book links go to the publisher or author's own page.
+- **Short attributed quotation for analysis** — a sentence or two, quoted to be examined — is the fair-dealing/fair-use core and is allowed. Reproducing a talk's transcript section, a book chapter, or lyrics is not. **Lyrics are the sharpest edge**: music publishers enforce aggressively even for a single verse; the Rush entry describes and links, quoting at most a fragment under analysis.
+- **The founder's own words are unrestricted here** — his articles, briefs and registers are his to publish, and the register format runs on them.
+
+## 2. Likenesses
+
+Infographics *of people* use **original commissioned/generated artwork** — never scraped photographs (photographer's copyright) and never AI-likeness renderings presented as portraits (personality-rights risk, and simple respect: several of these people are alive and known to the founder's community). Stylised original illustration, clearly the site's own, with the person named in text. For the deceased (Peart, Luhmann, Bush, Alexander, Ericsson, Csikszentmihalyi), the same rule for consistency.
+
+## 3. The wider-library pages
+
+`/library/` lists other people's complete works. Listing facts (title, year, one-line description, link) is uncopyrightable metadata — safe. Cover images and stills are not: no book-cover thumbnails unless the publisher offers an affiliate/embed programme that licenses them.
+
+## 4. Redrawn idea-infographics
+
+The golden circle, the flow channel, Wardley's evolution axis: **ideas are not copyrighted, expressions are.** Redraw in house style from the underlying idea, attribute the idea's author prominently, never trace the original figure. (Sinek's golden circle is also a registered trademark in some uses — the redrawn figure is fine for commentary; do not use it as the site's branding.)
+
+## 5. Conference recordings
+
+OWASP talks (Rice's keynote, the founder's own) are typically CC-licensed or OWASP-hosted — check each recording's actual licence before embedding; OWASP's own channels are the preferred embed source. Commercial conference recordings (all-rights-reserved venues) get links, not embeds.
+
+## 6. What CC BY covers on this site
+
+Every page footer states it plainly: the site's text, trace tables, seed data, original artwork and redrawn figures are CC BY 4.0; the anchor works belong to their authors and are linked, not licensed. An agent consuming `/llms-full.txt` inherits the same split — the site must never put a third party's expression into the file it invites agents to ingest wholesale.
+
+---
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+
+==============================================================================
+source: /briefs/05__gaps-and-open-questions.md
+
+==============================================================================
+
+
+# 05 — Gaps and Open Questions
+
+**Version** v0.33.62 · 25 August 2026
+**House rule** Published unresolved. Questions for the founder go to `/admin/comms.html`.
+
+---
+
+## Gaps (known, owned)
+
+**G1 — The full Victor register text.** The pack's `sources/` file is a faithful summary of the register's structure and closing argument; the **full verbatim text lives with the founder** (it was supplied in conversation; this environment could not retain it across a context boundary). Entry one cannot ship without it. *First ask in comms.*
+
+**G2 — Seven STATED entries have no corpus evidence.** By design (the founder's briefing documents are pending), but the site launches with 7 of 24 entries as stubs. The mitigation is §3 of `03__`: stubs are honest roadmap, with research plans published.
+
+**G3 — The founder's past publications are under-mined.** The corpus scanned here is the current estate + docs.diniscruz.ai. Two decades of earlier material — the O2 Platform era blog, OWASP talks, conference decks on SlideShare, the books (e.g. his OWASP testing-era writing) — were not reachable from this environment and are exactly where the STATED influences' traces will be found. The founder's own plan ("including doing a research on my past publications or presentations on them") covers this; the research plans in the seed JSON say where to look per entry.
+
+**G4 — No influence has a complete trace table yet except Victor's.** T2–T12 have evidence *files*, not pattern→implementation→version rows. Building each table is the site's core editorial work; the register format (01__) is the spec.
+
+**G5 — Screenshot/artwork production.** Original portraits and redrawn idea-figures (04__) need an artist pass or a generation workflow the founder approves. External-site screenshots hit the same egress constraint as the wardley pack — the `capture.js` pattern from that pack is reusable here.
+
+## Open questions for the founder (comms threads)
+
+**Q1** — Please supply the full immediate-connection register text for `/register/bret-victor/` (G1).
+**Q2** — DISCOVERED confirmations: Luhmann, Christopher Alexander, Team Topologies/Cynefin, Vannevar Bush — do they belong? Any to demote to "corpus citation, not influence"? (The falsifiability of the site starts with you falsifying its discoveries. **Design & Steve Jobs: confirmed by the founder 2026-08-25** — the first discovered→confirmed transition, before the site even exists.)
+**Q2b** — The Design entry's anchor: which artefact is canonical for you — the "Design is how it works" quote, the MP3-to-CD whiteboard story, an Apple keynote, Ive's process, a specific product? And the personal history: when did Design-with-a-capital-D become explicit in your thinking?
+**Q3** — Briefing order for the STATED seven: which first? (Suggested: Neil Peart or music-and-band — the entries no one can research but you.)
+**Q4** — Anchors to confirm: Kevin Kelly (*What Technology Wants* vs *The Inevitable*?), Sinek (*Start With Why* book vs the TED talk?), David Rice (which year's keynote recording is canonical?).
+**Q5** — Are there influences you *rejected* — things everyone assumes shaped you but did not, or that you outgrew? A `/register/<slug>/` with `status: counter-influence` would be unique on the web and very much in the site's falsifiable spirit.
+**Q6** — Personal-history detail for T4 (graphs): where did graphs actually enter — O2's code-flow work, or earlier?
+**Q7** — The `/map/` graph: should it live here or in the graphs sibling once it becomes a G³ demonstration? (Proposal: authored here, mirrored there.)
+
+---
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+
+==============================================================================
+source: /briefs/09__source-manifest.csv
+
+==============================================================================
+
+
+tier,path,words,role,notes
+0,00__BRIEF.md,840,pack,the commission
+0,01__the-register-format.md,907,pack,entry template canonised from the Victor register
+0,02__the-influence-map.md,1581,pack,all 24 entries with evidence
+0,03__site-architecture.md,534,pack,URLs / data model / tier movement
+0,04__boundaries-and-licensing.md,542,pack,no-verbatim rule as licence armour
+0,05__gaps-and-open-questions.md,483,pack,5 gaps / 7 comms questions
+0,influences__seed.json,,pack,24 entries; authoritative tier state
+0,sources/register__bret-victor__inventing-on-principle.md,124,pack,structural summary; full register text with the founder (comms Q1)
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md,943,evidence,"contains the section 'The Brett Victor Problem'"
+1,docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md,5614,evidence,"Victor immediate-feedback thesis; Csikszentmihalyi named; flow criteria applied"
+1,docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md,4673,evidence,"Luhmann/Zettelkasten mapped to G3; Vannevar Bush memex entry point"
+1,SGraph-AI__App__Send/library/concepts/v0_4_0__thinking-in-graphs.md,5013,evidence,"section 'The Semantic Web's Insight (and Mistake)' — node-first vs edge-first"
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md,3278,evidence,"TBL's Solid vs sgit vaults; Schneier at Inrupt"
+1,SGraph-AI__App__Send/team/roles/designer/ROLE.md,3076,evidence,"Christopher Alexander; Rams; Vignelli; Norman; the design canon"
+1,SGraph-AI__App__Send/library/guides/development/ifd/v1.2.1__ifd__intro-and-how-to-use.md,1956,evidence,"IFD centers on preserving developer flow state"
+2,wardley-maps.sgit.ai (sibling pack),,deconflict,Wardley material lives there; influence entry links out
+2,open-source.sgit.ai (sibling pack),,deconflict,open-source history lives there; Cathedral & Bazaar / Torvalds nest under the influence entry
+2,graphs + owasp sibling sites,,deconflict,link-out entries own resonance only
+3,founder's full immediate-connection register (in conversation),,DO-NOT-PUBLISH-YET,supplied verbatim by founder; not retained in this environment; request via comms Q1 then publish as entry one
+3,founder's briefing documents for the STATED seven,,PENDING,do not fabricate; stubs carry status awaiting-briefing until these arrive
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/27/part-2/v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md,2879,evidence,"'The Jonathan Ive Principle'; the Jobs MP3-to-CD whiteboard story; good design is invisible"
+1,SGraph-AI__App__Send/team/humans/dinis_cruz/claude-code-web/02/28/v0.7.4__explorer-response__security-and-process-briefs.md,2479,evidence,"the 'Jonathan Ive test' as mandatory validator for every UI change"
+
+
+==============================================================================
+source: /briefs/LICENSE.md
+
+==============================================================================
+
+
+# Licence
+
+## This pack
+
+Everything in this brief pack — the six numbered documents, `influences__seed.json`, `09__source-manifest.csv`, the `sources/` summary, this file and `README.md` — is released under the **Creative Commons Attribution 4.0 International licence (CC BY 4.0)**.
+
+    Copyright (c) 2026 Dinis Cruz
+    Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+
+Attribution: **Dinis Cruz**, with AI co-authorship (Claude, Anthropic).
+
+## The site this pack commissions
+
+The **site's own content** — resonance text, trace tables, seed data, original artwork, redrawn idea-figures, `/llms-full.txt` — is CC BY 4.0.
+
+## What CC BY explicitly does NOT cover
+
+**The anchor works.** Bret Victor's talks and transcripts, Simon Wardley's book, Kevin Kelly's books, Rush's music and lyrics, David Rice's keynote, Csikszentmihalyi's *Flow*, *A Pattern Language*, *The Cathedral and the Bazaar*, and every other cited work belong to their authors and estates. The site's rule (set by the founder, and correct in law): **link, never rehost; quote only short passages under analysis; lyrics near-zero; likenesses only as original artwork**. See `04__boundaries-and-licensing.md` — the no-verbatim rule is what lets the CC BY stamp on the site's own text stay honest.
+
+An agent ingesting `/llms-full.txt` inherits the same split: the file must never contain a third party's expression beyond attributed analytical quotation.
+
+
+==============================================================================
+source: /briefs/README.md
+
+==============================================================================
+
+
+# Brief pack — `influences.sgit.ai`
+
+**Version** v0.33.62 · 25 August 2026 · CC BY 4.0
+
+The commission pack for `influences.sgit.ai` — the provenance layer of the sgit.ai memory network: the people, works, topics and things that shaped the founder's thinking, each written to the **register format** (anchor → founder's words → principle → trace table → gaps as build specs → checklist → wider library), with influence treated as a **falsifiable claim about the codebase**.
+
+## Contents
+
+| File | Words | What it is |
+|---|---|---|
+| `00__BRIEF.md` | 840 | The commission, the thesis, the three-tier map, the build order |
+| `01__the-register-format.md` | 907 | The entry template canonised from the founder's Bret Victor register |
+| `02__the-influence-map.md` | 1,581 | All 24 entries with corpus evidence, quotes and paths |
+| `03__site-architecture.md` | 534 | URLs, data model, tier-movement changelog, comms-as-briefing-queue |
+| `04__boundaries-and-licensing.md` | 542 | The no-verbatim rule as licence armour; likenesses; lyrics; embeds |
+| `05__gaps-and-open-questions.md` | 483 | 5 gaps, 7 questions for the founder |
+| `influences__seed.json` | — | 24 entries: tier, kind, status, anchor, evidence, research plans |
+| `sources/register__bret-victor__inventing-on-principle.md` | 124 | Structural summary of the model register (full text with the founder — comms Q1) |
+| `09__source-manifest.csv` | — | Source tiers with verified paths and computed word counts |
+
+## Tier accounting
+
+At mining time: 12 TRACED / 7 STATED / 5 DISCOVERED (the prose in `00__`/`02__` uses these). The seed JSON records the *current* state: discovered entries with sufficient corpus evidence sit at TRACED with a `discovered: true` origin flag (Luhmann, Csikszentmihalyi, and — **founder-confirmed 2026-08-25** — Design/Steve Jobs plus its nested design canon): **15 traced / 7 stated / 3 discovered-pending** across 25 entries. The JSON is authoritative; regenerate counts from it.
+
+## Licence
+
+Pack text, seed data and structure: CC BY 4.0 (attribute Dinis Cruz). Anchor works cited belong to their authors — linked, never rehosted; see `04__`.
+
+
+==============================================================================
+source: /briefs/register__bret-victor__inventing-on-principle.md
+
+==============================================================================
+
+
+# The immediate-connection register
+*(Supplied by the founder as the model entry — the format every influence page follows. See 01__.)*
+
+**anchor** Bret Victor, "Inventing on Principle", CUSEC, January 2012 — vimeo.com/36579366, carried with transcript at worrydream.com. The founder's words: "That is the kind of experience and feedback loops I'm trying to create here."
+
+[Full register as provided: the principle; the five patterns with where-the-repo-stands and gaps; the two specified gaps (view time travel, relayout ghosts); the six-point checklist; the wider Victor library; and the closing evidence — "half the viewer's strongest features were already unknowing implementations of its demos, which is evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck."]

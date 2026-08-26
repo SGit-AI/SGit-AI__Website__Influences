@@ -1,0 +1,303 @@
+{
+  "version": "v0.33.62",
+  "generated": "2026-08-25",
+  "licence": "CC BY 4.0 (this seed data; anchor works belong to their authors)",
+  "tiers": {
+    "traced": "corpus evidence exists today",
+    "stated": "on the founder's seed list, thin/absent in corpus, awaiting his briefing document",
+    "discovered": "surfaced by corpus mining, not on the seed list, awaiting founder confirmation"
+  },
+  "influences": [
+    {
+      "slug": "bret-victor",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "anchor": {"title": "Inventing on Principle", "venue": "CUSEC", "year": 2012, "url": "https://vimeo.com/36579366", "transcript": "https://worrydream.com"},
+      "principle": "Immediate connection between creator and creation",
+      "corpus_evidence": [
+        {"path": "sources/register__bret-victor__inventing-on-principle.md", "note": "the founder's immediate-connection register (full text with founder)"},
+        {"path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md", "note": "builds central argument on Victor's immediate-feedback thesis"},
+        {"path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md", "note": "section titled 'The Brett Victor Problem'"}
+      ],
+      "wider_library": ["The Future of Programming", "Media for Thinking the Unthinkable", "Up and Down the Ladder of Abstraction", "Stop Drawing Dead Fish", "Drawing Dynamic Visualizations", "The Humane Representation of Thought", "Dynamicland"],
+      "briefing_status": "integrated (the register)"
+    },
+    {
+      "slug": "wardley",
+      "tier": "traced",
+      "kind": "person+framework",
+      "status": "link-out",
+      "anchor": {"title": "Wardley Maps (the book/blog series)", "author": "Simon Wardley", "url": "https://learnwardleymapping.com"},
+      "principle": "Situational awareness before strategy; the map is a falsifiable claim",
+      "corpus_evidence": [{"path": "(corpus-wide)", "note": "~210 files; sibling site wardley-maps.sgit.ai"}],
+      "sibling_site": "wardley-maps.sgit.ai",
+      "briefing_status": "none"
+    },
+    {
+      "slug": "semantic-web",
+      "tier": "traced",
+      "kind": "topic+person",
+      "status": "full",
+      "anchor": {"title": "The Semantic Web", "author": "Tim Berners-Lee, James Hendler, Ora Lassila", "venue": "Scientific American", "year": 2001},
+      "principle": "Machine-readable meaning; independent parties exchanging meaning without upfront agreement",
+      "corpus_evidence": [
+        {"path": "SGraph-AI__App__Send/library/concepts/v0_4_0__thinking-in-graphs.md", "note": "section 'The Semantic Web's Insight (and Mistake)' — node-first vs edge-first critique"},
+        {"path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/24/v0.6.17__architecture__solid-protocol-integration-complementary-architectures.md", "note": "Solid pods vs sgit vaults as complementary architectures"}
+      ],
+      "notes": "An influence argued with — the model for disagreement-as-engagement",
+      "briefing_status": "none"
+    },
+    {
+      "slug": "graphs",
+      "tier": "traced",
+      "kind": "topic",
+      "status": "link-out",
+      "anchor": {"title": "(personal history pending — likely O2 Platform code-flow graphs)", "note": "comms Q6"},
+      "principle": "Structure is edges; meaning derives from connection",
+      "corpus_evidence": [{"path": "(corpus-wide)", "note": "founding obsession; sibling site"}],
+      "sibling_site": "graphs sibling site",
+      "briefing_status": "requested (Q6: where did graphs enter)"
+    },
+    {
+      "slug": "owasp",
+      "tier": "traced",
+      "kind": "community+era",
+      "status": "full",
+      "anchor": {"title": "OWASP & the security community (participation from early 2000s; the Summits)", "url": "https://owasp.org"},
+      "principle": "Open community as the way security knowledge compounds",
+      "corpus_evidence": [{"path": "(corpus-wide)", "note": "~271 files incl. Summits history"}],
+      "nests": ["david-rice-keynote"],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "flow",
+      "tier": "traced",
+      "kind": "practice+person",
+      "status": "full",
+      "anchor": {"title": "Flow: The Psychology of Optimal Experience", "author": "Mihaly Csikszentmihalyi", "year": 1990},
+      "principle": "Clear goals + immediate feedback + challenge/skill balance = the zone; methodology should protect it",
+      "corpus_evidence": [
+        {"path": "SGraph-AI__App__Send/library/guides/development/ifd/v1.2.1__ifd__intro-and-how-to-use.md", "note": "'centers on preserving developer flow state'"},
+        {"path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md", "note": "Csikszentmihalyi cited by name; Victor as mechanism"}
+      ],
+      "composes_with": ["bret-victor", "csikszentmihalyi"],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "open-source",
+      "tier": "traced",
+      "kind": "topic+movement",
+      "status": "link-out",
+      "anchor": {"title": "Open source licences as social contracts (personal formation, O2 Platform onward)"},
+      "principle": "Releasing work is how it compounds; the licence is the constitution",
+      "corpus_evidence": [{"path": "(corpus-wide)", "note": "sibling site open-source.sgit.ai with full history pack"}],
+      "sibling_site": "open-source.sgit.ai",
+      "nests": ["cathedral-bazaar", "torvalds"],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "luhmann",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "discovered": true,
+      "anchor": {"title": "The Zettelkasten (and 'Communicating with Slip Boxes')", "author": "Niklas Luhmann"},
+      "principle": "External memory as thinking partner: atomic, addressed, densely linked, emergent",
+      "corpus_evidence": [{"path": "docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md", "note": "dedicated article mapping Zettelkasten to G³"}],
+      "briefing_status": "confirmation requested (Q2)"
+    },
+    {
+      "slug": "ericsson",
+      "tier": "traced",
+      "kind": "person+research",
+      "status": "full",
+      "anchor": {"title": "Peak: Secrets from the New Science of Expertise (and the 1993 deliberate-practice paper)", "author": "K. Anders Ericsson"},
+      "principle": "Expertise is structured, feedback-rich practice — not hours alone",
+      "corpus_evidence": [{"path": "(11 files)", "note": "deliberate practice / 10,000 hours, properly attributed"}],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "popper",
+      "tier": "traced",
+      "kind": "person+idea",
+      "status": "full",
+      "anchor": {"title": "Falsifiability (The Logic of Scientific Discovery)", "author": "Karl Popper"},
+      "principle": "A claim earns status by being refutable — maps, registers and this site's trace tables inherit it",
+      "corpus_evidence": [{"path": "(7 files)", "note": "'a map is a claim'; risks register discipline"}],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "torvalds",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "anchor": {"title": "Git (2005) and Linux (1991)", "author": "Linus Torvalds"},
+      "principle": "Tools that decentralise trust reshape how people collaborate",
+      "corpus_evidence": [{"path": "(5 files)", "note": "education-gaps Git argument; open-source history"}],
+      "nests_under": "open-source",
+      "briefing_status": "none"
+    },
+    {
+      "slug": "schneier",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "anchor": {"title": "Security economics & public writing (Schneier on Security)", "author": "Bruce Schneier"},
+      "principle": "Security is a systems and incentives problem before it is a technical one",
+      "corpus_evidence": [{"path": "(4 files)", "note": "LLM-failure-modes argument; Inrupt/Solid in the TBL brief"}],
+      "briefing_status": "none"
+    },
+    {
+      "slug": "neil-peart",
+      "tier": "stated",
+      "kind": "person+music",
+      "status": "stub",
+      "anchor": {"title": "Rush (drums & lyrics, 1974–2015)", "author": "Neil Peart", "note": "canonical anchor work TBD in briefing"},
+      "principle": "(hypothesis) Technical mastery in service of meaning — the craftsman-lyricist",
+      "corpus_evidence": [],
+      "research_plan": "Founder's talks/bios for drumming references; briefing document",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "kevin-kelly",
+      "tier": "stated",
+      "kind": "books",
+      "status": "stub",
+      "anchor": {"title": "What Technology Wants / The Inevitable (anchor TBD — Q4)", "author": "Kevin Kelly"},
+      "principle": "(hypothesis) Technology as an evolutionary system with its own tendencies",
+      "corpus_evidence": [],
+      "research_plan": "Confirm which books; check talks for technium references; possible Wardley-evolution link",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "sinek-golden-circle",
+      "tier": "stated",
+      "kind": "framework",
+      "status": "stub",
+      "anchor": {"title": "Start With Why (book 2009 / TED 2009 — anchor TBD, Q4)", "author": "Simon Sinek"},
+      "principle": "Why → How → What; purpose before mechanism",
+      "corpus_evidence": [],
+      "research_plan": "Check founder's deck structures for why-first framing",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "cathedral-bazaar",
+      "tier": "stated",
+      "kind": "work",
+      "status": "stub",
+      "anchor": {"title": "The Cathedral and the Bazaar", "author": "Eric S. Raymond", "year": 1997},
+      "principle": "Given enough eyeballs, all bugs are shallow; release early, release often",
+      "corpus_evidence": [],
+      "nests_under": "open-source",
+      "research_plan": "Factual history lives in open-source.sgit.ai; this entry owns personal impact only",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "david-rice-keynote",
+      "tier": "stated",
+      "kind": "presentation",
+      "status": "stub",
+      "anchor": {"title": "Upon the Threshold of Opportunity (OWASP keynote — recording/year TBD, Q4)", "author": "David Rice"},
+      "principle": "(hypothesis) Security as economic/societal opportunity, not fear — cf. Geekonomics",
+      "corpus_evidence": [],
+      "nests_under": "owasp",
+      "research_plan": "OWASP AppSec video archives; founder's contemporaneous blog posts",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "music-and-band",
+      "tier": "stated",
+      "kind": "practice+era",
+      "status": "stub",
+      "anchor": {"title": "Playing in a band (personal era)"},
+      "principle": "(hypothesis) Real-time collaborative flow — the experience IFD tries to recreate in software",
+      "corpus_evidence": [],
+      "research_plan": "Entirely the founder's briefing — unresearchable by others",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "diverse-distributed-teams",
+      "tier": "stated",
+      "kind": "practice",
+      "status": "stub",
+      "anchor": {"title": "Diverse and distributed teams (practice)"},
+      "principle": "(hypothesis) Cognitive diversity + distribution as a forcing function for explicit, written, async thinking",
+      "corpus_evidence": [],
+      "research_plan": "Founder's management writing; team-roles system; OWASP global-chapter model",
+      "briefing_status": "requested"
+    },
+    {
+      "slug": "christopher-alexander",
+      "tier": "discovered",
+      "kind": "person",
+      "status": "full",
+      "anchor": {"title": "A Pattern Language", "author": "Christopher Alexander", "year": 1977},
+      "principle": "Code is a space developers inhabit; patterns are the language of livable structure",
+      "corpus_evidence": [{"path": "SGraph-AI__App__Send/team/roles/designer/ROLE.md", "note": "'pattern language is the direct ancestor of software design patterns… think of code as a space that developers inhabit'"}],
+      "briefing_status": "confirmation requested (Q2)"
+    },
+    {
+      "slug": "design",
+      "tier": "traced",
+      "discovered": true,
+      "founder_confirmed": "2026-08-25 — 'Design and Steve Jobs approach to Design (with capital D)'",
+      "kind": "discipline+person",
+      "status": "full",
+      "anchor": {"title": "Design is how it works", "author": "Steve Jobs", "note": "the formulation the estate's Designer role is built on; canonical anchor artefact TBD in briefing (candidate: the MP3-to-CD whiteboard story)"},
+      "principle": "Design is not decoration applied after engineering — it is how the thing works; start with the user's intent and work backward to the simplest interaction",
+      "corpus_evidence": [
+        {"path": "SGraph-AI__App__Send/team/roles/designer/ROLE.md", "note": "Jobs quoted twice; 'Design is the coherence between the internal structure and the external experience'"},
+        {"path": "SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/02/27/part-2/v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md", "note": "'The Jonathan Ive Principle: Good Design Starts with the User' — the Jobs MP3-to-CD whiteboard story retold; 'good design is invisible… you notice its absence'"},
+        {"path": "SGraph-AI__App__Send/team/humans/dinis_cruz/claude-code-web/02/28/v0.7.4__explorer-response__security-and-process-briefs.md", "note": "the 'Jonathan Ive test' as a MANDATORY validator for every UI change: is it simpler? would reverting feel worse?"}
+      ],
+      "nests": ["design-canon"],
+      "briefing_status": "confirmed; briefing requested for anchor + personal history"
+    },
+    {
+      "slug": "design-canon",
+      "tier": "traced",
+      "discovered": true,
+      "kind": "canon",
+      "status": "full",
+      "anchor": {"title": "The wider design tradition: Rams ('less, but better'), Vignelli, Norman, Eames, Muller-Brockmann, Tschichold, Aalto, Cooper, Krug, Japanese design philosophy"},
+      "principle": "Every element must earn its place; hierarchy, affordance and proportion apply to APIs and CLIs as much as GUIs",
+      "corpus_evidence": [{"path": "SGraph-AI__App__Send/team/roles/designer/ROLE.md", "note": "industrial/graphic/interaction design mapped to software explicitly"}],
+      "nests_under": "design",
+      "briefing_status": "confirmed via the Design entry"
+    },
+    {
+      "slug": "team-topologies-cynefin",
+      "tier": "discovered",
+      "kind": "frameworks",
+      "status": "stub",
+      "anchor": {"title": "Team Topologies (Skelton & Pais) / Cynefin (Snowden)"},
+      "principle": "Org structure and problem-domain sensemaking as first-class engineering concerns",
+      "corpus_evidence": [{"path": "(2019 hiring post)", "note": "listed beside Wardley"}],
+      "briefing_status": "confirmation requested (Q2)"
+    },
+    {
+      "slug": "vannevar-bush",
+      "tier": "discovered",
+      "kind": "person+work",
+      "status": "stub",
+      "anchor": {"title": "As We May Think", "author": "Vannevar Bush", "venue": "The Atlantic", "year": 1945},
+      "principle": "The memex: external associative memory as an amplifier of thought — the ancestor of this site network's own thesis",
+      "corpus_evidence": [{"path": "docs.diniscruz.ai/docs/2025/06/18/bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md", "note": "enters via the Luhmann article"}],
+      "nests_under": "luhmann",
+      "briefing_status": "confirmation requested (Q2)"
+    },
+    {
+      "slug": "csikszentmihalyi",
+      "tier": "traced",
+      "discovered": true,
+      "kind": "person",
+      "status": "full",
+      "anchor": {"title": "Flow: The Psychology of Optimal Experience", "author": "Mihaly Csikszentmihalyi", "year": 1990},
+      "principle": "Optimal experience has measurable preconditions; environments can be engineered for it",
+      "corpus_evidence": [{"path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md", "note": "cited by name with flow criteria applied"}],
+      "nests_under": "flow",
+      "briefing_status": "none"
+    }
+  ]
+}

@@ -5,15 +5,9 @@
 > than an appreciation. An entry names which patterns from an anchor work appear where in the
 > estate, at which version, and which are still absent — specified precisely enough to build.
 
-Site version: v0.1.0 (26 August 2026). Published by the sgit project, which is also the subject
+Site version: v0.2.0 (26 August 2026). Published by the sgit project, which is also the subject
 of every claim on this site — participant disclosure at /about/participant.html. All site content
 CC BY 4.0.
-
-## What this release is
-
-The pipeline, before the register. Validation, auto-tagging and deployment are live and proven;
-the twenty-five influence entries have not been written. That order is deliberate: a site whose
-release gate works can publish anything safely, and a site full of pages with no gate cannot.
 
 ## The rule an agent consuming this site must inherit
 
@@ -21,66 +15,107 @@ THE ANCHOR WORKS ARE NOT HERE, AND WILL NEVER BE. This site explains why a work 
 traces where it was applied; it does not reproduce the talks, essays, books or lyrics that did
 the influencing. Those are linked, never rehosted — they belong to their authors, and a CC BY
 site that carried them would be relicensing what it does not own. Short attributed quotation for
-analysis is capped at 40 words BY THE RELEASE GATE, not by convention. Lyrics are the sharpest
-edge and get description and a link, never reproduction.
+analysis is capped at 40 words BY THE RELEASE GATE, not by convention: every <blockquote> on the
+site declares whose words it carries, data-quote="founder" is unrestricted because his own
+writing is his to publish, and anything else fails the build over forty words. Lyrics are the
+sharpest edge and get description and a link, never reproduction. Likenesses are original artwork
+only — never scraped photographs, and never AI renderings presented as portraits.
 
 Concretely: /llms-full.txt is safe to ingest wholesale. It contains this site's own analysis and
 nothing that belongs to a third party.
 
+## The register: 25 entries in three tiers
+
+15 TRACED, 7 STATED, 3 DISCOVERED. Counts are recomputed from /data/influences.json on every
+build and checked independently by the release gate; no number about this site's own shape is
+typed by a person.
+
+- TRACED — corpus evidence exists today. The entry lists the files by path and the claim is
+  checkable against them. It does NOT mean the influence is proven: a trace table shows that a
+  pattern appears at a named place, not that the anchor work caused it.
+- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
+  the research plan visible and an open thread in the briefing queue. Most have ZERO evidence and
+  say so in an empty evidence block. The roadmap, not the debt.
+- DISCOVERED — surfaced by mining the corpus, never named by the founder. Published as a claim
+  ABOUT him pending his confirmation, and he is asked in public to strike the ones that do not
+  belong. 7 entries were discovered in origin; 4 have since been promoted and keep the flag.
+
+Tier movement is this site's changelog, at /shipped/: STATED → TRACED when a briefing lands,
+DISCOVERED → TRACED when the founder confirms, DISCOVERED → removed when he does not, and a trace
+row flipping absent → implemented when the estate builds a gap an entry specified.
+
 ## Properties agents may rely on
 
-- The register will live at /register/<slug>/index.html, with a markdown twin at
-  /register/<slug>/index.md and, where the entry has a trace table, the same rows as data at
-  /register/<slug>/trace/trace.json. Slugs are people or topics, never works — an anchor work is
-  metadata inside the entry, because a briefing document may reveal the real anchor was a
-  different talk.
-- /data/influences.json will be the register. Every page under /register/ is generated from it;
-  the tier counts on every page are recomputed from it on every build and checked independently
-  by the release gate. No number about this site's own shape is typed by a person.
-- /map/graph.json will carry the influence graph — nodes, edges and the places a pattern lands
-  in the estate — computed from the same file. The map is generated, not drawn.
-- /llms-full.txt is this site in one fetch: the index, the front page, every register entry's
-  markdown twin and every source document. GENERATED and re-checked in CI, so it cannot say
-  anything the site does not.
+- Every entry is at /register/<slug>/index.html with a markdown twin at
+  /register/<slug>/index.md. Slugs are people or topics, never works — an anchor work is metadata
+  inside the entry, because a briefing document may reveal the real anchor was a different talk.
+- Entries with a trace table publish it three ways: /register/<slug>/trace/index.html,
+  /register/<slug>/trace/trace.md and /register/<slug>/trace/trace.json. Six entries have one.
+- /data/influences.json IS the register. Every page under /register/ is generated from it, /map/
+  is computed from it, and the prose is authored there once and rendered twice — the HTML page
+  and its markdown twin are two renderings of one string, so they cannot drift.
+- /map/graph.json carries the influence graph: nodes, edges and the places a pattern lands in the
+  estate. Computed from the register, not drawn.
+- /llms-full.txt is this site in one fetch: the index, the front page, every entry's markdown
+  twin and every source document. GENERATED and re-checked in CI, so it cannot say anything the
+  site does not.
+- The nine documents of the commissioning pack are published verbatim at /briefs/<filename>,
+  unredacted, with a reader page each under /documents/.
 - /sitemap.xml is generated from the tree, so it cannot omit a page somebody forgot to add.
 - The version in /admin/build/version.txt agrees with the badge on every page, the release
   history table, this file, /llms-full.txt and /index.md — CI fails the release otherwise.
 
-## The three tiers
+## Trace-row statuses, and what they mean
 
-- TRACED — corpus evidence exists today. The claim is checkable against the files the entry
-  lists.
-- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
-  the research plan visible, awaiting his briefing document. The roadmap, not the debt.
-- DISCOVERED — surfaced by mining the corpus, never named by the founder. The claim rests
-  entirely on the trace table until he confirms or corrects it. The site's falsifiability applied
-  to itself.
+implemented — the pattern appears at the named place.
+partial     — something of it appears; the pattern is not fully realised.
+absent      — the anchor work names it and the estate does not have it. KEPT IN THE TABLE rather
+              than dropped, and usually restated in Block 5 as a build spec.
 
-Tier movement is this site's changelog: STATED → TRACED when a briefing lands, DISCOVERED →
-TRACED when the founder confirms, and a trace row flipping absent → implemented when the estate
-builds a gap. A provenance site whose provenance changed silently would be self-refuting.
+A row without a version is flagged by the entry itself: the format's own rule is that a trace
+table without versions is an opinion.
 
-## The pages that exist today
+## The pages
 
-- /index.html — what this release is, and what an influence entry is. Markdown twin: /index.md
-- /register/index.html — the register index. Empty: the entries are not written.
-- /map/index.html — the influence map. Empty: it is computed from the register.
-- /documents/index.html — the source documents. Empty: the commissioning pack is not unpacked
-  into the tree yet.
-- /admin/index.html — how this site is built: the pipeline, the gate, the tagger, the
-  generators. /admin/versions.html — the release history. /admin/comms.html — tasks, and the
-  briefing-document request queue.
-- /network/index.html — the sibling sites and the boundaries between them.
-- /about/participant.html — who publishes this and how it is written.
+- /index.html — the thesis, the tiers, six entries worth starting with, and what the site cannot
+  do. Markdown twin: /index.md
+- /register/index.html — all 25 entries, grouped by tier
+- /register/<slug>/index.html — one entry, in the seven-block format: anchor, the founder's words,
+  the principle, the trace table, the gaps as build specs, the checklist, the wider library
+- /tiers/index.html — what each tier means, what moves an entry between them, and why tier is not
+  the same as status
+- /format/index.html — the seven blocks, the three reduced forms, the no-verbatim rule and the
+  generate-or-date rule
+- /map/index.html — the lineage diagram, every recorded relation, and the influence → principle →
+  estate projection. Computed from the register
+- /library/index.html — the union of every entry's Block 7. A list of addresses, not a collection:
+  no cover images, no excerpts
+- /shipped/index.html — tier movement, what is expected to move next, and what would be recorded
+  here if this site were wrong
+- /documents/index.html — the commissioning pack, published in full
+- /admin/index.html — the pipeline, the gate, the tagger, the generators.
+  /admin/versions.html — release history. /admin/comms.html — tasks, the briefing queue, and the
+  questions only the founder can answer
+- /network/index.html — the sibling sites, and the deconfliction rule three entries run on
+- /about/participant.html — who publishes this, the conflict stated plainly, and the five places
+  the approach is weakest
 
-## What is NOT here, and is next
+## What this site cannot do, stated on the site itself
 
-- The twenty-five register entries, from the pack's seed data: 15 traced, 7 stated, 3 discovered
-  and still awaiting confirmation.
-- /tiers/, /format/, /library/ and /shipped/ — the tier definitions, the register format
-  documented, the union of every entry's wider library, and the tier-movement changelog.
-- The full text of the founder's Bret Victor register, which is entry one and which this
-  environment does not hold. First ask in the comms queue.
+- A trace table cannot show causation. The Victor register's own finding is that half the estate's
+  strongest viewer features were UNKNOWING implementations of the talk's demos — which is evidence
+  that the instinct and the principle agree, and is weaker than "this shaped the work".
+- The corpus is cited, not resolved. This repository holds the website, not the estate, so every
+  evidence path is quoted from a dated mining run (v0.33.62, 25 August 2026) rather than checked at
+  build time. Seven entries have no trace table for that reason. Tracked as R1.
+- Two decades of earlier material — the O2 Platform-era blog, OWASP talks, conference decks — were
+  unreachable when the mining ran, and that is exactly where the STATED entries' evidence will be.
+  The tiers therefore partly measure what has recently been written down. Tracked as R3.
+- Entry one is incomplete. The full text of the founder's Bret Victor register is with him; the
+  entry ships with its trace table empty and the reason stated rather than with invented rows.
+  First ask in the queue, Q1.
+- Nothing on this network has ever been publicly retracted. Publishing gaps is the cheap half of
+  falsifiability.
 
 ## Related
 

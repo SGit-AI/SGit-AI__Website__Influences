@@ -1,0 +1,34 @@
+{
+  "slug": "design-canon",
+  "title": "The wider design canon",
+  "tier": "traced",
+  "principle": "Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.",
+  "anchor": {
+    "title": "The industrial, graphic and interaction design tradition, as mapped onto software in the estate's Designer role",
+    "note": "A canon rather than a work. The anchor is the mapping itself — the moment the tradition was written down as engineering guidance rather than as taste."
+  },
+  "rows": [
+    {
+      "pattern": "*Less, but better* (Rams) as a working principle rather than an aesthetic",
+      "where": "The Designer role definition, applied to API surface rather than to visual design",
+      "version": null,
+      "status": "implemented",
+      "source": "`team/roles/designer/ROLE.md`, cited in 02__ §D2"
+    },
+    {
+      "pattern": "Code as inhabited space — is it navigable, is it comfortable",
+      "where": "The same role definition's criteria for reviewing structure",
+      "version": null,
+      "status": "implemented",
+      "source": "`team/roles/designer/ROLE.md`; shared with [Christopher Alexander](../christopher-alexander/index.html)"
+    },
+    {
+      "pattern": "Affordance (Norman) applied to non-visual surfaces — a signature that tells you what it does",
+      "where": "Not written down anywhere as a review criterion, though the estate's naming conventions arguably practise it",
+      "version": null,
+      "status": "absent",
+      "source": "absence in the role definition and the surrounding corpus"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

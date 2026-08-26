@@ -1,0 +1,465 @@
+{
+  "schema": "influences-map/v1",
+  "generated_by": "admin/build/gen_map.py from data/influences.json",
+  "note": "Every node and every edge is a field in the register. Nothing here is drawn.",
+  "nodes": [
+    {
+      "id": "bret-victor",
+      "label": "Bret Victor",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "principle": "Immediate connection between creator and creation — a creator needs to see what they are making, as they make it.",
+      "url": "/register/bret-victor/index.html"
+    },
+    {
+      "id": "wardley",
+      "label": "Simon Wardley & Wardley Maps",
+      "tier": "traced",
+      "kind": "person + framework",
+      "status": "link-out",
+      "principle": "Situational awareness before strategy — draw the map before you argue about the move, and the map is a falsifiable claim about position and movement rather than a picture of your opinions.",
+      "url": "/register/wardley/index.html"
+    },
+    {
+      "id": "semantic-web",
+      "label": "Tim Berners-Lee & the Semantic Web",
+      "tier": "traced",
+      "kind": "topic + person",
+      "status": "full",
+      "principle": "Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.",
+      "url": "/register/semantic-web/index.html"
+    },
+    {
+      "id": "graphs",
+      "label": "Graphs",
+      "tier": "traced",
+      "kind": "topic",
+      "status": "link-out",
+      "principle": "Structure is edges. What a thing is matters less than what it connects to, and a model that records connection can answer questions its designer did not anticipate.",
+      "url": "/register/graphs/index.html"
+    },
+    {
+      "id": "owasp",
+      "label": "OWASP & the security community",
+      "tier": "traced",
+      "kind": "community + era",
+      "status": "full",
+      "principle": "Knowledge compounds fastest in the open, among people who owe each other nothing — and the format of the gathering decides whether it compounds at all.",
+      "url": "/register/owasp/index.html"
+    },
+    {
+      "id": "flow",
+      "label": "Flow, and coding in the zone",
+      "tier": "traced",
+      "kind": "practice + research",
+      "status": "full",
+      "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+      "url": "/register/flow/index.html"
+    },
+    {
+      "id": "open-source",
+      "label": "Open source & its licences",
+      "tier": "traced",
+      "kind": "topic + movement",
+      "status": "link-out",
+      "principle": "Releasing work is how it compounds — and the licence is the constitution, not the paperwork: it decides who can build on this and what they owe.",
+      "url": "/register/open-source/index.html"
+    },
+    {
+      "id": "luhmann",
+      "label": "Niklas Luhmann & the Zettelkasten",
+      "tier": "traced",
+      "kind": "person + method",
+      "status": "full",
+      "principle": "External memory works as a thinking partner when its units are atomic, uniquely addressed, densely linked and allowed to grow structure rather than being filed into one.",
+      "url": "/register/luhmann/index.html"
+    },
+    {
+      "id": "ericsson",
+      "label": "Anders Ericsson & deliberate practice",
+      "tier": "traced",
+      "kind": "person + research",
+      "status": "full",
+      "principle": "Expertise comes from structured practice with immediate feedback at the edge of current ability — not from hours, and not from experience.",
+      "url": "/register/ericsson/index.html"
+    },
+    {
+      "id": "popper",
+      "label": "Karl Popper & falsifiability",
+      "tier": "traced",
+      "kind": "person + idea",
+      "status": "full",
+      "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+      "url": "/register/popper/index.html"
+    },
+    {
+      "id": "torvalds",
+      "label": "Linus Torvalds",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "principle": "Tools that decentralise trust change how people are able to work together — and the change comes from the data model, not from the policy on top of it.",
+      "url": "/register/torvalds/index.html"
+    },
+    {
+      "id": "schneier",
+      "label": "Bruce Schneier",
+      "tier": "traced",
+      "kind": "person",
+      "status": "full",
+      "principle": "Security failures are usually incentive failures wearing a technical costume — ask who bears the cost of the failure before asking how the failure happens.",
+      "url": "/register/schneier/index.html"
+    },
+    {
+      "id": "design",
+      "label": "Design, with a capital D",
+      "tier": "traced",
+      "kind": "discipline + person",
+      "status": "full",
+      "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+      "url": "/register/design/index.html"
+    },
+    {
+      "id": "design-canon",
+      "label": "The wider design canon",
+      "tier": "traced",
+      "kind": "canon",
+      "status": "full",
+      "principle": "Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.",
+      "url": "/register/design-canon/index.html"
+    },
+    {
+      "id": "csikszentmihalyi",
+      "label": "Mihály Csíkszentmihályi",
+      "tier": "traced",
+      "kind": "person + research",
+      "status": "full",
+      "principle": "Optimal experience has measurable preconditions, which means environments can be engineered for it rather than hoped for.",
+      "url": "/register/csikszentmihalyi/index.html"
+    },
+    {
+      "id": "neil-peart",
+      "label": "Neil Peart & Rush",
+      "tier": "stated",
+      "kind": "person + music",
+      "status": "stub",
+      "principle": "*(hypothesis, not a finding)* Technical mastery in service of meaning — the craftsman-lyricist: virtuosity that exists to say something rather than to be noticed.",
+      "url": "/register/neil-peart/index.html"
+    },
+    {
+      "id": "kevin-kelly",
+      "label": "Kevin Kelly's books",
+      "tier": "stated",
+      "kind": "books",
+      "status": "stub",
+      "principle": "*(hypothesis)* Technology is an evolutionary system with its own tendencies — some directions are pushed on us by what has already been built, rather than chosen.",
+      "url": "/register/kevin-kelly/index.html"
+    },
+    {
+      "id": "sinek-golden-circle",
+      "label": "Simon Sinek — the golden circle",
+      "tier": "stated",
+      "kind": "framework",
+      "status": "stub",
+      "principle": "Purpose before mechanism: say why this exists before saying what it does, because the why is what people can act on.",
+      "url": "/register/sinek-golden-circle/index.html"
+    },
+    {
+      "id": "cathedral-bazaar",
+      "label": "The Cathedral and the Bazaar",
+      "tier": "stated",
+      "kind": "work",
+      "status": "stub",
+      "principle": "Release early, release often, and let the people using the thing find what is wrong with it — openness as a development method rather than a licensing choice.",
+      "url": "/register/cathedral-bazaar/index.html"
+    },
+    {
+      "id": "david-rice-keynote",
+      "label": "David Rice — “Upon the Threshold of Opportunity”",
+      "tier": "stated",
+      "kind": "presentation",
+      "status": "stub",
+      "principle": "*(hypothesis)* Security is an economic and societal opportunity rather than a fear industry — the argument of *Geekonomics*, made to a room of practitioners.",
+      "url": "/register/david-rice-keynote/index.html"
+    },
+    {
+      "id": "music-and-band",
+      "label": "Music, and playing in a band",
+      "tier": "stated",
+      "kind": "practice + era",
+      "status": "stub",
+      "principle": "*(hypothesis)* Playing together in real time is the original experience of collaborative flow — several people, immediate feedback, no possibility of stopping to plan.",
+      "url": "/register/music-and-band/index.html"
+    },
+    {
+      "id": "diverse-distributed-teams",
+      "label": "Diverse and distributed teams",
+      "tier": "stated",
+      "kind": "practice",
+      "status": "stub",
+      "principle": "*(hypothesis)* Distribution forces thinking to become explicit, written and asynchronous — and cognitive diversity is what stops a team agreeing quickly on the wrong thing.",
+      "url": "/register/diverse-distributed-teams/index.html"
+    },
+    {
+      "id": "christopher-alexander",
+      "label": "Christopher Alexander",
+      "tier": "discovered",
+      "kind": "person",
+      "status": "full",
+      "principle": "Code is a space that people inhabit. A pattern is a named solution to a recurring problem in a context — and a language of patterns is what lets a place be built by many hands and still be coherent.",
+      "url": "/register/christopher-alexander/index.html"
+    },
+    {
+      "id": "team-topologies-cynefin",
+      "label": "Team Topologies & Cynefin",
+      "tier": "discovered",
+      "kind": "frameworks",
+      "status": "stub",
+      "principle": "Organisational structure and problem-domain sensemaking are engineering concerns: the shape of the team decides the shape of the system, and the kind of problem decides which practice is appropriate.",
+      "url": "/register/team-topologies-cynefin/index.html"
+    },
+    {
+      "id": "vannevar-bush",
+      "label": "Vannevar Bush & the memex",
+      "tier": "discovered",
+      "kind": "person + work",
+      "status": "stub",
+      "principle": "The mind works by association, and an external memory should too — trails between documents, made by a person and followable by anyone afterwards.",
+      "url": "/register/vannevar-bush/index.html"
+    }
+  ],
+  "edges": [
+    {
+      "from": "bret-victor",
+      "to": "flow",
+      "label": "supplies the mechanism",
+      "recorded_in": "lineage"
+    },
+    {
+      "from": "wardley",
+      "to": "popper",
+      "label": "a map is a claim",
+      "recorded_in": "lineage"
+    },
+    {
+      "from": "semantic-web",
+      "to": "graphs",
+      "label": "feeds",
+      "recorded_in": "lineage"
+    },
+    {
+      "from": "david-rice-keynote",
+      "to": "owasp",
+      "label": "nests under",
+      "recorded_in": "nests"
+    },
+    {
+      "from": "owasp",
+      "to": "diverse-distributed-teams",
+      "label": "the formative case",
+      "recorded_in": "lineage"
+    },
+    {
+      "from": "csikszentmihalyi",
+      "to": "flow",
+      "label": "nests under",
+      "recorded_in": "nests"
+    },
+    {
+      "from": "flow",
+      "to": "bret-victor",
+      "label": "composes with",
+      "recorded_in": "composes_with"
+    },
+    {
+      "from": "flow",
+      "to": "csikszentmihalyi",
+      "label": "composes with",
+      "recorded_in": "composes_with"
+    },
+    {
+      "from": "cathedral-bazaar",
+      "to": "open-source",
+      "label": "nests under",
+      "recorded_in": "nests"
+    },
+    {
+      "from": "torvalds",
+      "to": "open-source",
+      "label": "nests under",
+      "recorded_in": "nests"
+    },
+    {
+      "from": "vannevar-bush",
+      "to": "luhmann",
+      "label": "nests under",
+      "recorded_in": "nests"
+    },
+    {
+      "from": "luhmann",
+      "to": "graphs",
+      "label": "the same claim, on paper",
+      "recorded_in": "lineage"
+    },
+    {
+      "from": "design-canon",
+      "to": "design",
+      "label": "nests under",
+      "recorded_in": "nests"
+    },
+    {
+      "from": "music-and-band",
+      "to": "flow",
+      "label": "hypothesised origin",
+      "recorded_in": "lineage"
+    }
+  ],
+  "lands_in_estate": [
+    {
+      "influence": "semantic-web",
+      "principle": "Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.",
+      "pattern": "Machine-readable meaning as the target — a graph a machine can act on rather than a document it can only parse",
+      "estate": "The estate's graph substrate and the concept document that sets out its thinking",
+      "version": "v0.4.0",
+      "status": "implemented"
+    },
+    {
+      "influence": "semantic-web",
+      "principle": "Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.",
+      "pattern": "Meaning derived from connection between things",
+      "estate": "The edge-first graph model the estate's ontology work is built on",
+      "version": "v0.4.0",
+      "status": "implemented"
+    },
+    {
+      "influence": "semantic-web",
+      "principle": "Meaning should be machine-readable, so that independent parties can exchange it without agreeing on a schema first.",
+      "pattern": "Personal data under the person's own control (Solid pods)",
+      "estate": "Encrypted vaults, keyed by their holder — compared to pods explicitly, as complementary architectures with different threat models",
+      "version": "v0.6.17",
+      "status": "partial"
+    },
+    {
+      "influence": "flow",
+      "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+      "pattern": "Immediate feedback as a precondition of the state",
+      "estate": "The estate's development methodology, whose stated core principle is preserving developer flow state",
+      "version": "v1.2.1",
+      "status": "implemented"
+    },
+    {
+      "influence": "flow",
+      "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+      "pattern": "Clear goals — the person always knows what they are trying to do next",
+      "estate": "The methodology's structure: work proceeds in units small enough to hold in one head",
+      "version": "v1.2.1",
+      "status": "implemented"
+    },
+    {
+      "influence": "flow",
+      "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+      "pattern": "Challenge matched to skill",
+      "estate": "The division of labour between person and model — generation delegated, judgement retained",
+      "version": "v1.2.1",
+      "status": "partial"
+    },
+    {
+      "influence": "flow",
+      "principle": "Clear goals, immediate feedback and a challenge matched to skill produce the zone — so a methodology's job is to protect those three conditions, not to optimise throughput.",
+      "pattern": "Programming named as a flow-inducing activity, with the criteria applied",
+      "estate": "The Joy-of-Programming argument, which cites Csikszentmihalyi directly and works through the criteria",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "popper",
+      "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+      "pattern": "A claim must be refutable to be worth making",
+      "estate": "Wardley mapping as practised here — *a map is a claim* about position and movement, refutable by pointing at a misplaced component",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "popper",
+      "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+      "pattern": "State the conditions under which you would be wrong",
+      "estate": "The risks register's falsifiable-statement discipline — an accepted risk with a named acceptor and a named mitigation",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "popper",
+      "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+      "pattern": "The demarcation applied to inspiration itself",
+      "estate": "**This site's trace tables.** An influence entry is written so that it can be checked against the repositories and found wrong",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "popper",
+      "principle": "A claim earns its status by being refutable. If nothing could show it to be wrong, it is not saying anything.",
+      "pattern": "Publishing the refutations, not only the claims",
+      "estate": "Partial. The gaps are published as build specs and the absent rows are kept, but no claim on this network has yet been retracted in public",
+      "version": null,
+      "status": "partial"
+    },
+    {
+      "influence": "design",
+      "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+      "pattern": "Design is how it works, not how it looks",
+      "estate": "The estate's Designer role definition, which is built on the formulation and extends it to coherence between internal structure and external experience",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "design",
+      "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+      "pattern": "Start from the user's intent and work backwards (the Ive principle)",
+      "estate": "The NotebookLM case-study brief, in a section named for the principle, with the MP3-to-CD story as the worked example",
+      "version": "v0.7.4",
+      "status": "implemented"
+    },
+    {
+      "influence": "design",
+      "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+      "pattern": "Good design is invisible — you notice it by reverting and feeling the loss",
+      "estate": "**The Jonathan Ive test**: *is it simpler? would reverting feel worse?* — a mandatory validator for every UI change",
+      "version": "v0.7.4",
+      "status": "implemented"
+    },
+    {
+      "influence": "design",
+      "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
+      "pattern": "Simplicity as subtraction — the feature removed rather than the feature added",
+      "estate": "Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change",
+      "version": "v0.7.4",
+      "status": "partial"
+    },
+    {
+      "influence": "design-canon",
+      "principle": "Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.",
+      "pattern": "*Less, but better* (Rams) as a working principle rather than an aesthetic",
+      "estate": "The Designer role definition, applied to API surface rather than to visual design",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "design-canon",
+      "principle": "Every element must earn its place. Hierarchy, affordance and proportion are properties of any designed thing — an API and a CLI included, not only a screen.",
+      "pattern": "Code as inhabited space — is it navigable, is it comfortable",
+      "estate": "The same role definition's criteria for reviewing structure",
+      "version": null,
+      "status": "implemented"
+    },
+    {
+      "influence": "christopher-alexander",
+      "principle": "Code is a space that people inhabit. A pattern is a named solution to a recurring problem in a context — and a language of patterns is what lets a place be built by many hands and still be coherent.",
+      "pattern": "Code as a space developers inhabit — judge it by navigability and comfort",
+      "estate": "The Designer role definition's review criteria",
+      "version": null,
+      "status": "implemented"
+    }
+  ],
+  "licence": "CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic)"
+}

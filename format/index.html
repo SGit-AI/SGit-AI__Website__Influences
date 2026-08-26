@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The register format · influences.sgit.ai</title>
+<meta name="description" content="Seven blocks, canonised from a working document that existed before this site did. What each block is for, the three reduced forms, the no-verbatim rule, and the generate-or-date rule that keeps a trace table from becoming an opinion.">
+<link rel="canonical" href="https://influences.sgit.ai/format/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/format/index.html">
+<meta property="og:title" content="The register format · influences.sgit.ai">
+<meta property="og:description" content="The format was not designed for this site. It was written first, as a working document, and the site was named afterwards.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the provenance layer</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl here" href="../register/index.html">The register<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../register/index.html">All the entries</a>
+      <a class="sl" href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+      <a class="sl" href="../register/semantic-web/index.html">The Semantic Web — argued with</a>
+      <a class="sl" href="../register/flow/index.html">Flow — three sources, one method</a>
+      <a class="sl" href="../register/design/index.html">Design — discovered, confirmed</a>
+      <a class="sl here" href="../format/index.html">The register format</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../map/index.html">The map<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../map/index.html">The influence map</a>
+      <a class="sl" href="../tiers/index.html">The three tiers</a>
+      <a class="sl" href="../library/index.html">The wider library</a>
+      <a class="sl" href="../shipped/index.html">Tier movement — the changelog</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../documents/index.html">The source documents</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../admin/index.html">The pipeline, end to end</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / format</div>
+<h1>The register format</h1>
+<p class="lead">Seven blocks, in this order, for every entry that earns them. The format was <b>not designed for this site</b>: the founder wrote an <i>immediate-connection register</i> for Bret Victor's <i>Inventing on Principle</i> as a working document about the estate's viewer, and then asked what a site made of such documents should be called. That ordering matters — the format is <b>proven in use</b>, not designed on spec.</p>
+
+<div class="note">
+  <p><b>The one move that makes this different from a reading list.</b> The format treats an influence as a <b>falsifiable claim about the codebase</b>. Anyone can say Victor inspired them. The register says <i>which</i> of Victor's patterns appear <i>where</i> in the estate, at <i>which</i> version — and which are still missing, specified precisely enough to build. <a href="../register/popper/index.html">Popper is the influence that explains the format itself</a>, which is a satisfying loop and also a slightly circular one.</p>
+</div>
+
+<h2 id="blocks">The seven blocks</h2>
+
+<h3 id="block1"><span class="bn">Block 1</span> The anchor</h3>
+<p>The primary work, precisely cited: title, author, venue, date, canonical URL, and a durable mirror where one exists. <b>One anchor per entry.</b> The wider bibliography goes in Block 7.</p>
+<p>For a person, the anchor is the single work that did the shaping, not the whole career. For a topic, an era or a community, it is the first documented contact with it. Slugs on this site are people and topics rather than works — <code>/register/bret-victor/</code>, not <code>/register/inventing-on-principle/</code> — precisely because <b>an anchor can be superseded</b>: a briefing document may reveal that the real anchor was a different talk, and a URL that encoded the wrong one would be wrong forever.</p>
+<p>Where the anchor is not yet settled, the block says so rather than picking one. Three entries are in that state today.</p>
+
+<h3 id="block2"><span class="bn">Block 2</span> The founder's words</h3>
+<p>Why this resonates, in first person. <b>This is the only site in the network where first person is the house style</b> — <i>what resonates with me and why</i> is the genre, and paraphrasing it into corporate third person would destroy the evidence.</p>
+<p>Until the briefing document for an entry arrives, this block carries whatever first-person statements already exist in the corpus, cited by file. Where none exist, the block says explicitly that what follows is <b>the site's reading of the evidence, not the founder's words</b>, and stays labelled that way.</p>
+<p>Quotations here are marked up with the person whose words they are, and <a href="#no-verbatim">the release gate reads that marking</a>. A blockquote on this site cannot be anonymous.</p>
+
+<h3 id="block3"><span class="bn">Block 3</span> The principle</h3>
+<p>The influence distilled to one transferable sentence — the thing an agent can actually apply. Victor's is <i>immediate connection between creator and creation</i>. Wardley's is <i>situational awareness before strategy</i>.</p>
+<p><b>The test:</b> the principle must be usable by someone who has never consumed the anchor work. A principle that only makes sense if you have watched the talk has not been distilled, it has been summarised.</p>
+<p>On stub entries the principle is often a <b>hypothesis constructed from public knowledge</b> rather than from anything the founder has written, and every such principle says so in its own text. That is not a hedge — it is the difference between a claim the site is making and a placeholder waiting to be corrected.</p>
+
+<h3 id="block4"><span class="bn">Block 4</span> The trace table</h3>
+<p><b>The heart of the format and the falsifiable part.</b> Rows of: pattern from the anchor → where the estate implements it → version → status.</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Status</th><th>Means</th></tr></thead>
+    <tbody>
+      <tr><td><span class="rowstate rs-yes">implemented</span></td><td>The pattern appears at the named place.</td></tr>
+      <tr><td><span class="rowstate rs-part">partial</span></td><td>Something of it appears; the pattern is not fully realised. Usually the most informative row on a table.</td></tr>
+      <tr><td><span class="rowstate rs-no">absent</span></td><td>The anchor work names it and the estate does not have it. <b>Kept in the table rather than dropped</b> — a trace table that only recorded successes would be a brochure.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The Victor register's own closing observation is the standard to aim for: half the estate's strongest viewer features turned out to be <b>unknowing</b> implementations of the talk's demos. That is a weaker claim than <i>the talk caused this</i> and a more interesting one — the instinct and the principle agree, and writing the register turns the agreement into something the next agent can extend on purpose rather than rediscover.</p>
+<p>Every entry with rows also publishes them <a href="../register/flow/trace/index.html">on their own page</a>, as markdown, and as JSON — because <a href="../map/index.html">the influence map</a> is computed from those files rather than drawn.</p>
+
+<h4 id="generate-or-date">The generate-or-date rule</h4>
+<div class="warnbox">
+  <p><b>A trace table without version numbers is an opinion.</b> A row that says a pattern appears somewhere, without saying at which release it was seen, cannot be checked later — the file may have changed, the feature may have gone, and nobody can tell whether the row was ever true.</p>
+  <p>So every row carries a version where the corpus scan recorded one, and <b>where it did not, the entry counts the rows that are missing and says so out loud</b>. That is not a satisfying answer. The satisfying answer is <a href="../admin/comms.html#r1">R1</a>: give the build read access to the estate and regenerate the rows rather than citing them.</p>
+</div>
+
+<h3 id="block5"><span class="bn">Block 5</span> The gaps, as build specs</h3>
+<p>Patterns from the anchor the estate does <em>not</em> yet implement, written precisely enough that an agent could pick one up as a work item. The Victor register specifies two by name — <i>view time travel</i> and <i>relayout ghosts</i> — and every full entry here is expected to produce its own.</p>
+<p>This is what makes an influence page <b>forward-looking</b>: it is provenance and backlog in the same document. A gap written as <i>we should think about X</i> is not a gap, it is a mood; the block is only doing its job when the spec names what would have to exist and how you would know it worked.</p>
+
+<h3 id="block6"><span class="bn">Block 6</span> The checklist</h3>
+<p>A short list of questions to ask of new work in this influence's light. <i>Does the person see the effect of their change immediately? Is the map drawn before the strategy is argued? Is it simpler than what it replaces?</i></p>
+<p><b>The checklist is the influence made operational</b> — the part an agent can run without having consumed the anchor work, and the part most likely to outlive the entry around it.</p>
+
+<h3 id="block7"><span class="bn">Block 7</span> The wider library</h3>
+<p>The rest of the person's or topic's work, <b>linked and never rehosted</b>, each item with one line on what it adds. The union of every entry's Block 7 is <a href="../library/index.html">/library/</a>, generated from the same register.</p>
+<p>Listing facts about a work — title, year, one line, a link — is uncopyrightable metadata and is safe. Cover images and stills are not, which is why there are none anywhere on this site.</p>
+
+<h2 id="reduced">The three reduced forms</h2>
+<p>Not every entry earns all seven blocks on day one, and pretending otherwise would produce padding. The format defines three reduced forms and <a href="../admin/index.html#generated">the generator implements exactly those</a>.</p>
+
+<h3 id="full">full — <span class="tally" data-k="full">13</span> entries</h3>
+<p>The seven blocks, or as many as the evidence supports. An entry can be <i>full</i> and still have an empty trace table: <a href="../register/bret-victor/index.html">the Victor entry</a> is the model for the whole site and its table is missing, because the register that contains it is with the founder. The entry says that in the place the table would be, which is more useful than an invented table and more honest than an omitted block.</p>
+
+<h3 id="link-out">link-out — <span class="tally" data-k="link-out">3</span> entries</h3>
+<p>Blocks 1–3, and then a <b>pointer</b> where the trace table would be: <i>the trace of this influence is an entire site</i>. <a href="../register/wardley/index.html">Wardley</a>, <a href="../register/graphs/index.html">graphs</a> and <a href="../register/open-source/index.html">open source</a> each have a sibling site carrying their material.</p>
+<p>Duplicating that material here would break <a href="../network/index.html#deconflict">the deconfliction rule</a>: two sites making the same argument slightly differently is the real failure mode for a network, and it is worse than a dead link. <b>The influence entry owns the resonance; the sibling owns the material.</b> An entry that grows past resonance-and-trace has scope-crept, and the fix is to move the material and keep the pointer.</p>
+
+<h3 id="stub">stub — <span class="tally" data-k="stub">9</span> entries</h3>
+<p>Blocks 1 and 3 at best current knowledge, an explicit awaiting-briefing marker, and <b>the research plan published</b> — which of the founder's past publications and talks should be mined when the briefing arrives.</p>
+<p>A stub is <b>published, not hidden. The roadmap is content.</b> Where the works are public knowledge and need no briefing, a stub also carries Block 7 — a reader looking for Kevin Kelly's books should not have to wait for a briefing document to find out what they are.</p>
+
+<h2 id="discovered-form">And the discovered form</h2>
+<p>Same as the full format, with one difference: <b>Block 2 opens with honesty.</b> The founder never listed this influence; the corpus surfaced it. The claim that it shaped the work rests entirely on the evidence in the entry until he confirms or corrects it.</p>
+<p><a href="../tiers/index.html#discovered">Discovered entries are the site's falsifiability applied to itself</a> — and the mechanism has already worked once: <a href="../register/design/index.html">Design</a> was surfaced by mining and confirmed by the founder the day the commissioning pack shipped.</p>
+
+<h2 id="no-verbatim">The no-verbatim rule, and why it is a release gate</h2>
+<p>The founder set the rule himself: the site explains what resonates and why, and traces where it was applied — <b>it does not reproduce the influences' own work</b>. That instinct happens to be exactly what copyright law rewards.</p>
+<div class="trade">
+  <div class="buys">
+    <h4>CC BY 4.0 covers</h4>
+    <ul>
+      <li>Every word of resonance and analysis on this site</li>
+      <li>The trace tables, the gaps, the checklists</li>
+      <li>The register data, the map, and <a href="../llms-full.txt">llms-full.txt</a></li>
+      <li>Any original artwork and redrawn figures</li>
+    </ul>
+  </div>
+  <div class="costs">
+    <h4>It does not cover</h4>
+    <ul>
+      <li><b>Every anchor work.</b> Talks, books, essays, keynotes, records — they belong to their authors</li>
+      <li>Anything in <a href="../library/index.html">the wider library</a></li>
+      <li>Cover images and stills, which is why there are none</li>
+      <li>Photographs of anybody</li>
+    </ul>
+  </div>
+</div>
+<p>The boundary, precisely:</p>
+<ul>
+  <li><b>Link, never rehost.</b> Talks stay at their canonical host; transcripts stay where their transcriber put them; book links go to the publisher or the author's own page.</li>
+  <li><b>Short attributed quotation for analysis</b> — a sentence or two, quoted in order to be examined — is the fair-dealing core and is allowed. Reproducing a transcript section, a chapter or a verse is not.</li>
+  <li><b>Lyrics are the sharpest edge.</b> Music publishers enforce aggressively even over a single verse, so <a href="../register/neil-peart/index.html">the Rush entry</a> describes and links, and quotes at most a fragment under analysis.</li>
+  <li><b>The founder's own words are unrestricted here.</b> His articles, briefs and registers are his to publish, and Block 2 runs on them.</li>
+  <li><b>Likenesses are original artwork only</b> — never scraped photographs, and never AI renderings presented as portraits. Several of these people are alive and known to this project's community, and that is a matter of respect before it is one of personality rights.</li>
+</ul>
+<p>A rule that load-bearing is worth a check rather than a paragraph, so it is one:</p>
+<pre class="shell"><span class="d"># in the page source</span>
+&lt;blockquote data-quote="<span class="g">founder</span>"&gt;…&lt;/blockquote&gt;        <span class="d"># unrestricted</span>
+&lt;blockquote data-quote="<span class="y">Steve Jobs</span>"&gt;…&lt;/blockquote&gt;     <span class="d"># capped at 40 words</span>
+&lt;blockquote&gt;…&lt;/blockquote&gt;                          <span class="r"># fails the release</span>
+
+<span class="d"># admin/build/validate.js, on every push</span>
+<span class="r">✗ 62-word quotation attributed to "X" exceeds the 40-word cap</span>
+<span class="d">  → the fix is to cut the quotation, never to raise the cap</span>
+</pre>
+<p><b>What the gate cannot do</b>, stated plainly: it cannot see an unmarked quotation woven into a paragraph, and it cannot tell you whether a 39-word quotation was fair. What it can do is make the marked case cheap and the unmarked case a review finding, and stop the failure mode that actually ships — a long passage pasted in whole because it was useful at the time. <a href="../admin/index.html#no-verbatim">How it is implemented →</a></p>
+
+<h2 id="metadata">Entry metadata</h2>
+<p>Every entry carries the same fields, and they are the schema of <a href="../data/influences.json"><code>data/influences.json</code></a> rather than a description of one:</p>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Field</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td><code>tier</code></td><td><a href="../tiers/index.html">traced / stated / discovered</a></td></tr>
+      <tr><td><code>kind</code></td><td>person, work, topic, era, practice, community, framework, canon — this register has all eight</td></tr>
+      <tr><td><code>status</code></td><td><a href="#reduced">full / link-out / stub</a></td></tr>
+      <tr><td><code>discovered</code></td><td>an origin flag, kept after a promotion — how an entry got here stays visible</td></tr>
+      <tr><td><code>founder_confirmed</code></td><td>the date and the words, where a discovered entry has been confirmed</td></tr>
+      <tr><td><code>anchor</code></td><td>Block 1, with its URLs</td></tr>
+      <tr><td><code>corpus_evidence[]</code></td><td>paths and notes — regenerable, and currently cited rather than resolved (<a href="../admin/comms.html#r1">R1</a>)</td></tr>
+      <tr><td><code>trace</code></td><td>rows, or a pointer to a sibling, or an honest statement of why there are none</td></tr>
+      <tr><td><code>nests</code> · <code>nests_under</code> · <code>composes_with</code> · <code>lineage</code></td><td>the edges <a href="../map/index.html">the map</a> is computed from</td></tr>
+      <tr><td><code>research_plan</code> · <code>briefing_status</code> · <code>comms</code></td><td>what is missing, and which <a href="../admin/comms.html#briefing">thread</a> is asking for it</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Every page under <code>/register/</code> is generated from those fields, and so is its markdown twin. <b>The prose is authored once</b> — in the JSON, in a deliberately tiny markdown — and rendered twice, because two renderings of one string cannot drift and two hand-written copies always do.</p>
+
+<h2 id="source">Where this document comes from</h2>
+<p>This page is the site's working statement of the format. The commissioning pack's own version is published verbatim at <a href="../documents/format.html">/documents/format.html</a>, and where the two differ, this page is the one the generator actually implements. Two departures are worth naming: stubs here may carry Block 7 where the bibliography is public knowledge, and the trace-table row statuses are fixed to three values so that <a href="../map/index.html">the map</a> can be computed from them.</p>
+
+<div class="pagenav">
+  <a href="../tiers/index.html">← The three tiers</a>
+  <a href="../register/bret-victor/index.html">The entry the format came from →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>The register</h4>
+    <a href="../register/index.html">All the entries</a>
+    <a href="../register/bret-victor/index.html">Bret Victor — entry one</a>
+    <a href="../register/semantic-web/index.html">The Semantic Web</a>
+    <a href="../register/flow/index.html">Flow</a>
+    <a href="../format/index.html">The register format</a>
+  </div>
+  <div>
+    <h4>The shape of it</h4>
+    <a href="../map/index.html">The influence map</a>
+    <a href="../tiers/index.html">The three tiers</a>
+    <a href="../library/index.html">The wider library</a>
+    <a href="../shipped/index.html">Tier movement</a>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../documents/index.html">The source documents</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="../admin/index.html">How it is built</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../admin/comms.html">Comms: the briefing queue</a>
+    <a href="../network/index.html">The sgit.ai network</a>
+    <a href="../about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>
