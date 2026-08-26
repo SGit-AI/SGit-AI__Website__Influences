@@ -46,8 +46,10 @@ jobs:
       - name: Check every generated page still matches its source
         run: |
           python3 admin/build/gen_register.py  --check
+          python3 admin/build/gen_articles.py  --check
           python3 admin/build/gen_documents.py --check
           python3 admin/build/gen_map.py       --check
+          python3 admin/build/gen_front.py     --check
           python3 admin/build/gen_llms_full.py --check
           python3 admin/build/gen_sitemap.py   --check
       - name: Validate the site (structure, links, version, canonical, key-leak tripwire)

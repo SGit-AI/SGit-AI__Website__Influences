@@ -26,6 +26,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import json                                                      # noqa: E402
 from pagelib import ROOT, HOST, VERSION, register_data          # noqa: E402
 
 OUT = ROOT / "llms-full.txt"
@@ -42,8 +43,9 @@ site does not.
 Structure of this file:
   PART 1  the index (llms.txt), for orientation and the stable-URL promises
   PART 2  the front page in full (index.md)
-  PART 3  the {{r}} register entries, each the markdown twin of its page
-  PART 4  the {{n}} source documents this site is written from, verbatim
+  PART 3  the {{a}} articles, verbatim — they are markdown files, not renderings
+  PART 4  the {{r}} register entries, each the markdown twin of its page
+  PART 5  the {{n}} source documents this site is written from, verbatim
 
 WHAT IS NOT IN THIS FILE, BY RULE: the anchor works. This site explains why an
 influence resonated and traces where it was applied; it does not reproduce the talks,
@@ -72,6 +74,20 @@ def register_twins():
     return out
 
 
+def articles():
+    """In the order data/articles.json lists them — newest first, which is the order the
+    index shows and the order somebody arriving cold should read them in."""
+    p = ROOT / "data/articles.json"
+    if not p.exists():
+        return []
+    out = []
+    for a in json.loads(p.read_text())["articles"]:
+        f = ROOT / "articles" / f'{a["slug"]}.md'
+        if f.exists():
+            out.append((a, f))
+    return out
+
+
 def source_documents():
     briefs = ROOT / "briefs"
     if not briefs.exists():
@@ -82,8 +98,11 @@ def source_documents():
 
 def build():
     twins = register_twins()
+    arts = articles()
     briefs = source_documents()
-    parts = [HEADER.replace("{r}", str(len(twins))).replace("{n}", str(len(briefs)) if briefs else "0")]
+    parts = [HEADER.replace("{r}", str(len(twins)))
+                   .replace("{a}", str(len(arts)))
+                   .replace("{n}", str(len(briefs)) if briefs else "0")]
 
     parts.append(RULE + "PART 1 — THE INDEX (source: /llms.txt)" + RULE + "\n")
     parts.append((ROOT / "llms.txt").read_text().strip())
@@ -91,8 +110,19 @@ def build():
     parts.append(RULE + "PART 2 — THE FRONT PAGE (source: /index.md)" + RULE + "\n")
     parts.append((ROOT / "index.md").read_text().strip())
 
+    if arts:
+        parts.append(RULE + f"PART 3 — THE {len(arts)} ARTICLES" + RULE + "\n")
+        parts.append("Each is also fetchable on its own at /articles/<slug>.md. The markdown IS the\n"
+                     "article; the page at /articles/<slug>.html is generated from it.\n")
+        for a, f in arts:
+            parts.append(RULE + f'source: /articles/{a["slug"]}.md ({a["date"]})' + RULE + "\n")
+            parts.append(f.read_text().strip())
+    else:
+        parts.append(RULE + "PART 3 — THE ARTICLES" + RULE + "\n")
+        parts.append("None published yet.")
+
     if twins:
-        parts.append(RULE + f"PART 3 — THE {len(twins)} REGISTER ENTRIES" + RULE + "\n")
+        parts.append(RULE + f"PART 4 — THE {len(twins)} REGISTER ENTRIES" + RULE + "\n")
         parts.append("Each is also fetchable on its own at /register/<slug>/index.md, the markdown\n"
                      "twin of /register/<slug>/index.html. Entries with a trace table also publish\n"
                      "it as data at /register/<slug>/trace/trace.json.\n")
@@ -100,7 +130,7 @@ def build():
             parts.append(RULE + f"source: /register/{slug}/index.md" + RULE + "\n")
             parts.append(p.read_text().strip())
     else:
-        parts.append(RULE + "PART 3 — THE REGISTER ENTRIES" + RULE + "\n")
+        parts.append(RULE + "PART 4 — THE REGISTER ENTRIES" + RULE + "\n")
         parts.append(
             "None are published yet. This release is the pipeline rather than the register:\n"
             "validation, auto-tagging and deployment are live, and the entries have not been\n"
@@ -108,14 +138,14 @@ def build():
             "twin beside it, and this part of this file fills itself in.")
 
     if briefs:
-        parts.append(RULE + f"PART 4 — THE {len(briefs)} SOURCE DOCUMENTS" + RULE + "\n")
+        parts.append(RULE + f"PART 5 — THE {len(briefs)} SOURCE DOCUMENTS" + RULE + "\n")
         parts.append("The commissioning pack, verbatim. Each is also fetchable on its own at\n"
                      "/briefs/<filename>.\n")
         for b in briefs:
             parts.append(RULE + f"source: /briefs/{b.name}" + RULE + "\n")
             parts.append(b.read_text().strip())
     else:
-        parts.append(RULE + "PART 4 — THE SOURCE DOCUMENTS" + RULE + "\n")
+        parts.append(RULE + "PART 5 — THE SOURCE DOCUMENTS" + RULE + "\n")
         parts.append(
             "None are published yet. When the commissioning pack lands it arrives verbatim\n"
             "under /briefs/<filename>, one reader page each under /documents/, and this part\n"

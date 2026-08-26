@@ -51,27 +51,30 @@ NAV = [
         ("The Semantic Web — argued with", "register/semantic-web/index.html"),
         ("Flow — three sources, one method", "register/flow/index.html"),
         ("Design — discovered, confirmed", "register/design/index.html"),
-        ("The register format", "format/index.html"),
-    ], ("register/", "format/")),
+        ("The three tiers", "tiers/index.html"),
+    ], ("register/", "tiers/")),
     ("The map", "map/index.html", [
         ("The influence map", "map/index.html"),
-        ("The three tiers", "tiers/index.html"),
         ("The wider library", "library/index.html"),
         ("Tier movement — the changelog", "shipped/index.html"),
-    ], ("map/", "tiers/", "library/", "shipped/")),
-    ("For agents", "documents/index.html", [
+    ], ("map/", "library/", "shipped/")),
+    ("Articles", "articles/index.html", [
+        ("All articles", "articles/index.html"),
+        ("An influence is a claim you can check", "articles/an-influence-is-a-claim.html"),
+    ], ("articles/",)),
+    ("Provenance", "provenance/index.html", [
+        ("How this register was built", "provenance/index.html"),
+        ("How an entry is written", "format/index.html"),
         ("The source documents", "documents/index.html"),
-        ("llms.txt", "llms.txt"),
-        ("llms-full.txt", "llms-full.txt"),
-    ], ("documents/", "briefs/")),
-    ("How this site is built", "admin/index.html", [
         ("The pipeline, end to end", "admin/index.html"),
         ("Release history", "admin/versions.html"),
         ("Comms: the briefing queue", "admin/comms.html"),
-    ], ("admin/",)),
+    ], ("provenance/", "format/", "documents/", "briefs/", "admin/")),
     ("The network", "network/index.html", [
         ("The sgit.ai network", "network/index.html"),
         ("Participant disclosure", "about/participant.html"),
+        ("llms.txt", "llms.txt"),
+        ("llms-full.txt", "llms-full.txt"),
     ], ("network/", "about/")),
 ]
 
@@ -81,7 +84,7 @@ FOOTER = [
         ("Bret Victor — entry one", "register/bret-victor/index.html"),
         ("The Semantic Web", "register/semantic-web/index.html"),
         ("Flow", "register/flow/index.html"),
-        ("The register format", "format/index.html"),
+        ("Design, with a capital D", "register/design/index.html"),
     ]),
     ("The shape of it", [
         ("The influence map", "map/index.html"),
@@ -89,17 +92,19 @@ FOOTER = [
         ("The wider library", "library/index.html"),
         ("Tier movement", "shipped/index.html"),
     ]),
-    ("For agents", [
+    ("Reading", [
+        ("Articles", "articles/index.html"),
+        ("An influence is a claim", "articles/an-influence-is-a-claim.html"),
         ("The source documents", "documents/index.html"),
-        ("llms.txt", "llms.txt"),
-        ("llms-full.txt", "llms-full.txt"),
+        ("How an entry is written", "format/index.html"),
     ]),
-    ("This site", [
-        ("How it is built", "admin/index.html"),
+    ("Provenance", [
+        ("How this register was built", "provenance/index.html"),
+        ("The pipeline, end to end", "admin/index.html"),
         ("Release history", "admin/versions.html"),
         ("Comms: the briefing queue", "admin/comms.html"),
-        ("The sgit.ai network", "network/index.html"),
         ("Participant disclosure", "about/participant.html"),
+        ("The sgit.ai network", "network/index.html"),
     ]),
 ]
 

@@ -550,3 +550,57 @@ pre.mermaid svg{max-width:100%;height:auto}
 .tiercard .n{font-family:var(--serif);font-size:2rem;line-height:1;color:#101114}
 .tiercard h3{margin:.35rem 0 .4rem;font-size:.95rem}
 .tiercard p{margin:0;font-size:.83rem;color:var(--dim);line-height:1.55}
+
+/* ---------- articles ---------- */
+/* Same component as sgit.ai's article list, so the network reads as one thing. */
+.chip{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.03em;
+  color:var(--accent-dk);border:1px solid rgba(15,118,110,.28);background:rgba(15,118,110,.06);
+  border-radius:99px;padding:.08rem .45rem;margin-right:.3rem}
+.chips{margin:.2rem 0 .5rem}
+.artlist{display:grid;gap:.8rem;margin:1.4rem 0}
+a.art{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:1rem 1.15rem;box-shadow:var(--shadow);color:var(--fg)}
+a.art:hover{border-color:var(--accent);text-decoration:none}
+a.art b{display:block;font-size:1.06rem;letter-spacing:-.01em;margin-bottom:.15rem}
+a.art .art-date{display:block;font-family:var(--mono);font-size:.68rem;color:var(--dim2);margin-bottom:.45rem}
+a.art .art-sum{display:block;color:var(--dim);font-size:.9rem;line-height:1.6}
+a.art .chips{display:block;margin-top:.55rem}
+main.doc p.artmeta{font-size:.8rem;color:var(--dim2);margin:.1rem 0 .5rem}
+main.doc p.artmeta .art-date{font-family:var(--mono)}
+/* an article is prose, so it gets a narrower measure than a reference page */
+main.doc.article{max-width:760px}
+
+/* ---------- the front page: ideas, quotes, surprises ---------- */
+/* The home page's job is to make somebody want to read an entry. These three components
+   carry that: the principle a reader can take away, the sentence that made it land, and
+   the thing about the register that is genuinely unexpected. */
+.ideas{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  max-width:1160px;margin:0 auto;padding:0 1.1rem}
+a.idea{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  border-left:3px solid var(--accent);padding:1.05rem 1.2rem;color:var(--fg);box-shadow:var(--shadow)}
+a.idea:hover{border-color:var(--accent);text-decoration:none}
+a.idea .who{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap;margin-bottom:.5rem}
+a.idea .who b{font-size:.9rem;color:#101114}
+a.idea .pr{font-family:var(--serif);font-size:1.06rem;line-height:1.5;color:#10302c;margin:0}
+a.idea .go{display:inline-block;margin-top:.6rem;font-size:.75rem;color:var(--accent-dk);font-weight:600}
+
+.quotewall{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  max-width:1160px;margin:0 auto;padding:0 1.1rem}
+.qcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem;
+  box-shadow:var(--shadow);display:flex;flex-direction:column}
+.qcard blockquote{margin:0 0 .7rem;padding:0;border:0;background:none;box-shadow:none;
+  font-family:var(--serif);font-size:1.08rem;line-height:1.55;color:#26282d}
+.qcard blockquote footer{display:block;margin-top:.5rem;font-family:var(--sans);font-size:.72rem;
+  color:var(--dim2)}
+.qcard .why{margin:0;font-size:.85rem;color:var(--dim);line-height:1.6}
+.qcard .why a{font-weight:600}
+
+.surprises{max-width:1000px;margin:0 auto;padding:0 1.1rem}
+.surprise{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:1rem 1.2rem;margin:.7rem 0;box-shadow:var(--shadow)}
+.surprise .n{font-family:var(--serif);font-size:1.9rem;line-height:1;color:var(--line2)}
+.surprise h3{margin:0 0 .35rem;font-size:1rem;color:#101114}
+.surprise p{margin:0;font-size:.9rem;color:#34363c;line-height:1.6}
+.surprise .go{display:inline-block;margin-top:.5rem;font-size:.75rem;color:var(--accent-dk);font-weight:600}
+@media (max-width:560px){.surprise{grid-template-columns:1fr}.surprise .n{display:none}}

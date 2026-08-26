@@ -33,6 +33,12 @@ The line the register opens on, and the reason it exists. The register is a work
 
 From a section titled **The Brett Victor Problem** — in an article about education policy, not developer tooling. One influence applied in two unrelated domains, which is itself trace evidence: an idea that only shows up where you first met it has not been absorbed.
 
+> Half the viewer's strongest features were already unknowing implementations of its demos, which is evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck.
+>
+> — Dinis Cruz, `the immediate-connection register (held by the founder)`
+
+The closing argument, and the standard every trace table on this site is aiming at. Note how careful it is: **the instinct and the principle agree** is a much weaker claim than *the talk caused this*, and it is the one the evidence actually supports.
+
 The talk's argument is not about tools. It is that ideas can only grow where their creator can see them growing, and that most of the ways we build software put a compile step, a deploy step or a refresh between a person and the thing they are making. Every one of those steps is a place an idea dies.
 
 What makes this the founding entry is what the register found when it was written: **the estate's viewer had already implemented several of the talk's demos without knowing it.** That is a weaker claim than *Victor caused this* and a more interesting one — the instinct and the principle agree, and writing the register is what turns an agreement into something the next agent can extend deliberately rather than rediscover.

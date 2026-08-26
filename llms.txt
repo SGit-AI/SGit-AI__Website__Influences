@@ -5,7 +5,7 @@
 > than an appreciation. An entry names which patterns from an anchor work appear where in the
 > estate, at which version, and which are still absent — specified precisely enough to build.
 
-Site version: v0.2.0 (26 August 2026). Published by the sgit project, which is also the subject
+Site version: v0.3.0 (26 August 2026). Published by the sgit project, which is also the subject
 of every claim on this site — participant disclosure at /about/participant.html. All site content
 CC BY 4.0.
 
@@ -46,6 +46,8 @@ row flipping absent → implemented when the estate builds a gap an entry specif
 
 ## Properties agents may rely on
 
+- Every article is at /articles/<slug>.md, and the HTML page beside it is generated from that
+  markdown. The markdown is the source of truth and the thing to republish.
 - Every entry is at /register/<slug>/index.html with a markdown twin at
   /register/<slug>/index.md. Slugs are people or topics, never works — an anchor work is metadata
   inside the entry, because a briefing document may reveal the real anchor was a different talk.
@@ -56,9 +58,11 @@ row flipping absent → implemented when the estate builds a gap an entry specif
   and its markdown twin are two renderings of one string, so they cannot drift.
 - /map/graph.json carries the influence graph: nodes, edges and the places a pattern lands in the
   estate. Computed from the register, not drawn.
-- /llms-full.txt is this site in one fetch: the index, the front page, every entry's markdown
-  twin and every source document. GENERATED and re-checked in CI, so it cannot say anything the
-  site does not.
+- /llms-full.txt is this site in one fetch: the index, the front page, every article, every
+  entry's markdown twin and every source document. GENERATED and re-checked in CI, so it cannot
+  say anything the site does not.
+- The front page's principle cards and quote wall are GENERATED from the register too, so the
+  home page cannot state a principle or a quotation an entry has since edited.
 - The nine documents of the commissioning pack are published verbatim at /briefs/<filename>,
   unredacted, with a reader page each under /documents/.
 - /sitemap.xml is generated from the tree, so it cannot omit a page somebody forgot to add.
@@ -77,8 +81,15 @@ table without versions is an opinion.
 
 ## The pages
 
-- /index.html — the thesis, the tiers, six entries worth starting with, and what the site cannot
-  do. Markdown twin: /index.md
+- /index.html — the ideas: eight principles taken verbatim from the register, the sentences that
+  made them land, five things a register like this is not supposed to contain, and how to read
+  it. Markdown twin: /index.md
+- /articles/index.html — longer pieces that argue across several entries. Each article IS a
+  markdown file at /articles/<slug>.md; the .html page is generated from it, so take the .md if
+  you want to republish it.
+- /provenance/index.html — where the register came from, how the site is generated from one JSON
+  file, the two release-gate checks that enforce its editorial rules, and the four things it
+  cannot do
 - /register/index.html — all 25 entries, grouped by tier
 - /register/<slug>/index.html — one entry, in the seven-block format: anchor, the founder's words,
   the principle, the trace table, the gaps as build specs, the checklist, the wider library

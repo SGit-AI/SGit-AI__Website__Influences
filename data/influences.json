@@ -43,7 +43,14 @@
         {
           "quote": "the problem with dogma is not that it exists, but that you stop asking the question.",
           "source": "briefs/.../v0.19.7__article__education-gaps-git-opensource.md",
-          "note": "From a section titled **The Brett Victor Problem** — in an article about education policy, not developer tooling. One influence applied in two unrelated domains, which is itself trace evidence: an idea that only shows up where you first met it has not been absorbed."
+          "note": "From a section titled **The Brett Victor Problem** — in an article about education policy, not developer tooling. One influence applied in two unrelated domains, which is itself trace evidence: an idea that only shows up where you first met it has not been absorbed.",
+          "id": "dogma"
+        },
+        {
+          "id": "unknowing",
+          "quote": "Half the viewer's strongest features were already unknowing implementations of its demos, which is evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck.",
+          "source": "the immediate-connection register (held by the founder)",
+          "note": "The closing argument, and the standard every trace table on this site is aiming at. Note how careful it is: **the instinct and the principle agree** is a much weaker claim than *the talk caused this*, and it is the one the evidence actually supports."
         }
       ],
       "resonance": [
@@ -220,7 +227,8 @@
         {
           "quote": "The Semantic Web community identified the right problem… But the community made a subtle mistake in practice. They ended up attaching meaning to nodes rather than deriving meaning from edges.",
           "source": "briefs/.../library/concepts/v0_4_0__thinking-in-graphs.md",
-          "note": "The section is titled *The Semantic Web's Insight (and Mistake)*, and the ordering of those two words is the entry. An influence you have a technical disagreement with is an influence you have read closely."
+          "note": "The section is titled *The Semantic Web's Insight (and Mistake)*, and the ordering of those two words is the entry. An influence you have a technical disagreement with is an influence you have read closely.",
+          "id": "mistake"
         }
       ],
       "resonance": [
@@ -466,7 +474,8 @@
         {
           "quote": "It centers on preserving developer flow state while leveraging LLMs for code generation.",
           "source": "briefs/.../ifd/v1.2.1__ifd__intro-and-how-to-use.md",
-          "note": "The opening sentence of the estate's development methodology. Not a mention in a rationale section — **the stated core principle**, in the first line."
+          "note": "The opening sentence of the estate's development methodology. Not a mention in a rationale section — **the stated core principle**, in the first line.",
+          "id": "ifd-opening"
         },
         {
           "quote": "IFD is about maintaining flow state.",
@@ -644,7 +653,8 @@
         {
           "quote": "Luhmann's Zettelkasten was a self-organizing knowledge graph on paper… atomic, uniquely identified, densely linked, emergent in structure, scalable and lifelong",
           "source": "briefs/.../bridging-niklas-luhmanns-ideas-with-semantic-knowledge-graphs-and-g3.md",
-          "note": "Six properties, named in one sentence — which is why this entry can have a principle at all. A discovered influence usually has to be reconstructed; this one was already written down."
+          "note": "Six properties, named in one sentence — which is why this entry can have a principle at all. A discovered influence usually has to be reconstructed; this one was already written down.",
+          "id": "six-properties"
         }
       ],
       "resonance": [
@@ -997,7 +1007,13 @@
         "title": "“Design is how it works” — the Jobs formulation the estate's Designer role is built on",
         "author": "Steve Jobs",
         "note": "**Anchor unconfirmed.** The formulation is from the 2003 *New York Times Magazine* profile linked above; the candidates for what actually did the shaping are that piece, the MP3-to-CD whiteboard story, a keynote, or a specific product. Asked as [Q2b](../../admin/comms.html#q2b).",
-        "url": "https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html"
+        "url": "https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html",
+        "quote": {
+          "id": "how-it-works",
+          "text": "Design is not just what it looks like and feels like. Design is how it works.",
+          "who": "Steve Jobs",
+          "note": "Quoted to be examined, and it is the whole entry in one line: design is named as a property of the mechanism rather than of the surface."
+        }
       },
       "principle": "Design is not decoration applied after engineering — it is how the thing works. Start from what the person is trying to do and work backwards to the simplest interaction that does it.",
       "founder_words": [
@@ -1009,7 +1025,8 @@
         {
           "quote": "Good design is invisible… the only way to notice it is to go back to the previous version and think: “This is way worse.”",
           "source": "briefs/.../v0.7.4__brief__advocate-designer-in-the-loop-notebooklm-case-study.md",
-          "note": "And this is the sentence that became a test. Read it again with the next block in mind."
+          "note": "And this is the sentence that became a test. Read it again with the next block in mind.",
+          "id": "invisible"
         }
       ],
       "resonance": [
@@ -1538,7 +1555,8 @@
         {
           "quote": "Christopher Alexander's pattern language is the direct ancestor of software design patterns. The Designer should think of code as a space that developers inhabit: is it navigable? Is it comfortable?",
           "source": "briefs/.../team/roles/designer/ROLE.md",
-          "note": "Not a nod in a bibliography — a **criterion in a live role definition**, telling a reviewer what to look at. That is what moved this from a citation to a discovered influence."
+          "note": "Not a nod in a bibliography — a **criterion in a live role definition**, telling a reviewer what to look at. That is what moved this from a citation to a discovered influence.",
+          "id": "inhabited"
         }
       ],
       "resonance": [
@@ -1712,5 +1730,50 @@
       "briefing_status": "requested",
       "comms": "Q2"
     }
-  ]
+  ],
+  "front": {
+    "note": "The front page's idea cards and quote wall are generated from these selections by admin/build/gen_front.py, so the home page cannot state a principle or a quotation the register does not.",
+    "ideas": [
+      "bret-victor",
+      "semantic-web",
+      "design",
+      "flow",
+      "luhmann",
+      "popper",
+      "christopher-alexander",
+      "wardley"
+    ],
+    "quotes": [
+      {
+        "slug": "bret-victor",
+        "id": "unknowing",
+        "why": "The finding that started the whole register: patterns from a 2012 talk turning up in a codebase years later, built on instinct, by people who had not connected the two. [The entry →](register/bret-victor/index.html)"
+      },
+      {
+        "slug": "semantic-web",
+        "id": "mistake",
+        "why": "An influence argued with, in public. Attach meaning to a node and everyone must agree before anyone can use it; derive it from edges and two parties can disagree about what a thing *is* while agreeing how it *relates*. [The entry →](register/semantic-web/index.html)"
+      },
+      {
+        "slug": "design",
+        "id": "how-it-works",
+        "why": "Sixteen words that this estate turned into a gate. The **Jonathan Ive test** — *is it simpler? would reverting feel worse?* — is a mandatory validator for every interface change. [The entry →](register/design/index.html)"
+      },
+      {
+        "slug": "flow",
+        "id": "ifd-opening",
+        "why": "Not a mention in a rationale section — the first line of the methodology. Csikszentmihalyi supplies the state, Victor the mechanism, and this is what was built from both. [The entry →](register/flow/index.html)"
+      },
+      {
+        "slug": "luhmann",
+        "id": "six-properties",
+        "why": "Six properties named in one sentence, and the hard one is **emergent**: nothing is filed under anything, and the structure is a consequence of the linking. A paper slip-box got there first. [The entry →](register/luhmann/index.html)"
+      },
+      {
+        "slug": "bret-victor",
+        "id": "dogma",
+        "why": "The same influence, applied to education policy rather than developer tooling — under a section header that names him. An idea that only shows up where you first met it has not been absorbed. [The entry →](register/bret-victor/index.html)"
+      }
+    ]
+  }
 }

@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">the provenance layer</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.2.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.3.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -31,29 +31,30 @@
       <a class="sl" href="../register/semantic-web/index.html">The Semantic Web — argued with</a>
       <a class="sl" href="../register/flow/index.html">Flow — three sources, one method</a>
       <a class="sl" href="../register/design/index.html">Design — discovered, confirmed</a>
-      <a class="sl" href="../format/index.html">The register format</a>
+      <a class="sl" href="../tiers/index.html">The three tiers</a>
       </div>
     </div>
     <div class="ni ni-has">
       <a class="nl" href="../map/index.html">The map<span class="caret">&#9662;</span></a>
       <div class="sub">
       <a class="sl" href="../map/index.html">The influence map</a>
-      <a class="sl" href="../tiers/index.html">The three tiers</a>
       <a class="sl" href="../library/index.html">The wider library</a>
       <a class="sl" href="../shipped/index.html">Tier movement — the changelog</a>
       </div>
     </div>
     <div class="ni ni-has">
-      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <a class="nl" href="../articles/index.html">Articles<span class="caret">&#9662;</span></a>
       <div class="sub">
-      <a class="sl" href="../documents/index.html">The source documents</a>
-      <a class="sl" href="../llms.txt">llms.txt</a>
-      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      <a class="sl" href="../articles/index.html">All articles</a>
+      <a class="sl" href="../articles/an-influence-is-a-claim.html">An influence is a claim you can check</a>
       </div>
     </div>
     <div class="ni ni-has">
-      <a class="nl here" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <a class="nl here" href="../provenance/index.html">Provenance<span class="caret">&#9662;</span></a>
       <div class="sub">
+      <a class="sl" href="../provenance/index.html">How this register was built</a>
+      <a class="sl" href="../format/index.html">How an entry is written</a>
+      <a class="sl" href="../documents/index.html">The source documents</a>
       <a class="sl" href="../admin/index.html">The pipeline, end to end</a>
       <a class="sl" href="../admin/versions.html">Release history</a>
       <a class="sl here" href="../admin/comms.html">Comms: the briefing queue</a>
@@ -64,6 +65,8 @@
       <div class="sub">
       <a class="sl" href="../network/index.html">The sgit.ai network</a>
       <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
       </div>
     </div>
   </div>
@@ -93,6 +96,9 @@
       <tr><td>T10</td><td><code>data/influences.json</code> — the register, seeded from the pack's <code>influences__seed.json</code> and extended with resonance text, trace rows and research plans</td><td class="verdict"><span class="tstat t-done">done</span> <span class="dim small">25 entries</span></td></tr>
       <tr><td>T11</td><td>The <a href="../register/index.html">twenty-five entries</a>, in the build order the brief sets: Victor first, then the link-out entries with sibling sites, then the Semantic Web, flow, Luhmann, the stated seven, and <a href="../map/index.html">the map</a></td><td class="verdict"><span class="tstat t-done">done</span> <span class="dim small">13 full · 3 link-out · 9 stubs</span></td></tr>
       <tr><td>T12</td><td><a href="../tiers/index.html">/tiers/</a>, <a href="../format/index.html">/format/</a>, <a href="../library/index.html">/library/</a> and <a href="../shipped/index.html">/shipped/</a> — the tier definitions, the register format documented, the union of every entry's wider library, and the tier-movement changelog</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T16</td><td><b>A front page about the ideas rather than the machinery.</b> Eight principles and six quotations, <b>generated from the register</b> by <code>gen_front.py</code> so the home page cannot quote a principle an entry has since edited</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T17</td><td><b><a href="../provenance/index.html">/provenance/</a></b> — where the register came from, how the site is generated, the two editorial gates, and the four things it cannot do. Everything the front page used to carry about its own construction</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T18</td><td><b><a href="../articles/index.html">/articles/</a></b> — an article <em>is</em> a markdown file and the page is generated from it, so a piece can be republished without a second copy existing. Needed a small stdlib markdown renderer (<code>mdblock.py</code>) whose blockquote handling enforces <a href="index.html#no-verbatim">the attribution rule</a> at authoring time rather than at CI time</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
       <tr><td>T13</td><td>Infographics: original artwork for likenesses, redrawn idea-figures in house style with attribution, each with a markdown or JSON twin as its source data</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
       <tr><td>T14</td><td>Cross-links <b>from</b> the sibling sites — <a href="https://wardley-maps.sgit.ai">wardley-maps</a>, <a href="https://graphs.sgit.ai">graphs</a> and <a href="https://open-source.sgit.ai">open-source</a> each own the material for one of this site's link-out entries and none of them points back yet</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
       <tr><td>T15</td><td>Vendor the diagram renderer. <a href="../map/index.html">The map</a> pulls <code>mermaid@11</code> from a third-party CDN at a pinned URL and degrades to a readable text fence when it is unreachable. The fallback works; the dependency is still a dependency</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
@@ -187,7 +193,7 @@
     <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
     <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.2.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="verline">site <a href="../admin/versions.html">v0.3.0</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>The register</h4>
@@ -195,7 +201,7 @@
     <a href="../register/bret-victor/index.html">Bret Victor — entry one</a>
     <a href="../register/semantic-web/index.html">The Semantic Web</a>
     <a href="../register/flow/index.html">Flow</a>
-    <a href="../format/index.html">The register format</a>
+    <a href="../register/design/index.html">Design, with a capital D</a>
   </div>
   <div>
     <h4>The shape of it</h4>
@@ -205,18 +211,20 @@
     <a href="../shipped/index.html">Tier movement</a>
   </div>
   <div>
-    <h4>For agents</h4>
+    <h4>Reading</h4>
+    <a href="../articles/index.html">Articles</a>
+    <a href="../articles/an-influence-is-a-claim.html">An influence is a claim</a>
     <a href="../documents/index.html">The source documents</a>
-    <a href="../llms.txt">llms.txt</a>
-    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="../format/index.html">How an entry is written</a>
   </div>
   <div>
-    <h4>This site</h4>
-    <a href="../admin/index.html">How it is built</a>
+    <h4>Provenance</h4>
+    <a href="../provenance/index.html">How this register was built</a>
+    <a href="../admin/index.html">The pipeline, end to end</a>
     <a href="../admin/versions.html">Release history</a>
     <a href="../admin/comms.html">Comms: the briefing queue</a>
-    <a href="../network/index.html">The sgit.ai network</a>
     <a href="../about/participant.html">Participant disclosure</a>
+    <a href="../network/index.html">The sgit.ai network</a>
   </div>
 </div></footer>
 

@@ -1,0 +1,20 @@
+{
+  "schema": "influences-articles/v1",
+  "attribution": "Dinis Cruz, with AI co-authorship (Claude, Anthropic)",
+  "licence": "CC BY 4.0",
+  "note": "Index metadata only. Each article's text lives in articles/<slug>.md and is the source of truth; the .html page is generated from it. The title appears in both and gen_articles.py fails if they disagree.",
+  "articles": [
+    {
+      "slug": "an-influence-is-a-claim",
+      "title": "An influence is a claim you can check",
+      "date": "2026-08-26",
+      "summary": "An introduction to this register: the one move that separates it from a reading list, the five ideas worth stealing from it, the three tiers and what moves an entry between them — and the four things the site cannot do, stated rather than buried.",
+      "chips": [
+        "intro",
+        "provenance",
+        "falsifiability",
+        "register"
+      ]
+    }
+  ]
+}

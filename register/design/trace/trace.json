@@ -7,7 +7,13 @@
     "title": "“Design is how it works” — the Jobs formulation the estate's Designer role is built on",
     "author": "Steve Jobs",
     "note": "**Anchor unconfirmed.** The formulation is from the 2003 *New York Times Magazine* profile linked above; the candidates for what actually did the shaping are that piece, the MP3-to-CD whiteboard story, a keynote, or a specific product. Asked as [Q2b](../../admin/comms.html#q2b).",
-    "url": "https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html"
+    "url": "https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html",
+    "quote": {
+      "id": "how-it-works",
+      "text": "Design is not just what it looks like and feels like. Design is how it works.",
+      "who": "Steve Jobs",
+      "note": "Quoted to be examined, and it is the whole entry in one line: design is named as a property of the mechanism rather than of the surface."
+    }
   },
   "rows": [
     {
