@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Release history · influences.sgit.ai</title>
+<meta name="description" content="Every release of this site, with what changed. Each row is a tag pushed by CI, verified against admin/build/version.txt and the release commit's subject.">
+<link rel="canonical" href="https://influences.sgit.ai/admin/versions.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/admin/versions.html">
+<meta property="og:title" content="Release history · influences.sgit.ai">
+<meta property="og:description" content="Every release of this site, with what changed. Each row is a tag pushed by CI, not by a human.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the pipeline</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../documents/index.html">The source documents</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../admin/index.html">The pipeline, end to end</a>
+      <a class="sl here" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / <a href="index.html">admin</a> / versions</div>
+<h1>Release history</h1>
+<p class="lead">Every push to <code>dev</code> is a minor release. The version is owned by <code>admin/build/version.txt</code>, must appear in the release commit's subject, and is tagged by CI once validation passes — so every row below corresponds to a tag on a commit that was gated. <a href="index.html#tagging">How the tag is decided →</a></p>
+
+<div class="note">
+  <p><b>This table is not the site's only changelog.</b> The other one is <b>tier movement</b>: an entry going STATED → TRACED because a briefing document arrived, DISCOVERED → TRACED because the founder confirmed it, or a trace row flipping <i>absent</i> → <i>implemented</i> because the estate built a gap. Those are the events this site exists to record, and they get their own dated page at <code>/shipped/</code> once there are entries to move.</p>
+</div>
+
+<div class="tablewrap">
+  <table class="vers">
+    <thead><tr><th>Version</th><th>Date</th><th>What changed</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="vnum">v0.1.0</td>
+        <td>26 Aug 2026</td>
+        <td><b>First release: the pipeline, before the register.</b> The three-job CI workflow — <a href="index.html#gate">validate</a> → <a href="index.html#tagging">auto-tag</a> → deploy — with the generator drift checks, the version-agreement gate, the internal-link and fragment checks, the canonical-host check and the <a href="index.html#leak">credential-shape leak tripwire</a>. Two checks the sibling sites do not have, both enforcing this site's own editorial rules rather than stating them: <a href="index.html#no-verbatim">the no-verbatim gate</a>, which caps a third party's quoted words at forty, and <a href="index.html#tallies">the register-is-the-data check</a>, which recomputes every tier count from <code>data/influences.json</code> and fails on disagreement. The shared chrome (nav, footer, version badge, tallies) owned by <code>admin/build/chrome.py</code>; the generators for <a href="../register/index.html">register/</a>, <a href="../map/index.html">map/</a>, <a href="../documents/index.html">documents/</a>, <code>llms-full.txt</code> and <code>sitemap.xml</code>, each with a <code>--check</code> drift gate; the network and disclosure pages; and the <code>!admin/build/</code> negation that stops the Python <code>.gitignore</code> swallowing the release gate. No register yet: the entries have not been written.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="pagenav">
+  <a href="index.html">← How this site is built</a>
+  <a href="comms.html">Comms: the briefing queue →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../documents/index.html">The source documents</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="../admin/index.html">How it is built</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>The network</h4>
+    <a href="../network/index.html">The sgit.ai network</a>
+    <a href="../about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

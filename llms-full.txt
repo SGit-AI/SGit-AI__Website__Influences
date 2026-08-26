@@ -1,0 +1,234 @@
+# influences.sgit.ai — full text
+
+Site version: v0.1.0. Every page and every source document of https://influences.sgit.ai/ in one
+file, so an agent can read the whole thing in a single fetch.
+
+GENERATED — assembled by admin/build/gen_llms_full.py from llms.txt, index.md,
+register/*/index.md and briefs/*.md, and re-checked in CI. It cannot say anything the
+site does not.
+
+Structure of this file:
+  PART 1  the index (llms.txt), for orientation and the stable-URL promises
+  PART 2  the front page in full (index.md)
+  PART 3  the 0 register entries, each the markdown twin of its page
+  PART 4  the 0 source documents this site is written from, verbatim
+
+WHAT IS NOT IN THIS FILE, BY RULE: the anchor works. This site explains why an
+influence resonated and traces where it was applied; it does not reproduce the talks,
+essays, books or lyrics that did the influencing. Those are linked, never rehosted —
+they belong to their authors and a CC BY file that carried them would be relicensing
+what this site does not own. Short attributed quotation for analysis is capped at 40
+words by the release gate. Follow the anchor URLs for the real thing.
+
+The site's own text, trace tables, seed data and register are CC BY 4.0 — Dinis Cruz,
+with AI co-authorship (Claude, Anthropic).
+
+
+
+
+==============================================================================
+PART 1 — THE INDEX (source: /llms.txt)
+
+==============================================================================
+
+
+# influences.sgit.ai — where the thinking came from
+
+> The provenance layer of the sgit.ai memory network: the people, works, topics and things that
+> shaped the founder's thinking, each written as a FALSIFIABLE CLAIM ABOUT THE CODEBASE rather
+> than an appreciation. An entry names which patterns from an anchor work appear where in the
+> estate, at which version, and which are still absent — specified precisely enough to build.
+
+Site version: v0.1.0 (26 August 2026). Published by the sgit project, which is also the subject
+of every claim on this site — participant disclosure at /about/participant.html. All site content
+CC BY 4.0.
+
+## What this release is
+
+The pipeline, before the register. Validation, auto-tagging and deployment are live and proven;
+the twenty-five influence entries have not been written. That order is deliberate: a site whose
+release gate works can publish anything safely, and a site full of pages with no gate cannot.
+
+## The rule an agent consuming this site must inherit
+
+THE ANCHOR WORKS ARE NOT HERE, AND WILL NEVER BE. This site explains why a work resonated and
+traces where it was applied; it does not reproduce the talks, essays, books or lyrics that did
+the influencing. Those are linked, never rehosted — they belong to their authors, and a CC BY
+site that carried them would be relicensing what it does not own. Short attributed quotation for
+analysis is capped at 40 words BY THE RELEASE GATE, not by convention. Lyrics are the sharpest
+edge and get description and a link, never reproduction.
+
+Concretely: /llms-full.txt is safe to ingest wholesale. It contains this site's own analysis and
+nothing that belongs to a third party.
+
+## Properties agents may rely on
+
+- The register will live at /register/<slug>/index.html, with a markdown twin at
+  /register/<slug>/index.md and, where the entry has a trace table, the same rows as data at
+  /register/<slug>/trace/trace.json. Slugs are people or topics, never works — an anchor work is
+  metadata inside the entry, because a briefing document may reveal the real anchor was a
+  different talk.
+- /data/influences.json will be the register. Every page under /register/ is generated from it;
+  the tier counts on every page are recomputed from it on every build and checked independently
+  by the release gate. No number about this site's own shape is typed by a person.
+- /map/graph.json will carry the influence graph — nodes, edges and the places a pattern lands
+  in the estate — computed from the same file. The map is generated, not drawn.
+- /llms-full.txt is this site in one fetch: the index, the front page, every register entry's
+  markdown twin and every source document. GENERATED and re-checked in CI, so it cannot say
+  anything the site does not.
+- /sitemap.xml is generated from the tree, so it cannot omit a page somebody forgot to add.
+- The version in /admin/build/version.txt agrees with the badge on every page, the release
+  history table, this file, /llms-full.txt and /index.md — CI fails the release otherwise.
+
+## The three tiers
+
+- TRACED — corpus evidence exists today. The claim is checkable against the files the entry
+  lists.
+- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
+  the research plan visible, awaiting his briefing document. The roadmap, not the debt.
+- DISCOVERED — surfaced by mining the corpus, never named by the founder. The claim rests
+  entirely on the trace table until he confirms or corrects it. The site's falsifiability applied
+  to itself.
+
+Tier movement is this site's changelog: STATED → TRACED when a briefing lands, DISCOVERED →
+TRACED when the founder confirms, and a trace row flipping absent → implemented when the estate
+builds a gap. A provenance site whose provenance changed silently would be self-refuting.
+
+## The pages that exist today
+
+- /index.html — what this release is, and what an influence entry is. Markdown twin: /index.md
+- /register/index.html — the register index. Empty: the entries are not written.
+- /map/index.html — the influence map. Empty: it is computed from the register.
+- /documents/index.html — the source documents. Empty: the commissioning pack is not unpacked
+  into the tree yet.
+- /admin/index.html — how this site is built: the pipeline, the gate, the tagger, the
+  generators. /admin/versions.html — the release history. /admin/comms.html — tasks, and the
+  briefing-document request queue.
+- /network/index.html — the sibling sites and the boundaries between them.
+- /about/participant.html — who publishes this and how it is written.
+
+## What is NOT here, and is next
+
+- The twenty-five register entries, from the pack's seed data: 15 traced, 7 stated, 3 discovered
+  and still awaiting confirmation.
+- /tiers/, /format/, /library/ and /shipped/ — the tier definitions, the register format
+  documented, the union of every entry's wider library, and the tier-movement changelog.
+- The full text of the founder's Bret Victor register, which is entry one and which this
+  environment does not hold. First ask in the comms queue.
+
+## Related
+
+- https://sgit.ai — the parent project and the network index
+- https://wardley-maps.sgit.ai — the trace of one influence is an entire sibling site
+- https://graphs.sgit.ai — the same, for the founding obsession
+- https://open-source.sgit.ai — the same, for open source and its licences
+- https://coding.sgit.ai · https://llms.sgit.ai · https://standards.sgit.ai
+- https://risks.sgit.ai · https://nhi.sgit.ai · https://pki.sgit.ai
+
+
+==============================================================================
+PART 2 — THE FRONT PAGE (source: /index.md)
+
+==============================================================================
+
+
+# influences.sgit.ai — where the thinking came from
+
+> The provenance layer of the sgit.ai memory network. The other sites teach an agent **what**
+> the founder thinks and **how** the estate works; this one is for **where the thinking came
+> from** — so an agent extends the instincts on purpose rather than by luck.
+
+*Source: <https://influences.sgit.ai/index.html> · site v0.1.0 · markdown twin of the front page.*
+
+---
+
+## This release is the pipeline. The register comes next.
+
+Every sibling site's early releases tell the same story: content lands, then something in the
+release machinery turns out to be wrong, and the fix is a release of its own. So this repository
+shipped the gate first, and publishes an almost-empty site through it — on a tree small enough to
+read in one sitting.
+
+```
+# every push to dev
+validate ──▶ tag-release ──▶ deploy
+   │             │                │
+   │             │                └─ upload-pages-artifact, deploy-pages
+   │             └─ git push origin refs/tags/vX.Y.Z
+   └─ gen_*.py --check ; node admin/build/validate.js
+
+# six checks in the gate, and two of them are this site's own:
+version agreement · internal links + fragments · canonical host
+the no-verbatim gate     # a third party's words, capped at 40
+the register is the data # tier counts recomputed, never typed
+credential-shape leak tripwire
+```
+
+The two middle checks are the site's own rules, made executable rather than stated.
+[Why a quotation cap is a release gate](admin/index.html#no-verbatim).
+
+## An influence entry is a falsifiable claim
+
+This is what separates the register from every "books that shaped me" listicle, and it is the
+reason the site exists at all.
+
+- **Not "X inspired me" — which pattern, where, at which version.** Anyone can say Bret Victor
+  was an influence. The register says which of Victor's patterns appear where in the estate, at
+  which release, and which are still **absent** — specified precisely enough that an agent could
+  pick one up as a work item.
+- **Seven blocks, proven in use before they were designed.** Anchor → the founder's words → the
+  principle → **the trace table** → the gaps as build specs → a checklist → the wider library.
+  The format was not invented for this site: it was written first, as a working document, and
+  the site was named afterwards.
+- **TRACED, STATED, DISCOVERED — and the difference is published.** Corpus evidence exists; on
+  the founder's list but not yet in the corpus; or found by mining and never claimed by him at
+  all. A reader can tell a traced claim from a hypothesis without taking the site's word for it.
+- **Link, never rehost.** The site explains why a work resonated and traces where it was
+  applied. The work itself stays where its author put it. That instinct is also the legally
+  correct one — and here it is a check in the release pipeline, not a paragraph in a footer.
+
+## What is not here yet
+
+Stated plainly, because a site about provenance that was vague about its own state would be
+self-refuting:
+
+- **The register itself** — twenty-five entries across three tiers, from the commissioning
+  pack's seed data. The empty index is live, generated from a data file that has not been
+  written.
+- **The influence map** — the graph of influences, principles and estate features. Computed from
+  the register, so it cannot exist before the register does.
+- **The source documents** — the commissioning pack, to be published in full, because a site
+  that argues from a document should let you read the document.
+- **The register format, documented**, the tier definitions, and the union of every entry's
+  wider library.
+
+Everything above is tracked as a numbered task at [comms](admin/comms.html), and every release
+says what it shipped in [one row](admin/versions.html).
+
+---
+
+All site content CC BY 4.0 — Dinis Cruz, with AI co-authorship (Claude, Anthropic). The anchor
+works belong to their authors and are linked, never rehosted.
+
+
+==============================================================================
+PART 3 — THE REGISTER ENTRIES
+
+==============================================================================
+
+
+None are published yet. This release is the pipeline rather than the register:
+validation, auto-tagging and deployment are live, and the entries have not been
+written. When they are, each arrives as /register/<slug>/index.html with a markdown
+twin beside it, and this part of this file fills itself in.
+
+
+==============================================================================
+PART 4 — THE SOURCE DOCUMENTS
+
+==============================================================================
+
+
+None are published yet. When the commissioning pack lands it arrives verbatim
+under /briefs/<filename>, one reader page each under /documents/, and this part
+of this file fills itself in — nobody has to remember to update it.

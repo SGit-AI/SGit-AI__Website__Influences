@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The network · influences.sgit.ai</title>
+<meta name="description" content="The sibling sites, the boundaries between them, and the deconfliction rule this site runs on: where an influence already has a sibling site, this entry owns the resonance and the sibling owns the material.">
+<link rel="canonical" href="https://influences.sgit.ai/network/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/network/index.html">
+<meta property="og:title" content="The network · influences.sgit.ai">
+<meta property="og:description" content="Several of this site's influences already have entire sibling sites. The deconfliction rule decides which half each one owns.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the pipeline</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../documents/index.html">The source documents</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../admin/index.html">The pipeline, end to end</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / network</div>
+<h1>The network</h1>
+<p class="lead">This site is one of several that carry one argument between them. Each is a separate repository, a separate domain and a separate release history — and each is built from the same three pieces: a commissioning brief published in full, a static site written from it, and the validate → tag → deploy pipeline that gates every release.</p>
+
+<div class="note">
+  <p><b>What is shared is machinery, not content.</b> One stylesheet (<code>assets/site.css</code>), one nav component, one pipeline shape, one release discipline — copied deliberately rather than packaged, so any site can diverge without asking permission. What is <em>not</em> shared is a single word of argument: each site is written from its own documents.</p>
+</div>
+
+<h2 id="place">This site's place in it</h2>
+<p>The network has a shape, and this site is the layer underneath it. The other sites teach an agent <b>what</b> the project thinks and <b>how</b> the estate works. This one is for <b>where the thinking came from</b> — so that an agent extending the estate extends its instincts deliberately rather than by accident.</p>
+<pre class="shell"><span class="d"># the memory network, by layer</span>
+<span class="cy">sgit.ai</span>                the product, the CLI, the vault layer
+<span class="cy">graphs · coding ·</span>      how the estate works: the substrate, the style,
+<span class="cy">standards · llms</span>       the instruments, the models
+<span class="y">influences.sgit.ai</span>   <span class="y">where the thinking came from</span>
+</pre>
+
+<h2 id="deconflict">The deconfliction rule, and why this site needs one badly</h2>
+<p>Several of the influences on this site <b>already have an entire sibling site</b>. Wardley mapping has one. Graphs have one. Open source has one. If the influence entry for Wardley tried to explain Wardley mapping, this site and that one would be making the same argument slightly differently — which is the real failure mode for a network of sites, and much worse than a dead link.</p>
+<p>So the rule is a split, and it is enforced by the entry format rather than by good intentions:</p>
+<div class="trade">
+  <div class="buys">
+    <h4>This site owns</h4>
+    <ul>
+      <li><b>The resonance.</b> Why this, and why it landed — in first person, which is the house style here and nowhere else in the network.</li>
+      <li><b>The personal history.</b> Where the influence entered, and when.</li>
+      <li><b>The trace pointer.</b> "The trace of this influence is an entire site" — and a link.</li>
+    </ul>
+  </div>
+  <div class="costs">
+    <h4>The sibling owns</h4>
+    <ul>
+      <li><b>The material.</b> The maps, the grammar, the licences, the history pack.</li>
+      <li><b>The teaching.</b> How the thing works, for someone who wants to use it.</li>
+      <li><b>Its own release history</b>, its own gaps and its own open questions.</li>
+    </ul>
+  </div>
+</div>
+<p>An entry that grows past resonance-and-trace has scope-crept into a sibling. When that happens the material moves to the sibling and the entry keeps the pointer — a rule that is easy to write and needs enforcing at review time, because the pull is always in the other direction.</p>
+
+<h2 id="sites">The sibling sites</h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Site</th><th>Owns</th><th>Relation to this site</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://sgit.ai"><b>sgit.ai</b></a></td><td>The parent project: the zero-knowledge vault layer, the shipped CLI, the demos and the catalogue — and the network index that lists every site here</td><td>Parent</td></tr>
+      <tr><td><a href="https://wardley-maps.sgit.ai">wardley-maps.sgit.ai</a></td><td>Mapping: evolution axes, situational awareness, and the maps drawn for this project</td><td><b>Owns the material for a link-out entry.</b> Simon Wardley is one of the deepest-traced influences in the corpus and the entry here will carry the resonance only</td></tr>
+      <tr><td><a href="https://graphs.sgit.ai">graphs.sgit.ai</a></td><td>Graphs as the modelling substrate — the grammar, the depth model and the book</td><td><b>Same split.</b> Graphs are the founding obsession; the entry here owns the personal history the sibling does not carry</td></tr>
+      <tr><td><a href="https://open-source.sgit.ai">open-source.sgit.ai</a></td><td>The open-source position: the licences, the packages, and the argument for publishing them</td><td><b>Same split.</b> Two nested entries — <i>The Cathedral and the Bazaar</i> and Torvalds — sit under this one</td></tr>
+      <tr><td><a href="https://coding.sgit.ai">coding.sgit.ai</a></td><td>How software actually gets written here: five languages, the rules, the measured compliance</td><td>The closest methodological sibling. Several trace rows on this site land in conventions that site documents</td></tr>
+      <tr><td><a href="https://llms.sgit.ai">llms.sgit.ai</a></td><td>Working with language models — what they are used for here and what they are not trusted with</td><td>Light overlap</td></tr>
+      <tr><td><a href="https://standards.sgit.ai">standards.sgit.ai</a></td><td>Standards and instruments: the formats, schemas and evidence artefacts</td><td>Shares the register-lives-in-a-vault, site-renders-it architecture</td></tr>
+      <tr><td><a href="https://risks.sgit.ai">risks.sgit.ai</a></td><td>Risk: accepted risks with named acceptors and named mitigations</td><td>Shares the falsifiable-statement discipline that one of this site's entries claims to explain</td></tr>
+      <tr><td><a href="https://nhi.sgit.ai">nhi.sgit.ai</a> · <a href="https://sentinel.sgit.ai">sentinel.sgit.ai</a> · <a href="https://pki.sgit.ai">pki.sgit.ai</a></td><td>Non-human identity, the sentinel that watches it, and key registries for agents</td><td>No overlap. <a href="https://pki.sgit.ai">pki.sgit.ai</a> is the house pattern this site's structure was copied from</td></tr>
+      <tr><td><a href="https://sg-compute.sgit.ai">sg-compute.sgit.ai</a></td><td>The ephemeral compute platform, measured from its own tree</td><td>No overlap</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Three of these need work <em>on the other side</em>, tracked as <a href="../admin/comms.html#tasks">T14</a>: this site will link out to wardley-maps, graphs and open-source, and none of them links back yet.</p>
+
+<h2 id="pipeline">What every site in the network runs</h2>
+<p>The same three jobs, in the same order, gated the same way — described in full on <a href="../admin/index.html#pipeline">this site's engineering page</a>:</p>
+<pre class="shell"><span class="g">validate</span> ──▶ <span class="g">tag-release</span> ──▶ <span class="g">deploy</span>
+<span class="d">#  a failure in any job stops the ones after it; the live site is never</span>
+<span class="d">#  replaced by a release that did not pass its own checks</span>
+</pre>
+<p>The differences between sites are the checks each one adds, and the addition is always the site's own subject made executable. <a href="https://sg-compute.sgit.ai">sg-compute.sgit.ai</a> bans live hostnames and instance ids because it documents running infrastructure. <a href="https://coding.sgit.ai">coding.sgit.ai</a> fails a release if a code example has drifted from the survey it was quoted from, because a style guide with stale examples is worse than none.</p>
+<p>This site adds two. <b><a href="../admin/index.html#no-verbatim">The no-verbatim gate</a></b> caps a third party's quoted words at forty, because this is the one site in the network whose subject matter belongs to other people. And <b><a href="../admin/index.html#tallies">the register-is-the-data check</a></b> recomputes every tier count from the register on every build, because tier movement is this site's changelog and a hand-typed count is what makes a change invisible.</p>
+
+<h2 id="licence">Licence</h2>
+<p>Every page of this site, <a href="../llms.txt">llms.txt</a> and <a href="../llms-full.txt">llms-full.txt</a> are released under <b>CC BY 4.0</b>. Attribution: Dinis Cruz, with AI co-authorship (Claude, Anthropic).</p>
+<p><b>The anchor works are not covered by that, and never will be.</b> Every talk, book, essay, keynote and record this site says shaped the thinking belongs to its author, and is linked rather than rehosted. An agent consuming <a href="../llms-full.txt">llms-full.txt</a> inherits the same split: the file carries this site's analysis and nothing that belongs to a third party.</p>
+
+<div class="pagenav">
+  <a href="../admin/comms.html">← Comms: the briefing queue</a>
+  <a href="../about/participant.html">Participant disclosure →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../documents/index.html">The source documents</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="../admin/index.html">How it is built</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>The network</h4>
+    <a href="../network/index.html">The sgit.ai network</a>
+    <a href="../about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

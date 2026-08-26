@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>influences.sgit.ai — where the thinking came from</title>
+<meta name="description" content="The provenance layer of the sgit.ai memory network: the people, works, topics and things that shaped the founder's thinking, each written as a falsifiable claim about the codebase. This release is the pipeline; the register follows.">
+<link rel="canonical" href="https://influences.sgit.ai/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/index.html">
+<meta property="og:title" content="influences.sgit.ai — an influence is a falsifiable claim">
+<meta property="og:description" content="Not a reading list. Each entry says which patterns from an anchor work appear where in the estate, at which version — and which are still missing.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the pipeline</span>
+  <a class="ver" href="admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="documents/index.html">The source documents</a>
+      <a class="sl" href="llms.txt">llms.txt</a>
+      <a class="sl" href="llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="admin/index.html">The pipeline, end to end</a>
+      <a class="sl" href="admin/versions.html">Release history</a>
+      <a class="sl" href="admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="network/index.html">The sgit.ai network</a>
+      <a class="sl" href="about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="assets/nav.js" defer></script>
+</div></nav>
+
+<header class="hero">
+  <div class="eyebrow">influences.sgit.ai · the sgit.ai network · release v0.1.0</div>
+  <h1>Where the thinking<br>came from</h1>
+  <p class="sub">The provenance layer of the memory network. The other sites teach an agent <b>what</b> the founder thinks and <b>how</b> the estate works; this one is for <b>where the thinking came from</b> — so an agent extends the instincts on purpose rather than by luck.</p>
+  <div class="ctas">
+    <a class="cta1" href="admin/index.html">How this site is built →</a>
+    <a class="cta2" href="admin/versions.html">Release history →</a>
+    <a class="cta2" href="documents/index.html">The source documents →</a>
+  </div>
+</header>
+
+<!-- what this release is -->
+<section class="band alt" id="release">
+  <div class="split">
+    <h2 style="text-align:left;font-size:1.5rem;margin-top:0">This release is the pipeline. The register comes next.</h2>
+    <p style="font-size:.95rem;color:#34363c;line-height:1.7">Every sibling site's early releases tell the same story: content lands, then something in the release machinery turns out to be wrong, and the fix is a release of its own. So this repository shipped the gate first, and publishes an almost-empty site through it — on a tree small enough to read in one sitting.</p>
+<pre class="shell"><span class="d"># every push to dev</span>
+<span class="g">validate</span> ──▶ <span class="g">tag-release</span> ──▶ <span class="g">deploy</span>
+   │             │                │
+   │             │                └─ upload-pages-artifact, deploy-pages
+   │             └─ git push origin refs/tags/vX.Y.Z
+   └─ gen_*.py --check ; node admin/build/validate.js
+
+<span class="d"># six checks in the gate, and two of them are this site's own:</span>
+version agreement · internal links + fragments · canonical host
+<span class="y">the no-verbatim gate</span>   <span class="d"># a third party's words, capped at 40</span>
+<span class="y">the register is the data</span> <span class="d"># tier counts recomputed, never typed</span>
+credential-shape leak tripwire
+</pre>
+    <p class="cap">The two highlighted checks are the site's own rules, made executable rather than stated. <a href="admin/index.html#no-verbatim">Why a quotation cap is a release gate →</a></p>
+  </div>
+</section>
+
+<!-- the thesis -->
+<section class="band" id="thesis">
+  <h2>An influence entry is a falsifiable claim</h2>
+  <p class="blurb">This is what separates the register from every "books that shaped me" listicle, and it is the reason the site exists at all.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="tag">the move</div>
+      <h3>Not "X inspired me" — <i>which</i> pattern, <i>where</i>, at <i>which</i> version</h3>
+      <p>Anyone can say Bret Victor was an influence. The register says which of Victor's patterns appear where in the estate, at which release, and which are still <b>absent</b> — specified precisely enough that an agent could pick one up as a work item.</p>
+    </div>
+    <div class="card">
+      <div class="tag">the format</div>
+      <h3>Seven blocks, proven in use before it was designed</h3>
+      <p>Anchor → the founder's words → the principle → <b>the trace table</b> → the gaps as build specs → a checklist → the wider library. The format was not invented for this site: it was written first, as a working document, and the site was named afterwards.</p>
+    </div>
+    <div class="card">
+      <div class="tag">the tiers</div>
+      <h3>TRACED, STATED, DISCOVERED — and the difference is published</h3>
+      <p>Corpus evidence exists; on the founder's list but not yet in the corpus; or found by mining and never claimed by him at all. A reader can tell a traced claim from a hypothesis without taking the site's word for it.</p>
+    </div>
+    <div class="card">
+      <div class="tag">the rule</div>
+      <h3>Link, never rehost</h3>
+      <p>The site explains why a work resonated and traces where it was applied. The work itself stays where its author put it. That instinct is also the legally correct one — and here it is <a href="admin/index.html#no-verbatim">a check in the release pipeline</a>, not a paragraph in a footer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- what is not here yet -->
+<section class="band alt" id="next">
+  <div class="split">
+    <h2 style="text-align:left;font-size:1.5rem;margin-top:0">What is not here yet</h2>
+    <p style="font-size:.95rem;color:#34363c;line-height:1.7">Stated plainly, because a site about provenance that was vague about its own state would be self-refuting:</p>
+    <ul style="font-size:.93rem;color:#34363c;line-height:1.7">
+      <li><b>The register itself</b> — twenty-five entries across three tiers, from the commissioning pack's seed data. <a href="register/index.html">The empty index is live</a>, generated from a data file that has not been written.</li>
+      <li><b>The influence map</b> — the graph of influences, principles and estate features. <a href="map/index.html">Computed from the register</a>, so it cannot exist before the register does.</li>
+      <li><b>The source documents</b> — the commissioning pack, to be <a href="documents/index.html">published in full</a>, because a site that argues from a document should let you read the document.</li>
+      <li><b>The register format, documented</b>, the tier definitions, and the union of every entry's wider library.</li>
+    </ul>
+    <p class="cap">Everything above is tracked as a numbered task at <a href="admin/comms.html">comms</a>, and every release says what it shipped in <a href="admin/versions.html">one row</a>.</p>
+  </div>
+</section>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="admin/versions.html">v0.1.0</a> · <a href="admin/index.html">engineering</a> · <a href="index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="documents/index.html">The source documents</a>
+    <a href="llms.txt">llms.txt</a>
+    <a href="llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="admin/index.html">How it is built</a>
+    <a href="admin/versions.html">Release history</a>
+    <a href="admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>The network</h4>
+    <a href="network/index.html">The sgit.ai network</a>
+    <a href="about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

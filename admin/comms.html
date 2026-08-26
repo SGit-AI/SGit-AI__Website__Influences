@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comms: the briefing queue · influences.sgit.ai</title>
+<meta name="description" content="Tasks, requests, and the briefing-document queue: one open thread per STATED influence, so the founder's stated plan to write a document about each one has a visible, addressable inbox.">
+<link rel="canonical" href="https://influences.sgit.ai/admin/comms.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/admin/comms.html">
+<meta property="og:title" content="Comms: the briefing queue · influences.sgit.ai">
+<meta property="og:description" content="On other sites this page carries build questions. Here it is also the briefing-document request queue — one thread per stated influence.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the pipeline</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../documents/index.html">The source documents</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../admin/index.html">The pipeline, end to end</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl here" href="../admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / <a href="index.html">admin</a> / comms</div>
+<h1>Comms: tasks, requests and the briefing queue</h1>
+<p class="lead">The working channel between the project lead and the agent building this site, kept in public and updated every release. On the sibling sites this page carries build questions. <b>Here it does one more job</b>: the founder's stated plan — <i>in time I will create a detailed briefing document about each one</i> — becomes a visible, addressable inbox, with <a href="#briefing">one open thread per influence awaiting a briefing</a>. When a document lands, the thread closes and the entry's tier moves.</p>
+
+<h2 id="tasks">Tasks</h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Task</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td>T1</td><td>CI pipeline: validate → auto-tag → deploy, matching the sibling sites</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T2</td><td>Auto-tagging on every push to <code>dev</code>, verified against <code>version.txt</code> and the commit subject, with historical backfill</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T3</td><td>The release gate: version agreement, internal links and fragments, canonical host, credential-shape leak tripwire</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T4</td><td><b><a href="index.html#no-verbatim">The no-verbatim gate</a></b> — this site's founding editorial rule as a check rather than a paragraph: every blockquote declares whose words it carries, and a third party's are capped at forty</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T5</td><td><b><a href="index.html#tallies">The register-is-the-data check</a></b> — every tier count on every page recomputed from <code>data/influences.json</code>, with the orphan checks in both directions</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T6</td><td>Shared chrome — nav, footer, version badge and tallies owned by one script and rewritten across the tree</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T7</td><td>Generators for <a href="../register/index.html">register/</a>, <a href="../map/index.html">map/</a>, <a href="../documents/index.html">documents/</a>, <code>llms-full.txt</code> and <code>sitemap.xml</code>, each with a CI <code>--check</code> drift gate</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T8</td><td><code>!admin/build/</code> in <code>.gitignore</code> — the trap that shipped a sibling site without its own release gate</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T9</td><td>Publish the commissioning pack verbatim under <code>/briefs/</code>, with a generated reader page each</td><td class="verdict"><span class="tstat t-open">next</span></td></tr>
+      <tr><td>T10</td><td><code>data/influences.json</code> — the register, seeded from the pack's <code>influences__seed.json</code> and extended with resonance text, trace rows and research plans</td><td class="verdict"><span class="tstat t-open">next</span></td></tr>
+      <tr><td>T11</td><td>The twenty-five entries, in the build order the brief sets: Victor first, then the link-out entries with sibling sites, then the Semantic Web, flow, Luhmann, the stated seven, and the map</td><td class="verdict"><span class="tstat t-open">next</span></td></tr>
+      <tr><td>T12</td><td><code>/tiers/</code>, <code>/format/</code>, <code>/library/</code> and <code>/shipped/</code> — the tier definitions, the register format documented, the union of every entry's wider library, and the tier-movement changelog</td><td class="verdict"><span class="tstat t-open">next</span></td></tr>
+      <tr><td>T13</td><td>Infographics: original artwork for likenesses, redrawn idea-figures in house style with attribution, each with a markdown or JSON twin as its source data</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
+      <tr><td>T14</td><td>Cross-links <b>from</b> the sibling sites — <a href="https://wardley-maps.sgit.ai">wardley-maps</a>, <a href="https://graphs.sgit.ai">graphs</a> and <a href="https://open-source.sgit.ai">open-source</a> each own the material for one of this site's link-out entries and none of them points back yet</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
+      <tr><td>T15</td><td>Vendor the diagram renderer. <a href="../map/index.html">The map</a> pulls <code>mermaid@11</code> from a third-party CDN at a pinned URL and degrades to a readable text fence when it is unreachable. The fallback works; the dependency is still a dependency</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="briefing">The briefing queue — one thread per influence awaiting a document</h2>
+<p>Seven influences are on the founder's own list and have <b>no corpus evidence at all</b>. That is not a defect in the mining: they are the things nobody else can research. Each gets a thread here, and the entry stays a published stub with its research plan visible until the thread closes.</p>
+<div class="note">
+  <p><b>Suggested order, and why.</b> Start with <b>N1</b> or <b>N6</b> — Neil Peart and the band years are the entries no researcher can substitute for, and the two most likely to change how the rest of the register reads. The others have public material a research pass can work from once the founder confirms the anchor.</p>
+</div>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Influence, and what the briefing needs to settle</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td id="n1">N1</td><td><b>Neil Peart &amp; Rush.</b> The anchor: which record, which lyric, which period. The hypothesis to test rather than assert — the craftsman-lyricist archetype, technical mastery in service of meaning. <span class="dim small">Note the boundary: this entry describes and links. Lyrics are the one place where even a verse is a legal risk, and the entry quotes at most a fragment under analysis.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n2">N2</td><td><b>Kevin Kelly's books.</b> Which is the anchor — <i>What Technology Wants</i>, <i>The Inevitable</i>, or the <i>1,000 True Fans</i> essay? And is the technium-to-Wardley-evolution connection real or a plausible-looking coincidence?</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n3">N3</td><td><b>Simon Sinek — the golden circle.</b> Anchor: the book or the talk? The site network is organised why-first, which is either evidence or hindsight, and only the founder can say which.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n4">N4</td><td><b><i>The Cathedral and the Bazaar</i>.</b> The essay's factual history belongs to <a href="https://open-source.sgit.ai">open-source.sgit.ai</a>. This entry owns only what it <em>did to the founder</em>, and that is exactly the part not written down anywhere.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n5">N5</td><td><b>David Rice — "Upon the Threshold of Opportunity".</b> Which year's OWASP keynote is canonical, and is there a recording whose licence permits an embed? <span class="dim small">OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n6">N6</td><td><b>Music, and playing in a band.</b> Entirely unresearchable by anyone else. The hypothesis worth testing: band-playing as the original experience of real-time collaborative flow — the thing the estate's development methodology tries to recreate in software.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n7">N7</td><td><b>Diverse and distributed teams.</b> Research plan is written: the founder's management writing, the estate's team-roles system, and OWASP's global-chapter model as the formative experience. The briefing needs to say which of those is the origin and which is the consequence.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="questions">Questions — these need an answer from a person</h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Question</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td id="q1"><b>Q1</b></td><td><b>The full text of the Bret Victor register.</b> The commissioning pack ships a faithful summary of its structure and closing argument; the full text lives with the founder, supplied in conversation and not retained across a context boundary. <b>Entry one cannot ship complete without it</b> — the site publishes what the pack carries, clearly marked as the summary, and swaps in the original the moment it arrives. This is the first ask.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q2"><b>Q2</b></td><td><b>Confirm or demote the discovered influences.</b> Luhmann, Christopher Alexander, Team Topologies/Cynefin and Vannevar Bush were found by mining the corpus and never named by the founder. Do they belong, or are any of them a citation rather than an influence? <b>The falsifiability of this site starts with the founder falsifying its discoveries.</b> <span class="dim small">Design and Steve Jobs: already confirmed, 25 August 2026 — the first discovered → confirmed transition, before the site existed.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q2b">Q2b</td><td><b>The Design entry's anchor.</b> Which artefact is canonical — the "design is how it works" formulation, the MP3-to-CD whiteboard story, a keynote, Ive's process, a specific product? And when did Design-with-a-capital-D become explicit in the thinking rather than implicit in the work?</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q3">Q3</td><td><b>Anchors to confirm</b> across the stated seven — Kelly, Sinek, Rice. Rolled into <a href="#briefing">the briefing threads</a> above rather than asked twice.</td><td class="verdict"><span class="tstat t-done">merged into N2/N3/N5</span></td></tr>
+      <tr><td id="q4"><b>Q4</b></td><td><b>Are there influences you rejected?</b> Things everyone assumes shaped the work but did not, or that were outgrown. An entry with <code>status: counter-influence</code> would be unusual on the web and very much in this site's spirit — a register that can only add is not falsifiable in the direction that matters.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q5">Q5</td><td><b>Where did graphs actually enter?</b> The founding obsession has an entire sibling site and no recorded origin. O2 Platform's code-flow work, or earlier? The link-out entry owns the personal history and nothing else, so this is the only thing it needs.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q6">Q6</td><td><b>Does <a href="../map/index.html">the map</a> belong here or on the graphs sibling</b> once it becomes a real G³ demonstration? Proposal: authored here, mirrored there — the influence graph is this site's content, and its rendering is that site's subject.</td><td class="verdict"><span class="tstat t-need">for the lead</span></td></tr>
+      <tr><td id="q7">Q7</td><td><b>Infographics and likenesses.</b> The founder asked for infographics of people and ideas. The rule this site adopts: likenesses are original artwork only, never scraped photographs and never AI renderings presented as portraits; idea-figures are redrawn in house style with the idea's author attributed. That needs either an artist pass or a generation workflow the founder approves. <span class="dim small">Tracked as T13.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="requests">Requests — build-side, for the lead</h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Request</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td id="r1"><b>R1</b></td><td><b>The corpus is cited, not resolved.</b> Every entry lists the files that put it in its tier, by path. <b>This repository holds the website, not the corpus</b>, so those paths are quoted from the mining run behind the commissioning pack (v0.33.62, 25 August 2026) rather than checked against the repositories at build time. Nothing on the site can disagree with the pack; the site can and will drift from the estate. Closing it needs a decision: give this build read access to the corpus and re-run the scan as a build step, or accept a dated snapshot and re-scan per release.</td><td class="verdict"><span class="tstat t-need">for the lead</span></td></tr>
+      <tr><td id="r2"><b>R2</b></td><td><b>Trace rows without versions.</b> The register format's own rule is that a trace table without version numbers is an opinion. The mining run reached files and named them; it did not always record the release they were read at. Rows are marked where a version is missing and the entry says how many — but the real fix is the same access R1 asks for.</td><td class="verdict"><span class="tstat t-need">for the lead</span></td></tr>
+      <tr><td id="r3">R3</td><td><b>Two decades of earlier material are unmined.</b> The corpus scanned for this pack is the current estate plus the current docs site. The O2 Platform-era blog, OWASP talks, conference decks and the earlier books were not reachable — and they are exactly where the stated influences' traces will be found. The per-entry research plans say where to look; someone has to be able to look.</td><td class="verdict"><span class="tstat t-need">for the lead</span></td></tr>
+      <tr><td id="r4">R4</td><td><b>GitHub Pages environment.</b> The workflow calls <code>configure-pages</code> with <code>enablement: true</code> and deploys from <code>dev</code>, which is this repository's default branch. On the sibling sites the first deploy job failed until the <code>github-pages</code> environment recognised the branch. This release is the test.</td><td class="verdict"><span class="tstat t-open">testing</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="notes">Notes from the build</h2>
+<ul>
+  <li><b>The pipeline was built first, deliberately.</b> Every sibling site's early releases are the same story: content lands, then something in the release machinery turns out to be wrong, and the fix is a release of its own. Publishing an almost-empty site through the full gate proves the gate on a tree small enough to read in one sitting.</li>
+  <li><b>Two of the six checks are editorial, and that is the point.</b> <a href="index.html#no-verbatim">The no-verbatim gate</a> and <a href="index.html#tallies">the register-is-the-data check</a> encode rules this site would otherwise merely state in a footer. A site whose thesis is that a claim should be checkable is in a poor position to publish unchecked claims about itself.</li>
+  <li><b>One trap was inherited and pre-empted.</b> The Python <code>.gitignore</code> this repository starts from carries <code>build/</code>, which silently swallows <code>admin/build/</code>. A sibling site shipped a first release whose validate job died on a missing file before it could check anything — the checks appeared to run and did not. The <code>!admin/build/</code> negation is in this repository's first commit.</li>
+  <li><b>Nothing here claims to be finished.</b> The nav lists the pages that exist, the version badge says what stage this is, and <a href="versions.html">the release history</a> says what shipped in one row per release. All three are easier to grow than to walk back.</li>
+</ul>
+
+<div class="pagenav">
+  <a href="versions.html">← Release history</a>
+  <a href="../network/index.html">The network →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../documents/index.html">The source documents</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="../admin/index.html">How it is built</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>The network</h4>
+    <a href="../network/index.html">The sgit.ai network</a>
+    <a href="../about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

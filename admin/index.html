@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How this site is built · influences.sgit.ai</title>
+<meta name="description" content="The pipeline, the release gate, the auto-tagger and the generators. A static site with no framework and no server, and a release that refuses to publish if it fails its own checks.">
+<link rel="canonical" href="https://influences.sgit.ai/admin/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="influences.sgit.ai">
+<meta property="og:url" content="https://influences.sgit.ai/admin/index.html">
+<meta property="og:title" content="How this site is built · influences.sgit.ai">
+<meta property="og:description" content="validate → tag → deploy, with six checks in the gate — two of which enforce this site's own editorial rules rather than stating them.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the pipeline</span>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni ni-has">
+      <a class="nl" href="../documents/index.html">For agents<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../documents/index.html">The source documents</a>
+      <a class="sl" href="../llms.txt">llms.txt</a>
+      <a class="sl" href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../admin/index.html">How this site is built<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../admin/index.html">The pipeline, end to end</a>
+      <a class="sl" href="../admin/versions.html">Release history</a>
+      <a class="sl" href="../admin/comms.html">Comms: the briefing queue</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__Influences">★ GitHub</a>
+  <script src="../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+<div class="crumb"><a href="../index.html">influences.sgit.ai</a> / admin / how this site is built</div>
+<h1>How this site is built</h1>
+<p class="lead">A static site, in one repository, deployed by GitHub Pages from the <code>dev</code> branch. There is no framework, no build step you have to install, and no server. What there <em>is</em> is a release pipeline that refuses to publish a site that fails its own checks — and that pipeline is the first thing this site shipped, before it had a single influence entry to publish.</p>
+
+<div class="note">
+  <p><b>Everything below runs identically on a laptop and in CI.</b> That is the whole design: the commands in <a href="#release">the release checklist</a> are the commands the workflow runs, so a release that passes locally passes in CI, and a release that fails in CI fails the same way in front of you.</p>
+</div>
+
+<h2 id="pipeline">The pipeline: three jobs, each gating the next</h2>
+<p>One workflow, <code>.github/workflows/deploy-pages.yml</code>, on every push to <code>dev</code> and <code>main</code>, on every pull request against them, and on manual dispatch.</p>
+
+<pre class="shell"><span class="d"># push to dev</span>
+<span class="g">validate</span> ──▶ <span class="g">tag-release</span> ──▶ <span class="g">deploy</span>
+   │             │                │
+   │             │                └─ upload-pages-artifact, deploy-pages
+   │             └─ git push origin refs/tags/vX.Y.Z
+   └─ gen_*.py --check ; node admin/build/validate.js
+
+<span class="d"># pull request  → validate only (no tag, no deploy)</span>
+<span class="d"># push to main  → validate, deploy; tag-release skips</span>
+<span class="d"># dispatch      → validate, deploy; tag-release skips</span>
+</pre>
+
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>Job</th><th>Runs when</th><th>What it does</th><th>If it fails</th></tr></thead>
+    <tbody>
+      <tr><td><b>validate</b></td><td>always</td><td>Re-runs every generator in <code>--check</code> mode, then <code>node admin/build/validate.js</code></td><td>Nothing is tagged and nothing is deployed. The live site is untouched.</td></tr>
+      <tr><td><b>tag-release</b></td><td>push to <code>dev</code> only</td><td>Works out this release's tag, verifies it against the version file and the commit subject, pushes it</td><td>No deploy. The release is wrong, not the site — fix the version and push again.</td></tr>
+      <tr><td><b>deploy</b></td><td>any push or dispatch, never a PR</td><td>Assembles the tree (minus <code>.git</code>, <code>.github</code>) and publishes it to GitHub Pages</td><td>The previously deployed version stays live.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p><b><code>main</code> is deploy-only, on purpose.</b> <code>tag-release</code> is gated on <code>refs/heads/dev</code>, so a push to <code>main</code> validates and publishes without writing a tag. That makes <code>main</code> usable as a deploy test or a fallback without polluting the tag history.</p>
+
+<h2 id="gate">The release gate</h2>
+<p><code>admin/build/validate.js</code> is plain Node with no dependencies, so it runs anywhere Node exists. Six checks, in order, and any failure exits non-zero:</p>
+
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Check</th><th>Why it exists</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>Version agreement</b> — <code>admin/build/version.txt</code> against every page's version badge, the row in <a href="versions.html">the versions table</a>, <code>llms.txt</code>, <code>llms-full.txt</code> and <code>index.md</code>, with no version listed twice</td><td>A version that means different things in different files means nothing. The duplicate check exists because a blanket version-bump <code>sed</code> across a sibling site once rewrote the history table and shipped two rows with the same number.</td></tr>
+      <tr><td>2</td><td><b>Internal links</b> — every relative <code>href</code> and <code>src</code> resolves to a file that exists, <b>and every <code>#fragment</code> resolves to an <code>id</code> on the page it names</b></td><td>A static site's most common defect, and the one nobody notices until a reader does. The fragment half matters here because this site cross-links by <em>block</em> — a principle, a trace row, a gap spec — and a renamed heading turns every one of those into a link that lands at the top of the right page and says nothing.</td></tr>
+      <tr><td>3</td><td><b>Canonical host</b> — every page declares a <code>rel="canonical"</code>, and every canonical and <code>og:url</code> is on the host named in <code>CNAME</code></td><td>A page that claims a canonical URL on the wrong host is worse than one that claims none. <code>CNAME</code> is the single source of truth for the hostname, here and in the generators.</td></tr>
+      <tr><td>4</td><td><b>The no-verbatim gate</b> — every <code>&lt;blockquote&gt;</code> declares whose words it carries, and a third party's are capped at 40 words</td><td>This site's founding rule, made executable. See below.</td></tr>
+      <tr><td>5</td><td><b>The register is the data</b> — every influence in <code>data/influences.json</code> has a page, every register page is in the data, and every tier count written into a page is recomputed from the data and must agree</td><td>Tier movement is the one event this site exists to record, and a hand-typed count is the first thing it makes wrong. See below.</td></tr>
+      <tr><td>6</td><td><b>The leak tripwire</b> — nothing in the tree may look like a vault key, an AWS access key id, a GitHub token, an API secret, a private key block, a Slack token or an AWS account id</td><td>Inherited from the sibling sites unchanged. This site quotes fewer real sessions than <a href="https://coding.sgit.ai">coding.sgit.ai</a> does, which is exactly why it is worth keeping: the check that only runs when you expect a problem is the check that is not running when you have one.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="no-verbatim">The no-verbatim gate — this site's rule, as a check</h3>
+<p>The founder set the rule himself: the site explains what resonates and why, and traces where it was applied — it does not reproduce the influences' own work. That instinct is also the legally correct one. This site's <b>analysis, resonance text and trace tables are original work</b> and carry CC BY 4.0 cleanly. The anchor works — talks, books, keynotes, music — are other people's copyrighted material, and a CC BY site that rehosted them would be relicensing what it does not own.</p>
+<p>A rule that load-bearing is worth a gate rather than a paragraph, so:</p>
+<ul>
+  <li>Every <code>&lt;blockquote&gt;</code> on the site carries <code>data-quote</code>, naming whose words it holds.</li>
+  <li><code>data-quote="founder"</code> is unrestricted — Dinis Cruz's own articles, briefs and registers are his to publish, and the register format runs on them.</li>
+  <li>Anything else is a third party and is capped at <b>40 words</b>: a sentence or two, quoted in order to be examined, which is the fair-dealing core.</li>
+</ul>
+<div class="warnbox">
+  <p><b>What the gate cannot do, stated plainly.</b> It cannot see an unmarked quotation woven
+  into a paragraph, and it cannot tell you whether a 39-word quotation was fair. What it can do
+  is make the marked case cheap and the unmarked case a review finding, and stop the one failure
+  mode that actually ships: a long passage pasted in whole because it was useful at the time.</p>
+  <p><b>The fix for a tripped gate is to cut the quotation, never to raise the cap.</b> That
+  sentence is in the source of the check, next to the number, for the release where somebody is
+  tempted.</p>
+</div>
+<p><b>Lyrics are the sharpest edge.</b> Music publishers enforce aggressively even for a single verse, so the entries touching music describe and link, and quote at most a fragment under analysis. The same applies to likenesses: infographics <em>of people</em> use original artwork, never scraped photographs — several of these people are alive and known to this project's community, and that is a matter of respect before it is a matter of personality rights.</p>
+
+<h3 id="tallies">The register is the data</h3>
+<p>Twenty-five entries in three tiers, and the counts appear on the front page, the register index, the tiers page and <code>llms.txt</code>. <b>None of those numbers is typed by a person.</b> A page writes an empty slot —</p>
+<pre class="shell"><span class="d">&lt;!-- in the page source --&gt;</span>
+&lt;span class="tally" data-k="<span class="cy">traced</span>"&gt;&lt;/span&gt; traced, &lt;span class="tally" data-k="<span class="cy">stated</span>"&gt;&lt;/span&gt; stated
+
+<span class="d"># chrome.py fills it, from data/influences.json</span>
+<span class="d"># validate.js recomputes the same counts from the same file and fails on disagreement</span>
+</pre>
+<p>Both halves have to be wrong in the same direction to ship a wrong count, and the check is independent of the filler rather than a re-read of its output. The reason this earns a gate at all: <b>tier movement is this site's changelog.</b> An entry going STATED → TRACED because a briefing document landed is the most interesting event this site records, and a hand-typed "seven stated" on three pages is what makes that event invisible.</p>
+<p>The same check catches the two orphan cases: an influence in the data with no page (someone forgot to re-run the generator) and a page with no influence in the data (a claim with nothing behind it).</p>
+
+<h3 id="leak">The leak tripwire</h3>
+<p>The gate scans <em>every</em> file in the tree, not just the HTML, for credential <b>shapes</b>: a vault key, an AWS access key id, a GitHub token, an API secret, a PEM private key block, a Slack token, and a bare 12-digit number — the shape of an AWS account id. <b>The fix for a tripped wire is always to redact the snippet, never to widen the pattern.</b> The one file exempt from the scan is <code>validate.js</code> itself, which necessarily carries the patterns; that exemption is what makes them writable at all.</p>
+<p>Note what the patterns deliberately are not: none of them contains a real value. A tripwire that hard-codes the secret it is looking for has published the secret in the tripwire.</p>
+
+<h2 id="tagging">How CI decides the tag</h2>
+<p>Every push to <code>dev</code> is a minor release. The version is owned by one file and stated twice, and CI refuses to tag unless both agree:</p>
+<pre class="shell"><span class="d"># 1. the file that owns it</span>
+admin/build/version.txt        <span class="y">v0.1.0</span>
+
+<span class="d"># 2. the release commit's subject</span>
+git commit -m "site <span class="y">v0.1.0</span>: the pipeline, before the register"
+
+<span class="d"># CI then checks, in this order:</span>
+newest release commit's version == version.txt   <span class="d"># or: error, the two disagree</span>
+tag vX.Y.Z sits on THAT commit                    <span class="d"># or: error, version was not bumped</span>
+vX.Y.Z is the next minor after the latest tag     <span class="d"># or a deliberate major to .0</span>
+git push origin refs/tags/vX.Y.Z                  <span class="d"># the load-bearing push</span>
+</pre>
+<p>Three details are worth knowing, because each of them is a bug that was fixed once already on a sibling site:</p>
+<ul>
+  <li><b>The release commit is not always HEAD.</b> When a pull request lands as a merge commit, HEAD is the merge and the release commit is its parent. Every check anchors to the newest commit whose subject carries a version, not to HEAD.</li>
+  <li><b>Historical tags are backfilled.</b> On its first run the job reads the whole history and tags any commit whose subject carries a version it cannot find a tag for. It is idempotent, so it is a no-op on every run afterwards, and it checks the remote before pushing so it does not repeat work it has already done.</li>
+  <li><b>A backfilled tag can be legitimately rejected.</b> <code>GITHUB_TOKEN</code> cannot push a ref onto a commit whose tree carries a different <code>.github/workflows</code> blob. Those are reported as warnings and the job still succeeds — the release's own tag is the load-bearing one, and a human can complete the set with <code>git push origin --tags</code>.</li>
+</ul>
+<div class="note">
+  <p><b>One more trap, inherited from the shell script itself.</b> The job reads the history once, into a variable, rather than piping <code>git log</code> into an early-exiting reader. Under <code>set -o pipefail</code>, a <code>git log</code> killed by SIGPIPE propagates its exit status out of the command substitution and kills the job — after the variable has been assigned, which makes it look like the <em>next</em> line failed. It is a race against the pipe buffer, so it passes on a short history and starts failing once the log outgrows it.</p>
+</div>
+
+<h2 id="generated">What is generated, and how drift is caught</h2>
+<p>Anything that restates something else is generated from it. A hand-maintained twin of a file is a stale artefact with a longer fuse — the sitemap that forgets a page, the "full text" file that is missing three documents, the markdown twin that still describes last month's trace table.</p>
+
+<div class="tablewrap">
+  <table>
+    <thead><tr><th>File</th><th>Owns</th><th>Generated from</th></tr></thead>
+    <tbody>
+      <tr><td><code>admin/build/version.txt</code></td><td>The version — single source of truth</td><td>hand-edited, once per release</td></tr>
+      <tr><td><code>data/influences.json</code></td><td><b>The register.</b> Every entry, tier, anchor, principle, trace row and research plan</td><td>hand-edited; seeded from the commissioning pack</td></tr>
+      <tr><td><code>admin/build/chrome.py</code></td><td>The nav and footer of every page, the version badge, and the tier tallies</td><td>one definition in the script, plus <code>data/influences.json</code></td></tr>
+      <tr><td><code>admin/build/pagelib.py</code></td><td>The shared page shell, the write-or-check writer, and the tiny markdown the register's prose is authored in</td><td>—</td></tr>
+      <tr><td><code>admin/build/gen_register.py</code></td><td><code>register/</code> — every entry, its markdown twin, and its trace table as page, markdown and JSON</td><td><code>data/influences.json</code></td></tr>
+      <tr><td><code>admin/build/gen_map.py</code></td><td><code>map/</code> — the influence graph and <code>map/graph.json</code></td><td><code>data/influences.json</code></td></tr>
+      <tr><td><code>admin/build/gen_documents.py</code></td><td><code>documents/</code></td><td><code>data/documents.json</code> + <code>briefs/*.md</code></td></tr>
+      <tr><td><code>admin/build/gen_llms_full.py</code></td><td><code>llms-full.txt</code></td><td><code>llms.txt</code>, <code>index.md</code>, <code>register/*/index.md</code>, <code>briefs/*.md</code></td></tr>
+      <tr><td><code>admin/build/gen_sitemap.py</code></td><td><code>sitemap.xml</code></td><td>the tree, dated from <a href="versions.html">the versions table</a></td></tr>
+      <tr><td><code>admin/build/validate.js</code></td><td>The release gate</td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p><b>Every generator has a <code>--check</code> mode, and CI runs all of them before the gate.</b> A generated page that has drifted from its source is a build failure here, not a warning: the whole reason a page is generated is that nobody has to remember to update it, and a drifted page quietly breaks that promise.</p>
+
+<h3 id="twins">Why the markdown twins are generated too</h3>
+<p>Every register entry publishes an HTML page and a markdown twin at the same URL stem, and the twin is not a second copy. Each sentence of prose is authored <b>once</b>, in <code>data/influences.json</code>, in a deliberately tiny markdown — links, bold, italic, code — and rendered twice. Two renderings of one string cannot drift. Writing the page by hand and the twin by hand is the arrangement that always does.</p>
+
+<h2 id="release">The release checklist</h2>
+<p>These are the commands the workflow runs, in this order, for the reason each note gives:</p>
+<pre class="shell"><span class="d"># 1. bump the version — exactly once per release — and add a row to admin/versions.html</span>
+<span class="d"># 2. regenerate the pages that come from data</span>
+python3 admin/build/gen_register.py
+python3 admin/build/gen_map.py
+python3 admin/build/gen_documents.py
+
+<span class="d"># 3. chrome AFTER the generators: it propagates the version badge, the nav and the</span>
+<span class="d">#    tallies into the pages they have just produced</span>
+python3 admin/build/chrome.py
+
+<span class="d"># 4. the files that read the tree and the stamped twins — AFTER chrome, or they</span>
+<span class="d">#    assemble a stale version line</span>
+python3 admin/build/gen_llms_full.py
+python3 admin/build/gen_sitemap.py
+
+<span class="d"># 5. validate exactly what CI validates</span>
+python3 admin/build/gen_register.py  --check
+python3 admin/build/gen_documents.py --check
+python3 admin/build/gen_map.py       --check
+python3 admin/build/gen_llms_full.py --check
+python3 admin/build/gen_sitemap.py   --check
+node admin/build/validate.js
+
+<span class="d"># 6. ship it</span>
+git commit -am "site vX.Y.Z: ..." &amp;&amp; git push -u origin dev
+</pre>
+
+<h2 id="trap">One inherited trap, pre-empted</h2>
+<p>The Python <code>.gitignore</code> this repository starts from carries <code>build/</code>, which silently swallows <code>admin/build/</code> — a sibling site shipped a first release whose validate job died on a missing file before it could check anything. The checks appeared to run and did not. The <code>!admin/build/</code> negation is in this repository's first commit.</p>
+
+<div class="pagenav">
+  <a href="../index.html">← Front page</a>
+  <a href="versions.html">Release history →</a>
+</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">influences<span>.sgit.ai</span></div>
+    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
+    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.1.0</a> · <a href="../admin/index.html">engineering</a></p>
+  </div>
+  <div>
+    <h4>For agents</h4>
+    <a href="../documents/index.html">The source documents</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+  </div>
+  <div>
+    <h4>This site</h4>
+    <a href="../admin/index.html">How it is built</a>
+    <a href="../admin/versions.html">Release history</a>
+    <a href="../admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>The network</h4>
+    <a href="../network/index.html">The sgit.ai network</a>
+    <a href="../about/participant.html">Participant disclosure</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

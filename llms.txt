@@ -1,0 +1,92 @@
+# influences.sgit.ai — where the thinking came from
+
+> The provenance layer of the sgit.ai memory network: the people, works, topics and things that
+> shaped the founder's thinking, each written as a FALSIFIABLE CLAIM ABOUT THE CODEBASE rather
+> than an appreciation. An entry names which patterns from an anchor work appear where in the
+> estate, at which version, and which are still absent — specified precisely enough to build.
+
+Site version: v0.1.0 (26 August 2026). Published by the sgit project, which is also the subject
+of every claim on this site — participant disclosure at /about/participant.html. All site content
+CC BY 4.0.
+
+## What this release is
+
+The pipeline, before the register. Validation, auto-tagging and deployment are live and proven;
+the twenty-five influence entries have not been written. That order is deliberate: a site whose
+release gate works can publish anything safely, and a site full of pages with no gate cannot.
+
+## The rule an agent consuming this site must inherit
+
+THE ANCHOR WORKS ARE NOT HERE, AND WILL NEVER BE. This site explains why a work resonated and
+traces where it was applied; it does not reproduce the talks, essays, books or lyrics that did
+the influencing. Those are linked, never rehosted — they belong to their authors, and a CC BY
+site that carried them would be relicensing what it does not own. Short attributed quotation for
+analysis is capped at 40 words BY THE RELEASE GATE, not by convention. Lyrics are the sharpest
+edge and get description and a link, never reproduction.
+
+Concretely: /llms-full.txt is safe to ingest wholesale. It contains this site's own analysis and
+nothing that belongs to a third party.
+
+## Properties agents may rely on
+
+- The register will live at /register/<slug>/index.html, with a markdown twin at
+  /register/<slug>/index.md and, where the entry has a trace table, the same rows as data at
+  /register/<slug>/trace/trace.json. Slugs are people or topics, never works — an anchor work is
+  metadata inside the entry, because a briefing document may reveal the real anchor was a
+  different talk.
+- /data/influences.json will be the register. Every page under /register/ is generated from it;
+  the tier counts on every page are recomputed from it on every build and checked independently
+  by the release gate. No number about this site's own shape is typed by a person.
+- /map/graph.json will carry the influence graph — nodes, edges and the places a pattern lands
+  in the estate — computed from the same file. The map is generated, not drawn.
+- /llms-full.txt is this site in one fetch: the index, the front page, every register entry's
+  markdown twin and every source document. GENERATED and re-checked in CI, so it cannot say
+  anything the site does not.
+- /sitemap.xml is generated from the tree, so it cannot omit a page somebody forgot to add.
+- The version in /admin/build/version.txt agrees with the badge on every page, the release
+  history table, this file, /llms-full.txt and /index.md — CI fails the release otherwise.
+
+## The three tiers
+
+- TRACED — corpus evidence exists today. The claim is checkable against the files the entry
+  lists.
+- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
+  the research plan visible, awaiting his briefing document. The roadmap, not the debt.
+- DISCOVERED — surfaced by mining the corpus, never named by the founder. The claim rests
+  entirely on the trace table until he confirms or corrects it. The site's falsifiability applied
+  to itself.
+
+Tier movement is this site's changelog: STATED → TRACED when a briefing lands, DISCOVERED →
+TRACED when the founder confirms, and a trace row flipping absent → implemented when the estate
+builds a gap. A provenance site whose provenance changed silently would be self-refuting.
+
+## The pages that exist today
+
+- /index.html — what this release is, and what an influence entry is. Markdown twin: /index.md
+- /register/index.html — the register index. Empty: the entries are not written.
+- /map/index.html — the influence map. Empty: it is computed from the register.
+- /documents/index.html — the source documents. Empty: the commissioning pack is not unpacked
+  into the tree yet.
+- /admin/index.html — how this site is built: the pipeline, the gate, the tagger, the
+  generators. /admin/versions.html — the release history. /admin/comms.html — tasks, and the
+  briefing-document request queue.
+- /network/index.html — the sibling sites and the boundaries between them.
+- /about/participant.html — who publishes this and how it is written.
+
+## What is NOT here, and is next
+
+- The twenty-five register entries, from the pack's seed data: 15 traced, 7 stated, 3 discovered
+  and still awaiting confirmation.
+- /tiers/, /format/, /library/ and /shipped/ — the tier definitions, the register format
+  documented, the union of every entry's wider library, and the tier-movement changelog.
+- The full text of the founder's Bret Victor register, which is entry one and which this
+  environment does not hold. First ask in the comms queue.
+
+## Related
+
+- https://sgit.ai — the parent project and the network index
+- https://wardley-maps.sgit.ai — the trace of one influence is an entire sibling site
+- https://graphs.sgit.ai — the same, for the founding obsession
+- https://open-source.sgit.ai — the same, for open source and its licences
+- https://coding.sgit.ai · https://llms.sgit.ai · https://standards.sgit.ai
+- https://risks.sgit.ai · https://nhi.sgit.ai · https://pki.sgit.ai
