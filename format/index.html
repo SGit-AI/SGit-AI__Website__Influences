@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">the provenance layer</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.3.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.4.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -61,10 +61,11 @@
       </div>
     </div>
     <div class="ni ni-has">
-      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <a class="nl" href="../about/index.html">About<span class="caret">&#9662;</span></a>
       <div class="sub">
-      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/index.html">Dinis Cruz — whose register this is</a>
       <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
       <a class="sl" href="../llms.txt">llms.txt</a>
       <a class="sl" href="../llms-full.txt">llms-full.txt</a>
       </div>
@@ -77,7 +78,7 @@
 <main class="doc">
 <div class="crumb"><a href="../index.html">influences.sgit.ai</a> / format</div>
 <h1>The register format</h1>
-<p class="lead">Seven blocks, in this order, for every entry that earns them. The format was <b>not designed for this site</b>: the founder wrote an <i>immediate-connection register</i> for Bret Victor's <i>Inventing on Principle</i> as a working document about the estate's viewer, and then asked what a site made of such documents should be called. That ordering matters — the format is <b>proven in use</b>, not designed on spec.</p>
+<p class="lead">Seven blocks, in this order, for every entry that earns them. The format was <b>not designed for this site</b>: Dinis Cruz wrote an <i>immediate-connection register</i> for Bret Victor's <i>Inventing on Principle</i> as a working document about the estate's viewer, and then asked what a site made of such documents should be called. That ordering matters — the format is <b>proven in use</b>, not designed on spec.</p>
 
 <div class="note">
   <p><b>The one move that makes this different from a reading list.</b> The format treats an influence as a <b>falsifiable claim about the codebase</b>. Anyone can say Victor inspired them. The register says <i>which</i> of Victor's patterns appear <i>where</i> in the estate, at <i>which</i> version — and which are still missing, specified precisely enough to build. <a href="../register/popper/index.html">Popper is the influence that explains the format itself</a>, which is a satisfying loop and also a slightly circular one.</p>
@@ -90,15 +91,15 @@
 <p>For a person, the anchor is the single work that did the shaping, not the whole career. For a topic, an era or a community, it is the first documented contact with it. Slugs on this site are people and topics rather than works — <code>/register/bret-victor/</code>, not <code>/register/inventing-on-principle/</code> — precisely because <b>an anchor can be superseded</b>: a briefing document may reveal that the real anchor was a different talk, and a URL that encoded the wrong one would be wrong forever.</p>
 <p>Where the anchor is not yet settled, the block says so rather than picking one. Three entries are in that state today.</p>
 
-<h3 id="block2"><span class="bn">Block 2</span> The founder's words</h3>
+<h3 id="block2"><span class="bn">Block 2</span> Dinis Cruz's words</h3>
 <p>Why this resonates, in first person. <b>This is the only site in the network where first person is the house style</b> — <i>what resonates with me and why</i> is the genre, and paraphrasing it into corporate third person would destroy the evidence.</p>
-<p>Until the briefing document for an entry arrives, this block carries whatever first-person statements already exist in the corpus, cited by file. Where none exist, the block says explicitly that what follows is <b>the site's reading of the evidence, not the founder's words</b>, and stays labelled that way.</p>
+<p>Until the briefing document for an entry arrives, this block carries whatever first-person statements already exist in the corpus, cited by file. Where none exist, the block says explicitly that what follows is <b>the site's reading of the evidence, not Dinis Cruz's words</b>, and stays labelled that way.</p>
 <p>Quotations here are marked up with the person whose words they are, and <a href="#no-verbatim">the release gate reads that marking</a>. A blockquote on this site cannot be anonymous.</p>
 
 <h3 id="block3"><span class="bn">Block 3</span> The principle</h3>
 <p>The influence distilled to one transferable sentence — the thing an agent can actually apply. Victor's is <i>immediate connection between creator and creation</i>. Wardley's is <i>situational awareness before strategy</i>.</p>
 <p><b>The test:</b> the principle must be usable by someone who has never consumed the anchor work. A principle that only makes sense if you have watched the talk has not been distilled, it has been summarised.</p>
-<p>On stub entries the principle is often a <b>hypothesis constructed from public knowledge</b> rather than from anything the founder has written, and every such principle says so in its own text. That is not a hedge — it is the difference between a claim the site is making and a placeholder waiting to be corrected.</p>
+<p>On stub entries the principle is often a <b>hypothesis constructed from public knowledge</b> rather than from anything Dinis Cruz has written, and every such principle says so in its own text. That is not a hedge — it is the difference between a claim the site is making and a placeholder waiting to be corrected.</p>
 
 <h3 id="block4"><span class="bn">Block 4</span> The trace table</h3>
 <p><b>The heart of the format and the falsifiable part.</b> Rows of: pattern from the anchor → where the estate implements it → version → status.</p>
@@ -137,22 +138,22 @@
 <p>Not every entry earns all seven blocks on day one, and pretending otherwise would produce padding. The format defines three reduced forms and <a href="../admin/index.html#generated">the generator implements exactly those</a>.</p>
 
 <h3 id="full">full — <span class="tally" data-k="full">13</span> entries</h3>
-<p>The seven blocks, or as many as the evidence supports. An entry can be <i>full</i> and still have an empty trace table: <a href="../register/bret-victor/index.html">the Victor entry</a> is the model for the whole site and its table is missing, because the register that contains it is with the founder. The entry says that in the place the table would be, which is more useful than an invented table and more honest than an omitted block.</p>
+<p>The seven blocks, or as many as the evidence supports. An entry can be <i>full</i> and still have an empty trace table: <a href="../register/bret-victor/index.html">the Victor entry</a> is the model for the whole site and its table is missing, because the register that contains it is with Dinis Cruz. The entry says that in the place the table would be, which is more useful than an invented table and more honest than an omitted block.</p>
 
 <h3 id="link-out">link-out — <span class="tally" data-k="link-out">3</span> entries</h3>
 <p>Blocks 1–3, and then a <b>pointer</b> where the trace table would be: <i>the trace of this influence is an entire site</i>. <a href="../register/wardley/index.html">Wardley</a>, <a href="../register/graphs/index.html">graphs</a> and <a href="../register/open-source/index.html">open source</a> each have a sibling site carrying their material.</p>
 <p>Duplicating that material here would break <a href="../network/index.html#deconflict">the deconfliction rule</a>: two sites making the same argument slightly differently is the real failure mode for a network, and it is worse than a dead link. <b>The influence entry owns the resonance; the sibling owns the material.</b> An entry that grows past resonance-and-trace has scope-crept, and the fix is to move the material and keep the pointer.</p>
 
 <h3 id="stub">stub — <span class="tally" data-k="stub">9</span> entries</h3>
-<p>Blocks 1 and 3 at best current knowledge, an explicit awaiting-briefing marker, and <b>the research plan published</b> — which of the founder's past publications and talks should be mined when the briefing arrives.</p>
+<p>Blocks 1 and 3 at best current knowledge, an explicit awaiting-briefing marker, and <b>the research plan published</b> — which of Dinis Cruz's past publications and talks should be mined when the briefing arrives.</p>
 <p>A stub is <b>published, not hidden. The roadmap is content.</b> Where the works are public knowledge and need no briefing, a stub also carries Block 7 — a reader looking for Kevin Kelly's books should not have to wait for a briefing document to find out what they are.</p>
 
 <h2 id="discovered-form">And the discovered form</h2>
-<p>Same as the full format, with one difference: <b>Block 2 opens with honesty.</b> The founder never listed this influence; the corpus surfaced it. The claim that it shaped the work rests entirely on the evidence in the entry until he confirms or corrects it.</p>
-<p><a href="../tiers/index.html#discovered">Discovered entries are the site's falsifiability applied to itself</a> — and the mechanism has already worked once: <a href="../register/design/index.html">Design</a> was surfaced by mining and confirmed by the founder the day the commissioning pack shipped.</p>
+<p>Same as the full format, with one difference: <b>Block 2 opens with honesty.</b> Dinis Cruz never listed this influence; the corpus surfaced it. The claim that it shaped the work rests entirely on the evidence in the entry until he confirms or corrects it.</p>
+<p><a href="../tiers/index.html#discovered">Discovered entries are the site's falsifiability applied to itself</a> — and the mechanism has already worked once: <a href="../register/design/index.html">Design</a> was surfaced by mining and confirmed by Dinis Cruz the day the commissioning pack shipped.</p>
 
 <h2 id="no-verbatim">The no-verbatim rule, and why it is a release gate</h2>
-<p>The founder set the rule himself: the site explains what resonates and why, and traces where it was applied — <b>it does not reproduce the influences' own work</b>. That instinct happens to be exactly what copyright law rewards.</p>
+<p>Dinis Cruz set the rule himself: the site explains what resonates and why, and traces where it was applied — <b>it does not reproduce the influences' own work</b>. That instinct happens to be exactly what copyright law rewards.</p>
 <div class="trade">
   <div class="buys">
     <h4>CC BY 4.0 covers</h4>
@@ -178,7 +179,7 @@
   <li><b>Link, never rehost.</b> Talks stay at their canonical host; transcripts stay where their transcriber put them; book links go to the publisher or the author's own page.</li>
   <li><b>Short attributed quotation for analysis</b> — a sentence or two, quoted in order to be examined — is the fair-dealing core and is allowed. Reproducing a transcript section, a chapter or a verse is not.</li>
   <li><b>Lyrics are the sharpest edge.</b> Music publishers enforce aggressively even over a single verse, so <a href="../register/neil-peart/index.html">the Rush entry</a> describes and links, and quotes at most a fragment under analysis.</li>
-  <li><b>The founder's own words are unrestricted here.</b> His articles, briefs and registers are his to publish, and Block 2 runs on them.</li>
+  <li><b>Dinis Cruz's own words are unrestricted here.</b> His articles, briefs and registers are his to publish, and Block 2 runs on them.</li>
   <li><b>Likenesses are original artwork only</b> — never scraped photographs, and never AI renderings presented as portraits. Several of these people are alive and known to this project's community, and that is a matter of respect before it is one of personality rights.</li>
 </ul>
 <p>A rule that load-bearing is worth a check rather than a paragraph, so it is one:</p>
@@ -226,10 +227,10 @@
 <footer class="site"><div class="cols">
   <div>
     <div class="brandline">influences<span>.sgit.ai</span></div>
-    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p>The influence register of <a href="../about/index.html" style="display:inline;padding:0"><b>Dinis Cruz</b></a> — the people, works, topics and things that shaped his thinking, and the places in his own code where that shaping can be checked. An influence entry here is a <b>falsifiable claim about a codebase</b>, not a reading list. A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
-    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.3.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="partnote">⚠ Participant disclosure: written about Dinis Cruz, published by the project he founded, and claiming his own work was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.4.0</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>The register</h4>
@@ -259,8 +260,14 @@
     <a href="../admin/index.html">The pipeline, end to end</a>
     <a href="../admin/versions.html">Release history</a>
     <a href="../admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>About</h4>
+    <a href="../about/index.html">Dinis Cruz</a>
     <a href="../about/participant.html">Participant disclosure</a>
     <a href="../network/index.html">The sgit.ai network</a>
+    <a href="https://open-source.sgit.ai/about/index.html">↗ open-source.sgit.ai/about</a>
+    <a href="https://docs.diniscruz.ai/about.html">↗ docs.diniscruz.ai/about</a>
   </div>
 </div></footer>
 

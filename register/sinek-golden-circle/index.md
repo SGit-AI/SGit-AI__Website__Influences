@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/sinek-golden-circle/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** framework
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-Why → How → What. On the founder's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.
+Why → How → What. On Dinis Cruz's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.
 
 ## Block 1 — The anchor
 
@@ -18,11 +20,11 @@ Why → How → What. On the founder's list, with no corpus trace — and with o
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The circumstantial evidence: **this site network is organised why-first.** Every site opens on the argument for its own existence before describing what it contains, and every commissioning brief in the network states a thesis before a scope. That is either the golden circle applied, or it is a house style that arrived some other way and now looks like it.
 
-Only the founder can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**
+Only Dinis Cruz can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**
 
 ## Block 3 — The principle
 
@@ -36,13 +38,13 @@ Only the founder can settle that, and the site should not settle it for him. It 
 
 ## Awaiting the briefing document
 
-Named by the founder; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.
+Named by Dinis Cruz; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.
 
-**Research plan.** Confirm the anchor in [N3](../../admin/comms.html#n3). Then check the founder's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).
+**Research plan.** Confirm the anchor in [N3](../../admin/comms.html#n3). Then check Dinis Cruz's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 

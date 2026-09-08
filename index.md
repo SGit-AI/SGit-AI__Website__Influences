@@ -1,11 +1,17 @@
-# influences.sgit.ai — where the thinking came from
+# influences.sgit.ai — the influence register of Dinis Cruz
 
 > **An inspiration is something that moved you. An influence is something that *shaped the
-> work*** — and this is a register of 25 of them: the people, works, topics and things behind one
-> body of software, with the idea worth taking from each and the exact place in a codebase where
-> you can check that it landed.
+> work*** — and these are 25 of [Dinis Cruz's](about/index.html): the people, works, topics and
+> things behind twenty-five years of his software, with the idea worth taking from each and the
+> exact place in his code where you can check that it landed.
 
-*Source: <https://influences.sgit.ai/index.html> · site v0.3.0 · markdown twin of the front page.*
+*Twenty-five years in security and software · former CISO · former OWASP board member and Summit
+organiser · founder of [sgit.ai](https://sgit.ai). More about him at
+[open-source.sgit.ai/about](https://open-source.sgit.ai/about/index.html) and
+[docs.diniscruz.ai/about](https://docs.diniscruz.ai/about.html), and
+[why this register is his to make](about/index.html).*
+
+*Source: <https://influences.sgit.ai/index.html> · site v0.4.0 · markdown twin of the front page.*
 
 ---
 
@@ -52,10 +58,10 @@ about a machine nobody built.
    — and turned it into two questions every interface change has to answer: *is it simpler? would
    reverting feel worse?* Not a quote on a wall. A gate that can fail.
    [Design, with a capital D](register/design/index.html)
-3. **Influences the subject never claimed.** Seven entries were found by searching the work rather
-   than asking the author. They are published as claims *about* him, and he is asked in public to
-   strike the ones that do not belong. [The discovered tier](tiers/index.html#discovered)
-4. **Entries with no evidence at all — published anyway.** Seven influences are on the founder's
+3. **Influences he never claimed.** Seven entries were found by searching his work rather than by
+   asking him. They are published as claims *about* him, and he is asked in public to strike the
+   ones that do not belong. [The discovered tier](tiers/index.html#discovered)
+4. **Entries with no evidence at all — published anyway.** Seven influences are on Dinis Cruz's
    own list and the search found nothing. One of them has no public record and never will.
    [Music, and playing in a band](register/music-and-band/index.html)
 5. **Rows that say *absent*.** Every entry lists the patterns from its anchor work that the
@@ -68,11 +74,11 @@ Twenty-five entries, sorted by how well the claim is evidenced rather than by ho
 mattered. **The tier is a statement about evidence, not importance** — a stated influence may well
 be the deepest one on the list.
 
-- **TRACED — 15.** The work names them. The entry lists the files and the claim can be checked
+- **TRACED — 15.** His own writing names them. The entry lists the files and the claim can be checked
   against them, which is all *traced* means. [The definition](tiers/index.html#traced)
-- **STATED — 7.** He says so and the record is silent. Published as stubs with the research plan
+- **STATED — 7.** He says so and the written record is silent. Published as stubs with the research plan
   visible and a hypothesis clearly labelled as one. [The definition](tiers/index.html#stated)
-- **DISCOVERED — 3.** The record says so and he never did. Claims about him, awaiting his
+- **DISCOVERED — 3.** His work says so and he never did. Claims about him, awaiting his
   confirmation or his correction. [The definition](tiers/index.html#discovered)
 
 Then: [all 25 entries](register/index.html) · [the influence map](map/index.html), computed from
@@ -98,10 +104,11 @@ implementations of a talk's demos, built on instinct years later by people who h
 the two. The honest claim is that the instinct and the principle agree. It is weaker than *this
 shaped the work*, and it is the one the evidence supports.
 
-There is also an obvious conflict of interest: **association is flattery, and it costs nothing to
-claim.** Saying that Victor, Popper and Alexander are in your intellectual lineage makes your work
-sound better without making it better. The defence is the only one available — every claim here is
-checkable by somebody who does not share the incentive.
+There is also an obvious conflict of interest, and it is worth naming on the way in: this is a
+register **about** Dinis Cruz, published **by** the project he founded, claiming his own work was
+shaped by a list of well-regarded thinkers. **Association is flattery, and it costs nothing to
+claim.** The defence is the only one available — every claim here is checkable by somebody who
+does not share the incentive.
 
 [How the register was built, what the release gate refuses to publish, and the four things this
 site cannot do](provenance/index.html).

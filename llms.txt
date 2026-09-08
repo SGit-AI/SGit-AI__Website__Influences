@@ -1,13 +1,20 @@
-# influences.sgit.ai — where the thinking came from
+# influences.sgit.ai — the influence register of DINIS CRUZ
 
-> The provenance layer of the sgit.ai memory network: the people, works, topics and things that
-> shaped the founder's thinking, each written as a FALSIFIABLE CLAIM ABOUT THE CODEBASE rather
+> WHOSE REGISTER THIS IS: Dinis Cruz — twenty-five years in security and software, former CISO,
+> former OWASP board member and organiser of the OWASP Summits, creator of the O2 Platform,
+> founder of sgit.ai and of several companies that publish their source and their strategy,
+> currently Chief Architect of GenAI Innovation. More about him at
+> https://open-source.sgit.ai/about/index.html and https://docs.diniscruz.ai/about.html, and
+> at /about/index.html on this site.
+>
+> This site is the provenance layer of the sgit.ai memory network: the people, works, topics and
+> things that shaped HIS thinking, each written as a FALSIFIABLE CLAIM ABOUT HIS CODEBASE rather
 > than an appreciation. An entry names which patterns from an anchor work appear where in the
 > estate, at which version, and which are still absent — specified precisely enough to build.
 
-Site version: v0.3.0 (26 August 2026). Published by the sgit project, which is also the subject
-of every claim on this site — participant disclosure at /about/participant.html. All site content
-CC BY 4.0.
+Site version: v0.4.0 (26 August 2026). Written about Dinis Cruz and published by the project he
+founded, which makes it the least neutral vantage point on this network — participant disclosure
+at /about/participant.html. All site content CC BY 4.0.
 
 ## The rule an agent consuming this site must inherit
 
@@ -33,15 +40,15 @@ typed by a person.
 - TRACED — corpus evidence exists today. The entry lists the files by path and the claim is
   checkable against them. It does NOT mean the influence is proven: a trace table shows that a
   pattern appears at a named place, not that the anchor work caused it.
-- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
+- STATED — on Dinis Cruz's own list, and thin or absent in the corpus. Published as a stub with
   the research plan visible and an open thread in the briefing queue. Most have ZERO evidence and
   say so in an empty evidence block. The roadmap, not the debt.
-- DISCOVERED — surfaced by mining the corpus, never named by the founder. Published as a claim
+- DISCOVERED — surfaced by mining the corpus, never named by Dinis Cruz. Published as a claim
   ABOUT him pending his confirmation, and he is asked in public to strike the ones that do not
   belong. 7 entries were discovered in origin; 4 have since been promoted and keep the flag.
 
 Tier movement is this site's changelog, at /shipped/: STATED → TRACED when a briefing lands,
-DISCOVERED → TRACED when the founder confirms, DISCOVERED → removed when he does not, and a trace
+DISCOVERED → TRACED when Dinis Cruz confirms, DISCOVERED → removed when he does not, and a trace
 row flipping absent → implemented when the estate builds a gap an entry specified.
 
 ## Properties agents may rely on
@@ -91,7 +98,7 @@ table without versions is an opinion.
   file, the two release-gate checks that enforce its editorial rules, and the four things it
   cannot do
 - /register/index.html — all 25 entries, grouped by tier
-- /register/<slug>/index.html — one entry, in the seven-block format: anchor, the founder's words,
+- /register/<slug>/index.html — one entry, in the seven-block format: anchor, Dinis Cruz's words,
   the principle, the trace table, the gaps as build specs, the checklist, the wider library
 - /tiers/index.html — what each tier means, what moves an entry between them, and why tier is not
   the same as status
@@ -106,8 +113,10 @@ table without versions is an opinion.
 - /documents/index.html — the commissioning pack, published in full
 - /admin/index.html — the pipeline, the gate, the tagger, the generators.
   /admin/versions.html — release history. /admin/comms.html — tasks, the briefing queue, and the
-  questions only the founder can answer
+  questions only Dinis Cruz can answer
 - /network/index.html — the sibling sites, and the deconfliction rule three entries run on
+- /about/index.html — Dinis Cruz: who he is, where to read the canonical accounts, why this
+  register is his to make, and which voice you are reading in which block
 - /about/participant.html — who publishes this, the conflict stated plainly, and the five places
   the approach is weakest
 
@@ -122,7 +131,7 @@ table without versions is an opinion.
 - Two decades of earlier material — the O2 Platform-era blog, OWASP talks, conference decks — were
   unreachable when the mining ran, and that is exactly where the STATED entries' evidence will be.
   The tiers therefore partly measure what has recently been written down. Tracked as R3.
-- Entry one is incomplete. The full text of the founder's Bret Victor register is with him; the
+- Entry one is incomplete. The full text of Dinis Cruz's Bret Victor register is with him; the
   entry ships with its trace table empty and the reason stated rather than with invented rows.
   First ask in the queue, Q1.
 - Nothing on this network has ever been publicly retracted. Publishing gaps is the cheap half of

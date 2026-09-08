@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/semantic-web/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** topic + person
 - **status** full — the seven-block register format
@@ -18,7 +20,7 @@ The article that put the idea in front of a general audience. The wider programm
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > The Semantic Web community identified the right problem… But the community made a subtle mistake in practice. They ended up attaching meaning to nodes rather than deriving meaning from edges.
 >

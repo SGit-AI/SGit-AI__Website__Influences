@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/owasp/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** community + era
 - **status** full — the seven-block register format
@@ -18,7 +20,7 @@ The anchor for a community or an era is the first documented contact with it, no
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The claim worth defending here is narrower than *open communities are good*. It is about the **Summit format** specifically: sessions that must produce an artefact, working groups that outlive the room, and outputs published whether or not they are finished. That is an unusual thing to have been formed by, and it shows up in the estate as a set of habits rather than as a topic — publishing unresolved questions as first-class pages, versioning documents rather than replacing them, and treating a working document as a deliverable.
 

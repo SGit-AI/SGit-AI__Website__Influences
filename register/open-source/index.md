@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/open-source/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** topic + movement
 - **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
@@ -17,7 +19,7 @@ A practice rather than a work. The anchor is the habit of publishing, and what i
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The sibling site carries the history, the licence positions and the argument for publishing. What belongs here instead is the formation: **what releasing changes about how you write**. Code you will publish is code you explain; a tool with users is a tool with a boundary; and a licence choice made twenty years ago still decides who can use the thing today.
 
@@ -29,7 +31,7 @@ The second strand is the one that connects to the rest of this register. Open so
 
 ## Block 4 — The trace table
 
-**Where the trace table would be:** **The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to the founder's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html).
+**Where the trace table would be:** **The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to Dinis Cruz's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html).
 
 open-source.sgit.ai — https://open-source.sgit.ai
 

@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/flow/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** practice + research
 - **status** full — the seven-block register format
@@ -17,7 +19,7 @@ The book is the anchor for the *state*. [Victor's talk](../bret-victor/index.htm
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > In his seminal work, Mihály Csíkszentmihályi identified programming as one of many activities… that can induce flow
 >
@@ -41,7 +43,7 @@ The composition is the interesting part. Csikszentmihalyi describes a state and 
 
 That claim is what the estate's development methodology is built on, and it explains an otherwise odd design decision: the methodology is organised around *not breaking concentration* rather than around correctness or speed. Correctness is checked afterwards; concentration cannot be.
 
-The third source is the founder's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place.
+The third source is Dinis Cruz's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place.
 
 ## Block 3 — The principle
 

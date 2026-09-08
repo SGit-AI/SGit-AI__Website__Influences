@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/luhmann/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + method
 - **status** full — the seven-block register format
 - **briefing** requested
 
-Never on the founder's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.
+Never on Dinis Cruz's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.
 
 ## Block 1 — The anchor
 
@@ -18,7 +20,7 @@ The slip-box itself is the anchor; the essay is the closest thing to Luhmann exp
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > Luhmann's Zettelkasten was a self-organizing knowledge graph on paper… atomic, uniquely identified, densely linked, emergent in structure, scalable and lifelong
 >

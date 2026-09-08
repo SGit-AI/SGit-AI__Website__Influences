@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/schneier/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person
 - **status** full — the seven-block register format
@@ -18,7 +20,7 @@ A body of work rather than one book. The specific move being credited is the shi
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The thing worth naming is the **shift**, not the writing. Schneier started as a cryptographer and ended up arguing that the interesting question was economic: who pays when this breaks, and does that person get to decide anything? That reframing is now so standard in security that it is easy to forget it had to be made.
 

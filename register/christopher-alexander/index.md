@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/christopher-alexander/index.html> · markdown twin of the entry page.*
 
-- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** discovered — surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it
 - **kind** person
 - **status** full — the seven-block register format
 - **briefing** requested
 
-Never named by the founder. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.
+Never named by Dinis Cruz. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.
 
 ## Block 1 — The anchor
 
@@ -17,7 +19,7 @@ The book everyone in software cites. *The Timeless Way of Building* is the argum
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > Christopher Alexander's pattern language is the direct ancestor of software design patterns. The Designer should think of code as a space that developers inhabit: is it navigable? Is it comfortable?
 >
@@ -29,7 +31,7 @@ The move worth noticing is that the role definition does not use Alexander the w
 
 That reading is closer to what Alexander actually argued, and to his later disappointment with what software did with his work. It is also, honestly, the reading that is hardest to check: comfort is not a property a test can assert.
 
-**This entry is DISCOVERED and stays that way until the founder confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2).
+**This entry is DISCOVERED and stays that way until Dinis Cruz confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2).
 
 ## Block 3 — The principle
 

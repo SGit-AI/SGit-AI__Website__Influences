@@ -2,9 +2,11 @@
 
 *Source: <https://influences.sgit.ai/register/team-topologies-cynefin/index.html> · markdown twin of the entry page.*
 
-- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** discovered — surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it
 - **kind** frameworks
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
 Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and not enough to claim — so this is a discovered stub, published at the strength of its evidence.
@@ -14,11 +16,11 @@ Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and
 Team Topologies (Skelton & Pais, 2019) and the Cynefin framework (Snowden, 1999)
 - anchor: <https://teamtopologies.com/>
 
-Two frameworks, bundled because the corpus bundles them. If the founder confirms, they should probably be separated — they answer different questions.
+Two frameworks, bundled because the corpus bundles them. If Dinis Cruz confirms, they should probably be separated — they answer different questions.
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The honest statement of the evidence: a hiring post from 2019 lists these beside [Wardley](../wardley/index.html), and Wardley turned out to be one of the deepest-traced influences in the register. **Proximity in a list is not evidence of equal weight**, and this entry is a stub because the site declines to infer one from the other.
 
@@ -36,7 +38,7 @@ What makes it worth publishing anyway: naming Cynefin means having a position on
 
 ## Awaiting the briefing document
 
-Found by mining and never claimed by the founder, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.
+Found by mining and never claimed by Dinis Cruz, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.
 
 **Research plan.** [Q2](../../admin/comms.html#q2) first: does this belong at all, or is it a citation rather than an influence? If confirmed, separate the two frameworks and look for Team Topologies vocabulary — stream-aligned, platform, enabling, complicated-subsystem — in the estate's team-roles system, and for Cynefin's domains in how work is triaged.
 

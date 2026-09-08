@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/design-canon/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** canon
 - **status** full — the seven-block register format
@@ -17,7 +19,7 @@ A canon rather than a work. The anchor is the mapping itself — the moment the 
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 What makes this an entry rather than a bibliography is the direction the mapping runs. The role definition does not say *good designers admire Rams*; it takes **less, but better** and treats it as a working principle for an API surface. That is the tradition being used as a tool, which is the test this register applies throughout.
 

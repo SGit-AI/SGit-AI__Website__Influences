@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/ericsson/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + research
 - **status** full — the seven-block register format
@@ -17,7 +19,7 @@ The book is the accessible anchor; the 1993 paper *The Role of Deliberate Practi
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 Two things resonate here, and the second is the one that matters now. The first is the correction itself — that experience and practice are different things, and that twenty years of doing something the same way is not twenty years of practice. Attributing the research to Ericsson rather than to its popular summary is a small act of the same discipline this whole site runs on: **cite the claim's actual source, and the claim gets sharper.**
 

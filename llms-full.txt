@@ -1,6 +1,6 @@
 # influences.sgit.ai — full text
 
-Site version: v0.3.0. Every page and every source document of https://influences.sgit.ai/ in one
+Site version: v0.4.0. Every page and every source document of https://influences.sgit.ai/ in one
 file, so an agent can read the whole thing in a single fetch.
 
 GENERATED — assembled by admin/build/gen_llms_full.py from llms.txt, index.md,
@@ -33,16 +33,23 @@ PART 1 — THE INDEX (source: /llms.txt)
 ==============================================================================
 
 
-# influences.sgit.ai — where the thinking came from
+# influences.sgit.ai — the influence register of DINIS CRUZ
 
-> The provenance layer of the sgit.ai memory network: the people, works, topics and things that
-> shaped the founder's thinking, each written as a FALSIFIABLE CLAIM ABOUT THE CODEBASE rather
+> WHOSE REGISTER THIS IS: Dinis Cruz — twenty-five years in security and software, former CISO,
+> former OWASP board member and organiser of the OWASP Summits, creator of the O2 Platform,
+> founder of sgit.ai and of several companies that publish their source and their strategy,
+> currently Chief Architect of GenAI Innovation. More about him at
+> https://open-source.sgit.ai/about/index.html and https://docs.diniscruz.ai/about.html, and
+> at /about/index.html on this site.
+>
+> This site is the provenance layer of the sgit.ai memory network: the people, works, topics and
+> things that shaped HIS thinking, each written as a FALSIFIABLE CLAIM ABOUT HIS CODEBASE rather
 > than an appreciation. An entry names which patterns from an anchor work appear where in the
 > estate, at which version, and which are still absent — specified precisely enough to build.
 
-Site version: v0.3.0 (26 August 2026). Published by the sgit project, which is also the subject
-of every claim on this site — participant disclosure at /about/participant.html. All site content
-CC BY 4.0.
+Site version: v0.4.0 (26 August 2026). Written about Dinis Cruz and published by the project he
+founded, which makes it the least neutral vantage point on this network — participant disclosure
+at /about/participant.html. All site content CC BY 4.0.
 
 ## The rule an agent consuming this site must inherit
 
@@ -68,15 +75,15 @@ typed by a person.
 - TRACED — corpus evidence exists today. The entry lists the files by path and the claim is
   checkable against them. It does NOT mean the influence is proven: a trace table shows that a
   pattern appears at a named place, not that the anchor work caused it.
-- STATED — on the founder's own list, and thin or absent in the corpus. Published as a stub with
+- STATED — on Dinis Cruz's own list, and thin or absent in the corpus. Published as a stub with
   the research plan visible and an open thread in the briefing queue. Most have ZERO evidence and
   say so in an empty evidence block. The roadmap, not the debt.
-- DISCOVERED — surfaced by mining the corpus, never named by the founder. Published as a claim
+- DISCOVERED — surfaced by mining the corpus, never named by Dinis Cruz. Published as a claim
   ABOUT him pending his confirmation, and he is asked in public to strike the ones that do not
   belong. 7 entries were discovered in origin; 4 have since been promoted and keep the flag.
 
 Tier movement is this site's changelog, at /shipped/: STATED → TRACED when a briefing lands,
-DISCOVERED → TRACED when the founder confirms, DISCOVERED → removed when he does not, and a trace
+DISCOVERED → TRACED when Dinis Cruz confirms, DISCOVERED → removed when he does not, and a trace
 row flipping absent → implemented when the estate builds a gap an entry specified.
 
 ## Properties agents may rely on
@@ -126,7 +133,7 @@ table without versions is an opinion.
   file, the two release-gate checks that enforce its editorial rules, and the four things it
   cannot do
 - /register/index.html — all 25 entries, grouped by tier
-- /register/<slug>/index.html — one entry, in the seven-block format: anchor, the founder's words,
+- /register/<slug>/index.html — one entry, in the seven-block format: anchor, Dinis Cruz's words,
   the principle, the trace table, the gaps as build specs, the checklist, the wider library
 - /tiers/index.html — what each tier means, what moves an entry between them, and why tier is not
   the same as status
@@ -141,8 +148,10 @@ table without versions is an opinion.
 - /documents/index.html — the commissioning pack, published in full
 - /admin/index.html — the pipeline, the gate, the tagger, the generators.
   /admin/versions.html — release history. /admin/comms.html — tasks, the briefing queue, and the
-  questions only the founder can answer
+  questions only Dinis Cruz can answer
 - /network/index.html — the sibling sites, and the deconfliction rule three entries run on
+- /about/index.html — Dinis Cruz: who he is, where to read the canonical accounts, why this
+  register is his to make, and which voice you are reading in which block
 - /about/participant.html — who publishes this, the conflict stated plainly, and the five places
   the approach is weakest
 
@@ -157,7 +166,7 @@ table without versions is an opinion.
 - Two decades of earlier material — the O2 Platform-era blog, OWASP talks, conference decks — were
   unreachable when the mining ran, and that is exactly where the STATED entries' evidence will be.
   The tiers therefore partly measure what has recently been written down. Tracked as R3.
-- Entry one is incomplete. The full text of the founder's Bret Victor register is with him; the
+- Entry one is incomplete. The full text of Dinis Cruz's Bret Victor register is with him; the
   entry ships with its trace table empty and the reason stated rather than with invented rows.
   First ask in the queue, Q1.
 - Nothing on this network has ever been publicly retracted. Publishing gaps is the cheap half of
@@ -179,14 +188,20 @@ PART 2 — THE FRONT PAGE (source: /index.md)
 ==============================================================================
 
 
-# influences.sgit.ai — where the thinking came from
+# influences.sgit.ai — the influence register of Dinis Cruz
 
 > **An inspiration is something that moved you. An influence is something that *shaped the
-> work*** — and this is a register of 25 of them: the people, works, topics and things behind one
-> body of software, with the idea worth taking from each and the exact place in a codebase where
-> you can check that it landed.
+> work*** — and these are 25 of [Dinis Cruz's](about/index.html): the people, works, topics and
+> things behind twenty-five years of his software, with the idea worth taking from each and the
+> exact place in his code where you can check that it landed.
 
-*Source: <https://influences.sgit.ai/index.html> · site v0.3.0 · markdown twin of the front page.*
+*Twenty-five years in security and software · former CISO · former OWASP board member and Summit
+organiser · founder of [sgit.ai](https://sgit.ai). More about him at
+[open-source.sgit.ai/about](https://open-source.sgit.ai/about/index.html) and
+[docs.diniscruz.ai/about](https://docs.diniscruz.ai/about.html), and
+[why this register is his to make](about/index.html).*
+
+*Source: <https://influences.sgit.ai/index.html> · site v0.4.0 · markdown twin of the front page.*
 
 ---
 
@@ -233,10 +248,10 @@ about a machine nobody built.
    — and turned it into two questions every interface change has to answer: *is it simpler? would
    reverting feel worse?* Not a quote on a wall. A gate that can fail.
    [Design, with a capital D](register/design/index.html)
-3. **Influences the subject never claimed.** Seven entries were found by searching the work rather
-   than asking the author. They are published as claims *about* him, and he is asked in public to
-   strike the ones that do not belong. [The discovered tier](tiers/index.html#discovered)
-4. **Entries with no evidence at all — published anyway.** Seven influences are on the founder's
+3. **Influences he never claimed.** Seven entries were found by searching his work rather than by
+   asking him. They are published as claims *about* him, and he is asked in public to strike the
+   ones that do not belong. [The discovered tier](tiers/index.html#discovered)
+4. **Entries with no evidence at all — published anyway.** Seven influences are on Dinis Cruz's
    own list and the search found nothing. One of them has no public record and never will.
    [Music, and playing in a band](register/music-and-band/index.html)
 5. **Rows that say *absent*.** Every entry lists the patterns from its anchor work that the
@@ -249,11 +264,11 @@ Twenty-five entries, sorted by how well the claim is evidenced rather than by ho
 mattered. **The tier is a statement about evidence, not importance** — a stated influence may well
 be the deepest one on the list.
 
-- **TRACED — 15.** The work names them. The entry lists the files and the claim can be checked
+- **TRACED — 15.** His own writing names them. The entry lists the files and the claim can be checked
   against them, which is all *traced* means. [The definition](tiers/index.html#traced)
-- **STATED — 7.** He says so and the record is silent. Published as stubs with the research plan
+- **STATED — 7.** He says so and the written record is silent. Published as stubs with the research plan
   visible and a hypothesis clearly labelled as one. [The definition](tiers/index.html#stated)
-- **DISCOVERED — 3.** The record says so and he never did. Claims about him, awaiting his
+- **DISCOVERED — 3.** His work says so and he never did. Claims about him, awaiting his
   confirmation or his correction. [The definition](tiers/index.html#discovered)
 
 Then: [all 25 entries](register/index.html) · [the influence map](map/index.html), computed from
@@ -279,10 +294,11 @@ implementations of a talk's demos, built on instinct years later by people who h
 the two. The honest claim is that the instinct and the principle agree. It is weaker than *this
 shaped the work*, and it is the one the evidence supports.
 
-There is also an obvious conflict of interest: **association is flattery, and it costs nothing to
-claim.** Saying that Victor, Popper and Alexander are in your intellectual lineage makes your work
-sound better without making it better. The defence is the only one available — every claim here is
-checkable by somebody who does not share the incentive.
+There is also an obvious conflict of interest, and it is worth naming on the way in: this is a
+register **about** Dinis Cruz, published **by** the project he founded, claiming his own work was
+shaped by a list of well-regarded thinkers. **Association is flattery, and it costs nothing to
+claim.** The defence is the only one available — every claim here is checkable by somebody who
+does not share the incentive.
 
 [How the register was built, what the release gate refuses to publish, and the four things this
 site cannot do](provenance/index.html).
@@ -311,6 +327,9 @@ source: /articles/an-influence-is-a-claim.md (2026-08-26)
 
 
 # An influence is a claim you can check
+
+*By Dinis Cruz. Published at [influences.sgit.ai](https://influences.sgit.ai) — my influence
+register, and the site this piece introduces.*
 
 Everyone has a list of the people who shaped them. Almost nobody can show the shaping.
 
@@ -549,6 +568,10 @@ markdown as well as HTML, the register is one JSON file, and the influence graph
 it. All of it is CC BY 4.0; none of the works it describes are mine to give away, so they are
 linked and never rehosted.
 
+More about me at [open-source.sgit.ai/about](https://open-source.sgit.ai/about/index.html) — the
+record, the companies and the open-source position — and at
+[docs.diniscruz.ai/about](https://docs.diniscruz.ai/about.html), the research hub.
+
 
 ==============================================================================
 PART 4 — THE 25 REGISTER ENTRIES
@@ -572,6 +595,8 @@ source: /register/bret-victor/index.md
 
 *Source: <https://influences.sgit.ai/register/bret-victor/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person
 - **status** full — the seven-block register format
@@ -589,11 +614,11 @@ One anchor per entry: not the whole career, the single work that did the shaping
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > That is the kind of experience and feedback loops I'm trying to create here.
 >
-> — Dinis Cruz, `the immediate-connection register (held by the founder)`
+> — Dinis Cruz, `the immediate-connection register (held by Dinis Cruz)`
 
 The line the register opens on, and the reason it exists. The register is a working document about the estate's viewer, not an essay about Victor.
 
@@ -605,7 +630,7 @@ From a section titled **The Brett Victor Problem** — in an article about educa
 
 > Half the viewer's strongest features were already unknowing implementations of its demos, which is evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck.
 >
-> — Dinis Cruz, `the immediate-connection register (held by the founder)`
+> — Dinis Cruz, `the immediate-connection register (held by Dinis Cruz)`
 
 The closing argument, and the standard every trace table on this site is aiming at. Note how careful it is: **the instinct and the principle agree** is a much weaker claim than *the talk caused this*, and it is the one the evidence actually supports.
 
@@ -621,7 +646,7 @@ The test the format sets for a principle is that it must be usable by someone wh
 
 ## Block 4 — The trace table
 
-**No trace table yet.** **The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by the founder and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered.
+**No trace table yet.** **The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by Dinis Cruz and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered.
 
 ## Block 5 — The gaps, as build specs
 
@@ -657,7 +682,7 @@ The register's second named gap: when a layout changes, the previous positions l
 
 | Path in the corpus | What it carries |
 |---|---|
-| `sources/register__bret-victor__inventing-on-principle.md` | the founder's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is with the founder |
+| `sources/register__bret-victor__inventing-on-principle.md` | Dinis Cruz's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is still with him |
 | `docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md` | builds its central argument on Victor's immediate-feedback thesis, and quotes the talk's core line about creators needing an immediate connection to what they create |
 | `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md` | a section titled *The Brett Victor Problem*, applying the talk's point about dogma to education policy |
 
@@ -676,6 +701,8 @@ source: /register/wardley/index.md
 
 *Source: <https://influences.sgit.ai/register/wardley/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + framework
 - **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
@@ -692,7 +719,7 @@ The book/blog series, published in the open. The anchor is the mapping method it
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The resonance is not the diagrams. It is that mapping makes a strategy **arguable**: two people looking at the same map can disagree about where a component sits and settle it with evidence, which is impossible when the strategy is a paragraph of prose.
 
@@ -725,7 +752,7 @@ wardley-maps.sgit.ai — https://wardley-maps.sgit.ai
 | Path in the corpus | What it carries |
 |---|---|
 | `(corpus-wide, ~210 files)` | the largest single-influence footprint the mining run found, spanning strategy documents, briefs and the published mapping material |
-| `wardley-maps.sgit.ai (sibling site + its own brief pack)` | the founder's own published Wardley material — videos, infographics and the maps-as-code work |
+| `wardley-maps.sgit.ai (sibling site + its own brief pack)` | Dinis Cruz's own published Wardley material — videos, infographics and the maps-as-code work |
 
 ---
 
@@ -741,6 +768,8 @@ source: /register/semantic-web/index.md
 # Tim Berners-Lee & the Semantic Web
 
 *Source: <https://influences.sgit.ai/register/semantic-web/index.html> · markdown twin of the entry page.*
+
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
 
 - **tier** traced — corpus evidence exists today
 - **kind** topic + person
@@ -758,7 +787,7 @@ The article that put the idea in front of a general audience. The wider programm
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > The Semantic Web community identified the right problem… But the community made a subtle mistake in practice. They ended up attaching meaning to nodes rather than deriving meaning from edges.
 >
@@ -838,6 +867,8 @@ source: /register/graphs/index.md
 
 *Source: <https://influences.sgit.ai/register/graphs/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** topic
 - **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
@@ -853,7 +884,7 @@ The first encounter — likely the O2 Platform's code-flow work
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 This is the influence with the largest corpus footprint and the least documented origin, which is a strange combination and worth stating rather than smoothing over. Graphs are everywhere in the estate — the substrate, the ontology work, the memory model, an entire sibling site — and nothing in the corpus records the moment they stopped being a data structure and became the way of seeing.
 
@@ -898,6 +929,8 @@ source: /register/owasp/index.md
 
 *Source: <https://influences.sgit.ai/register/owasp/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** community + era
 - **status** full — the seven-block register format
@@ -914,7 +947,7 @@ The anchor for a community or an era is the first documented contact with it, no
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The claim worth defending here is narrower than *open communities are good*. It is about the **Summit format** specifically: sessions that must produce an artefact, working groups that outlive the room, and outputs published whether or not they are finished. That is an unusual thing to have been formed by, and it shows up in the estate as a set of habits rather than as a topic — publishing unresolved questions as first-class pages, versioning documents rather than replacing them, and treating a working document as a deliverable.
 
@@ -965,6 +998,8 @@ source: /register/flow/index.md
 
 *Source: <https://influences.sgit.ai/register/flow/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** practice + research
 - **status** full — the seven-block register format
@@ -980,7 +1015,7 @@ The book is the anchor for the *state*. [Victor's talk](../bret-victor/index.htm
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > In his seminal work, Mihály Csíkszentmihályi identified programming as one of many activities… that can induce flow
 >
@@ -1004,7 +1039,7 @@ The composition is the interesting part. Csikszentmihalyi describes a state and 
 
 That claim is what the estate's development methodology is built on, and it explains an otherwise odd design decision: the methodology is organised around *not breaking concentration* rather than around correctness or speed. Correctness is checked afterwards; concentration cannot be.
 
-The third source is the founder's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place.
+The third source is Dinis Cruz's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place.
 
 ## Block 3 — The principle
 
@@ -1070,6 +1105,8 @@ source: /register/open-source/index.md
 
 *Source: <https://influences.sgit.ai/register/open-source/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** topic + movement
 - **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
@@ -1085,7 +1122,7 @@ A practice rather than a work. The anchor is the habit of publishing, and what i
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The sibling site carries the history, the licence positions and the argument for publishing. What belongs here instead is the formation: **what releasing changes about how you write**. Code you will publish is code you explain; a tool with users is a tool with a boundary; and a licence choice made twenty years ago still decides who can use the thing today.
 
@@ -1097,7 +1134,7 @@ The second strand is the one that connects to the rest of this register. Open so
 
 ## Block 4 — The trace table
 
-**Where the trace table would be:** **The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to the founder's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html).
+**Where the trace table would be:** **The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to Dinis Cruz's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html).
 
 open-source.sgit.ai — https://open-source.sgit.ai
 
@@ -1130,12 +1167,14 @@ source: /register/luhmann/index.md
 
 *Source: <https://influences.sgit.ai/register/luhmann/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + method
 - **status** full — the seven-block register format
 - **briefing** requested
 
-Never on the founder's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.
+Never on Dinis Cruz's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.
 
 ## Block 1 — The anchor
 
@@ -1146,7 +1185,7 @@ The slip-box itself is the anchor; the essay is the closest thing to Luhmann exp
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > Luhmann's Zettelkasten was a self-organizing knowledge graph on paper… atomic, uniquely identified, densely linked, emergent in structure, scalable and lifelong
 >
@@ -1214,6 +1253,8 @@ source: /register/ericsson/index.md
 
 *Source: <https://influences.sgit.ai/register/ericsson/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + research
 - **status** full — the seven-block register format
@@ -1229,7 +1270,7 @@ The book is the accessible anchor; the 1993 paper *The Role of Deliberate Practi
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 Two things resonate here, and the second is the one that matters now. The first is the correction itself — that experience and practice are different things, and that twenty years of doing something the same way is not twenty years of practice. Attributing the research to Ericsson rather than to its popular summary is a small act of the same discipline this whole site runs on: **cite the claim's actual source, and the claim gets sharper.**
 
@@ -1287,6 +1328,8 @@ source: /register/popper/index.md
 
 *Source: <https://influences.sgit.ai/register/popper/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + idea
 - **status** full — the seven-block register format
@@ -1302,7 +1345,7 @@ First published in German as *Logik der Forschung* (1934). The anchor is the dem
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The reason this entry is short and load-bearing at once: **it is not a topic in the estate, it is the format of the estate's outputs.** A Wardley map is a claim about where a component sits, refutable by pointing at it. A risk in the risks register is a claim with a named acceptor and a named mitigation, refutable by checking whether the mitigation exists. A trace row on this site is a claim that a pattern appears at a path at a version, refutable by opening the file.
 
@@ -1334,7 +1377,7 @@ Every site here publishes its gaps and its open questions, which is the cheap ha
 
 ### G2 — The counter-influence entry does not exist
 
-The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs the founder rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm.
+The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs Dinis Cruz rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm.
 
 
 ## Block 6 — The checklist
@@ -1371,12 +1414,14 @@ source: /register/torvalds/index.md
 
 *Source: <https://influences.sgit.ai/register/torvalds/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person
 - **status** full — the seven-block register format
 - **briefing** none
 
-Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument the founder makes about education.
+Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument Dinis Cruz makes about education.
 
 ## Block 1 — The anchor
 
@@ -1387,7 +1432,7 @@ Two works, unusually — the entry is about what they have in common rather than
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 Git's interesting property is not distribution, it is that **the history is content-addressed and therefore verifiable by anyone holding a copy**. Nobody has to trust the server. That is a data-model decision that produced a social one, and it is the same move this estate makes with encrypted vaults: put the guarantee in the structure, not in the operator's promise.
 
@@ -1438,6 +1483,8 @@ source: /register/schneier/index.md
 
 *Source: <https://influences.sgit.ai/register/schneier/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person
 - **status** full — the seven-block register format
@@ -1454,7 +1501,7 @@ A body of work rather than one book. The specific move being credited is the shi
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The thing worth naming is the **shift**, not the writing. Schneier started as a cryptographer and ended up arguing that the interesting question was economic: who pays when this breaks, and does that person get to decide anything? That reframing is now so standard in security that it is easy to forget it had to be made.
 
@@ -1506,13 +1553,15 @@ source: /register/design/index.md
 
 *Source: <https://influences.sgit.ai/register/design/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** discipline + person
 - **status** full — the seven-block register format
 - **briefing** confirmed; anchor and personal history requested
 - **founder-confirmed** 2026-08-25 — “Design and Steve Jobs approach to Design (with capital D).”
 
-Discovered by mining and confirmed by the founder the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.
+Discovered by mining and confirmed by Dinis Cruz the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.
 
 ## Block 1 — The anchor
 
@@ -1523,7 +1572,7 @@ Discovered by mining and confirmed by the founder the day the commissioning pack
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > Design is the coherence between the internal structure and the external experience.
 >
@@ -1541,7 +1590,7 @@ The reason this is the strongest-traced entry on the site is not the number of c
 
 That is the difference between a quote on a wall and an influence. A gate in a pipeline is checkable, dated, and possible to fail. Most entries in this register aspire to a trace table; this one had its trace table written as a workflow before anyone asked for the register.
 
-What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why the founder's confirmation came with a question attached rather than closing the entry.
+What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why Dinis Cruz's confirmation came with a question attached rather than closing the entry.
 
 ## Block 3 — The principle
 
@@ -1557,7 +1606,7 @@ What is genuinely missing is the personal history. The corpus shows the influenc
 | Simplicity as subtraction — the feature removed rather than the feature added | Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change | v0.7.4 | partial |
 | The same discipline applied to non-visual surfaces — an API, a CLI, a file format | Nowhere. The validator is scoped to UI changes, and the estate's public surface is mostly not UI | v0.7.4 | absent |
 
-Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why the founder's confirmation was a formality rather than a discovery.
+Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why Dinis Cruz's confirmation was a formality rather than a discovery.
 
 ## Block 5 — The gaps, as build specs
 
@@ -1607,6 +1656,8 @@ source: /register/design-canon/index.md
 
 *Source: <https://influences.sgit.ai/register/design-canon/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** canon
 - **status** full — the seven-block register format
@@ -1622,7 +1673,7 @@ A canon rather than a work. The anchor is the mapping itself — the moment the 
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 What makes this an entry rather than a bibliography is the direction the mapping runs. The role definition does not say *good designers admire Rams*; it takes **less, but better** and treats it as a working principle for an API surface. That is the tradition being used as a tool, which is the test this register applies throughout.
 
@@ -1683,6 +1734,8 @@ source: /register/csikszentmihalyi/index.md
 
 *Source: <https://influences.sgit.ai/register/csikszentmihalyi/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + research
 - **status** full — the seven-block register format
@@ -1698,7 +1751,7 @@ Shared with [the flow entry](../flow/index.html), deliberately. That entry is ab
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The move that matters is the one people skip: Csikszentmihalyi did not describe a mood, he **specified a state** — clear goals, immediate feedback, challenge matched to skill, merging of action and awareness, loss of self-consciousness, altered sense of time. A list of preconditions is a thing you can design against. A vibe is not.
 
@@ -1747,22 +1800,24 @@ source: /register/neil-peart/index.md
 
 *Source: <https://influences.sgit.ai/register/neil-peart/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** person + music
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-On the founder's own list, and with **zero corpus evidence**. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.
+On Dinis Cruz's own list, and with **zero corpus evidence**. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.
 
 ## Block 1 — The anchor
 
 Rush — drums and lyrics, 1974–2015 — Neil Peart
 
-**Anchor not yet chosen.** Which record, which period, which lyric — that is the founder's to say, and it is [N1](../../admin/comms.html#n1) in the briefing queue.
+**Anchor not yet chosen.** Which record, which period, which lyric — that is Dinis Cruz's to say, and it is [N1](../../admin/comms.html#n1) in the briefing queue.
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 There is nothing to put here yet, and inventing it would be the exact failure the tier system exists to prevent. What can be said is why the entry is worth waiting for: an influence from outside software, on a person whose work is entirely inside it, is the kind that shapes taste rather than technique — and taste is the part of an estate that a trace table struggles to reach.
 
@@ -1770,7 +1825,7 @@ There is nothing to put here yet, and inventing it would be the exact failure th
 
 ***(hypothesis, not a finding)* Technical mastery in service of meaning — the craftsman-lyricist: virtuosity that exists to say something rather than to be noticed.**
 
-This principle is a **hypothesis constructed from public knowledge about Peart**, not from anything the founder has written. It is published so that the briefing document can correct it, which is more useful than an empty box — but it should not be quoted as this site's claim until it has been.
+This principle is a **hypothesis constructed from public knowledge about Peart**, not from anything Dinis Cruz has written. It is published so that the briefing document can correct it, which is more useful than an empty box — but it should not be quoted as this site's claim until it has been.
 
 ## Block 7 — The wider library
 
@@ -1780,13 +1835,13 @@ This principle is a **hypothesis constructed from public knowledge about Peart**
 
 ## Awaiting the briefing document
 
-The founder named this influence and the corpus scan found nothing. That is the definition of the STATED tier, and it is not a defect in the mining: two decades of earlier writing were out of reach, and some of this may never have been written down at all. The entry stays here, visible, with the question attached.
+Dinis Cruz named this influence and the corpus scan found nothing. That is the definition of the STATED tier, and it is not a defect in the mining: two decades of earlier writing were out of reach, and some of this may never have been written down at all. The entry stays here, visible, with the question attached.
 
-**Research plan.** The founder's own briefing document is the only real source, and it is [N1](../../admin/comms.html#n1). Alongside it: his talks and bios for drumming and music references, and the earlier blog material that was not reachable when the pack was mined ([R3](../../admin/comms.html#r3)). **A boundary that applies to this entry more than any other on the site**: lyrics are the sharpest edge in the whole no-verbatim rule — publishers enforce aggressively even over a single verse — so this entry will describe and link, and quote at most a fragment under analysis. [The release gate enforces the cap](../../admin/index.html#no-verbatim).
+**Research plan.** Dinis Cruz's own briefing document is the only real source, and it is [N1](../../admin/comms.html#n1). Alongside it: his talks and bios for drumming and music references, and the earlier blog material that was not reachable when the pack was mined ([R3](../../admin/comms.html#r3)). **A boundary that applies to this entry more than any other on the site**: lyrics are the sharpest edge in the whole no-verbatim rule — publishers enforce aggressively even over a single verse — so this entry will describe and link, and quote at most a fragment under analysis. [The release gate enforces the cap](../../admin/index.html#no-verbatim).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -1803,12 +1858,14 @@ source: /register/kevin-kelly/index.md
 
 *Source: <https://influences.sgit.ai/register/kevin-kelly/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** books
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-On the founder's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.
+On Dinis Cruz's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.
 
 ## Block 1 — The anchor
 
@@ -1818,15 +1875,15 @@ On the founder's list, with no corpus evidence and three candidate anchors. The 
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If the founder read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html).
+One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If Dinis Cruz read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html).
 
 ## Block 3 — The principle
 
 ***(hypothesis)* Technology is an evolutionary system with its own tendencies — some directions are pushed on us by what has already been built, rather than chosen.**
 
-Stated as a hypothesis because the source is Kelly's public argument, not the founder's account of what he took from it.
+Stated as a hypothesis because the source is Kelly's public argument, not Dinis Cruz's account of what he took from it.
 
 ## Block 7 — The wider library
 
@@ -1837,13 +1894,13 @@ Stated as a hypothesis because the source is Kelly's public argument, not the fo
 
 ## Awaiting the briefing document
 
-Named by the founder, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.
+Named by Dinis Cruz, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.
 
-**Research plan.** Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check the founder's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).
+**Research plan.** Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check Dinis Cruz's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -1860,12 +1917,14 @@ source: /register/sinek-golden-circle/index.md
 
 *Source: <https://influences.sgit.ai/register/sinek-golden-circle/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** framework
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-Why → How → What. On the founder's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.
+Why → How → What. On Dinis Cruz's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.
 
 ## Block 1 — The anchor
 
@@ -1876,11 +1935,11 @@ Why → How → What. On the founder's list, with no corpus trace — and with o
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The circumstantial evidence: **this site network is organised why-first.** Every site opens on the argument for its own existence before describing what it contains, and every commissioning brief in the network states a thesis before a scope. That is either the golden circle applied, or it is a house style that arrived some other way and now looks like it.
 
-Only the founder can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**
+Only Dinis Cruz can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**
 
 ## Block 3 — The principle
 
@@ -1894,13 +1953,13 @@ Only the founder can settle that, and the site should not settle it for him. It 
 
 ## Awaiting the briefing document
 
-Named by the founder; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.
+Named by Dinis Cruz; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.
 
-**Research plan.** Confirm the anchor in [N3](../../admin/comms.html#n3). Then check the founder's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).
+**Research plan.** Confirm the anchor in [N3](../../admin/comms.html#n3). Then check Dinis Cruz's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -1917,12 +1976,14 @@ source: /register/cathedral-bazaar/index.md
 
 *Source: <https://influences.sgit.ai/register/cathedral-bazaar/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** work
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to the founder* — which is exactly the part that is not written down anywhere.
+The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to Dinis Cruz* — which is exactly the part that is not written down anywhere.
 
 ## Block 1 — The anchor
 
@@ -1933,9 +1994,9 @@ Published free by its author and still online at its original address, which is 
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is the founder's to write.
+The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is Dinis Cruz's to write.
 
 ## Block 3 — The principle
 
@@ -1949,13 +2010,13 @@ The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-so
 
 ## Awaiting the briefing document
 
-Named by the founder. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.
+Named by Dinis Cruz. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.
 
-**Research plan.** The founder's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).
+**Research plan.** Dinis Cruz's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -1972,12 +2033,14 @@ source: /register/david-rice-keynote/index.md
 
 *Source: <https://influences.sgit.ai/register/david-rice-keynote/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** presentation
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-An OWASP keynote, named by the founder from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.
+An OWASP keynote, named by Dinis Cruz from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.
 
 ## Block 1 — The anchor
 
@@ -1987,9 +2050,9 @@ Upon the Threshold of Opportunity — an OWASP AppSec keynote — David Rice
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only the founder holds.
+A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only Dinis Cruz holds.
 
 Nests under [OWASP](../owasp/index.html), where the community-as-influence claim lives.
 
@@ -2006,13 +2069,13 @@ Constructed from Rice's published book rather than from the keynote, because the
 
 ## Awaiting the briefing document
 
-Named by the founder; no corpus trace, and no located recording. Both halves of the entry are open.
+Named by Dinis Cruz; no corpus trace, and no located recording. Both halves of the entry are open.
 
-**Research plan.** Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one the founder means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: the founder's contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).
+**Research plan.** Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one Dinis Cruz means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: his contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -2029,12 +2092,14 @@ source: /register/music-and-band/index.md
 
 *Source: <https://influences.sgit.ai/register/music-and-band/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** practice + era
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-The most personal entry on the site, entirely awaiting the founder's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.
+The most personal entry on the site, entirely awaiting Dinis Cruz's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.
 
 ## Block 1 — The anchor
 
@@ -2044,9 +2109,9 @@ Not a work, and not a public event. There is nothing to link, which makes this t
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-The hypothesis is worth stating precisely because of what depends on it. [The flow entry](../flow/index.html) is one of the best-traced things in this register: Csikszentmihalyi's state, Victor's mechanism, and a development methodology whose stated core principle is preserving flow. **If band-playing is where the founder first experienced that state, then the most-instrumented influence on this site has an origin that is not written down anywhere.**
+The hypothesis is worth stating precisely because of what depends on it. [The flow entry](../flow/index.html) is one of the best-traced things in this register: Csikszentmihalyi's state, Victor's mechanism, and a development methodology whose stated core principle is preserving flow. **If band-playing is where Dinis Cruz first experienced that state, then the most-instrumented influence on this site has an origin that is not written down anywhere.**
 
 It also has a specific property none of the software influences do: a band is *collaborative* flow. The methodology tries to recreate a state between a person and a machine. The original may have been a state between people — and that difference, if real, is a design constraint nobody has written down.
 
@@ -2054,17 +2119,17 @@ It also has a specific property none of the software influences do: a band is *c
 
 ***(hypothesis)* Playing together in real time is the original experience of collaborative flow — several people, immediate feedback, no possibility of stopping to plan.**
 
-This is the site's most consequential unverified claim and it is flagged as such everywhere it appears. If the founder confirms it, it becomes the root of a lineage. If he does not, it is a neat story invented by a machine, and the register will say so.
+This is the site's most consequential unverified claim and it is flagged as such everywhere it appears. If Dinis Cruz confirms it, it becomes the root of a lineage. If he does not, it is a neat story invented by a machine, and the register will say so.
 
 ## Awaiting the briefing document
 
-Entirely unresearchable by anyone except the founder. There is no public record, no publication to mine and no third party to ask. This entry is a placeholder for something only he can write, and it is published so that its absence is visible rather than tidy.
+Entirely unresearchable by anyone except Dinis Cruz. There is no public record, no publication to mine and no third party to ask. This entry is a placeholder for something only he can write, and it is published so that its absence is visible rather than tidy.
 
 **Research plan.** There is no research plan, and pretending otherwise would be dishonest. The entry needs [N6](../../admin/comms.html#n6) and nothing else. The specific questions worth answering: what the band was and when; whether the flow hypothesis above is right or a machine's tidy story; and whether the collaborative aspect is the part that carried over.
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -2081,12 +2146,14 @@ source: /register/diverse-distributed-teams/index.md
 
 *Source: <https://influences.sgit.ai/register/diverse-distributed-teams/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** practice
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-On the founder's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.
+On Dinis Cruz's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.
 
 ## Block 1 — The anchor
 
@@ -2096,11 +2163,11 @@ No single work. The likeliest formative instance is OWASP's global chapter model
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The circumstantial case is strong enough to be worth stating and weak enough that it must not be presented as evidence. This estate's practices are unusually written-down: role definitions as documents, briefs as first-class artefacts, decisions recorded rather than remembered. **That is what a distributed habit looks like when it has been fully internalised** — but a habit that thorough could equally come from working with agents, who have no other way to receive context.
 
-Which of those came first is the question, and it is the founder's. [OWASP's global chapters](../owasp/index.html) predate everything else here by two decades, which makes them the best candidate for the origin.
+Which of those came first is the question, and it is Dinis Cruz's. [OWASP's global chapters](../owasp/index.html) predate everything else here by two decades, which makes them the best candidate for the origin.
 
 ## Block 3 — The principle
 
@@ -2114,13 +2181,13 @@ Two claims bundled into one principle, which is usually a sign the entry has not
 
 ## Awaiting the briefing document
 
-Named by the founder, with no direct corpus citation. The estate is full of *consequences* that would be consistent with this influence, which is not the same thing as evidence for it — and the difference is what the tier means.
+Named by Dinis Cruz, with no direct corpus citation. The estate is full of *consequences* that would be consistent with this influence, which is not the same thing as evidence for it — and the difference is what the tier means.
 
-**Research plan.** [N7](../../admin/comms.html#n7). Three places to look, in order of likely yield: the founder's management writing; the estate's own team-roles system, which reads like a formalisation of something learned earlier; and OWASP's global-chapter model as the formative experience. The question the briefing must answer: **which of these is the origin and which are consequences.**
+**Research plan.** [N7](../../admin/comms.html#n7). Three places to look, in order of likely yield: Dinis Cruz's management writing; the estate's own team-roles system, which reads like a formalisation of something learned earlier; and OWASP's global-chapter model as the formative experience. The question the briefing must answer: **which of these is the origin and which are consequences.**
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 
@@ -2137,12 +2204,14 @@ source: /register/christopher-alexander/index.md
 
 *Source: <https://influences.sgit.ai/register/christopher-alexander/index.html> · markdown twin of the entry page.*
 
-- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** discovered — surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it
 - **kind** person
 - **status** full — the seven-block register format
 - **briefing** requested
 
-Never named by the founder. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.
+Never named by Dinis Cruz. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.
 
 ## Block 1 — The anchor
 
@@ -2152,7 +2221,7 @@ The book everyone in software cites. *The Timeless Way of Building* is the argum
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > Christopher Alexander's pattern language is the direct ancestor of software design patterns. The Designer should think of code as a space that developers inhabit: is it navigable? Is it comfortable?
 >
@@ -2164,7 +2233,7 @@ The move worth noticing is that the role definition does not use Alexander the w
 
 That reading is closer to what Alexander actually argued, and to his later disappointment with what software did with his work. It is also, honestly, the reading that is hardest to check: comfort is not a property a test can assert.
 
-**This entry is DISCOVERED and stays that way until the founder confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2).
+**This entry is DISCOVERED and stays that way until Dinis Cruz confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2).
 
 ## Block 3 — The principle
 
@@ -2226,9 +2295,11 @@ source: /register/team-topologies-cynefin/index.md
 
 *Source: <https://influences.sgit.ai/register/team-topologies-cynefin/index.html> · markdown twin of the entry page.*
 
-- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** discovered — surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it
 - **kind** frameworks
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
 Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and not enough to claim — so this is a discovered stub, published at the strength of its evidence.
@@ -2238,11 +2309,11 @@ Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and
 Team Topologies (Skelton & Pais, 2019) and the Cynefin framework (Snowden, 1999)
 - anchor: <https://teamtopologies.com/>
 
-Two frameworks, bundled because the corpus bundles them. If the founder confirms, they should probably be separated — they answer different questions.
+Two frameworks, bundled because the corpus bundles them. If Dinis Cruz confirms, they should probably be separated — they answer different questions.
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The honest statement of the evidence: a hiring post from 2019 lists these beside [Wardley](../wardley/index.html), and Wardley turned out to be one of the deepest-traced influences in the register. **Proximity in a list is not evidence of equal weight**, and this entry is a stub because the site declines to infer one from the other.
 
@@ -2260,7 +2331,7 @@ What makes it worth publishing anyway: naming Cynefin means having a position on
 
 ## Awaiting the briefing document
 
-Found by mining and never claimed by the founder, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.
+Found by mining and never claimed by Dinis Cruz, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.
 
 **Research plan.** [Q2](../../admin/comms.html#q2) first: does this belong at all, or is it a citation rather than an influence? If confirmed, separate the two frameworks and look for Team Topologies vocabulary — stream-aligned, platform, enabling, complicated-subsystem — in the estate's team-roles system, and for Cynefin's domains in how work is triaged.
 
@@ -2285,9 +2356,11 @@ source: /register/vannevar-bush/index.md
 
 *Source: <https://influences.sgit.ai/register/vannevar-bush/index.html> · markdown twin of the entry page.*
 
-- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** discovered — surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it
 - **kind** person + work
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
 The ancestor of the whole external-memory idea, and it entered this register the long way round — by being cited in an article about a modern implementation of the thing it predicted.
@@ -2299,7 +2372,7 @@ As We May Think — Vannevar Bush — The Atlantic · 1945
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 Bush's specific idea was not storage. It was the **trail**: a named path through documents that one person builds and another can follow, which is a claim about *edges being authored* rather than derived. Eighty years on, that is still not what most systems do.
 

@@ -44,13 +44,13 @@ BY_SLUG = {i["slug"]: i for i in INF}
 
 TIER_NOTE = {
     "traced":     "corpus evidence exists today",
-    "stated":     "on the founder's list, thin or absent in the corpus, awaiting his briefing document",
-    "discovered": "surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it",
+    "stated":     "on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document",
+    "discovered": "surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it",
 }
 STATUS_NOTE = {
     "full":     "the seven-block register format",
     "link-out": "blocks 1-3 and a pointer: the trace of this influence is an entire sibling site",
-    "stub":     "blocks 1 and 3, plus the research plan — awaiting the founder's briefing document",
+    "stub":     "blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document",
 }
 ROW_STATE = {
     "implemented": ("rs-yes", "implemented"),
@@ -68,7 +68,7 @@ def badges(i, up=""):
            f'title="{STATUS_NOTE[i["status"]]}">{esc(i["status"])}</a>']
     if i.get("discovered") and i["tier"] != "discovered":
         out.insert(1, '<span class="kindb kb-disc" title="Surfaced by corpus mining rather than '
-                      'named by the founder, and since promoted">discovered → traced</span>')
+                      'named by Dinis Cruz, and since promoted">discovered → traced</span>')
     return '<div class="badges">' + " ".join(out) + "</div>"
 
 
@@ -181,6 +181,8 @@ def block_trace_md(i):
 def entry_page(i, prev_i, next_i):
     rel = f'register/{i["slug"]}/index.html'
     up = "../../"
+    n_of = INF.index(i) + 1
+    n_total = len(INF)
     blocks = []
 
     blocks.append(f'''<h2 id="anchor"><span class="bn">Block 1</span> The anchor</h2>
@@ -189,7 +191,7 @@ def entry_page(i, prev_i, next_i):
 {(f'<p class="small dim">{md_inline(i["anchor"]["note"])}</p>' if i["anchor"].get("note") else "")}''')
 
     if i.get("founder_words") or i.get("resonance"):
-        blocks.append(f'''<h2 id="words"><span class="bn">Block 2</span> The founder's words</h2>
+        blocks.append(f'''<h2 id="words"><span class="bn">Block 2</span> In his own words</h2>
 {first_person_note(i)}
 {quotes_html(i)}
 {paras(i.get("resonance", []))}''')
@@ -255,6 +257,7 @@ The full union of every entry's Block 7 is at <a href="{up}library/index.html">/
 <div class="crumb"><a href="{up}index.html">influences.sgit.ai</a> / <a href="{up}register/index.html">register</a> / {esc(i["title"])}</div>
 <h1>{esc(i["title"])}</h1>
 {badges(i, up)}
+<p class="byline">An influence on <a href="{up}about/index.html"><b>Dinis Cruz</b></a> — entry {n_of} of <span class="tally" data-k="total">{n_total}</span> in <a href="{up}register/index.html">his register</a>.</p>
 <p class="lead">{md_inline(i["blurb"])}</p>
 
 {"".join(chr(10) + b + chr(10) for b in blocks)}
@@ -329,7 +332,7 @@ def first_person_note(i):
                 'briefing document for this entry arrives, this block carries the first-person '
                 'statements that already exist in the corpus, cited by file.</p>')
     return ('<p class="small dim">No first-person statement about this influence exists in the '
-            'corpus yet. What follows is the site\'s reading of the evidence, not the founder\'s '
+            'corpus yet. What follows is the site\'s reading of the evidence, not Dinis Cruz\'s '
             'words — and it stays labelled as such until his briefing document arrives.</p>')
 
 
@@ -337,7 +340,7 @@ def evidence_block(i, up):
     ev = i.get("corpus_evidence", [])
     if not ev:
         return ('<h2 id="evidence">The corpus evidence</h2>\n'
-                '<div class="warnbox"><p><b>None.</b> This influence is on the founder\'s own list '
+                '<div class="warnbox"><p><b>None.</b> This influence is on Dinis Cruz\'s own list '
                 'and the corpus scan found nothing to attach to it. That is the definition of the '
                 f'<a href="{up}tiers/index.html#stated">STATED tier</a>, and it is published rather '
                 'than hidden: an empty evidence block is the most honest thing this page can '
@@ -400,7 +403,8 @@ def entry_md(i):
     L = [f'# {i["title"]}', ""]
     L += [f'*Source: <https://{HOST}/register/{i["slug"]}/index.html> · '
           f'markdown twin of the entry page.*', ""]
-    L += [f'- **tier** {i["tier"]} — {TIER_NOTE[i["tier"]]}',
+    L += [f'*An influence on **Dinis Cruz** — one of {len(INF)} entries in his register.*', "",
+          f'- **tier** {i["tier"]} — {TIER_NOTE[i["tier"]]}',
           f'- **kind** {i["kind"]}',
           f'- **status** {i["status"]} — {STATUS_NOTE[i["status"]]}',
           f'- **briefing** {i.get("briefing_status", "none")}']
@@ -416,7 +420,7 @@ def entry_md(i):
     L += ["", "*Linked, never rehosted.*"]
 
     if i.get("founder_words") or i.get("resonance"):
-        L += ["", "## Block 2 — The founder's words", ""]
+        L += ["", "## Block 2 — In his own words", ""]
         if quotes_md(i):
             L += [quotes_md(i), ""]
         L += ["\n\n".join(i.get("resonance", []))]
@@ -453,7 +457,7 @@ def entry_md(i):
         L += ["| Path in the corpus | What it carries |", "|---|---|"]
         L += [f'| `{e["path"]}` | {e["note"]} |' for e in i["corpus_evidence"]]
     else:
-        L += ["None. This influence is on the founder's own list and the corpus scan found "
+        L += ["None. This influence is on Dinis Cruz's own list and the corpus scan found "
               "nothing to attach to it — which is the definition of the STATED tier."]
 
     L += ["", "---", "",
@@ -574,10 +578,10 @@ def index_page():
     for tier, heading, blurb in [
         ("traced", "TRACED", "Corpus evidence exists today. The claim on the page can be checked "
                              "against the files listed on it."),
-        ("stated", "STATED", "On the founder's own list, and thin or absent in the corpus. "
+        ("stated", "STATED", "On Dinis Cruz's own list, and thin or absent in the corpus. "
                              "Published as commitments with the research plan visible — the "
                              "roadmap, not the debt."),
-        ("discovered", "DISCOVERED", "Surfaced by mining the corpus, never named by the founder. "
+        ("discovered", "DISCOVERED", "Surfaced by mining the corpus, never named by Dinis Cruz. "
                                      "The claim rests entirely on the trace table until he "
                                      "confirms or corrects it."),
     ]:
@@ -604,7 +608,7 @@ def index_page():
 <span class="tally" data-k="traced">{t["traced"]}</span> traced,
 <span class="tally" data-k="stated">{t["stated"]}</span> stated,
 <span class="tally" data-k="discovered">{t["discovered"]}</span> discovered and still awaiting
-the founder's confirmation. The counts are computed from
+Dinis Cruz's confirmation. The counts are computed from
 <a href="../data/influences.json"><code>data/influences.json</code></a> on every build, not typed
 — because tier movement is the one event this site exists to record.</p>
 

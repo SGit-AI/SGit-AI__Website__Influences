@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/kevin-kelly/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** books
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-On the founder's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.
+On Dinis Cruz's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.
 
 ## Block 1 — The anchor
 
@@ -17,15 +19,15 @@ On the founder's list, with no corpus evidence and three candidate anchors. The 
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If the founder read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html).
+One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If Dinis Cruz read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html).
 
 ## Block 3 — The principle
 
 ***(hypothesis)* Technology is an evolutionary system with its own tendencies — some directions are pushed on us by what has already been built, rather than chosen.**
 
-Stated as a hypothesis because the source is Kelly's public argument, not the founder's account of what he took from it.
+Stated as a hypothesis because the source is Kelly's public argument, not Dinis Cruz's account of what he took from it.
 
 ## Block 7 — The wider library
 
@@ -36,13 +38,13 @@ Stated as a hypothesis because the source is Kelly's public argument, not the fo
 
 ## Awaiting the briefing document
 
-Named by the founder, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.
+Named by Dinis Cruz, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.
 
-**Research plan.** Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check the founder's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).
+**Research plan.** Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check Dinis Cruz's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 

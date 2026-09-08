@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/torvalds/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person
 - **status** full — the seven-block register format
 - **briefing** none
 
-Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument the founder makes about education.
+Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument Dinis Cruz makes about education.
 
 ## Block 1 — The anchor
 
@@ -18,7 +20,7 @@ Two works, unusually — the entry is about what they have in common rather than
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 Git's interesting property is not distribution, it is that **the history is content-addressed and therefore verifiable by anyone holding a copy**. Nobody has to trust the server. That is a data-model decision that produced a social one, and it is the same move this estate makes with encrypted vaults: put the guarantee in the structure, not in the operator's promise.
 

@@ -1,7 +1,7 @@
 # influences.sgit.ai — where the thinking came from
 
 The [sgit.ai](https://sgit.ai) network's provenance layer: the people, works, topics and things
-that shaped the founder's thinking, each written as a **falsifiable claim about the codebase**
+that shaped Dinis Cruz's thinking, each written as a **falsifiable claim about the codebase**
 rather than an appreciation.
 
 Live site: https://influences.sgit.ai (GitHub Pages, deployed from `dev`).
@@ -13,7 +13,7 @@ patterns appear **where** in the estate, at **which** version — and which are 
 specified precisely enough that an agent could pick one up as a work item. That is what separates
 the register from every "books that shaped me" listicle, and it is the reason the site exists.
 
-The format was not designed for the site. The founder wrote an *immediate-connection register*
+The format was not designed for the site. Dinis Cruz wrote an *immediate-connection register*
 for Victor's *Inventing on Principle* as a working document, and then asked what a site made of
 such documents should be called. The format is **proven in use**.
 
@@ -77,7 +77,7 @@ never to raise the cap.**
 under `register/` is in the data, and every tier count written into a page is recomputed from the
 register and must agree. `chrome.py` fills the numbers in; `validate.js` recomputes them
 independently from the same file. Tier movement — STATED → TRACED when a briefing lands,
-DISCOVERED → TRACED when the founder confirms — is this site's changelog, and a hand-typed count
+DISCOVERED → TRACED when Dinis Cruz confirms — is this site's changelog, and a hand-typed count
 is exactly what makes that change invisible.
 
 ## Release process

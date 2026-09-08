@@ -36,7 +36,7 @@ PAGE = ROOT / "index.html"
 
 
 def find_quote(slug, qid):
-    """A quotation by id, from either Block 2 (the founder's words) or Block 1 (a short
+    """A quotation by id, from either Block 2 (Dinis Cruz's words) or Block 1 (a short
     attributed quotation of the anchor work itself). Raises on a miss rather than
     quietly rendering nothing — a silently empty quote wall is worse than a red build."""
     i = INF[slug]

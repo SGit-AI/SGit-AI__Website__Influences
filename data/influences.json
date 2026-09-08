@@ -7,7 +7,7 @@
   "note": "The register. Every page under /register/ is generated from this file, /map/ is computed from it, and every tier count on the site is recomputed from it on each build and checked independently by the release gate. Prose is authored here once, in a tiny markdown (links, bold, italic, code), and rendered as both HTML and its markdown twin.",
   "tiers": {
     "traced": "corpus evidence exists today",
-    "stated": "on the founder's seed list, thin or absent in the corpus, awaiting his briefing document",
+    "stated": "on Dinis Cruz's seed list, thin or absent in the corpus, awaiting his briefing document",
     "discovered": "surfaced by corpus mining, not on the seed list, awaiting founder confirmation"
   },
   "row_status": {
@@ -37,7 +37,7 @@
       "founder_words": [
         {
           "quote": "That is the kind of experience and feedback loops I'm trying to create here.",
-          "source": "the immediate-connection register (held by the founder)",
+          "source": "the immediate-connection register (held by Dinis Cruz)",
           "note": "The line the register opens on, and the reason it exists. The register is a working document about the estate's viewer, not an essay about Victor."
         },
         {
@@ -49,7 +49,7 @@
         {
           "id": "unknowing",
           "quote": "Half the viewer's strongest features were already unknowing implementations of its demos, which is evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck.",
-          "source": "the immediate-connection register (held by the founder)",
+          "source": "the immediate-connection register (held by Dinis Cruz)",
           "note": "The closing argument, and the standard every trace table on this site is aiming at. Note how careful it is: **the instinct and the principle agree** is a much weaker claim than *the talk caused this*, and it is the one the evidence actually supports."
         }
       ],
@@ -60,7 +60,7 @@
       "corpus_evidence": [
         {
           "path": "sources/register__bret-victor__inventing-on-principle.md",
-          "note": "the founder's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is with the founder"
+          "note": "Dinis Cruz's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is still with him"
         },
         {
           "path": "docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md",
@@ -73,7 +73,7 @@
       ],
       "trace": {
         "state": "pending",
-        "note": "**The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by the founder and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered."
+        "note": "**The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by Dinis Cruz and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered."
       },
       "gaps": [
         {
@@ -166,7 +166,7 @@
         },
         {
           "path": "wardley-maps.sgit.ai (sibling site + its own brief pack)",
-          "note": "the founder's own published Wardley material — videos, infographics and the maps-as-code work"
+          "note": "Dinis Cruz's own published Wardley material — videos, infographics and the maps-as-code work"
         }
       ],
       "trace": {
@@ -196,7 +196,7 @@
       "sibling_site": {
         "host": "wardley-maps.sgit.ai",
         "url": "https://wardley-maps.sgit.ai",
-        "owns": "the maps, the evolution axes, the maps-as-code work, and the founder's own published mapping material"
+        "owns": "the maps, the evolution axes, the maps-as-code work, and Dinis Cruz's own published mapping material"
       },
       "lineage": [
         {
@@ -486,7 +486,7 @@
       "resonance": [
         "The composition is the interesting part. Csikszentmihalyi describes a state and its preconditions but has nothing to say about software; Victor describes a mechanism — immediate connection — without naming the state it protects. Put them together and you get a testable claim: **the reason immediate feedback matters is that it is what keeps the challenge/skill balance visible**, and a delay of thirty seconds is enough to lose it.",
         "That claim is what the estate's development methodology is built on, and it explains an otherwise odd design decision: the methodology is organised around *not breaking concentration* rather than around correctness or speed. Correctness is checked afterwards; concentration cannot be.",
-        "The third source is the founder's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place."
+        "The third source is Dinis Cruz's own practice, and it is the one with the least written evidence and possibly the most weight — see [music and playing in a band](../music-and-band/index.html), which is a stub awaiting his account and which, if the hypothesis holds, is where the experience of real-time collaborative flow came from in the first place."
       ],
       "corpus_evidence": [
         {
@@ -615,7 +615,7 @@
         "state": "sibling",
         "sibling": "open-source.sgit.ai",
         "sibling_url": "https://open-source.sgit.ai",
-        "note": "**The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to the founder's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html)."
+        "note": "**The trace of this influence is an entire site**, with a full history pack behind it. This entry owns the personal half — what publishing did to Dinis Cruz's practice — and two nested entries: [*The Cathedral and the Bazaar*](../cathedral-bazaar/index.html) and [Torvalds](../torvalds/index.html)."
       },
       "checklist": [
         "If this were public tomorrow, what would have to change first — and is that thing a defect?",
@@ -641,7 +641,7 @@
       "discovered": true,
       "kind": "person + method",
       "status": "full",
-      "blurb": "Never on the founder's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.",
+      "blurb": "Never on Dinis Cruz's list. The corpus surfaced a dedicated published article mapping the slip-box to the estate's graph model — a discovered influence with more written evidence behind it than most of the stated ones.",
       "anchor": {
         "title": "The Zettelkasten, and *Communicating with Slip Boxes* (1981)",
         "author": "Niklas Luhmann",
@@ -850,7 +850,7 @@
         {
           "id": "G2",
           "title": "The counter-influence entry does not exist",
-          "spec": "The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs the founder rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm."
+          "spec": "The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs Dinis Cruz rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm."
         }
       ],
       "checklist": [
@@ -881,7 +881,7 @@
       "tier": "traced",
       "kind": "person",
       "status": "full",
-      "blurb": "Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument the founder makes about education.",
+      "blurb": "Builder of two of the things this estate stands on. Nests under open source, and earns a standalone entry for one reason: Git is not just a tool here, it is the shape of an argument Dinis Cruz makes about education.",
       "anchor": {
         "title": "Git (2005), and Linux (1991)",
         "author": "Linus Torvalds",
@@ -1002,7 +1002,7 @@
       "founder_confirmed": "2026-08-25 — “Design and Steve Jobs approach to Design (with capital D).”",
       "kind": "discipline + person",
       "status": "full",
-      "blurb": "Discovered by mining and confirmed by the founder the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.",
+      "blurb": "Discovered by mining and confirmed by Dinis Cruz the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.",
       "anchor": {
         "title": "“Design is how it works” — the Jobs formulation the estate's Designer role is built on",
         "author": "Steve Jobs",
@@ -1032,7 +1032,7 @@
       "resonance": [
         "The reason this is the strongest-traced entry on the site is not the number of citations. It is that the influence **turned into process**. The brief's section is titled *The Jonathan Ive Principle: Good Design Starts with the User*; the observation is that you notice good design only by reverting and feeling the loss; and the estate turned that observation into the **Jonathan Ive test** — *is it simpler? would reverting feel worse?* — which is a **mandatory validator for every UI change**.",
         "That is the difference between a quote on a wall and an influence. A gate in a pipeline is checkable, dated, and possible to fail. Most entries in this register aspire to a trace table; this one had its trace table written as a workflow before anyone asked for the register.",
-        "What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why the founder's confirmation came with a question attached rather than closing the entry."
+        "What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why Dinis Cruz's confirmation came with a question attached rather than closing the entry."
       ],
       "corpus_evidence": [
         {
@@ -1050,7 +1050,7 @@
       ],
       "trace": {
         "state": "rows",
-        "note": "Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why the founder's confirmation was a formality rather than a discovery.",
+        "note": "Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why Dinis Cruz's confirmation was a formality rather than a discovery.",
         "rows": [
           {
             "pattern": "Design is how it works, not how it looks",
@@ -1285,20 +1285,20 @@
       "tier": "stated",
       "kind": "person + music",
       "status": "stub",
-      "blurb": "On the founder's own list, and with **zero corpus evidence**. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.",
+      "blurb": "On Dinis Cruz's own list, and with **zero corpus evidence**. The most personal entry on the site and the one nobody else can research — which is exactly why it is published as a stub rather than quietly dropped.",
       "anchor": {
         "title": "Rush — drums and lyrics, 1974–2015",
         "author": "Neil Peart",
-        "note": "**Anchor not yet chosen.** Which record, which period, which lyric — that is the founder's to say, and it is [N1](../../admin/comms.html#n1) in the briefing queue."
+        "note": "**Anchor not yet chosen.** Which record, which period, which lyric — that is Dinis Cruz's to say, and it is [N1](../../admin/comms.html#n1) in the briefing queue."
       },
       "principle": "*(hypothesis, not a finding)* Technical mastery in service of meaning — the craftsman-lyricist: virtuosity that exists to say something rather than to be noticed.",
-      "principle_note": "This principle is a **hypothesis constructed from public knowledge about Peart**, not from anything the founder has written. It is published so that the briefing document can correct it, which is more useful than an empty box — but it should not be quoted as this site's claim until it has been.",
+      "principle_note": "This principle is a **hypothesis constructed from public knowledge about Peart**, not from anything Dinis Cruz has written. It is published so that the briefing document can correct it, which is more useful than an empty box — but it should not be quoted as this site's claim until it has been.",
       "resonance": [
         "There is nothing to put here yet, and inventing it would be the exact failure the tier system exists to prevent. What can be said is why the entry is worth waiting for: an influence from outside software, on a person whose work is entirely inside it, is the kind that shapes taste rather than technique — and taste is the part of an estate that a trace table struggles to reach."
       ],
       "corpus_evidence": [],
-      "stub_note": "The founder named this influence and the corpus scan found nothing. That is the definition of the STATED tier, and it is not a defect in the mining: two decades of earlier writing were out of reach, and some of this may never have been written down at all. The entry stays here, visible, with the question attached.",
-      "research_plan": "The founder's own briefing document is the only real source, and it is [N1](../../admin/comms.html#n1). Alongside it: his talks and bios for drumming and music references, and the earlier blog material that was not reachable when the pack was mined ([R3](../../admin/comms.html#r3)). **A boundary that applies to this entry more than any other on the site**: lyrics are the sharpest edge in the whole no-verbatim rule — publishers enforce aggressively even over a single verse — so this entry will describe and link, and quote at most a fragment under analysis. [The release gate enforces the cap](../../admin/index.html#no-verbatim).",
+      "stub_note": "Dinis Cruz named this influence and the corpus scan found nothing. That is the definition of the STATED tier, and it is not a defect in the mining: two decades of earlier writing were out of reach, and some of this may never have been written down at all. The entry stays here, visible, with the question attached.",
+      "research_plan": "Dinis Cruz's own briefing document is the only real source, and it is [N1](../../admin/comms.html#n1). Alongside it: his talks and bios for drumming and music references, and the earlier blog material that was not reachable when the pack was mined ([R3](../../admin/comms.html#r3)). **A boundary that applies to this entry more than any other on the site**: lyrics are the sharpest edge in the whole no-verbatim rule — publishers enforce aggressively even over a single verse — so this entry will describe and link, and quote at most a fragment under analysis. [The release gate enforces the cap](../../admin/index.html#no-verbatim).",
       "wider_library": [
         {
           "title": "Rush — the discography",
@@ -1323,20 +1323,20 @@
       "tier": "stated",
       "kind": "books",
       "status": "stub",
-      "blurb": "On the founder's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.",
+      "blurb": "On Dinis Cruz's list, with no corpus evidence and three candidate anchors. The interesting question is whether the technium connects to Wardley's evolution axis or merely rhymes with it.",
       "anchor": {
         "title": "*What Technology Wants* (2010), *The Inevitable* (2016), or *1,000 True Fans* (2008)",
         "author": "Kevin Kelly",
         "note": "**Three candidates, none confirmed.** They are quite different books and the entry reads differently depending which one did the shaping — [N2](../../admin/comms.html#n2)."
       },
       "principle": "*(hypothesis)* Technology is an evolutionary system with its own tendencies — some directions are pushed on us by what has already been built, rather than chosen.",
-      "principle_note": "Stated as a hypothesis because the source is Kelly's public argument, not the founder's account of what he took from it.",
+      "principle_note": "Stated as a hypothesis because the source is Kelly's public argument, not Dinis Cruz's account of what he took from it.",
       "resonance": [
-        "One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If the founder read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html)."
+        "One connection is worth flagging precisely so that it can be knocked down: the technium's claim that technologies evolve along paths with their own momentum is structurally close to [Wardley's evolution axis](../wardley/index.html) — the most heavily traced influence in this register. If Dinis Cruz read Kelly first, that is a lineage. If he read Wardley first, it is a coincidence that looks like one. **The register cannot tell the difference and should not guess**, which is why the edge between them is not drawn on [the map](../../map/index.html)."
       ],
       "corpus_evidence": [],
-      "stub_note": "Named by the founder, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.",
-      "research_plan": "Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check the founder's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).",
+      "stub_note": "Named by Dinis Cruz, absent from the corpus. Kelly's books are widely read and it would be easy to write a plausible entry from public material — which is precisely what this tier exists to stop.",
+      "research_plan": "Confirm which book, or which combination, in [N2](../../admin/comms.html#n2). Then: check Dinis Cruz's conference talks for technium framing, and test the Wardley-evolution connection against whichever came first in his reading. The earlier blog material is the place to look ([R3](../../admin/comms.html#r3)).",
       "wider_library": [
         {
           "title": "What Technology Wants (2010)",
@@ -1365,7 +1365,7 @@
       "tier": "stated",
       "kind": "framework",
       "status": "stub",
-      "blurb": "Why → How → What. On the founder's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.",
+      "blurb": "Why → How → What. On Dinis Cruz's list, with no corpus trace — and with one piece of circumstantial evidence that is either supporting or embarrassing, depending on the answer.",
       "anchor": {
         "title": "*Start With Why* — the book (2009) or the TED talk (2009)",
         "author": "Simon Sinek",
@@ -1375,11 +1375,11 @@
       "principle": "Purpose before mechanism: say why this exists before saying what it does, because the why is what people can act on.",
       "resonance": [
         "The circumstantial evidence: **this site network is organised why-first.** Every site opens on the argument for its own existence before describing what it contains, and every commissioning brief in the network states a thesis before a scope. That is either the golden circle applied, or it is a house style that arrived some other way and now looks like it.",
-        "Only the founder can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**"
+        "Only Dinis Cruz can settle that, and the site should not settle it for him. It is a good illustration of the general problem this register has: **a pattern you can see is not evidence of the influence you expect to have caused it.**"
       ],
       "corpus_evidence": [],
-      "stub_note": "Named by the founder; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.",
-      "research_plan": "Confirm the anchor in [N3](../../admin/comms.html#n3). Then check the founder's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).",
+      "stub_note": "Named by Dinis Cruz; nothing in the corpus names Sinek or the golden circle. The why-first structure of the network is a resemblance, not a citation, and this entry keeps the two apart.",
+      "research_plan": "Confirm the anchor in [N3](../../admin/comms.html#n3). Then check Dinis Cruz's conference decks and talks for explicit why-first framing — a deck that opens on purpose is weak evidence, a deck that *names the golden circle* is strong. **A boundary note**: the golden circle is a registered trademark in some uses. A redrawn figure for commentary is fine; it must never become this site's branding. [The infographic rules](../../admin/comms.html#q7).",
       "wider_library": [
         {
           "title": "How great leaders inspire action (TED, 2009)",
@@ -1404,7 +1404,7 @@
       "tier": "stated",
       "kind": "work",
       "status": "stub",
-      "blurb": "The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to the founder* — which is exactly the part that is not written down anywhere.",
+      "blurb": "The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to Dinis Cruz* — which is exactly the part that is not written down anywhere.",
       "anchor": {
         "title": "The Cathedral and the Bazaar",
         "author": "Eric S. Raymond",
@@ -1414,11 +1414,11 @@
       },
       "principle": "Release early, release often, and let the people using the thing find what is wrong with it — openness as a development method rather than a licensing choice.",
       "resonance": [
-        "The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is the founder's to write."
+        "The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is Dinis Cruz's to write."
       ],
       "corpus_evidence": [],
-      "stub_note": "Named by the founder. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.",
-      "research_plan": "The founder's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).",
+      "stub_note": "Named by Dinis Cruz. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.",
+      "research_plan": "Dinis Cruz's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).",
       "wider_library": [
         {
           "title": "The Cathedral and the Bazaar (1997)",
@@ -1447,7 +1447,7 @@
       "tier": "stated",
       "kind": "presentation",
       "status": "stub",
-      "blurb": "An OWASP keynote, named by the founder from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.",
+      "blurb": "An OWASP keynote, named by Dinis Cruz from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.",
       "anchor": {
         "title": "Upon the Threshold of Opportunity — an OWASP AppSec keynote",
         "author": "David Rice",
@@ -1456,12 +1456,12 @@
       "principle": "*(hypothesis)* Security is an economic and societal opportunity rather than a fear industry — the argument of *Geekonomics*, made to a room of practitioners.",
       "principle_note": "Constructed from Rice's published book rather than from the keynote, because the keynote has not been located. It is a placeholder for the real principle, not the real principle.",
       "resonance": [
-        "A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only the founder holds.",
+        "A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only Dinis Cruz holds.",
         "Nests under [OWASP](../owasp/index.html), where the community-as-influence claim lives."
       ],
       "corpus_evidence": [],
-      "stub_note": "Named by the founder; no corpus trace, and no located recording. Both halves of the entry are open.",
-      "research_plan": "Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one the founder means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: the founder's contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).",
+      "stub_note": "Named by Dinis Cruz; no corpus trace, and no located recording. Both halves of the entry are open.",
+      "research_plan": "Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one Dinis Cruz means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: his contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).",
       "wider_library": [
         {
           "title": "Geekonomics: The Real Cost of Insecure Software (2007)",
@@ -1485,19 +1485,19 @@
       "tier": "stated",
       "kind": "practice + era",
       "status": "stub",
-      "blurb": "The most personal entry on the site, entirely awaiting the founder's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.",
+      "blurb": "The most personal entry on the site, entirely awaiting Dinis Cruz's account — and carrying the hypothesis that, if it holds, explains one of the most-traced influences in the register.",
       "anchor": {
         "title": "Playing in a band — a personal era",
         "note": "Not a work, and not a public event. There is nothing to link, which makes this the only entry on the site with no anchor URL at all."
       },
       "principle": "*(hypothesis)* Playing together in real time is the original experience of collaborative flow — several people, immediate feedback, no possibility of stopping to plan.",
-      "principle_note": "This is the site's most consequential unverified claim and it is flagged as such everywhere it appears. If the founder confirms it, it becomes the root of a lineage. If he does not, it is a neat story invented by a machine, and the register will say so.",
+      "principle_note": "This is the site's most consequential unverified claim and it is flagged as such everywhere it appears. If Dinis Cruz confirms it, it becomes the root of a lineage. If he does not, it is a neat story invented by a machine, and the register will say so.",
       "resonance": [
-        "The hypothesis is worth stating precisely because of what depends on it. [The flow entry](../flow/index.html) is one of the best-traced things in this register: Csikszentmihalyi's state, Victor's mechanism, and a development methodology whose stated core principle is preserving flow. **If band-playing is where the founder first experienced that state, then the most-instrumented influence on this site has an origin that is not written down anywhere.**",
+        "The hypothesis is worth stating precisely because of what depends on it. [The flow entry](../flow/index.html) is one of the best-traced things in this register: Csikszentmihalyi's state, Victor's mechanism, and a development methodology whose stated core principle is preserving flow. **If band-playing is where Dinis Cruz first experienced that state, then the most-instrumented influence on this site has an origin that is not written down anywhere.**",
         "It also has a specific property none of the software influences do: a band is *collaborative* flow. The methodology tries to recreate a state between a person and a machine. The original may have been a state between people — and that difference, if real, is a design constraint nobody has written down."
       ],
       "corpus_evidence": [],
-      "stub_note": "Entirely unresearchable by anyone except the founder. There is no public record, no publication to mine and no third party to ask. This entry is a placeholder for something only he can write, and it is published so that its absence is visible rather than tidy.",
+      "stub_note": "Entirely unresearchable by anyone except Dinis Cruz. There is no public record, no publication to mine and no third party to ask. This entry is a placeholder for something only he can write, and it is published so that its absence is visible rather than tidy.",
       "research_plan": "There is no research plan, and pretending otherwise would be dishonest. The entry needs [N6](../../admin/comms.html#n6) and nothing else. The specific questions worth answering: what the band was and when; whether the flow hypothesis above is right or a machine's tidy story; and whether the collaborative aspect is the part that carried over.",
       "lineage": [
         {
@@ -1514,7 +1514,7 @@
       "tier": "stated",
       "kind": "practice",
       "status": "stub",
-      "blurb": "On the founder's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.",
+      "blurb": "On Dinis Cruz's list as a practice rather than a person. The formative case is probably twenty years old and already in this register under another name.",
       "anchor": {
         "title": "Working in diverse and distributed teams — a practice",
         "note": "No single work. The likeliest formative instance is OWASP's global chapter model, which has [its own entry](../owasp/index.html) — the briefing needs to say whether that is the origin or a later example."
@@ -1523,11 +1523,11 @@
       "principle_note": "Two claims bundled into one principle, which is usually a sign the entry has not been thought through yet. The briefing should separate them: distribution and diversity are different mechanisms with different failure modes.",
       "resonance": [
         "The circumstantial case is strong enough to be worth stating and weak enough that it must not be presented as evidence. This estate's practices are unusually written-down: role definitions as documents, briefs as first-class artefacts, decisions recorded rather than remembered. **That is what a distributed habit looks like when it has been fully internalised** — but a habit that thorough could equally come from working with agents, who have no other way to receive context.",
-        "Which of those came first is the question, and it is the founder's. [OWASP's global chapters](../owasp/index.html) predate everything else here by two decades, which makes them the best candidate for the origin."
+        "Which of those came first is the question, and it is Dinis Cruz's. [OWASP's global chapters](../owasp/index.html) predate everything else here by two decades, which makes them the best candidate for the origin."
       ],
       "corpus_evidence": [],
-      "stub_note": "Named by the founder, with no direct corpus citation. The estate is full of *consequences* that would be consistent with this influence, which is not the same thing as evidence for it — and the difference is what the tier means.",
-      "research_plan": "[N7](../../admin/comms.html#n7). Three places to look, in order of likely yield: the founder's management writing; the estate's own team-roles system, which reads like a formalisation of something learned earlier; and OWASP's global-chapter model as the formative experience. The question the briefing must answer: **which of these is the origin and which are consequences.**",
+      "stub_note": "Named by Dinis Cruz, with no direct corpus citation. The estate is full of *consequences* that would be consistent with this influence, which is not the same thing as evidence for it — and the difference is what the tier means.",
+      "research_plan": "[N7](../../admin/comms.html#n7). Three places to look, in order of likely yield: Dinis Cruz's management writing; the estate's own team-roles system, which reads like a formalisation of something learned earlier; and OWASP's global-chapter model as the formative experience. The question the briefing must answer: **which of these is the origin and which are consequences.**",
       "wider_library": [
         {
           "title": "Team Topologies — Skelton & Pais",
@@ -1543,7 +1543,7 @@
       "tier": "discovered",
       "kind": "person",
       "status": "full",
-      "blurb": "Never named by the founder. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.",
+      "blurb": "Never named by Dinis Cruz. Surfaced by mining a live role definition, where the pattern-language idea is doing real work — a load-bearing citation, not a decorative one.",
       "anchor": {
         "title": "A Pattern Language",
         "author": "Christopher Alexander, Sara Ishikawa and Murray Silverstein",
@@ -1562,7 +1562,7 @@
       "resonance": [
         "The move worth noticing is that the role definition does not use Alexander the way software usually does. The Gang of Four took the *pattern* idea and left the rest; this citation takes the part the Gang of Four dropped — **that a building is judged by what it is like to be in it** — and applies it to a codebase. *Is it navigable? Is it comfortable?* are not questions about correctness. They are questions about habitation.",
         "That reading is closer to what Alexander actually argued, and to his later disappointment with what software did with his work. It is also, honestly, the reading that is hardest to check: comfort is not a property a test can assert.",
-        "**This entry is DISCOVERED and stays that way until the founder confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2)."
+        "**This entry is DISCOVERED and stays that way until Dinis Cruz confirms it.** The claim that Alexander shaped the thinking rests entirely on one citation being load-bearing rather than ornamental. That is a real argument and it is not proof — [Q2](../../admin/comms.html#q2)."
       ],
       "corpus_evidence": [
         {
@@ -1646,7 +1646,7 @@
       "blurb": "Listed beside Wardley in a 2019 hiring post. One mention is enough to notice and not enough to claim — so this is a discovered stub, published at the strength of its evidence.",
       "anchor": {
         "title": "Team Topologies (Skelton & Pais, 2019) and the Cynefin framework (Snowden, 1999)",
-        "note": "Two frameworks, bundled because the corpus bundles them. If the founder confirms, they should probably be separated — they answer different questions.",
+        "note": "Two frameworks, bundled because the corpus bundles them. If Dinis Cruz confirms, they should probably be separated — they answer different questions.",
         "url": "https://teamtopologies.com/"
       },
       "principle": "Organisational structure and problem-domain sensemaking are engineering concerns: the shape of the team decides the shape of the system, and the kind of problem decides which practice is appropriate.",
@@ -1660,7 +1660,7 @@
           "note": "both frameworks listed beside Wardley mapping; the only occurrence the mining run found"
         }
       ],
-      "stub_note": "Found by mining and never claimed by the founder, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.",
+      "stub_note": "Found by mining and never claimed by Dinis Cruz, on the strength of a single mention. Published at the tier its evidence supports, and it will move — in either direction — when [Q2](../../admin/comms.html#q2) is answered.",
       "research_plan": "[Q2](../../admin/comms.html#q2) first: does this belong at all, or is it a citation rather than an influence? If confirmed, separate the two frameworks and look for Team Topologies vocabulary — stream-aligned, platform, enabling, complicated-subsystem — in the estate's team-roles system, and for Cynefin's domains in how work is triaged.",
       "wider_library": [
         {

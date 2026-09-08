@@ -604,3 +604,9 @@ a.idea .go{display:inline-block;margin-top:.6rem;font-size:.75rem;color:var(--ac
 .surprise p{margin:0;font-size:.9rem;color:#34363c;line-height:1.6}
 .surprise .go{display:inline-block;margin-top:.5rem;font-size:.75rem;color:var(--accent-dk);font-weight:600}
 @media (max-width:560px){.surprise{grid-template-columns:1fr}.surprise .n{display:none}}
+main.doc p.byline{font-size:.85rem;color:var(--dim);margin:-.6rem 0 1rem}
+main.doc p.byline a{font-weight:600}
+/* the hero's byline: whose register this is, and where to read more about him */
+header.hero .wholine{max-width:760px;margin:-.7rem auto 1.7rem;font-size:.82rem;color:var(--dim2);
+  line-height:1.8}
+header.hero .wholine a{color:var(--accent-dk);font-weight:600}

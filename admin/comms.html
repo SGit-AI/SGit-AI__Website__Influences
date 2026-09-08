@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Comms: the briefing queue · influences.sgit.ai</title>
-<meta name="description" content="Tasks, requests, and the briefing-document queue: one open thread per STATED influence, so the founder's stated plan to write a document about each one has a visible, addressable inbox.">
+<meta name="description" content="Tasks, requests, and the briefing-document queue: one open thread per STATED influence, so Dinis Cruz's stated plan to write a document about each one has a visible, addressable inbox.">
 <link rel="canonical" href="https://influences.sgit.ai/admin/comms.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="influences.sgit.ai">
@@ -20,7 +20,7 @@
   <a class="brand" href="../index.html">influences<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai — the parent project: the vault layer, the shipped CLI and the network this site belongs to">↗ part of <b>sgit.ai</b></a>
   <span class="stage-pill">the provenance layer</span>
-  <a class="ver" href="../admin/versions.html" title="Site release history">v0.3.0</a>
+  <a class="ver" href="../admin/versions.html" title="Site release history">v0.4.0</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni ni-has">
@@ -61,10 +61,11 @@
       </div>
     </div>
     <div class="ni ni-has">
-      <a class="nl" href="../network/index.html">The network<span class="caret">&#9662;</span></a>
+      <a class="nl" href="../about/index.html">About<span class="caret">&#9662;</span></a>
       <div class="sub">
-      <a class="sl" href="../network/index.html">The sgit.ai network</a>
+      <a class="sl" href="../about/index.html">Dinis Cruz — whose register this is</a>
       <a class="sl" href="../about/participant.html">Participant disclosure</a>
+      <a class="sl" href="../network/index.html">The sgit.ai network</a>
       <a class="sl" href="../llms.txt">llms.txt</a>
       <a class="sl" href="../llms-full.txt">llms-full.txt</a>
       </div>
@@ -77,7 +78,7 @@
 <main class="doc">
 <div class="crumb"><a href="../index.html">influences.sgit.ai</a> / <a href="index.html">admin</a> / comms</div>
 <h1>Comms: tasks, requests and the briefing queue</h1>
-<p class="lead">The working channel between the project lead and the agent building this site, kept in public and updated every release. On the sibling sites this page carries build questions. <b>Here it does one more job</b>: the founder's stated plan — <i>in time I will create a detailed briefing document about each one</i> — becomes a visible, addressable inbox, with <a href="#briefing">one open thread per influence awaiting a briefing</a>. When a document lands, the thread closes and the entry's tier moves.</p>
+<p class="lead">The working channel between the project lead and the agent building this site, kept in public and updated every release. On the sibling sites this page carries build questions. <b>Here it does one more job</b>: Dinis Cruz's stated plan — <i>in time I will create a detailed briefing document about each one</i> — becomes a visible, addressable inbox, with <a href="#briefing">one open thread per influence awaiting a briefing</a>. When a document lands, the thread closes and the entry's tier moves.</p>
 
 <h2 id="tasks">Tasks</h2>
 <div class="tablewrap">
@@ -99,6 +100,7 @@
       <tr><td>T16</td><td><b>A front page about the ideas rather than the machinery.</b> Eight principles and six quotations, <b>generated from the register</b> by <code>gen_front.py</code> so the home page cannot quote a principle an entry has since edited</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
       <tr><td>T17</td><td><b><a href="../provenance/index.html">/provenance/</a></b> — where the register came from, how the site is generated, the two editorial gates, and the four things it cannot do. Everything the front page used to carry about its own construction</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
       <tr><td>T18</td><td><b><a href="../articles/index.html">/articles/</a></b> — an article <em>is</em> a markdown file and the page is generated from it, so a piece can be republished without a second copy existing. Needed a small stdlib markdown renderer (<code>mdblock.py</code>) whose blockquote handling enforces <a href="index.html#no-verbatim">the attribution rule</a> at authoring time rather than at CI time</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
+      <tr><td>T19</td><td><b>Name the subject.</b> The site said <i>the founder</i> in 227 places. Dinis Cruz is now named in the titles, the hero, every footer, a byline under every entry, and the register's own prose; <a href="../about/index.html">/about/</a> says who he is and links the two canonical accounts rather than keeping a third</td><td class="verdict"><span class="tstat t-done">done</span></td></tr>
       <tr><td>T13</td><td>Infographics: original artwork for likenesses, redrawn idea-figures in house style with attribution, each with a markdown or JSON twin as its source data</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
       <tr><td>T14</td><td>Cross-links <b>from</b> the sibling sites — <a href="https://wardley-maps.sgit.ai">wardley-maps</a>, <a href="https://graphs.sgit.ai">graphs</a> and <a href="https://open-source.sgit.ai">open-source</a> each own the material for one of this site's link-out entries and none of them points back yet</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
       <tr><td>T15</td><td>Vendor the diagram renderer. <a href="../map/index.html">The map</a> pulls <code>mermaid@11</code> from a third-party CDN at a pinned URL and degrades to a readable text fence when it is unreachable. The fallback works; the dependency is still a dependency</td><td class="verdict"><span class="tstat t-open">queued</span></td></tr>
@@ -107,21 +109,21 @@
 </div>
 
 <h2 id="briefing">The briefing queue — one thread per influence awaiting a document</h2>
-<p>Seven influences are on the founder's own list and have <b>no corpus evidence at all</b>. That is not a defect in the mining: they are the things nobody else can research. Each gets a thread here, and the entry stays a published stub with its research plan visible until the thread closes.</p>
+<p>Seven influences are on Dinis Cruz's own list and have <b>no corpus evidence at all</b>. That is not a defect in the mining: they are the things nobody else can research. Each gets a thread here, and the entry stays a published stub with its research plan visible until the thread closes.</p>
 <div class="note">
-  <p><b>Suggested order, and why.</b> Start with <b>N1</b> or <b>N6</b> — Neil Peart and the band years are the entries no researcher can substitute for, and the two most likely to change how the rest of the register reads. The others have public material a research pass can work from once the founder confirms the anchor.</p>
+  <p><b>Suggested order, and why.</b> Start with <b>N1</b> or <b>N6</b> — Neil Peart and the band years are the entries no researcher can substitute for, and the two most likely to change how the rest of the register reads. The others have public material a research pass can work from once Dinis Cruz confirms the anchor.</p>
 </div>
 <div class="tablewrap">
   <table>
     <thead><tr><th>#</th><th>Influence, and what the briefing needs to settle</th><th>State</th></tr></thead>
     <tbody>
-      <tr><td id="n1">N1</td><td><b>Neil Peart &amp; Rush.</b> The anchor: which record, which lyric, which period. The hypothesis to test rather than assert — the craftsman-lyricist archetype, technical mastery in service of meaning. <span class="dim small">Note the boundary: this entry describes and links. Lyrics are the one place where even a verse is a legal risk, and the entry quotes at most a fragment under analysis.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="n2">N2</td><td><b>Kevin Kelly's books.</b> Which is the anchor — <i>What Technology Wants</i>, <i>The Inevitable</i>, or the <i>1,000 True Fans</i> essay? And is the technium-to-Wardley-evolution connection real or a plausible-looking coincidence?</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="n3">N3</td><td><b>Simon Sinek — the golden circle.</b> Anchor: the book or the talk? The site network is organised why-first, which is either evidence or hindsight, and only the founder can say which.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="n4">N4</td><td><b><i>The Cathedral and the Bazaar</i>.</b> The essay's factual history belongs to <a href="https://open-source.sgit.ai">open-source.sgit.ai</a>. This entry owns only what it <em>did to the founder</em>, and that is exactly the part not written down anywhere.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="n5">N5</td><td><b>David Rice — "Upon the Threshold of Opportunity".</b> Which year's OWASP keynote is canonical, and is there a recording whose licence permits an embed? <span class="dim small">OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="n6">N6</td><td><b>Music, and playing in a band.</b> Entirely unresearchable by anyone else. The hypothesis worth testing: band-playing as the original experience of real-time collaborative flow — the thing the estate's development methodology tries to recreate in software.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="n7">N7</td><td><b>Diverse and distributed teams.</b> Research plan is written: the founder's management writing, the estate's team-roles system, and OWASP's global-chapter model as the formative experience. The briefing needs to say which of those is the origin and which is the consequence.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="n1">N1</td><td><b>Neil Peart &amp; Rush.</b> The anchor: which record, which lyric, which period. The hypothesis to test rather than assert — the craftsman-lyricist archetype, technical mastery in service of meaning. <span class="dim small">Note the boundary: this entry describes and links. Lyrics are the one place where even a verse is a legal risk, and the entry quotes at most a fragment under analysis.</span></td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="n2">N2</td><td><b>Kevin Kelly's books.</b> Which is the anchor — <i>What Technology Wants</i>, <i>The Inevitable</i>, or the <i>1,000 True Fans</i> essay? And is the technium-to-Wardley-evolution connection real or a plausible-looking coincidence?</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="n3">N3</td><td><b>Simon Sinek — the golden circle.</b> Anchor: the book or the talk? The site network is organised why-first, which is either evidence or hindsight, and only Dinis Cruz can say which.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="n4">N4</td><td><b><i>The Cathedral and the Bazaar</i>.</b> The essay's factual history belongs to <a href="https://open-source.sgit.ai">open-source.sgit.ai</a>. This entry owns only what it <em>did to Dinis Cruz</em>, and that is exactly the part not written down anywhere.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="n5">N5</td><td><b>David Rice — "Upon the Threshold of Opportunity".</b> Which year's OWASP keynote is canonical, and is there a recording whose licence permits an embed? <span class="dim small">OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed.</span></td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="n6">N6</td><td><b>Music, and playing in a band.</b> Entirely unresearchable by anyone else. The hypothesis worth testing: band-playing as the original experience of real-time collaborative flow — the thing the estate's development methodology tries to recreate in software.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="n7">N7</td><td><b>Diverse and distributed teams.</b> Research plan is written: Dinis Cruz's management writing, the estate's team-roles system, and OWASP's global-chapter model as the formative experience. The briefing needs to say which of those is the origin and which is the consequence.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
     </tbody>
   </table>
 </div>
@@ -131,14 +133,14 @@
   <table>
     <thead><tr><th>#</th><th>Question</th><th>State</th></tr></thead>
     <tbody>
-      <tr><td id="q1"><b>Q1</b></td><td><b>The full text of the Bret Victor register.</b> The commissioning pack ships a faithful summary of its structure and closing argument; the full text lives with the founder, supplied in conversation and not retained across a context boundary. <b>Entry one cannot ship complete without it</b> — the site publishes what the pack carries, clearly marked as the summary, and swaps in the original the moment it arrives. This is the first ask.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="q2"><b>Q2</b></td><td><b>Confirm or demote the discovered influences.</b> Luhmann, Christopher Alexander, Team Topologies/Cynefin and Vannevar Bush were found by mining the corpus and never named by the founder. Do they belong, or are any of them a citation rather than an influence? <b>The falsifiability of this site starts with the founder falsifying its discoveries.</b> <span class="dim small">Design and Steve Jobs: already confirmed, 25 August 2026 — the first discovered → confirmed transition, before the site existed.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="q2b">Q2b</td><td><b>The Design entry's anchor.</b> Which artefact is canonical — the "design is how it works" formulation, the MP3-to-CD whiteboard story, a keynote, Ive's process, a specific product? And when did Design-with-a-capital-D become explicit in the thinking rather than implicit in the work?</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q1"><b>Q1</b></td><td><b>The full text of the Bret Victor register.</b> The commissioning pack ships a faithful summary of its structure and closing argument; the full text lives with Dinis Cruz, supplied in conversation and not retained across a context boundary. <b>Entry one cannot ship complete without it</b> — the site publishes what the pack carries, clearly marked as the summary, and swaps in the original the moment it arrives. This is the first ask.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="q2"><b>Q2</b></td><td><b>Confirm or demote the discovered influences.</b> Luhmann, Christopher Alexander, Team Topologies/Cynefin and Vannevar Bush were found by mining the corpus and never named by Dinis Cruz. Do they belong, or are any of them a citation rather than an influence? <b>The falsifiability of this site starts with Dinis Cruz falsifying its discoveries.</b> <span class="dim small">Design and Steve Jobs: already confirmed, 25 August 2026 — the first discovered → confirmed transition, before the site existed.</span></td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="q2b">Q2b</td><td><b>The Design entry's anchor.</b> Which artefact is canonical — the "design is how it works" formulation, the MP3-to-CD whiteboard story, a keynote, Ive's process, a specific product? And when did Design-with-a-capital-D become explicit in the thinking rather than implicit in the work?</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
       <tr><td id="q3">Q3</td><td><b>Anchors to confirm</b> across the stated seven — Kelly, Sinek, Rice. Rolled into <a href="#briefing">the briefing threads</a> above rather than asked twice.</td><td class="verdict"><span class="tstat t-done">merged into N2/N3/N5</span></td></tr>
-      <tr><td id="q4"><b>Q4</b></td><td><b>Are there influences you rejected?</b> Things everyone assumes shaped the work but did not, or that were outgrown. An entry with <code>status: counter-influence</code> would be unusual on the web and very much in this site's spirit — a register that can only add is not falsifiable in the direction that matters.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
-      <tr><td id="q5">Q5</td><td><b>Where did graphs actually enter?</b> The founding obsession has an entire sibling site and no recorded origin. O2 Platform's code-flow work, or earlier? The link-out entry owns the personal history and nothing else, so this is the only thing it needs.</td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q4"><b>Q4</b></td><td><b>Are there influences you rejected?</b> Things everyone assumes shaped the work but did not, or that were outgrown. An entry with <code>status: counter-influence</code> would be unusual on the web and very much in this site's spirit — a register that can only add is not falsifiable in the direction that matters.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
+      <tr><td id="q5">Q5</td><td><b>Where did graphs actually enter?</b> The founding obsession has an entire sibling site and no recorded origin. O2 Platform's code-flow work, or earlier? The link-out entry owns the personal history and nothing else, so this is the only thing it needs.</td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
       <tr><td id="q6">Q6</td><td><b>Does <a href="../map/index.html">the map</a> belong here or on the graphs sibling</b> once it becomes a real G³ demonstration? Proposal: authored here, mirrored there — the influence graph is this site's content, and its rendering is that site's subject.</td><td class="verdict"><span class="tstat t-need">for the lead</span></td></tr>
-      <tr><td id="q7">Q7</td><td><b>Infographics and likenesses.</b> The founder asked for infographics of people and ideas. The rule this site adopts: likenesses are original artwork only, never scraped photographs and never AI renderings presented as portraits; idea-figures are redrawn in house style with the idea's author attributed. That needs either an artist pass or a generation workflow the founder approves. <span class="dim small">Tracked as T13.</span></td><td class="verdict"><span class="tstat t-need">for the founder</span></td></tr>
+      <tr><td id="q7">Q7</td><td><b>Infographics and likenesses.</b> Dinis Cruz asked for infographics of people and ideas. The rule this site adopts: likenesses are original artwork only, never scraped photographs and never AI renderings presented as portraits; idea-figures are redrawn in house style with the idea's author attributed. That needs either an artist pass or a generation workflow Dinis Cruz approves. <span class="dim small">Tracked as T13.</span></td><td class="verdict"><span class="tstat t-need">for Dinis Cruz</span></td></tr>
     </tbody>
   </table>
 </div>
@@ -175,7 +177,7 @@
   rows. <a href="#r1">R1</a> is what closes the gap, and it is a decision rather than a task.</li>
   <li><b>Entry one is incomplete and shipped anyway.</b> <a href="../register/bret-victor/index.html">The
   Victor entry</a> is the model for the whole format and its trace table is missing, because the
-  register that contains it is with the founder (<a href="#q1">Q1</a>). Publishing it with the table
+  register that contains it is with Dinis Cruz (<a href="#q1">Q1</a>). Publishing it with the table
   empty and the reason stated is more useful than holding the site back, and considerably more
   useful than inventing the rows.</li>
   <li><b>Nothing here claims to be finished.</b> The nav lists the pages that exist, the version badge says what stage this is, and <a href="versions.html">the release history</a> says what shipped in one row per release. All three are easier to grow than to walk back.</li>
@@ -190,10 +192,10 @@
 <footer class="site"><div class="cols">
   <div>
     <div class="brandline">influences<span>.sgit.ai</span></div>
-    <p>A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network: the people, works, topics and things that shaped the founder's thinking, and the places in the estate where that shaping can be checked. An influence entry here is a <b>falsifiable claim about the codebase</b>, not a reading list. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
+    <p>The influence register of <a href="../about/index.html" style="display:inline;padding:0"><b>Dinis Cruz</b></a> — the people, works, topics and things that shaped his thinking, and the places in his own code where that shaping can be checked. An influence entry here is a <b>falsifiable claim about a codebase</b>, not a reading list. A site in the <a href="https://sgit.ai" style="display:inline;padding:0"><b>sgit.ai</b></a> network. The site's own words are CC BY 4.0; the anchor works belong to their authors and are linked, never rehosted.</p>
     <p class="netline"><a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · <a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · <a href="https://graphs.sgit.ai">↗ graphs.sgit.ai</a> · <a href="https://open-source.sgit.ai">↗ open-source.sgit.ai</a> · <a href="https://coding.sgit.ai">↗ coding.sgit.ai</a> · <a href="https://sgit.ai/network/index.html">↗ the network</a></p>
-    <p class="partnote">⚠ Participant disclosure: published by the sgit project, whose own work this site claims was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
-    <p class="verline">site <a href="../admin/versions.html">v0.3.0</a> · <a href="../admin/index.html">engineering</a></p>
+    <p class="partnote">⚠ Participant disclosure: written about Dinis Cruz, published by the project he founded, and claiming his own work was shaped by the influences it lists. <a href="../about/participant.html" style="display:inline;padding:0">Read the disclosure</a>.</p>
+    <p class="verline">site <a href="../admin/versions.html">v0.4.0</a> · <a href="../admin/index.html">engineering</a></p>
   </div>
   <div>
     <h4>The register</h4>
@@ -223,8 +225,14 @@
     <a href="../admin/index.html">The pipeline, end to end</a>
     <a href="../admin/versions.html">Release history</a>
     <a href="../admin/comms.html">Comms: the briefing queue</a>
+  </div>
+  <div>
+    <h4>About</h4>
+    <a href="../about/index.html">Dinis Cruz</a>
     <a href="../about/participant.html">Participant disclosure</a>
     <a href="../network/index.html">The sgit.ai network</a>
+    <a href="https://open-source.sgit.ai/about/index.html">↗ open-source.sgit.ai/about</a>
+    <a href="https://docs.diniscruz.ai/about.html">↗ docs.diniscruz.ai/about</a>
   </div>
 </div></footer>
 

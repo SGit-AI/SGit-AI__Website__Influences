@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/graphs/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** topic
 - **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
@@ -17,7 +19,7 @@ The first encounter — likely the O2 Platform's code-flow work
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 This is the influence with the largest corpus footprint and the least documented origin, which is a strange combination and worth stating rather than smoothing over. Graphs are everywhere in the estate — the substrate, the ontology work, the memory model, an entire sibling site — and nothing in the corpus records the moment they stopped being a data structure and became the way of seeing.
 

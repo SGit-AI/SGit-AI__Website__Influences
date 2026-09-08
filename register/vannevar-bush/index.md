@@ -2,9 +2,11 @@
 
 *Source: <https://influences.sgit.ai/register/vannevar-bush/index.html> · markdown twin of the entry page.*
 
-- **tier** discovered — surfaced by mining the corpus, not on the founder's list — a falsifiable claim until he confirms it
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** discovered — surfaced by mining the corpus, not on Dinis Cruz's list — a falsifiable claim until he confirms it
 - **kind** person + work
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
 The ancestor of the whole external-memory idea, and it entered this register the long way round — by being cited in an article about a modern implementation of the thing it predicted.
@@ -16,7 +18,7 @@ As We May Think — Vannevar Bush — The Atlantic · 1945
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 Bush's specific idea was not storage. It was the **trail**: a named path through documents that one person builds and another can follow, which is a claim about *edges being authored* rather than derived. Eighty years on, that is still not what most systems do.
 

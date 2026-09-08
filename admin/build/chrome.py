@@ -70,12 +70,13 @@ NAV = [
         ("Release history", "admin/versions.html"),
         ("Comms: the briefing queue", "admin/comms.html"),
     ], ("provenance/", "format/", "documents/", "briefs/", "admin/")),
-    ("The network", "network/index.html", [
-        ("The sgit.ai network", "network/index.html"),
+    ("About", "about/index.html", [
+        ("Dinis Cruz — whose register this is", "about/index.html"),
         ("Participant disclosure", "about/participant.html"),
+        ("The sgit.ai network", "network/index.html"),
         ("llms.txt", "llms.txt"),
         ("llms-full.txt", "llms-full.txt"),
-    ], ("network/", "about/")),
+    ], ("about/", "network/")),
 ]
 
 FOOTER = [
@@ -103,20 +104,27 @@ FOOTER = [
         ("The pipeline, end to end", "admin/index.html"),
         ("Release history", "admin/versions.html"),
         ("Comms: the briefing queue", "admin/comms.html"),
+    ]),
+    ("About", [
+        ("Dinis Cruz", "about/index.html"),
         ("Participant disclosure", "about/participant.html"),
         ("The sgit.ai network", "network/index.html"),
+        ("↗ open-source.sgit.ai/about", "https://open-source.sgit.ai/about/index.html"),
+        ("↗ docs.diniscruz.ai/about", "https://docs.diniscruz.ai/about.html"),
     ]),
 ]
 
-BLURB = ("A site in the <a href=\"https://sgit.ai\" style=\"display:inline;padding:0\"><b>sgit.ai</b></a> "
-         "network: the people, works, topics and things that shaped the founder's thinking, and "
-         "the places in the estate where that shaping can be checked. An influence entry here is "
-         "a <b>falsifiable claim about the codebase</b>, not a reading list. "
+BLURB = ("The influence register of <a href=\"{up}about/index.html\" style=\"display:inline;padding:0\">"
+         "<b>Dinis Cruz</b></a> — the people, works, topics and things that shaped his thinking, and "
+         "the places in his own code where that shaping can be checked. An influence entry here is "
+         "a <b>falsifiable claim about a codebase</b>, not a reading list. A site in the "
+         "<a href=\"https://sgit.ai\" style=\"display:inline;padding:0\"><b>sgit.ai</b></a> network. "
          "The site's own words are CC BY 4.0; the anchor works belong to their authors and are "
          "linked, never rehosted.")
-PARTNOTE = ('⚠ Participant disclosure: published by the sgit project, whose own work this site '
-            'claims was shaped by the influences it lists. <a href="{up}about/participant.html" '
-            'style="display:inline;padding:0">Read the disclosure</a>.')
+PARTNOTE = ('⚠ Participant disclosure: written about Dinis Cruz, published by the project he '
+            'founded, and claiming his own work was shaped by the influences it lists. '
+            '<a href="{up}about/participant.html" style="display:inline;padding:0">Read the '
+            'disclosure</a>.')
 PARTNOTE_SELF = '⚠ Participant disclosure: published by the sgit project. You are on the disclosure page.'
 NETLINE = ('<a href="https://sgit.ai"><b>↗ sgit.ai</b></a> — the parent project · '
            '<a href="https://wardley-maps.sgit.ai">↗ wardley-maps.sgit.ai</a> · '
@@ -153,6 +161,10 @@ def nav_html(rel, up):
 
 
 def footer_html(rel, up):
+    # BLURB and PARTNOTE both carry a {up} placeholder: the footer links to the About page
+    # from every depth in the tree, and the site now says whose register this is in the
+    # footer of every page rather than only on the front one.
+    blurb = BLURB.format(up=up)
     partnote = PARTNOTE_SELF if rel == "about/participant.html" else PARTNOTE.format(up=up)
     md_twin = f' · <a href="{up}index.md">this page as markdown</a>' if rel == "index.html" else ""
     cols = "\n".join(
@@ -164,7 +176,7 @@ def footer_html(rel, up):
     return (f'<footer class="site"><div class="cols">\n'
             f'  <div>\n'
             f'    <div class="brandline">influences<span>.sgit.ai</span></div>\n'
-            f'    <p>{BLURB}</p>\n'
+            f'    <p>{blurb}</p>\n'
             f'    <p class="netline">{NETLINE}</p>\n'
             f'    <p class="partnote">{partnote}</p>\n'
             f'    <p class="verline">site <a href="{up}admin/versions.html">{VERSION}</a> · '

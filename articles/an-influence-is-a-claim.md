@@ -1,5 +1,8 @@
 # An influence is a claim you can check
 
+*By Dinis Cruz. Published at [influences.sgit.ai](https://influences.sgit.ai) — my influence
+register, and the site this piece introduces.*
+
 Everyone has a list of the people who shaped them. Almost nobody can show the shaping.
 
 I have been keeping that list informally for twenty years — the talks I keep coming back to,
@@ -236,3 +239,7 @@ The site is at [influences.sgit.ai](https://influences.sgit.ai). Every entry is 
 markdown as well as HTML, the register is one JSON file, and the influence graph is computed from
 it. All of it is CC BY 4.0; none of the works it describes are mine to give away, so they are
 linked and never rehosted.
+
+More about me at [open-source.sgit.ai/about](https://open-source.sgit.ai/about/index.html) — the
+record, the companies and the open-source position — and at
+[docs.diniscruz.ai/about](https://docs.diniscruz.ai/about.html), the research hub.

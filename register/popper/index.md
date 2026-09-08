@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/popper/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + idea
 - **status** full — the seven-block register format
@@ -17,7 +19,7 @@ First published in German as *Logik der Forschung* (1934). The anchor is the dem
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The reason this entry is short and load-bearing at once: **it is not a topic in the estate, it is the format of the estate's outputs.** A Wardley map is a claim about where a component sits, refutable by pointing at it. A risk in the risks register is a claim with a named acceptor and a named mitigation, refutable by checking whether the mitigation exists. A trace row on this site is a claim that a pattern appears at a path at a version, refutable by opening the file.
 
@@ -49,7 +51,7 @@ Every site here publishes its gaps and its open questions, which is the cheap ha
 
 ### G2 — The counter-influence entry does not exist
 
-The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs the founder rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm.
+The most Popperian thing this site could publish is an influence that was *rejected* — something widely assumed to have shaped the work and did not, or was outgrown. It needs Dinis Cruz rather than a build, and it is [Q4](../../admin/comms.html#q4) in the briefing queue. Until one exists, the register can only confirm.
 
 
 ## Block 6 — The checklist

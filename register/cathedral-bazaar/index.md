@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/cathedral-bazaar/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** work
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to the founder* — which is exactly the part that is not written down anywhere.
+The essay's factual history belongs to the open-source sibling site. This entry owns only what it *did to Dinis Cruz* — which is exactly the part that is not written down anywhere.
 
 ## Block 1 — The anchor
 
@@ -18,9 +20,9 @@ Published free by its author and still online at its original address, which is 
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is the founder's to write.
+The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-source.sgit.ai) carries the essay's history, its influence on the movement and the arguments it started. If this entry repeated any of that it would be duplicating a sibling, so it is deliberately empty of everything except the one thing that sibling cannot hold: **what reading it in the late nineties or early two-thousands did to a particular person's idea of how software gets made.** That is Dinis Cruz's to write.
 
 ## Block 3 — The principle
 
@@ -34,13 +36,13 @@ The deconfliction here is unusually sharp. [open-source.sgit.ai](https://open-so
 
 ## Awaiting the briefing document
 
-Named by the founder. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.
+Named by Dinis Cruz. The corpus covers the essay's factual history through the open-source material and says nothing about its personal effect — and the personal effect is the whole content of this entry.
 
-**Research plan.** The founder's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).
+**Research plan.** Dinis Cruz's briefing, [N4](../../admin/comms.html#n4). The specific question: what changed after reading it — a decision about releasing something, a change in how work was structured, or a way of arguing for openness that he did not have before. Contemporaneous blog posts from the O2 Platform era are the place to look, and they are out of reach ([R3](../../admin/comms.html#r3)).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 

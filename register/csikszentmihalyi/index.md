@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/csikszentmihalyi/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + research
 - **status** full — the seven-block register format
@@ -17,7 +19,7 @@ Shared with [the flow entry](../flow/index.html), deliberately. That entry is ab
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The move that matters is the one people skip: Csikszentmihalyi did not describe a mood, he **specified a state** — clear goals, immediate feedback, challenge matched to skill, merging of action and awareness, loss of self-consciousness, altered sense of time. A list of preconditions is a thing you can design against. A vibe is not.
 

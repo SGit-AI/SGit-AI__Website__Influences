@@ -2,13 +2,15 @@
 
 *Source: <https://influences.sgit.ai/register/design/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** discipline + person
 - **status** full — the seven-block register format
 - **briefing** confirmed; anchor and personal history requested
 - **founder-confirmed** 2026-08-25 — “Design and Steve Jobs approach to Design (with capital D).”
 
-Discovered by mining and confirmed by the founder the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.
+Discovered by mining and confirmed by Dinis Cruz the day the commissioning pack shipped — the first DISCOVERED → confirmed transition, before the site existed. The strongest trace on this site: an influence that became a mandatory step in the pipeline.
 
 ## Block 1 — The anchor
 
@@ -19,7 +21,7 @@ Discovered by mining and confirmed by the founder the day the commissioning pack
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > Design is the coherence between the internal structure and the external experience.
 >
@@ -37,7 +39,7 @@ The reason this is the strongest-traced entry on the site is not the number of c
 
 That is the difference between a quote on a wall and an influence. A gate in a pipeline is checkable, dated, and possible to fail. Most entries in this register aspire to a trace table; this one had its trace table written as a workflow before anyone asked for the register.
 
-What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why the founder's confirmation came with a question attached rather than closing the entry.
+What is genuinely missing is the personal history. The corpus shows the influence fully operational and says nothing about when it arrived — which is why Dinis Cruz's confirmation came with a question attached rather than closing the entry.
 
 ## Block 3 — The principle
 
@@ -53,7 +55,7 @@ What is genuinely missing is the personal history. The corpus shows the influenc
 | Simplicity as subtraction — the feature removed rather than the feature added | Implied by the Ive test's first half and not separately enforced. Nothing records what was taken out of a change | v0.7.4 | partial |
 | The same discipline applied to non-visual surfaces — an API, a CLI, a file format | Nowhere. The validator is scoped to UI changes, and the estate's public surface is mostly not UI | v0.7.4 | absent |
 
-Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why the founder's confirmation was a formality rather than a discovery.
+Three rows implemented at a stated version, from three documents in the same fortnight of the corpus. That density is why Dinis Cruz's confirmation was a formality rather than a discovery.
 
 ## Block 5 — The gaps, as build specs
 

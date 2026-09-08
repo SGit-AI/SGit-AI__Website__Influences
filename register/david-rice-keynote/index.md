@@ -2,12 +2,14 @@
 
 *Source: <https://influences.sgit.ai/register/david-rice-keynote/index.html> · markdown twin of the entry page.*
 
-- **tier** stated — on the founder's list, thin or absent in the corpus, awaiting his briefing document
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
+- **tier** stated — on Dinis Cruz's list, thin or absent in the corpus, awaiting his briefing document
 - **kind** presentation
-- **status** stub — blocks 1 and 3, plus the research plan — awaiting the founder's briefing document
+- **status** stub — blocks 1 and 3, plus the research plan — awaiting Dinis Cruz's briefing document
 - **briefing** requested
 
-An OWASP keynote, named by the founder from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.
+An OWASP keynote, named by Dinis Cruz from memory. The one entry whose anchor is a specific recording that has to be *found* before it can be linked.
 
 ## Block 1 — The anchor
 
@@ -17,9 +19,9 @@ Upon the Threshold of Opportunity — an OWASP AppSec keynote — David Rice
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
-A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only the founder holds.
+A conference talk is an unusual anchor and a revealing one. Books get re-read; a keynote is heard once, and an influence that survives that is an influence that landed at the right moment. What the entry needs is not a summary of Rice's argument — that is available — but **why this talk, to this person, in that room**, which is the part only Dinis Cruz holds.
 
 Nests under [OWASP](../owasp/index.html), where the community-as-influence claim lives.
 
@@ -36,13 +38,13 @@ Constructed from Rice's published book rather than from the keynote, because the
 
 ## Awaiting the briefing document
 
-Named by the founder; no corpus trace, and no located recording. Both halves of the entry are open.
+Named by Dinis Cruz; no corpus trace, and no located recording. Both halves of the entry are open.
 
-**Research plan.** Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one the founder means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: the founder's contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).
+**Research plan.** Two tracks, both in [N5](../../admin/comms.html#n5). **Find the recording**: the OWASP AppSec video archives, by year, and confirm which one Dinis Cruz means. **Then check the licence before embedding** — OWASP's own channels are the preferred source; a commercial conference recording gets a link, not an embed. Alongside: his contemporaneous blog reactions, which are in the unreachable earlier material ([R3](../../admin/comms.html#r3)).
 
 ## The corpus evidence
 
-None. This influence is on the founder's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
+None. This influence is on Dinis Cruz's own list and the corpus scan found nothing to attach to it — which is the definition of the STATED tier.
 
 ---
 

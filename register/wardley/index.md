@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/wardley/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person + framework
 - **status** link-out — blocks 1-3 and a pointer: the trace of this influence is an entire sibling site
@@ -18,7 +20,7 @@ The book/blog series, published in the open. The anchor is the mapping method it
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 The resonance is not the diagrams. It is that mapping makes a strategy **arguable**: two people looking at the same map can disagree about where a component sits and settle it with evidence, which is impossible when the strategy is a paragraph of prose.
 
@@ -51,7 +53,7 @@ wardley-maps.sgit.ai — https://wardley-maps.sgit.ai
 | Path in the corpus | What it carries |
 |---|---|
 | `(corpus-wide, ~210 files)` | the largest single-influence footprint the mining run found, spanning strategy documents, briefs and the published mapping material |
-| `wardley-maps.sgit.ai (sibling site + its own brief pack)` | the founder's own published Wardley material — videos, infographics and the maps-as-code work |
+| `wardley-maps.sgit.ai (sibling site + its own brief pack)` | Dinis Cruz's own published Wardley material — videos, infographics and the maps-as-code work |
 
 ---
 

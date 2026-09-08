@@ -2,6 +2,8 @@
 
 *Source: <https://influences.sgit.ai/register/bret-victor/index.html> · markdown twin of the entry page.*
 
+*An influence on **Dinis Cruz** — one of 25 entries in his register.*
+
 - **tier** traced — corpus evidence exists today
 - **kind** person
 - **status** full — the seven-block register format
@@ -19,11 +21,11 @@ One anchor per entry: not the whole career, the single work that did the shaping
 
 *Linked, never rehosted.*
 
-## Block 2 — The founder's words
+## Block 2 — In his own words
 
 > That is the kind of experience and feedback loops I'm trying to create here.
 >
-> — Dinis Cruz, `the immediate-connection register (held by the founder)`
+> — Dinis Cruz, `the immediate-connection register (held by Dinis Cruz)`
 
 The line the register opens on, and the reason it exists. The register is a working document about the estate's viewer, not an essay about Victor.
 
@@ -35,7 +37,7 @@ From a section titled **The Brett Victor Problem** — in an article about educa
 
 > Half the viewer's strongest features were already unknowing implementations of its demos, which is evidence the instinct and the principle agree; this register makes the agreement deliberate, so the next agent extends it on purpose rather than by luck.
 >
-> — Dinis Cruz, `the immediate-connection register (held by the founder)`
+> — Dinis Cruz, `the immediate-connection register (held by Dinis Cruz)`
 
 The closing argument, and the standard every trace table on this site is aiming at. Note how careful it is: **the instinct and the principle agree** is a much weaker claim than *the talk caused this*, and it is the one the evidence actually supports.
 
@@ -51,7 +53,7 @@ The test the format sets for a principle is that it must be usable by someone wh
 
 ## Block 4 — The trace table
 
-**No trace table yet.** **The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by the founder and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered.
+**No trace table yet.** **The table exists and this site does not have it.** The register's own trace table — five patterns from the talk, each with where the repository stands and what is missing — was written by Dinis Cruz and supplied in conversation; it was not retained across a context boundary and this environment cannot reconstruct it. Inventing rows would be exactly the failure this format exists to prevent, so the entry ships with the table empty and the gaps it *does* name published in Block 5. This is the first ask in the briefing queue — [Q1](../../admin/comms.html#q1) — and entry one is not complete until it is answered.
 
 ## Block 5 — The gaps, as build specs
 
@@ -87,7 +89,7 @@ The register's second named gap: when a layout changes, the previous positions l
 
 | Path in the corpus | What it carries |
 |---|---|
-| `sources/register__bret-victor__inventing-on-principle.md` | the founder's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is with the founder |
+| `sources/register__bret-victor__inventing-on-principle.md` | Dinis Cruz's immediate-connection register — structural summary published at [/documents/victor-register.html](../../documents/victor-register.html); the full text is still with him |
 | `docs.diniscruz.ai/docs/2025/07/04/the-joy-of-programming-in-the-age-of-ai-assisted-development.md` | builds its central argument on Victor's immediate-feedback thesis, and quotes the talk's core line about creators needing an immediate connection to what they create |
 | `SGraph-AI__App__Send/team/humans/dinis_cruz/briefs/03/28/v0.19.7__article__education-gaps-git-opensource.md` | a section titled *The Brett Victor Problem*, applying the talk's point about dogma to education policy |
 
